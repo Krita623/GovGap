@@ -1,8 +1,0 @@
-{
-  "total_samples": 120,
-  "total_calls": 294,
-  "decode_status_counts": {
-    "ok": 277,
-    "failed: calldata_empty": 17
-  }
-}

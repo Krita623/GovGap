@@ -1,9 +1,0 @@
-{
-  "benchmark_id": "real-compound-0006",
-  "human_overall_risk": "LOW",
-  "dimension_labels": {
-    "conflict_detection": "LOW",
-    "depth_analysis": "LOW",
-    "function_semantic_match": "LOW"
-  }
-}
