@@ -1,0 +1,81 @@
+{
+  "proposal_summary": "Lists MaticX on the Aave v3 Polygon Pool as collateral, configuring risk parameters, interest rate strategies, eMode settings, and a 6M supply cap.",
+  "disclosed_entities": [
+    {
+      "name": "MaticX",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Llama proposes listing MaticX on the Aave v3 Polygon Pool. MaticX is an ERC20 receipt token"
+    },
+    {
+      "name": "Chainlink Oracle",
+      "address": "0x5d37e4b374e6907de8fc7fb33ee3b0af403c7403",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Chainlink Oracle: 0x5d37E4b374E6907de8Fc7fb33EE3b0af403C7403"
+    },
+    {
+      "name": "ProposalPayload",
+      "address": "0xd417d07c20e31f6e129fa68182054b641fbec8bd",
+      "entity_type": "implementation",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ProposalPayload = 0xD417d07c20e31F6e129fa68182054B641FbEC8Bd"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x5d37e4b374e6907de8fc7fb33ee3b0af403c7403",
+      "textual_evidence": "Chainlink Oracle: [0x5d37E4b374E6907de8Fc7fb33EE3b0af403C7403]"
+    },
+    {
+      "address": "0xd417d07c20e31f6e129fa68182054b641fbec8bd",
+      "textual_evidence": "ProposalPayload = [0xD417d07c20e31F6e129fa68182054B641FbEC8Bd]"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "add MaticX as collateral and set risk parameters",
+      "canonical_action": "parameter_update",
+      "object": "Aave v3 Polygon Pool",
+      "claimed_effect": "Enables users to deposit MaticX as collateral and configures LTV to 50%, Liquidation Threshold to 65%, Liquidation Bonus to 10%, and Reserve Factor to 20%.",
+      "textual_evidence": "MaticX will be added as collateral... Risk Parameters: Collateral: Yes Borrowing: No LTV: 50% Liquidation Threshold: 65% Liquidation Bonus: 10% Reserve Factor: 20%",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "connect Chainlink oracle price source to AaveOracle",
+      "canonical_action": "parameter_update",
+      "object": "AaveOracle",
+      "claimed_effect": "Sets the price feed for MaticX on Aave V3.",
+      "textual_evidence": "connect the Chainlink oracle price source to AaveOracle",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "add Matrix to the 'Matic correlated' eMode",
+      "canonical_action": "parameter_update",
+      "object": "Aave v3 eMode",
+      "claimed_effect": "Configures eMode parameters for MaticX (LTV: 92.5%, Liquidation Threshold: 95%, Liquidation Bonus: 1%).",
+      "textual_evidence": "Matrix will be added to the 'Matic correlated' eMode... 'MATIC correlated' eMode Parameters: LTV: 92.5% Liquidation Threshold: 95% Liquidation Bonus: 1%",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "implement a SupplyCap of $6M",
+      "canonical_action": "parameter_update",
+      "object": "MaticX Reserve",
+      "claimed_effect": "Limits maximum MaticX deposits to $6m.",
+      "textual_evidence": "A SupplyCap of $6M will be implemented",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "This is a standard Aave V3 asset listing proposal consisting of a pre-tested ProposalPayload contract configuring reserve parameters.",
+    "textual_evidence": "All the components involved in this proposal (tokens' implementations, interest rate strategy, oracle feed, proposal payload) have been tested and reviewed"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract functions or ABIs are explicitly mentioned in the proposal text, only general configuration outcomes."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

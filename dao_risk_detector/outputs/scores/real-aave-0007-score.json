@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "proposal_id": "152",
+    "generated_at": "2026-05-08T11:15:23.760006+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Onboard USDT to the Aave Ethereum V3 Liquidity Pool as a non-collateral asset with defined supply and borrow caps.",
+    "disclosed_entities": [
+      {
+        "name": "USDT",
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Ticker: USDT\nContract Address: 0xdAC17F958D2ee523a2206206994597C13D831ec7"
+      },
+      {
+        "name": "GenericListingEngine",
+        "address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The proposal payload uses the GenericListingEngine (0xC51e6E38d406F98049622Ca54a6096a23826B426) to perform a new asset listing"
+      },
+      {
+        "name": "Rate Strategy",
+        "address": "0xdd1bac6a713c5b0ec42ba39d0c5e4582975de6d6",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "rateStrategy: 0xdd1BAC6A713c5b0EC42bA39D0c5e4582975DE6D6"
+      },
+      {
+        "name": "AaveV3EthUSDTPayload",
+        "address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "AaveV3EthUSDTPayload: ProposalPayload 0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "textual_evidence": "Contract Address: [0xdAC17F958D2ee523a2206206994597C13D831ec7](https://etherscan.io/address/0xdAC17F958D2ee523a2206206994597C13D831ec7)"
+      },
+      {
+        "address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+        "textual_evidence": "[GenericListingEngine](https://etherscan.io/address/0xC51e6E38d406F98049622Ca54a6096a23826B426#code)"
+      },
+      {
+        "address": "0xdd1bac6a713c5b0ec42ba39d0c5e4582975de6d6",
+        "textual_evidence": "rateStrategy: 0xdd1BAC6A713c5b0EC42bA39D0c5e4582975DE6D6"
+      },
+      {
+        "address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "textual_evidence": "AaveV3EthUSDTPayload: ProposalPayload(https://etherscan.io/address/0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb#code)"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Onboard USDT to the Ethereum v3 Liquidity Pool",
+        "canonical_action": "parameter_update",
+        "object": "Aave Ethereum V3 Pool",
+        "claimed_effect": "USDT becomes a borrowable asset in the pool, but not a collateral asset, with a supply cap of 200M and a borrow cap of 185M.",
+        "textual_evidence": "The risk parameters provided introduce USDT as a non-collateral asset.\n... supply Cap: 200_000_000, borrowCap: 185_000_000",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal follows a standardized asset listing framework using a generic listing engine template.",
+      "textual_evidence": "The proposal payload uses the GenericListingEngine to perform a new asset listing"
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "Listing",
+        "textual_evidence": "IGenericV3ListingEngine.Listing({"
+      }
+    ],
+    "limitations": [],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000013500000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "to_address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+        "value": "0x0",
+        "input": "0x1e74ccee00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000008457468657265756d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003457468000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000000000000000002400000000000000000000000003e7d1eab13ad0104d2750b8863b489d65364e32d000000000000000000000000dd1bac6a713c5b0ec42ba39d0c5e4582975de6d60000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003e8000000000000000000000000000000000000000000000000000000000bebc200000000000000000000000000000000000000000000000000000000000b06e040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003e8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000045553445400000000000000000000000000000000000000000000000000000000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000013500000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x1e74ccee",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "to_address": "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+        "value": "0",
+        "input": "0x50d25bcd",
+        "output": "0x0000000000000000000000000000000000000000000000000000000005f60fe0",
+        "depth": 2,
+        "function_selector": "0x50d25bcd",
+        "decoded_function": "latestAnswer()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+        "to_address": "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+        "value": "0",
+        "input": "0x50d25bcd",
+        "output": "0x0000000000000000000000000000000000000000000000000000000005f60fe0",
+        "depth": 3,
+        "function_selector": "0x50d25bcd",
+        "decoded_function": "latestAnswer()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "to_address": "0x54586be62e3c3580375ae3723c145253060ca0c2",
+        "value": "0x0",
+        "input": "0xabfd5310000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000000000000000000010000000000000000000000003e7d1eab13ad0104d2750b8863b489d65364e32d",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000013500000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0xabfd5310",
+        "decoded_function": "setAssetSources(address[],address[])",
+        "decoded_args": [
+          [
+            "0xdac17f958d2ee523a2206206994597c13d831ec7"
+          ],
+          [
+            "0x3e7d1eab13ad0104d2750b8863b489d65364e32d"
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x54586be62e3c3580375ae3723c145253060ca0c2",
+        "to_address": "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+        "value": "0",
+        "input": "0x707cd716",
+        "output": "0x000000000000000000000000c2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+        "depth": 3,
+        "function_selector": "0x707cd716",
+        "decoded_function": "getACLManager()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x54586be62e3c3580375ae3723c145253060ca0c2",
+        "to_address": "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+        "value": "0",
+        "input": "0x13ee32e00000000000000000000000003b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 3,
+        "function_selector": "0x13ee32e0",
+        "decoded_function": "isAssetListingAdmin(address)",
+        "decoded_args": [
+          "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x54586be62e3c3580375ae3723c145253060ca0c2",
+        "to_address": "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+        "value": "0",
+        "input": "0x7be53ca10000000000000000000000003b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 3,
+        "function_selector": "0x7be53ca1",
+        "decoded_function": "isPoolAdmin(address)",
+        "decoded_args": [
+          "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+      "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+      "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+      "0x54586be62e3c3580375ae3723c145253060ca0c2",
+      "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+      "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+      "0xc51e6e38d406f98049622ca54a6096a23826b426",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 5,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execute()",
+      "getACLManager()",
+      "isAssetListingAdmin(address)",
+      "isPoolAdmin(address)",
+      "latestAnswer()",
+      "setAssetSources(address[],address[])"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "152:0:arbitrary_call",
+      "action_type": "arbitrary_call",
+      "severity_hint": "high",
+      "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+      "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+      "depth": 0,
+      "function_selector": "0x61461954",
+      "decoded_function": "execute()",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000013500000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    },
+    {
+      "id": "152:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+      "to_address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+      "depth": 1,
+      "function_selector": "0x1e74ccee",
+      "decoded_function": null,
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "to_address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+        "value": "0x0",
+        "input": "0x1e74ccee00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000008457468657265756d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003457468000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000000000000000002400000000000000000000000003e7d1eab13ad0104d2750b8863b489d65364e32d000000000000000000000000dd1bac6a713c5b0ec42ba39d0c5e4582975de6d60000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003e8000000000000000000000000000000000000000000000000000000000bebc200000000000000000000000000000000000000000000000000000000000b06e040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003e8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000045553445400000000000000000000000000000000000000000000000000000000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000013500000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x1e74ccee",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 4,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered high-risk business action.",
+      "disclosed_addresses": [
+        "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+        "0xc51e6e38d406f98049622ca54a6096a23826b426",
+        "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "0xdd1bac6a713c5b0ec42ba39d0c5e4582975de6d6"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+        "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+        "0x54586be62e3c3580375ae3723c145253060ca0c2",
+        "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+        "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+                "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+                "0x54586be62e3c3580375ae3723c145253060ca0c2",
+                "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+                "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c"
+              ],
+              "related_actions": [
+                {
+                  "id": "152:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [
+                "arbitrary_call"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "152:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ]
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+            "0xc51e6e38d406f98049622ca54a6096a23826b426",
+            "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "0xdd1bac6a713c5b0ec42ba39d0c5e4582975de6d6"
+          ],
+          "trace_unique_addresses": [
+            "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+            "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+            "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+            "0x54586be62e3c3580375ae3723c145253060ca0c2",
+            "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+            "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+            "0xc51e6e38d406f98049622ca54a6096a23826b426",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+            "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+            "0x54586be62e3c3580375ae3723c145253060ca0c2",
+            "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+            "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 6,
+      "severity": "MEDIUM",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 3,
+      "depth_mismatch": true,
+      "summary": "Observed trace depth exceeds claimed complexity.",
+      "findings": [
+        {
+          "id": "depth.complexity_mismatch",
+          "title": "Trace complexity exceeds textual complexity disclosure",
+          "severity": "MEDIUM",
+          "description": "Observed trace depth exceeds claimed complexity.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "claimed_complexity": "simple",
+              "actual_max_depth": 3,
+              "delegatecall_count": 1,
+              "business_actions_match": false,
+              "uncovered_business_actions": [
+                "arbitrary_call"
+              ],
+              "delegatecall_sensitive": true,
+              "high_risk_actions": [
+                {
+                  "id": "152:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ]
+            }
+          ],
+          "recommendation": "Review whether the proposal text should describe the actual call depth or indirect execution paths.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal follows a standardized asset listing framework using a generic listing engine template.",
+            "textual_evidence": "The proposal payload uses the GenericListingEngine to perform a new asset listing"
+          },
+          "actual_max_depth": 3,
+          "delegatecall_count": 1,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "execute()",
+        "getACLManager()",
+        "isAssetListingAdmin(address)",
+        "isPoolAdmin(address)",
+        "latestAnswer()",
+        "setAssetSources(address[],address[])"
+      ],
+      "unmatched_functions": [
+        "arbitrary_call"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "arbitrary_call",
+        "parameter_update"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "parameter_update"
+              ],
+              "actual_business_actions": [
+                "arbitrary_call",
+                "parameter_update"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "execute()",
+                "getACLManager()",
+                "isAssetListingAdmin(address)",
+                "isPoolAdmin(address)",
+                "latestAnswer()",
+                "setAssetSources(address[],address[])"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Onboard USDT to the Ethereum v3 Liquidity Pool",
+              "canonical_action": "parameter_update",
+              "object": "Aave Ethereum V3 Pool",
+              "claimed_effect": "USDT becomes a borrowable asset in the pool, but not a collateral asset, with a supply cap of 200M and a borrow cap of 185M.",
+              "textual_evidence": "The risk parameters provided introduce USDT as a non-collateral asset.\n... supply Cap: 200_000_000, borrowCap: 185_000_000",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "152:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "152:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+              "to_address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+              "depth": 1,
+              "function_selector": "0x1e74ccee",
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "execute()",
+            "getACLManager()",
+            "isAssetListingAdmin(address)",
+            "isPoolAdmin(address)",
+            "latestAnswer()",
+            "setAssetSources(address[],address[])"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x2f39d218133afab8f2b819b1066c7e434ad94e9e",
+            "0x3e7d1eab13ad0104d2750b8863b489d65364e32d",
+            "0x54586be62e3c3580375ae3723c145253060ca0c2",
+            "0xa964273552c1dba201f5f000215f5bd5576e8f93",
+            "0xc2aacf6553d20d1e9d78e365aaba8032af9c85b0",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "related_actions": [
+            {
+              "id": "152:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ],
+          "material_related_actions": [
+            {
+              "id": "152:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ]
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "depth.complexity_mismatch",
+      "title": "Trace complexity exceeds textual complexity disclosure",
+      "severity": "MEDIUM",
+      "description": "Observed trace depth exceeds claimed complexity.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "claimed_complexity": "simple",
+          "actual_max_depth": 3,
+          "delegatecall_count": 1,
+          "business_actions_match": false,
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ],
+          "delegatecall_sensitive": true,
+          "high_risk_actions": [
+            {
+              "id": "152:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x3b45bbc2b69fafab95fd91b10f39ccb5dd92facb",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ]
+        }
+      ],
+      "recommendation": "Review whether the proposal text should describe the actual call depth or indirect execution paths.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "parameter_update"
+          ],
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "execute()",
+            "getACLManager()",
+            "isAssetListingAdmin(address)",
+            "isPoolAdmin(address)",
+            "latestAnswer()",
+            "setAssetSources(address[],address[])"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

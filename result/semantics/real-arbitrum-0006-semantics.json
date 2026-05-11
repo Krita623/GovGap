@@ -1,0 +1,65 @@
+{
+  "proposal_summary": "This proposal introduces a 6-month experimental incentive system to reward 50 active ArbitrumDAO delegates. It establishes a point-based framework tracked via a dashboard developed by Karma, administered by SEED Latam, and requests 1,580,000 ARB in total funding managed by a new 3/5 multisig.",
+  "disclosed_entities": [
+    {
+      "name": "Karma",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Karma will develop features to enhance administrator efficiency and provide transparency to the Arbitrum community."
+    },
+    {
+      "name": "SEED Latam",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "SEED Latam is willing to assume the administration of this program."
+    },
+    {
+      "name": "Program Multisig",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We propose to use a configuration similar to that of Plurality Labs. Having a 3/5 multisig where apart from myself, there would be a mix of DAO delegates + contributors"
+    },
+    {
+      "name": "Gnosis Zodiac OZ governor module",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This multisig will be configured with a Gnosis Zodiac OZ governor module looking at the Arbitrum token contract."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Fund the program with 1,580,000 ARB",
+      "canonical_action": "transfer",
+      "object": "1,580,000 ARB",
+      "claimed_effect": "Provides budget for delegate incentives, Karma development, admin costs, and multisig signers.",
+      "textual_evidence": "Total costs: 1,580,000 ARB",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Setup 3/5 multisig for funds management",
+      "canonical_action": "treasury_operation",
+      "object": "Program Multisig",
+      "claimed_effect": "Manages payments securely with DAO clawback capability.",
+      "textual_evidence": "Having a 3/5 multisig where apart from myself, there would be a mix of DAO delegates + contributors",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires the development of off-chain automation and an integration dashboard (by Karma) to calculate complex metrics (Tally, Snapshot, Forum participation) combined with manual dispute resolution and multisig payments.",
+    "textual_evidence": "Karma will develop features to enhance administrator efficiency... Calculation and display of PR, SV, TV, CR, CP (TBD if CP can be automated) for each delegate as specified in the proposal."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The system is experimental and subject to changes.",
+    "Data inconsistencies are likely in the initial stages and will require correction by the administrator.",
+    "The Bonus Point (+30% TP) is subjective and requires discretion by the administrator."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

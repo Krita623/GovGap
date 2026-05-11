@@ -1,0 +1,48 @@
+{
+  "proposal_summary": "Deploy Uniswap v3 on BNB Chain using the Wormhole bridge for governance.",
+  "disclosed_entities": [
+    {
+      "name": "0xPlasma Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "0xPlasma Labs is submitting a Governance Proposal to deploy Uniswap v3 to BNB Chain"
+    },
+    {
+      "name": "BNB Chain",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "deploy Uniswap v3 to BNB Chain"
+    },
+    {
+      "name": "Wormhole",
+      "address": null,
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the community chose the Wormhole bridge for the Uniswap v3 deployment on BNB Chain"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "deploy Uniswap v3 to BNB Chain",
+      "canonical_action": "unknown",
+      "object": "Uniswap v3",
+      "claimed_effect": "Make Uniswap v3 available on BNB Chain",
+      "textual_evidence": "This proposal will authorize 0xPlasma Labs to deploy the Uniswap v3 protocol to the BNB PoS Chain",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves deploying Uniswap v3 to a new chain and using a cross-chain bridge for governance.",
+    "textual_evidence": "deploy the Uniswap v3 protocol to the BNB PoS Chain ... using Wormhole bridge infrastructure for cross-chain governance messaging."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific contract addresses or functions are provided in the text for the deployment."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

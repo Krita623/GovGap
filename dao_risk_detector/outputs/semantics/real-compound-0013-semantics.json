@@ -1,0 +1,65 @@
+{
+  "proposal_summary": "Update Scroll cUSDCv3 Comet to a new version supporting up to 24 collaterals.",
+  "disclosed_entities": [
+    {
+      "name": "Scroll cUSDCv3 Comet",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Compound Growth Program [AlphaGrowth] proposes to update Scroll cUSDCv3 Comet to a new version, which supports up to 24 collaterals."
+    },
+    {
+      "name": "Factory",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The first action sets the factory to the newly deployed factory"
+    },
+    {
+      "name": "Extension delegate",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "extension delegate to the newly deployed contract"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "set the factory to the newly deployed factory",
+      "canonical_action": "parameter_update",
+      "object": "Factory",
+      "claimed_effect": "Updates the system to use a newly deployed factory.",
+      "textual_evidence": "The first action sets the factory to the newly deployed factory",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "set extension delegate to the newly deployed contract",
+      "canonical_action": "parameter_update",
+      "object": "Extension delegate",
+      "claimed_effect": "Updates the extension delegate to a newly deployed contract.",
+      "textual_evidence": "extension delegate to the newly deployed contract",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "deploys and upgrades Comet to a new version",
+      "canonical_action": "upgrade",
+      "object": "Scroll cUSDCv3 Comet",
+      "claimed_effect": "Upgrades the Comet contract to a version that supports up to 24 collaterals.",
+      "textual_evidence": "deploys and upgrades Comet to a new version.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal involves contract upgrades and pointer updates to new delegates and factories, requiring standard validation and simulation.",
+    "textual_evidence": "Simulations have confirmed the market’s readiness, as much as possible, using the Comet scenario suite."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific contract addresses (0x...) are provided in the text.",
+    "Specific smart contract function names are not explicitly mentioned."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,36 @@
+{
+  "risk_actions": [
+    {
+      "id": "mutant-upgrade-0002:0:upgrade",
+      "action_type": "upgrade",
+      "severity_hint": "critical",
+      "from_address": "0x1000000000000000000000000000000000000001",
+      "to_address": "0x2000000000000000000000000000000000000002",
+      "depth": 0,
+      "function_selector": "0x3659cfe6",
+      "decoded_function": "upgradeTo(address)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x2000000000000000000000000000000000000002",
+        "value": "0x0",
+        "input": "0x3659cfe60000000000000000000000005000000000000000000000000000000000000002",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3659cfe6",
+        "decoded_function": "upgradeTo(address)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 1,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 1
+  }
+}

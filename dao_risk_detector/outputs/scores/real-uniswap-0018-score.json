@@ -1,0 +1,3096 @@
+{
+  "metadata": {
+    "proposal_id": "94",
+    "generated_at": "2026-05-08T11:15:24.543457+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal expands Uniswap protocol fees on v2 and v3 to Arbitrum, Base, Celo, OP Mainnet, Soneium, X Layer, Worldchain, and Zora. It also enables fees uniformly on all v3 pools via a new tier-based v3OpenFeeAdapter on Mainnet and the selected L2s, and routes fees to L2 TokenJars for UNI burn on Mainnet.",
+    "disclosed_entities": [
+      {
+        "name": "UniswapV3Factory",
+        "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV3Factory | 0x1F98431c8aD98523631AE4a59f267346ea31F984"
+      },
+      {
+        "name": "V3OpenFeeAdapter",
+        "address": "0x3e40db80450f025b01e45c58b0af763c7a29a8bd",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "V3OpenFeeAdapter | 0x3e40DB80450f025b01E45c58b0aF763C7A29a8bd"
+      },
+      {
+        "name": "V3FeeAdapter",
+        "address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "V3FeeAdapter | 0x5E74C9f42EEd283bFf3744fBD1889d398d40867d"
+      },
+      {
+        "name": "TokenJar",
+        "address": "0x95e337c5b155385945d407f5396387d0c2a3a263",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "TokenJar | 0x95E337C5B155385945D407f5396387D0c2a3A263"
+      },
+      {
+        "name": "Releaser (ArbitrumBridgedResourceFirepit)",
+        "address": "0xb8018422bce25d82e70cb98fda96a4f502d89427",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Releaser (ArbitrumBridgedResourceFirepit) | 0xB8018422bcE25D82E70cB98FdA96a4f502D89427"
+      },
+      {
+        "name": "V3OpenFeeAdapter (Arbitrum)",
+        "address": "0xff7ad5da31fecdc678796c88b05926db896b0699",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "V3OpenFeeAdapter | 0xFF7aD5dA31fECdC678796c88B05926dB896b0699"
+      },
+      {
+        "name": "UniswapV2Factory (Arbitrum)",
+        "address": "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV2Factory | 0xf1D7CC64Fb4452F05c498126312eBE29f30Fbcf9"
+      },
+      {
+        "name": "TokenJar (OP Mainnet)",
+        "address": "0xb13285df724ea75f3f1e9912010b7e491dcd5ee3",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "TokenJar | 0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+      },
+      {
+        "name": "Releaser (OptimismBridgedResourceFirepit) (OP Mainnet)",
+        "address": "0x94460443ca27ffc1baeca61165fde18346c91abd",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0x94460443Ca27FFC1baeCa61165fde18346C91AbD"
+      },
+      {
+        "name": "V3OpenFeeAdapter (OP Mainnet)",
+        "address": "0xec23cf5a1db3dcc6595385d28b2a4d9b52503be4",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "V3OpenFeeAdapter | 0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4"
+      },
+      {
+        "name": "UniswapV2Factory (OP Mainnet)",
+        "address": "0x0c3c1c532f1e39edf36be9fe0be1410313e074bf",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV2Factory | 0x0c3c1c532F1e39EdF36BE9Fe0bE1410313E074Bf"
+      },
+      {
+        "name": "TokenJar (Base)",
+        "address": "0x9bd25e67bf390437c8faf480ac735a27bcf6168c",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "TokenJar | 0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+      },
+      {
+        "name": "Releaser (OptimismBridgedResourceFirepit) (Base)",
+        "address": "0xff77c0ed0b6b13a20446969107e5867abc46f53a",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0xFf77c0ED0B6b13A20446969107E5867abc46f53a"
+      },
+      {
+        "name": "V3OpenFeeAdapter (Base)",
+        "address": "0xabea76658b205696d49b5f91b2a03536cb8a3be1",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "V3OpenFeeAdapter | 0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1"
+      },
+      {
+        "name": "UniswapV3Factory (Base)",
+        "address": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV3Factory | 0x33128a8fC17869897dcE68Ed026d694621f6FDfD"
+      },
+      {
+        "name": "UniswapV2Factory (Base)",
+        "address": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV2Factory | 0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6"
+      },
+      {
+        "name": "CrossChainAccount (Celo)",
+        "address": "0x044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "CrossChainAccount | 0x044aAF330d7fD6AE683EEc5c1C1d1fFf5196B6b7"
+      },
+      {
+        "name": "UniswapV3Factory (Celo)",
+        "address": "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV3Factory | 0xAfE208a311B21f13EF87E33A90049fC17A7acDEc"
+      },
+      {
+        "name": "UniswapV2Factory (Celo)",
+        "address": "0x114a43df6c5f54ebb8a9d70cd1951d3dd68004c7",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV2Factory | 0x114A43DF6C5f54EBB8A9d70Cd1951D3dD68004c7"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x3e40db80450f025b01e45c58b0af763c7a29a8bd",
+        "textual_evidence": "V3OpenFeeAdapter | 0x3e40DB80450f025b01E45c58b0aF763C7A29a8bd"
+      },
+      {
+        "address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+        "textual_evidence": "V3FeeAdapter | 0x5E74C9f42EEd283bFf3744fBD1889d398d40867d"
+      },
+      {
+        "address": "0x95e337c5b155385945d407f5396387d0c2a3a263",
+        "textual_evidence": "TokenJar | 0x95E337C5B155385945D407f5396387D0c2a3A263"
+      },
+      {
+        "address": "0xb8018422bce25d82e70cb98fda96a4f502d89427",
+        "textual_evidence": "Releaser (ArbitrumBridgedResourceFirepit) | 0xB8018422bcE25D82E70cB98FdA96a4f502D89427"
+      },
+      {
+        "address": "0xff7ad5da31fecdc678796c88b05926db896b0699",
+        "textual_evidence": "V3OpenFeeAdapter | 0xFF7aD5dA31fECdC678796c88B05926dB896b0699"
+      },
+      {
+        "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+        "textual_evidence": "UniswapV3Factory | 0x1F98431c8aD98523631AE4a59f267346ea31F984"
+      },
+      {
+        "address": "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+        "textual_evidence": "UniswapV2Factory | 0xf1D7CC64Fb4452F05c498126312eBE29f30Fbcf9"
+      },
+      {
+        "address": "0xb13285df724ea75f3f1e9912010b7e491dcd5ee3",
+        "textual_evidence": "TokenJar | 0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+      },
+      {
+        "address": "0x94460443ca27ffc1baeca61165fde18346c91abd",
+        "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0x94460443Ca27FFC1baeCa61165fde18346C91AbD"
+      },
+      {
+        "address": "0xec23cf5a1db3dcc6595385d28b2a4d9b52503be4",
+        "textual_evidence": "V3OpenFeeAdapter | 0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4"
+      },
+      {
+        "address": "0x0c3c1c532f1e39edf36be9fe0be1410313e074bf",
+        "textual_evidence": "UniswapV2Factory | 0x0c3c1c532F1e39EdF36BE9Fe0bE1410313E074Bf"
+      },
+      {
+        "address": "0x9bd25e67bf390437c8faf480ac735a27bcf6168c",
+        "textual_evidence": "TokenJar | 0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+      },
+      {
+        "address": "0xff77c0ed0b6b13a20446969107e5867abc46f53a",
+        "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0xFf77c0ED0B6b13A20446969107E5867abc46f53a"
+      },
+      {
+        "address": "0xabea76658b205696d49b5f91b2a03536cb8a3be1",
+        "textual_evidence": "V3OpenFeeAdapter | 0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1"
+      },
+      {
+        "address": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+        "textual_evidence": "UniswapV3Factory | 0x33128a8fC17869897dcE68Ed026d694621f6FDfD"
+      },
+      {
+        "address": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+        "textual_evidence": "UniswapV2Factory | 0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6"
+      },
+      {
+        "address": "0x044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+        "textual_evidence": "CrossChainAccount | 0x044aAF330d7fD6AE683EEc5c1C1d1fFf5196B6b7"
+      },
+      {
+        "address": "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+        "textual_evidence": "UniswapV3Factory | 0xAfE208a311B21f13EF87E33A90049fC17A7acDEc"
+      },
+      {
+        "address": "0x114a43df6c5f54ebb8a9d70cd1951d3dd68004c7",
+        "textual_evidence": "UniswapV2Factory | 0x114A43DF6C5f54EBB8A9d70Cd1951D3dD68004c7"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "V3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));",
+        "canonical_action": "role_change",
+        "object": "UniswapV3Factory",
+        "claimed_effect": "Change the owner on UniswapV3Factory to v3OpenFeeAdapter",
+        "textual_evidence": "/// Change the owner on UniswapV3Factory to v3OpenFeeAdapter\nV3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "V3_FACTORY.setOwner(address(v3OpenFeeAdapter));",
+        "canonical_action": "role_change",
+        "object": "UniswapV3Factory",
+        "claimed_effect": "Set the owner of the V3 Factory to the V3OpenFeeAdapter",
+        "textual_evidence": "/// Set the owner of the V3 Factory to the V3OpenFeeAdapter\nV3_FACTORY.setOwner(address(v3OpenFeeAdapter));",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "V2_FACTORY.setFeeTo(address(tokenJar));",
+        "canonical_action": "parameter_update",
+        "object": "UniswapV2Factory",
+        "claimed_effect": "Set the recipient of V2 protocol fees to the TokenJar",
+        "textual_evidence": "/// Set the recipient of V2 protocol fees to the TokenJar\nV2_FACTORY.setFeeTo(address(tokenJar));",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "V2_FACTORY.setFeeToSetter(CrossChainAccount)",
+        "canonical_action": "role_change",
+        "object": "UniswapV2Factory",
+        "claimed_effect": "Transfer v2 setFeeToSetter role",
+        "textual_evidence": "/// Transfer v2 setFeeToSetter role\nV2_FACTORY.setFeeToSetter(CrossChainAccount)",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "V3_FACTORY.setOwner(CrossChainAccount)",
+        "canonical_action": "role_change",
+        "object": "UniswapV3Factory",
+        "claimed_effect": "Transfer UniswapV3Factory owner role",
+        "textual_evidence": "/// Transfer UniswapV3Factory owner role \nV3_FACTORY.setOwner(CrossChainAccount)",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "POOL_MANAGER.transferOwnership(CrossChainAccount)",
+        "canonical_action": "role_change",
+        "object": "POOL_MANAGER",
+        "claimed_effect": "Transfer Uniswap v4 PoolManager owner role",
+        "textual_evidence": "// Transfer Uniswap v4 PoolManager owner role\nPOOL_MANAGER.transferOwnership(CrossChainAccount)",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Involves executing ten transactions across multiple chains, setting up new fee architecture and fee adapters.",
+      "textual_evidence": "Because these transactions are crosschain, governance front ends may not decode them correctly."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "setFactoryOwner",
+        "textual_evidence": "V3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));"
+      },
+      {
+        "function_name": "setOwner",
+        "textual_evidence": "V3_FACTORY.setOwner(address(v3OpenFeeAdapter));"
+      },
+      {
+        "function_name": "setFeeTo",
+        "textual_evidence": "V2_FACTORY.setFeeTo(address(tokenJar));"
+      },
+      {
+        "function_name": "setFeeToSetter",
+        "textual_evidence": "V2_FACTORY.setFeeToSetter(CrossChainAccount)"
+      },
+      {
+        "function_name": "transferOwnership",
+        "textual_evidence": "POOL_MANAGER.transferOwnership(CrossChainAccount)"
+      }
+    ],
+    "limitations": [
+      "No specific parameters for fees sizes, pools, or execution logic other than ownership and fee-to updates were provided in the text snippet itself."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value": "0x0",
+        "input": "0x3dbb202b000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0xa1dd330d602c32622aa270ea73d078b803cb3518",
+          "0x6fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be400000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+        "value": "0",
+        "input": "0xbf40fac10000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+        "output": "0x000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "depth": 1,
+        "function_selector": "0xbf40fac1",
+        "decoded_function": "getAddress(string)",
+        "decoded_args": [
+          "OVM_L1CrossDomainMessenger"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "value": "0x0",
+        "input": "0x3dbb202b000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0xa1dd330d602c32622aa270ea73d078b803cb3518",
+          "0x6fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be400000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000353b10000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000353b10000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000353b10000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000353b10000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "value": "0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "value": "0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "value": "0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 4,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 5,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "value": "0x0",
+        "input": "0x3dbb202b00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+          "0x6fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be100000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+        "value": "0",
+        "input": "0xbf40fac10000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+        "output": "0x000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "depth": 1,
+        "function_selector": "0xbf40fac1",
+        "decoded_function": "getAddress(string)",
+        "decoded_args": [
+          "OVM_L1CrossDomainMessenger"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "value": "0x0",
+        "input": "0x3dbb202b00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+          "0x6fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be100000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000811e80000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000811e80000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000811e80000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000811e80000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "value": "0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "value": "0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "value": "0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 4,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 5,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "value": "0x2399230ca64000",
+        "input": "0x679b6ded0000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000000000000000000000000000000000000000030d400000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b069900000000000000000000000000000000000000000000000000000000",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 0,
+        "function_selector": "0x679b6ded",
+        "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "decoded_args": [
+          "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+          0,
+          10000000000000000,
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          200000,
+          100000000,
+          "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+        "value": "0x2399230ca64000",
+        "input": "0x679b6ded0000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000000000000000000000000000000000000000030d400000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b069900000000000000000000000000000000000000000000000000000000",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 1,
+        "function_selector": "0x679b6ded",
+        "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "decoded_args": [
+          "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+          0,
+          10000000000000000,
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          200000,
+          100000000,
+          "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "value": "0x2399230ca64000",
+        "input": "0x8db5993b00000000000000000000000000000000000000000000000000000000000000090000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd4570f8a09dfa60854208229edf5651d3fbeb415e9036aee757bab1f50d869287",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 2,
+        "function_selector": "0x8db5993b",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+        "value": "0x2399230ca64000",
+        "input": "0x8db5993b00000000000000000000000000000000000000000000000000000000000000090000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd4570f8a09dfa60854208229edf5651d3fbeb415e9036aee757bab1f50d869287",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 3,
+        "function_selector": "0x8db5993b",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+        "value": "0x0",
+        "input": "0xf3cc660c000000000000000000000000f2371551fe3937db7c750f4dfabe5c2fffdcbf5a",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xf3cc660c",
+        "decoded_function": "setFactoryOwner(address)",
+        "decoded_args": [
+          "0xf2371551fe3937db7c750f4dfabe5c2fffdcbf5a"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+        "to_address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+        "value": "0x0",
+        "input": "0x13af4035000000000000000000000000f2371551fe3937db7c750f4dfabe5c2fffdcbf5a",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x13af4035",
+        "decoded_function": "setOwner(address)",
+        "decoded_args": [
+          "0xf2371551fe3937db7c750f4dfabe5c2fffdcbf5a"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value": "0x0",
+        "input": "0x3dbb202b000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0xa1dd330d602c32622aa270ea73d078b803cb3518",
+          "0x6fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee300000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+        "value": "0",
+        "input": "0xbf40fac10000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+        "output": "0x000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "depth": 1,
+        "function_selector": "0xbf40fac1",
+        "decoded_function": "getAddress(string)",
+        "decoded_args": [
+          "OVM_L1CrossDomainMessenger"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "value": "0x0",
+        "input": "0x3dbb202b000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0xa1dd330d602c32622aa270ea73d078b803cb3518",
+          "0x6fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee300000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000353b20000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000353b20000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000353b20000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000353b20000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000000c3c1c532f1e39edf36be9fe0be1410313e074bf00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed000000000000000000000000b13285df724ea75f3f1e9912010b7e491dcd5ee30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "value": "0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "value": "0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "value": "0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 4,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 5,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "value": "0x0",
+        "input": "0x3dbb202b00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+          "0x6fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c00000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+        "value": "0",
+        "input": "0xbf40fac10000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+        "output": "0x000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "depth": 1,
+        "function_selector": "0xbf40fac1",
+        "decoded_function": "getAddress(string)",
+        "decoded_args": [
+          "OVM_L1CrossDomainMessenger"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "value": "0x0",
+        "input": "0x3dbb202b00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+          "0x6fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c00000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000811e90000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000811e90000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000811e90000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000811e90000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000008909dc15e40173ff4699343b6eb8132c65e18ec600000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000024f46901ed0000000000000000000000009bd25e67bf390437c8faf480ac735a27bcf6168c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "value": "0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "value": "0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 4,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0x47af267b4554485f4c4f434b424f58000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x4554485f4c4f434b424f58000000000000000000000000000000000000000000"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "value": "0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 4,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 5,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "value": "0x2399230ca64000",
+        "input": "0x679b6ded000000000000000000000000f1d7cc64fb4452f05c498126312ebe29f30fbcf90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000000000000000000000000000000000000000030d400000000000000000000000000000000000000000000000000000000005f5e10000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000024f46901ed00000000000000000000000095e337c5b155385945d407f5396387d0c2a3a26300000000000000000000000000000000000000000000000000000000",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a3",
+        "depth": 0,
+        "function_selector": "0x679b6ded",
+        "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "decoded_args": [
+          "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+          0,
+          10000000000000000,
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          200000,
+          100000000,
+          "0xf46901ed00000000000000000000000095e337c5b155385945d407f5396387d0c2a3a263"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+        "value": "0x2399230ca64000",
+        "input": "0x679b6ded000000000000000000000000f1d7cc64fb4452f05c498126312ebe29f30fbcf90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000000000000000000000000000000000000000030d400000000000000000000000000000000000000000000000000000000005f5e10000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000024f46901ed00000000000000000000000095e337c5b155385945d407f5396387d0c2a3a26300000000000000000000000000000000000000000000000000000000",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a3",
+        "depth": 1,
+        "function_selector": "0x679b6ded",
+        "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "decoded_args": [
+          "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+          0,
+          10000000000000000,
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          200000,
+          100000000,
+          "0xf46901ed00000000000000000000000095e337c5b155385945d407f5396387d0c2a3a263"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "value": "0x2399230ca64000",
+        "input": "0x8db5993b00000000000000000000000000000000000000000000000000000000000000090000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd76c99770b7679bea51b4697d38f01379e5f99e998c6fcc9ec862405f8ddf7c4a",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a3",
+        "depth": 2,
+        "function_selector": "0x8db5993b",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+        "value": "0x2399230ca64000",
+        "input": "0x8db5993b00000000000000000000000000000000000000000000000000000000000000090000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd76c99770b7679bea51b4697d38f01379e5f99e998c6fcc9ec862405f8ddf7c4a",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a3",
+        "depth": 3,
+        "function_selector": "0x8db5993b",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+        "value": "0x0",
+        "input": "0x76ef845300000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x76ef8453",
+        "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+        "decoded_args": [
+          [
+            "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+            "0x79a530c8e2fa8748b7b40dd3629c0520c2ccf03f",
+            "0x288dc841a52fca2707c6947b3a777c5e56cd87bc"
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            "0x13af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+            "0xa2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+            "0xf2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7"
+          ],
+          "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+          14
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+        "to_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "value": "0",
+        "input": "0x1a90a219",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x1a90a219",
+        "decoded_function": "messageFee()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+        "value": "0x0",
+        "input": "0x1a90a219",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x1a90a219",
+        "decoded_function": "messageFee()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+        "to_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "value": "0x0",
+        "input": "0xb19a437e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000003605b9c8ce5e2cddf4e51d4563526c39850198bb92458f003423543f7bfae0ffb1b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xb19a437e",
+        "decoded_function": "publishMessage(uint32,bytes,uint8)",
+        "decoded_args": [
+          0,
+          "0x5b9c8ce5e2cddf4e51d4563526c39850198bb92458f003423543f7bfae0ffb1b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+          1
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+        "value": "0x0",
+        "input": "0xb19a437e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000003605b9c8ce5e2cddf4e51d4563526c39850198bb92458f003423543f7bfae0ffb1b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0xb19a437e",
+        "decoded_function": "publishMessage(uint32,bytes,uint8)",
+        "decoded_args": [
+          0,
+          "0x5b9c8ce5e2cddf4e51d4563526c39850198bb92458f003423543f7bfae0ffb1b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+          1
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 5,
+    "unique_addresses": [
+      "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+      "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+      "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+      "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+      "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+      "0x73a79fab69143498ed3712e519a88a918e1f4072",
+      "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+      "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+      "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+      "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+      "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+      "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+      "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+      "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+      "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+      "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+      "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+      "0xf5f4496219f31cdcba6130b5402873624585615a"
+    ],
+    "delegatecall_count": 26,
+    "staticcall_count": 17,
+    "external_call_count": 16,
+    "value_transfer_count": 8,
+    "decoded_functions": [
+      "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+      "depositTransaction(address,uint256,uint64,bool,bytes)",
+      "getAddress(string)",
+      "isFeatureEnabled(bytes32)",
+      "messageFee()",
+      "publishMessage(uint32,bytes,uint8)",
+      "resourceConfig()",
+      "sendMessage(address,bytes,uint32)",
+      "sendMessage(address[],uint256[],bytes[],address,uint16)",
+      "setFactoryOwner(address)",
+      "setOwner(address)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "94:0:bridge",
+      "action_type": "bridge",
+      "severity_hint": "high",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "depth": 0,
+      "function_selector": "0x3dbb202b",
+      "decoded_function": "sendMessage(address,bytes,uint32)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value": "0x0",
+        "input": "0x3dbb202b000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0xa1dd330d602c32622aa270ea73d078b803cb3518",
+          "0x6fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be400000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:11:bridge",
+      "action_type": "bridge",
+      "severity_hint": "high",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+      "depth": 0,
+      "function_selector": "0x3dbb202b",
+      "decoded_function": "sendMessage(address,bytes,uint32)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "value": "0x0",
+        "input": "0x3dbb202b00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+          "0x6fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be100000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:22:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+      "depth": 0,
+      "function_selector": "0x679b6ded",
+      "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+      "value": "0x2399230ca64000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "value": "0x2399230ca64000",
+        "input": "0x679b6ded0000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000000000000000000000000000000000000000030d400000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b069900000000000000000000000000000000000000000000000000000000",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 0,
+        "function_selector": "0x679b6ded",
+        "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "decoded_args": [
+          "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+          0,
+          10000000000000000,
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          200000,
+          100000000,
+          "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699"
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:54:bridge",
+      "action_type": "bridge",
+      "severity_hint": "high",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+      "depth": 0,
+      "function_selector": "0x76ef8453",
+      "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+        "value": "0x0",
+        "input": "0x76ef845300000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x76ef8453",
+        "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+        "decoded_args": [
+          [
+            "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+            "0x79a530c8e2fa8748b7b40dd3629c0520c2ccf03f",
+            "0x288dc841a52fca2707c6947b3a777c5e56cd87bc"
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            "0x13af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+            "0xa2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+            "0xf2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7"
+          ],
+          "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+          14
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:13:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+      "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+      "depth": 1,
+      "function_selector": "0x3dbb202b",
+      "decoded_function": "sendMessage(address,bytes,uint32)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "value": "0x0",
+        "input": "0x3dbb202b00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+          "0x6fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be100000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:23:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+      "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+      "depth": 1,
+      "function_selector": "0x679b6ded",
+      "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+      "value": "0x2399230ca64000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+        "value": "0x2399230ca64000",
+        "input": "0x679b6ded0000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd0000000000000000000000000000000000000000000000000000000000030d400000000000000000000000000000000000000000000000000000000005f5e1000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b069900000000000000000000000000000000000000000000000000000000",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 1,
+        "function_selector": "0x679b6ded",
+        "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "decoded_args": [
+          "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+          0,
+          10000000000000000,
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+          200000,
+          100000000,
+          "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699"
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:27:permission_change",
+      "action_type": "permission_change",
+      "severity_hint": "high",
+      "from_address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+      "to_address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "depth": 1,
+      "function_selector": "0x13af4035",
+      "decoded_function": "setOwner(address)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+        "to_address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+        "value": "0x0",
+        "input": "0x13af4035000000000000000000000000f2371551fe3937db7c750f4dfabe5c2fffdcbf5a",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x13af4035",
+        "decoded_function": "setOwner(address)",
+        "decoded_args": [
+          "0xf2371551fe3937db7c750f4dfabe5c2fffdcbf5a"
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:2:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+      "depth": 1,
+      "function_selector": "0x3dbb202b",
+      "decoded_function": "sendMessage(address,bytes,uint32)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "value": "0x0",
+        "input": "0x3dbb202b000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x3dbb202b",
+        "decoded_function": "sendMessage(address,bytes,uint32)",
+        "decoded_args": [
+          "0xa1dd330d602c32622aa270ea73d078b803cb3518",
+          "0x6fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be400000000000000000000000000000000000000000000000000000000",
+          200000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:24:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+      "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+      "depth": 2,
+      "function_selector": "0x8db5993b",
+      "decoded_function": null,
+      "value": "0x2399230ca64000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "value": "0x2399230ca64000",
+        "input": "0x8db5993b00000000000000000000000000000000000000000000000000000000000000090000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd4570f8a09dfa60854208229edf5651d3fbeb415e9036aee757bab1f50d869287",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 2,
+        "function_selector": "0x8db5993b",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:56:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+      "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+      "depth": 2,
+      "function_selector": "0x1a90a219",
+      "decoded_function": "messageFee()",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+        "value": "0x0",
+        "input": "0x1a90a219",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x1a90a219",
+        "decoded_function": "messageFee()",
+        "decoded_args": [],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:58:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+      "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+      "depth": 2,
+      "function_selector": "0xb19a437e",
+      "decoded_function": "publishMessage(uint32,bytes,uint8)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+        "value": "0x0",
+        "input": "0xb19a437e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000003605b9c8ce5e2cddf4e51d4563526c39850198bb92458f003423543f7bfae0ffb1b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0xb19a437e",
+        "decoded_function": "publishMessage(uint32,bytes,uint8)",
+        "decoded_args": [
+          0,
+          "0x5b9c8ce5e2cddf4e51d4563526c39850198bb92458f003423543f7bfae0ffb1b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000001c000000000000000000000000098f3c9e6e3face36baad05fe09d375ef1464288b000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000003000000000000000000000000afe208a311b21f13ef87e33a90049fc17a7acdec00000000000000000000000079a530c8e2fa8748b7b40dd3629c0520c2ccf03f000000000000000000000000288dc841a52fca2707c6947b3a777c5e56cd87bc00000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a2e74af6000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024f2fde38b000000000000000000000000044aaf330d7fd6ae683eec5c1c1d1fff5196b6b700000000000000000000000000000000000000000000000000000000",
+          1
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:15:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+      "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+      "depth": 3,
+      "function_selector": "0xe9e05c42",
+      "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000811e80000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000811e80000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000031fafd4889fa1269f7a13a66ee0fb458f27d72a900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf7200000000000000000000000033128a8fc17869897dce68ed026d694621f6fdfd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000abea76658b205696d49b5f91b2a03536cb8a3be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:25:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+      "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+      "depth": 3,
+      "function_selector": "0x8db5993b",
+      "decoded_function": null,
+      "value": "0x2399230ca64000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+        "value": "0x2399230ca64000",
+        "input": "0x8db5993b00000000000000000000000000000000000000000000000000000000000000090000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd4570f8a09dfa60854208229edf5651d3fbeb415e9036aee757bab1f50d869287",
+        "output": "0x00000000000000000000000000000000000000000000000000000000002424a2",
+        "depth": 3,
+        "function_selector": "0x8db5993b",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:4:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+      "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+      "depth": 3,
+      "function_selector": "0xe9e05c42",
+      "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "value": "0x0",
+        "input": "0xe9e05c4200000000000000000000000042000000000000000000000000000000000000070000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007df76000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000001a4d764ad0b00010000000000000000000000000000000000000000000000000000000353b10000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0xe9e05c42",
+        "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "decoded_args": [
+          "0x4200000000000000000000000000000000000007",
+          0,
+          515958,
+          false,
+          "0xd764ad0b00010000000000000000000000000000000000000000000000000000000353b10000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a1dd330d602c32622aa270ea73d078b803cb351800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030d4000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a46fadcf720000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000002413af4035000000000000000000000000ec23cf5a1db3dcc6595385d28b2a4d9b52503be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:10:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+      "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+      "depth": 5,
+      "function_selector": "0xcc731b02",
+      "decoded_function": "resourceConfig()",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 5,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:17:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+      "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+      "depth": 5,
+      "function_selector": "0x47af267b",
+      "decoded_function": "isFeatureEnabled(bytes32)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null,
+        "merged_count": 4
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:21:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+      "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+      "depth": 5,
+      "function_selector": "0xcc731b02",
+      "decoded_function": "resourceConfig()",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "value": "0x0",
+        "input": "0xcc731b02",
+        "output": "0x0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+        "depth": 5,
+        "function_selector": "0xcc731b02",
+        "decoded_function": "resourceConfig()",
+        "decoded_args": [],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "94:6:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+      "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+      "depth": 5,
+      "function_selector": "0x47af267b",
+      "decoded_function": "isFeatureEnabled(bytes32)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "value": "0x0",
+        "input": "0x47af267b435553544f4d5f4741535f544f4b454e00000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 5,
+        "function_selector": "0x47af267b",
+        "decoded_function": "isFeatureEnabled(bytes32)",
+        "decoded_args": [
+          "0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000"
+        ],
+        "error": null,
+        "merged_count": 4
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "summary": "An undisclosed address participates in an uncovered critical business action.",
+      "disclosed_addresses": [
+        "0x044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+        "0x0c3c1c532f1e39edf36be9fe0be1410313e074bf",
+        "0x114a43df6c5f54ebb8a9d70cd1951d3dd68004c7",
+        "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+        "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+        "0x3e40db80450f025b01e45c58b0af763c7a29a8bd",
+        "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+        "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+        "0x94460443ca27ffc1baeca61165fde18346c91abd",
+        "0x95e337c5b155385945d407f5396387d0c2a3a263",
+        "0x9bd25e67bf390437c8faf480ac735a27bcf6168c",
+        "0xabea76658b205696d49b5f91b2a03536cb8a3be1",
+        "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+        "0xb13285df724ea75f3f1e9912010b7e491dcd5ee3",
+        "0xb8018422bce25d82e70cb98fda96a4f502d89427",
+        "0xec23cf5a1db3dcc6595385d28b2a4d9b52503be4",
+        "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+        "0xff77c0ed0b6b13a20446969107e5867abc46f53a",
+        "0xff7ad5da31fecdc678796c88b05926db896b0699"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+        "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+        "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+        "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+        "0x73a79fab69143498ed3712e519a88a918e1f4072",
+        "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+        "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+        "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+        "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+        "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+        "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+        "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+        "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+        "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+        "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+        "0xf5f4496219f31cdcba6130b5402873624585615a"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "CRITICAL",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+                "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+                "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+                "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+                "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+                "0x73a79fab69143498ed3712e519a88a918e1f4072",
+                "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+                "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+                "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+                "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+                "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+                "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+                "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+                "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+                "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+                "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+                "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+                "0xf5f4496219f31cdcba6130b5402873624585615a"
+              ],
+              "related_actions": [
+                {
+                  "id": "94:0:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+                  "depth": 0,
+                  "function_selector": "0x3dbb202b",
+                  "decoded_function": "sendMessage(address,bytes,uint32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:11:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+                  "depth": 0,
+                  "function_selector": "0x3dbb202b",
+                  "decoded_function": "sendMessage(address,bytes,uint32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:22:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+                  "depth": 0,
+                  "function_selector": "0x679b6ded",
+                  "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+                  "value": "0x2399230ca64000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:54:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+                  "depth": 0,
+                  "function_selector": "0x76ef8453",
+                  "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:13:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+                  "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+                  "depth": 1,
+                  "function_selector": "0x3dbb202b",
+                  "decoded_function": "sendMessage(address,bytes,uint32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:23:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+                  "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+                  "depth": 1,
+                  "function_selector": "0x679b6ded",
+                  "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+                  "value": "0x2399230ca64000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:2:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+                  "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+                  "depth": 1,
+                  "function_selector": "0x3dbb202b",
+                  "decoded_function": "sendMessage(address,bytes,uint32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:24:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+                  "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+                  "depth": 2,
+                  "function_selector": "0x8db5993b",
+                  "decoded_function": null,
+                  "value": "0x2399230ca64000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:56:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+                  "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+                  "depth": 2,
+                  "function_selector": "0x1a90a219",
+                  "decoded_function": "messageFee()",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:58:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+                  "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+                  "depth": 2,
+                  "function_selector": "0xb19a437e",
+                  "decoded_function": "publishMessage(uint32,bytes,uint8)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:15:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+                  "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+                  "depth": 3,
+                  "function_selector": "0xe9e05c42",
+                  "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:25:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+                  "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+                  "depth": 3,
+                  "function_selector": "0x8db5993b",
+                  "decoded_function": null,
+                  "value": "0x2399230ca64000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:4:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+                  "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+                  "depth": 3,
+                  "function_selector": "0xe9e05c42",
+                  "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:10:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+                  "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+                  "depth": 5,
+                  "function_selector": "0xcc731b02",
+                  "decoded_function": "resourceConfig()",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:17:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+                  "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+                  "depth": 5,
+                  "function_selector": "0x47af267b",
+                  "decoded_function": "isFeatureEnabled(bytes32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:21:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+                  "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+                  "depth": 5,
+                  "function_selector": "0xcc731b02",
+                  "decoded_function": "resourceConfig()",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:6:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+                  "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+                  "depth": 5,
+                  "function_selector": "0x47af267b",
+                  "decoded_function": "isFeatureEnabled(bytes32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update",
+                "permission_change"
+              ],
+              "uncovered_business_actions": [
+                "bridge",
+                "transfer"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "94:0:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+                  "depth": 0,
+                  "function_selector": "0x3dbb202b",
+                  "decoded_function": "sendMessage(address,bytes,uint32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:11:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+                  "depth": 0,
+                  "function_selector": "0x3dbb202b",
+                  "decoded_function": "sendMessage(address,bytes,uint32)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "94:54:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+                  "depth": 0,
+                  "function_selector": "0x76ef8453",
+                  "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ]
+            }
+          ],
+          "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+            "0x0c3c1c532f1e39edf36be9fe0be1410313e074bf",
+            "0x114a43df6c5f54ebb8a9d70cd1951d3dd68004c7",
+            "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+            "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+            "0x3e40db80450f025b01e45c58b0af763c7a29a8bd",
+            "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+            "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+            "0x94460443ca27ffc1baeca61165fde18346c91abd",
+            "0x95e337c5b155385945d407f5396387d0c2a3a263",
+            "0x9bd25e67bf390437c8faf480ac735a27bcf6168c",
+            "0xabea76658b205696d49b5f91b2a03536cb8a3be1",
+            "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+            "0xb13285df724ea75f3f1e9912010b7e491dcd5ee3",
+            "0xb8018422bce25d82e70cb98fda96a4f502d89427",
+            "0xec23cf5a1db3dcc6595385d28b2a4d9b52503be4",
+            "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+            "0xff77c0ed0b6b13a20446969107e5867abc46f53a",
+            "0xff7ad5da31fecdc678796c88b05926db896b0699"
+          ],
+          "trace_unique_addresses": [
+            "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+            "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+            "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+            "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+            "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+            "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+            "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+            "0x73a79fab69143498ed3712e519a88a918e1f4072",
+            "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+            "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+            "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+            "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+            "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+            "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+            "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+            "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+            "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+            "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+            "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+            "0xf5f4496219f31cdcba6130b5402873624585615a"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+            "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+            "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+            "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+            "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+            "0x73a79fab69143498ed3712e519a88a918e1f4072",
+            "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+            "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+            "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+            "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+            "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+            "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+            "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+            "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+            "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+            "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+            "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+            "0xf5f4496219f31cdcba6130b5402873624585615a"
+          ],
+          "covered_business_actions": [
+            "parameter_update",
+            "permission_change"
+          ],
+          "uncovered_business_actions": [
+            "bridge",
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 5,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Involves executing ten transactions across multiple chains, setting up new fee architecture and fee adapters.",
+            "textual_evidence": "Because these transactions are crosschain, governance front ends may not decode them correctly."
+          },
+          "actual_max_depth": 5,
+          "delegatecall_count": 26,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "bridge",
+            "parameter_update",
+            "permission_change",
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "bridge",
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+        "depositTransaction(address,uint256,uint64,bool,bytes)",
+        "getAddress(string)",
+        "isFeatureEnabled(bytes32)",
+        "messageFee()",
+        "publishMessage(uint32,bytes,uint8)",
+        "resourceConfig()",
+        "sendMessage(address,bytes,uint32)",
+        "sendMessage(address[],uint256[],bytes[],address,uint16)",
+        "setFactoryOwner(address)",
+        "setOwner(address)"
+      ],
+      "unmatched_functions": [
+        "bridge",
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "role_change",
+        "role_change",
+        "parameter_update",
+        "role_change",
+        "role_change",
+        "role_change"
+      ],
+      "actual_actions": [
+        "bridge",
+        "parameter_update",
+        "permission_change",
+        "transfer"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "role_change",
+                "role_change",
+                "parameter_update",
+                "role_change",
+                "role_change",
+                "role_change"
+              ],
+              "actual_business_actions": [
+                "bridge",
+                "parameter_update",
+                "permission_change",
+                "transfer"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+                "depositTransaction(address,uint256,uint64,bool,bytes)",
+                "getAddress(string)",
+                "isFeatureEnabled(bytes32)",
+                "messageFee()",
+                "publishMessage(uint32,bytes,uint8)",
+                "resourceConfig()",
+                "sendMessage(address,bytes,uint32)",
+                "sendMessage(address[],uint256[],bytes[],address,uint16)",
+                "setFactoryOwner(address)",
+                "setOwner(address)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "V3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));",
+              "canonical_action": "role_change",
+              "object": "UniswapV3Factory",
+              "claimed_effect": "Change the owner on UniswapV3Factory to v3OpenFeeAdapter",
+              "textual_evidence": "/// Change the owner on UniswapV3Factory to v3OpenFeeAdapter\nV3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "V3_FACTORY.setOwner(address(v3OpenFeeAdapter));",
+              "canonical_action": "role_change",
+              "object": "UniswapV3Factory",
+              "claimed_effect": "Set the owner of the V3 Factory to the V3OpenFeeAdapter",
+              "textual_evidence": "/// Set the owner of the V3 Factory to the V3OpenFeeAdapter\nV3_FACTORY.setOwner(address(v3OpenFeeAdapter));",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "V2_FACTORY.setFeeTo(address(tokenJar));",
+              "canonical_action": "parameter_update",
+              "object": "UniswapV2Factory",
+              "claimed_effect": "Set the recipient of V2 protocol fees to the TokenJar",
+              "textual_evidence": "/// Set the recipient of V2 protocol fees to the TokenJar\nV2_FACTORY.setFeeTo(address(tokenJar));",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "V2_FACTORY.setFeeToSetter(CrossChainAccount)",
+              "canonical_action": "role_change",
+              "object": "UniswapV2Factory",
+              "claimed_effect": "Transfer v2 setFeeToSetter role",
+              "textual_evidence": "/// Transfer v2 setFeeToSetter role\nV2_FACTORY.setFeeToSetter(CrossChainAccount)",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "V3_FACTORY.setOwner(CrossChainAccount)",
+              "canonical_action": "role_change",
+              "object": "UniswapV3Factory",
+              "claimed_effect": "Transfer UniswapV3Factory owner role",
+              "textual_evidence": "/// Transfer UniswapV3Factory owner role \nV3_FACTORY.setOwner(CrossChainAccount)",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "POOL_MANAGER.transferOwnership(CrossChainAccount)",
+              "canonical_action": "role_change",
+              "object": "POOL_MANAGER",
+              "claimed_effect": "Transfer Uniswap v4 PoolManager owner role",
+              "textual_evidence": "// Transfer Uniswap v4 PoolManager owner role\nPOOL_MANAGER.transferOwnership(CrossChainAccount)",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "94:0:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+              "depth": 0,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:11:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+              "depth": 0,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:22:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+              "depth": 0,
+              "function_selector": "0x679b6ded",
+              "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:54:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+              "depth": 0,
+              "function_selector": "0x76ef8453",
+              "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:13:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+              "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+              "depth": 1,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:23:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+              "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+              "depth": 1,
+              "function_selector": "0x679b6ded",
+              "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:27:permission_change",
+              "action_type": "permission_change",
+              "severity_hint": "high",
+              "from_address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+              "to_address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+              "depth": 1,
+              "function_selector": "0x13af4035",
+              "decoded_function": "setOwner(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+              "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+              "depth": 1,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:24:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+              "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+              "depth": 2,
+              "function_selector": "0x8db5993b",
+              "decoded_function": null,
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:56:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+              "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+              "depth": 2,
+              "function_selector": "0x1a90a219",
+              "decoded_function": "messageFee()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:58:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+              "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+              "depth": 2,
+              "function_selector": "0xb19a437e",
+              "decoded_function": "publishMessage(uint32,bytes,uint8)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:15:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+              "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+              "depth": 3,
+              "function_selector": "0xe9e05c42",
+              "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:25:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+              "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+              "depth": 3,
+              "function_selector": "0x8db5993b",
+              "decoded_function": null,
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:4:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+              "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+              "depth": 3,
+              "function_selector": "0xe9e05c42",
+              "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:10:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+              "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+              "depth": 5,
+              "function_selector": "0xcc731b02",
+              "decoded_function": "resourceConfig()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:17:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+              "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+              "depth": 5,
+              "function_selector": "0x47af267b",
+              "decoded_function": "isFeatureEnabled(bytes32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:21:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+              "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+              "depth": 5,
+              "function_selector": "0xcc731b02",
+              "decoded_function": "resourceConfig()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:6:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+              "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+              "depth": 5,
+              "function_selector": "0x47af267b",
+              "decoded_function": "isFeatureEnabled(bytes32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "bridge",
+            "parameter_update",
+            "permission_change",
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+            "depositTransaction(address,uint256,uint64,bool,bytes)",
+            "getAddress(string)",
+            "isFeatureEnabled(bytes32)",
+            "messageFee()",
+            "publishMessage(uint32,bytes,uint8)",
+            "resourceConfig()",
+            "sendMessage(address,bytes,uint32)",
+            "sendMessage(address[],uint256[],bytes[],address,uint16)",
+            "setFactoryOwner(address)",
+            "setOwner(address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "CRITICAL",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+            "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+            "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+            "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+            "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+            "0x73a79fab69143498ed3712e519a88a918e1f4072",
+            "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+            "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+            "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+            "0x8efb6b5c4767b09dc9aa6af4eaa89f749522bae2",
+            "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+            "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+            "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+            "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+            "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+            "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+            "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+            "0xf5f4496219f31cdcba6130b5402873624585615a"
+          ],
+          "related_actions": [
+            {
+              "id": "94:0:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+              "depth": 0,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:11:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+              "depth": 0,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:22:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+              "depth": 0,
+              "function_selector": "0x679b6ded",
+              "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:54:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+              "depth": 0,
+              "function_selector": "0x76ef8453",
+              "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:13:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+              "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+              "depth": 1,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:23:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+              "to_address": "0x7c058ad1d0ee415f7e7f30e62db1bcf568470a10",
+              "depth": 1,
+              "function_selector": "0x679b6ded",
+              "decoded_function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+              "to_address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+              "depth": 1,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:24:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+              "to_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+              "depth": 2,
+              "function_selector": "0x8db5993b",
+              "decoded_function": null,
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:56:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+              "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+              "depth": 2,
+              "function_selector": "0x1a90a219",
+              "decoded_function": "messageFee()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:58:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x98f3c9e6e3face36baad05fe09d375ef1464288b",
+              "to_address": "0x3c3d457f1522d3540ab3325aa5f1864e34cba9d0",
+              "depth": 2,
+              "function_selector": "0xb19a437e",
+              "decoded_function": "publishMessage(uint32,bytes,uint8)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:15:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x49048044d57e1c92a77f79988d21fa8faf74e97e",
+              "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+              "depth": 3,
+              "function_selector": "0xe9e05c42",
+              "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:25:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x8315177ab297ba92a06054ce80a67ed4dbd7ed3a",
+              "to_address": "0x93e8f92327bfa8096f5f6ee5f2a49183d3b3b898",
+              "depth": 3,
+              "function_selector": "0x8db5993b",
+              "decoded_function": null,
+              "value": "0x2399230ca64000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:4:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+              "to_address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+              "depth": 3,
+              "function_selector": "0xe9e05c42",
+              "decoded_function": "depositTransaction(address,uint256,uint64,bool,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:10:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+              "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+              "depth": 5,
+              "function_selector": "0xcc731b02",
+              "decoded_function": "resourceConfig()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:17:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+              "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+              "depth": 5,
+              "function_selector": "0x47af267b",
+              "decoded_function": "isFeatureEnabled(bytes32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:21:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x73a79fab69143498ed3712e519a88a918e1f4072",
+              "to_address": "0x0507aaa21c678976fcdc7e804836acd6ebc17a44",
+              "depth": 5,
+              "function_selector": "0xcc731b02",
+              "decoded_function": "resourceConfig()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:6:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+              "to_address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+              "depth": 5,
+              "function_selector": "0x47af267b",
+              "decoded_function": "isFeatureEnabled(bytes32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update",
+            "permission_change"
+          ],
+          "uncovered_business_actions": [
+            "bridge",
+            "transfer"
+          ],
+          "material_related_actions": [
+            {
+              "id": "94:0:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+              "depth": 0,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:11:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x866e82a600a1414e583f7f13623f1ac5d58b0afa",
+              "depth": 0,
+              "function_selector": "0x3dbb202b",
+              "decoded_function": "sendMessage(address,bytes,uint32)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "94:54:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0xf5f4496219f31cdcba6130b5402873624585615a",
+              "depth": 0,
+              "function_selector": "0x76ef8453",
+              "decoded_function": "sendMessage(address[],uint256[],bytes[],address,uint16)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "role_change",
+            "role_change",
+            "parameter_update",
+            "role_change",
+            "role_change",
+            "role_change"
+          ],
+          "actual_business_actions": [
+            "bridge",
+            "parameter_update",
+            "permission_change",
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+            "depositTransaction(address,uint256,uint64,bool,bytes)",
+            "getAddress(string)",
+            "isFeatureEnabled(bytes32)",
+            "messageFee()",
+            "publishMessage(uint32,bytes,uint8)",
+            "resourceConfig()",
+            "sendMessage(address,bytes,uint32)",
+            "sendMessage(address[],uint256[],bytes[],address,uint16)",
+            "setFactoryOwner(address)",
+            "setOwner(address)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

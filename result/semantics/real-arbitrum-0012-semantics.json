@@ -1,0 +1,79 @@
+{
+  "proposal_summary": "This proposal transfers the proposer and canceller roles from the current Arbitrum Core Governor and Arbitrum Treasury Governor to newly deployed Governor contracts to upgrade the governance infrastructure.",
+  "disclosed_entities": [
+    {
+      "name": "Current Arbitrum Core Governor",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "implicit",
+      "textual_evidence": "transfer the proposer and canceller roles from the current Arbitrum Core Governor"
+    },
+    {
+      "name": "Current Arbitrum Treasury Governor",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "implicit",
+      "textual_evidence": "transfer the proposer and canceller roles from the current Arbitrum Core Governor and Arbitrum Treasury Governor"
+    },
+    {
+      "name": "New Core Governor",
+      "address": "0x7796f378b3c56ced57350b938561d8c52256456b",
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Core Governor: 0x7796F378B3c56ceD57350B938561D8c52256456b"
+    },
+    {
+      "name": "New Treasury Governor",
+      "address": "0x4fd1216c8b5e72b22785169ae5c1e8f3b30c19e4",
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Treasury Governor: 0x4fd1216c8b5E72b22785169Ae5C1e8f3b30C19E4"
+    },
+    {
+      "name": "Timelock contract",
+      "address": null,
+      "entity_type": "timelock",
+      "disclosure_level": "implicit",
+      "textual_evidence": "on the timelock contract"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x7796f378b3c56ced57350b938561d8c52256456b",
+      "textual_evidence": "Core Governor: 0x7796F378B3c56ceD57350B938561D8c52256456b"
+    },
+    {
+      "address": "0x4fd1216c8b5e72b22785169ae5c1e8f3b30c19e4",
+      "textual_evidence": "Treasury Governor: 0x4fd1216c8b5E72b22785169Ae5C1e8f3b30C19E4"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Grant the newly deployed Core Governor and Treasury Governor contracts the 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+      "canonical_action": "treasury_operation",
+      "object": "Timelock contract",
+      "claimed_effect": "The new Governor contracts will have the ability to propose and cancel proposals on the timelock.",
+      "textual_evidence": "Grant the newly deployed Core Governor and Treasury Governor contracts the 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Revoke the current Core Governor and Treasury Governor contracts' 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+      "canonical_action": "treasury_operation",
+      "object": "Timelock contract",
+      "claimed_effect": "The old Governor contracts will no longer have the ability to execute proposals.",
+      "textual_evidence": "Revoke the current Core Governor and Treasury Governor contracts' 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves changing multiple roles for several contracts on a timelock",
+    "textual_evidence": "transfer the proposer and canceller roles"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Addresses for current Governors and timelock contract are not disclosed"
+  ],
+  "llm_status": "repaired",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,34 @@
+{
+  "proposal_summary": "This proposal refreshes accounting records and does not mention token movement.",
+  "disclosed_entities": [
+    {
+      "name": "DAO timelock",
+      "address": "0x1000000000000000000000000000000000000001",
+      "entity_type": "timelock",
+      "disclosure_level": "implicit",
+      "textual_evidence": "standard DAO execution context"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "maintenance",
+      "canonical_action": "maintenance",
+      "object": null,
+      "claimed_effect": "Refresh accounting records without moving assets.",
+      "textual_evidence": "This proposal refreshes accounting records and does not mention token movement.",
+      "confidence": 0.82
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The text describes routine single-step maintenance.",
+    "textual_evidence": "This proposal refreshes accounting records and does not mention token movement."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Synthetic mutant semantics intentionally omit the risky business action."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "A proposal to update Reserve Factors and IR curves for frozen assets on Aave V2 Ethereum to encourage repayment and deprecation.",
+  "disclosed_entities": [
+    {
+      "name": "Chaos Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "author: \"Chaos Labs\""
+    },
+    {
+      "name": "AaveV2Ethereum",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "A proposal to update Reserve Factors and IR curves for frozen assets on V2 Ethereum"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "update Reserve Factors and IR curves for frozen assets",
+      "canonical_action": "parameter_update",
+      "object": "frozen assets",
+      "claimed_effect": "encourage the repayment of borrowed assets and redemption of supplied assets by setting RF to 99.90% and Base Rate to 20%, Slope1 to 0%, Slope2 to 300%",
+      "textual_evidence": "setting the RFs of all frozen assets on V2 Ethereum to near 100% ... raising the borrow rates across V2 frozen assets ... Set Base Rate at 20% / Set Slope1 at 0% / Set Slope2 at 300%",
+      "confidence": 0.99
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Updates RF and IR curves across 20 distinct assets on V2 Ethereum, involving multiple parameter updates per asset.",
+    "textual_evidence": "Specification table shows RF, Base, Slope1, and Slope2 changes for 20 assets."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No deployed addresses for the payload or targeted smart contracts were explicitly provided in the text (only GitHub links)."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

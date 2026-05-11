@@ -1,0 +1,178 @@
+{
+  "random_seed": 20260429,
+  "quota": {
+    "early": {
+      "executed_like": 4,
+      "non_executed_like": 2
+    },
+    "middle": {
+      "executed_like": 5,
+      "non_executed_like": 1
+    },
+    "recent": {
+      "executed_like": 6,
+      "non_executed_like": 2
+    }
+  },
+  "daos": {
+    "compound": {
+      "indexed_total": 531,
+      "eligible_total": 531,
+      "sampled_total": 20,
+      "actual_distribution": {
+        "early": {
+          "executed_like": 4,
+          "non_executed_like": 2
+        },
+        "middle": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "recent": {
+          "executed_like": 6,
+          "non_executed_like": 2
+        }
+      },
+      "fallback_events": [],
+      "shortfall": 0,
+      "excluded_status_counts": {},
+      "missing_created_block": 0
+    },
+    "uniswap": {
+      "indexed_total": 88,
+      "eligible_total": 88,
+      "sampled_total": 20,
+      "actual_distribution": {
+        "early": {
+          "executed_like": 4,
+          "non_executed_like": 2
+        },
+        "middle": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "recent": {
+          "executed_like": 6,
+          "non_executed_like": 2
+        }
+      },
+      "fallback_events": [],
+      "shortfall": 0,
+      "excluded_status_counts": {},
+      "missing_created_block": 0
+    },
+    "ens": {
+      "indexed_total": 69,
+      "eligible_total": 68,
+      "sampled_total": 20,
+      "actual_distribution": {
+        "early": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "middle": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "recent": {
+          "executed_like": 7,
+          "non_executed_like": 1
+        }
+      },
+      "fallback_events": [
+        {
+          "time_bucket": "early",
+          "status_bucket": "non_executed_like",
+          "strategy": "same_time_other_status",
+          "needed_before_strategy": 1
+        },
+        {
+          "time_bucket": "recent",
+          "status_bucket": "non_executed_like",
+          "strategy": "same_time_other_status",
+          "needed_before_strategy": 1
+        }
+      ],
+      "shortfall": 0,
+      "excluded_status_counts": {
+        "active": 1
+      },
+      "missing_created_block": 0
+    },
+    "arbitrum": {
+      "indexed_total": 85,
+      "eligible_total": 84,
+      "sampled_total": 20,
+      "actual_distribution": {
+        "early": {
+          "executed_like": 4,
+          "non_executed_like": 2
+        },
+        "middle": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "recent": {
+          "executed_like": 6,
+          "non_executed_like": 2
+        }
+      },
+      "fallback_events": [],
+      "shortfall": 0,
+      "excluded_status_counts": {
+        "active": 1
+      },
+      "missing_created_block": 0
+    },
+    "aave": {
+      "indexed_total": 401,
+      "eligible_total": 379,
+      "sampled_total": 20,
+      "actual_distribution": {
+        "early": {
+          "executed_like": 4,
+          "non_executed_like": 2
+        },
+        "middle": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "recent": {
+          "executed_like": 6,
+          "non_executed_like": 2
+        }
+      },
+      "fallback_events": [],
+      "shortfall": 0,
+      "excluded_status_counts": {
+        "pending": 22
+      },
+      "missing_created_block": 0
+    },
+    "nouns-dao": {
+      "indexed_total": 962,
+      "eligible_total": 958,
+      "sampled_total": 20,
+      "actual_distribution": {
+        "early": {
+          "executed_like": 4,
+          "non_executed_like": 2
+        },
+        "middle": {
+          "executed_like": 5,
+          "non_executed_like": 1
+        },
+        "recent": {
+          "executed_like": 6,
+          "non_executed_like": 2
+        }
+      },
+      "fallback_events": [],
+      "shortfall": 0,
+      "excluded_status_counts": {
+        "active": 4
+      },
+      "missing_created_block": 0
+    }
+  }
+}

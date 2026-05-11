@@ -1,0 +1,496 @@
+{
+  "metadata": {
+    "proposal_id": "7",
+    "generated_at": "2026-05-08T11:15:23.731010+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Deactivates the ability to open new stable rate borrowing positions on Aave V1 and updates the rebalance mechanism to enforce a swap to variable rates during extreme borrowing pressure.",
+    "disclosed_entities": [
+      {
+        "name": "Proposal Contract",
+        "address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Executes the proposal deployed at https://etherscan.io/address/0x6a46c03c861cab74c8a213983b7eb295234c16b3#code"
+      },
+      {
+        "name": "LendingPool",
+        "address": "0xdb9217fad3c1463093fc2801dd0a22c930850a61",
+        "entity_type": "implementation",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code"
+      },
+      {
+        "name": "LendingPoolCore",
+        "address": "0x2847a5d7ce69790cb40471d454feb21a0be1f2e3",
+        "entity_type": "implementation",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "textual_evidence": "Executes the proposal deployed at https://etherscan.io/address/0x6a46c03c861cab74c8a213983b7eb295234c16b3#code"
+      },
+      {
+        "address": "0xdb9217fad3c1463093fc2801dd0a22c930850a61",
+        "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code"
+      },
+      {
+        "address": "0x2847a5d7ce69790cb40471d454feb21a0be1f2e3",
+        "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Updates the LendingPool implementation",
+        "canonical_action": "upgrade",
+        "object": "LendingPool",
+        "claimed_effect": "Sets a new implementation address for the LendingPool",
+        "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Updates the LendingPoolCore implementation",
+        "canonical_action": "upgrade",
+        "object": "LendingPoolCore",
+        "claimed_effect": "Sets a new implementation address for LendingPoolCore to update rebalanceStableRate() logic",
+        "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Execute disableReserveStableBorrowRate()",
+        "canonical_action": "parameter_update",
+        "object": "All Aave V1 assets",
+        "claimed_effect": "Disables stable rate borrowing for all assets listed on Aave V1",
+        "textual_evidence": "Execute disableReserveStableBorrowRate() in all the assets listed on the protocol V1",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal requires updating two core system implementations (LendingPool and LendingPoolCore) and executing a parameter change across all supported assets.",
+      "textual_evidence": "Deactivation of the ability to open new stable rate borrowing positions on Aave V1 and update of the rebalance mechanism"
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "rebalanceStableRate()",
+        "textual_evidence": "These contract updates are needed to update the implementation of the rebalanceStableRate() function"
+      },
+      {
+        "function_name": "disableReserveStableBorrowRate()",
+        "textual_evidence": "Execute disableReserveStableBorrowRate() in all the assets listed on the protocol V1"
+      }
+    ],
+    "limitations": [
+      "No specific address was provided for the assets that will have their borrow rate disabled."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "to_address": "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+        "value": "0x0",
+        "input": "0x5aef021f000000000000000000000000db9217fad3c1463093fc2801dd0a22c930850a61",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 1,
+        "function_selector": "0x5aef021f",
+        "decoded_function": "setLendingPoolImpl(address)",
+        "decoded_args": [
+          "0xdb9217fad3c1463093fc2801dd0a22c930850a61"
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+      "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execute()",
+      "setLendingPoolImpl(address)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "7:0:arbitrary_call",
+      "action_type": "arbitrary_call",
+      "severity_hint": "high",
+      "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+      "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+      "depth": 0,
+      "function_selector": "0x61461954",
+      "decoded_function": "execute()",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 4,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered high-risk business action.",
+      "disclosed_addresses": [
+        "0x2847a5d7ce69790cb40471d454feb21a0be1f2e3",
+        "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "0xdb9217fad3c1463093fc2801dd0a22c930850a61"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c"
+              ],
+              "related_actions": [
+                {
+                  "id": "7:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [
+                "arbitrary_call"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "7:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ]
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x2847a5d7ce69790cb40471d454feb21a0be1f2e3",
+            "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+            "0xdb9217fad3c1463093fc2801dd0a22c930850a61"
+          ],
+          "trace_unique_addresses": [
+            "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+            "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal requires updating two core system implementations (LendingPool and LendingPoolCore) and executing a parameter change across all supported assets.",
+            "textual_evidence": "Deactivation of the ability to open new stable rate borrowing positions on Aave V1 and update of the rebalance mechanism"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "execute()",
+        "setLendingPoolImpl(address)"
+      ],
+      "unmatched_functions": [
+        "arbitrary_call"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "upgrade",
+        "upgrade",
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "arbitrary_call",
+        "parameter_update"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "upgrade",
+                "upgrade",
+                "parameter_update"
+              ],
+              "actual_business_actions": [
+                "arbitrary_call",
+                "parameter_update"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "execute()",
+                "setLendingPoolImpl(address)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Updates the LendingPool implementation",
+              "canonical_action": "upgrade",
+              "object": "LendingPool",
+              "claimed_effect": "Sets a new implementation address for the LendingPool",
+              "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Updates the LendingPoolCore implementation",
+              "canonical_action": "upgrade",
+              "object": "LendingPoolCore",
+              "claimed_effect": "Sets a new implementation address for LendingPoolCore to update rebalanceStableRate() logic",
+              "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Execute disableReserveStableBorrowRate()",
+              "canonical_action": "parameter_update",
+              "object": "All Aave V1 assets",
+              "claimed_effect": "Disables stable rate borrowing for all assets listed on Aave V1",
+              "textual_evidence": "Execute disableReserveStableBorrowRate() in all the assets listed on the protocol V1",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "7:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "execute()",
+            "setLendingPoolImpl(address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "related_actions": [
+            {
+              "id": "7:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ],
+          "material_related_actions": [
+            {
+              "id": "7:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ]
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "upgrade",
+            "upgrade",
+            "parameter_update"
+          ],
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "execute()",
+            "setLendingPoolImpl(address)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

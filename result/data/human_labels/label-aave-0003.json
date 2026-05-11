@@ -1,0 +1,9 @@
+{
+  "benchmark_id": "real-aave-0003",
+  "human_overall_risk": "LOW",
+  "dimension_labels": {
+    "conflict_detection": "LOW",
+    "depth_analysis": "LOW",
+    "function_semantic_match": "LOW"
+  }
+}

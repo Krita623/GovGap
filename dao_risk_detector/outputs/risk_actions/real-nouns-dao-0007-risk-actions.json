@@ -1,0 +1,96 @@
+{
+  "risk_actions": [
+    {
+      "id": "435:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x6f3e6272a167e8accb32072d08e0957f9c79223d",
+      "to_address": "0xdd1492570beb290a2f309541e1fddcaaa3f00b61",
+      "depth": 1,
+      "function_selector": "0xd27dd112",
+      "decoded_function": "withdrawDAONounsFromEscrowToTreasury(uint256[])",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x6f3e6272a167e8accb32072d08e0957f9c79223d",
+        "to_address": "0xdd1492570beb290a2f309541e1fddcaaa3f00b61",
+        "value": "0x0",
+        "input": "0xd27dd1120000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000b5",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xd27dd112",
+        "decoded_function": "withdrawDAONounsFromEscrowToTreasury(uint256[])",
+        "decoded_args": [
+          [
+            181
+          ]
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "435:2:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x6f3e6272a167e8accb32072d08e0957f9c79223d",
+      "to_address": "0x34761eb1bda821ed7b30b51d7fbabbe18fd7574b",
+      "depth": 2,
+      "function_selector": "0xe46aa495",
+      "decoded_function": null,
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x6f3e6272a167e8accb32072d08e0957f9c79223d",
+        "to_address": "0x34761eb1bda821ed7b30b51d7fbabbe18fd7574b",
+        "value": "0x0",
+        "input": "0xe46aa49500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000b5",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe46aa495",
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "435:4:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x44d97d22b3d37d837ce4b22773aad9d1566055d9",
+      "to_address": "0x9c8ff314c9bc7f6e59a9d9225fb22946427edc03",
+      "depth": 4,
+      "function_selector": "0x23b872dd",
+      "decoded_function": "transferFrom(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x44d97d22b3d37d837ce4b22773aad9d1566055d9",
+        "to_address": "0x9c8ff314c9bc7f6e59a9d9225fb22946427edc03",
+        "value": "0x0",
+        "input": "0x23b872dd00000000000000000000000044d97d22b3d37d837ce4b22773aad9d1566055d9000000000000000000000000b1a32fc9f9d8b2cf86c068cae13108809547ef7100000000000000000000000000000000000000000000000000000000000000b5",
+        "output": null,
+        "depth": 4,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x44d97d22b3d37d837ce4b22773aad9d1566055d9",
+          "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+          181
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 3,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 3
+  }
+}

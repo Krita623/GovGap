@@ -1,0 +1,49 @@
+{
+  "proposal_summary": "A proposal to fund the production, launch, and distribution of physical luxury Noun sunglasses tied to a consumable NFT collection, requesting 115 ETH and 1 Noun.",
+  "disclosed_entities": [
+    {
+      "name": "NounsDAO Treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This project would not have been possible without the NounsDAO and the treasury."
+    },
+    {
+      "name": "Zora",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "will be using Zora’s smart contract system to launch this NFT."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 115 ETH to the proposers",
+      "canonical_action": "transfer",
+      "object": "115 ETH",
+      "claimed_effect": "Fund smart contract, website, promotional material, distribution facility, and manufacturing.",
+      "textual_evidence": "115Ξ for creating the smart contract, website, promotional/marketing material... and to start manufacturing.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Transfer 1 Noun",
+      "canonical_action": "transfer",
+      "object": "1 Noun",
+      "claimed_effect": "Reward proposers upon successful delivery of the first physical pair.",
+      "textual_evidence": "1 Noun of the DAO's choice upon successful delivery of the first physical pair of glasses.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The on-chain actions simply involve transferring ETH and an NFT (Noun) to the proposers, which requires standard execution.",
+    "textual_evidence": "Funds Requested - 115Ξ... - 1 Noun of the DAO's choice upon successful delivery"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific wallet or contract addresses are provided in the text for the transfer of the requested funds."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

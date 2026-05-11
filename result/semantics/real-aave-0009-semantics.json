@@ -1,0 +1,215 @@
+{
+  "proposal_summary": "Grants the RISK_ADMIN role to a CapsPlusRiskStewards smart contract on each network with an active Aave v3 instance, enabling the RISK_COUNCIL to adjust asset caps upwards without voting overhead.",
+  "disclosed_entities": [
+    {
+      "name": "BGD Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "__Author(s): BGD Labs (@bgdlabs)__"
+    },
+    {
+      "name": "CapsPlusRiskStewards",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "grants the `RISK_ADMIN` role to a `CapsPlusRiskStewards` smart contract on each network"
+    },
+    {
+      "name": "RISK_COUNCIL",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The `RISK_COUNCIL` is a Gnosis Safe controlled by the DAOs risk-providers"
+    },
+    {
+      "name": "Gauntlet",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "risk-providers (Gauntlet, Chaos Labs)"
+    },
+    {
+      "name": "Chaos Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "risk-providers (Gauntlet, Chaos Labs)"
+    },
+    {
+      "name": "ACL_MANAGER",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal's payload executes `ACL_MANAGER.addRiskAdmin(STEWARD)`"
+    },
+    {
+      "name": "CapsPlusRiskSteward - Arbitrum",
+      "address": "0xadf86b537ef08591c2777e144322e8b0ca7e82a7",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- CapsPlusRiskSteward:\n  [arbitrum](https://arbiscan.io/address/0xADf86b537eF08591c2777E144322E8b0Ca7E82a7#code#F1#L1)"
+    },
+    {
+      "name": "CapsPlusRiskSteward - Avalanche",
+      "address": "0xd2c92b5a793e196ab11dbefbe3af6bdded6c3dd5",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[avalanche](https://snowtrace.io/address/0xd2c92b5a793e196ab11dbefbe3af6bdded6c3dd5#code#F1#L1)"
+    },
+    {
+      "name": "CapsPlusRiskSteward - Mainnet",
+      "address": "0x82dccf206ae2ab46e2099e663f70dee77cae7778",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[mainnet](https://etherscan.io/address/0x82dcCF206Ae2Ab46E2099e663F70DeE77caE7778#code#F1#L1)"
+    },
+    {
+      "name": "CapsPlusRiskSteward - Metis",
+      "address": "0x5f4d15d761528c57a5c30c43c1dab26fc5452731",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[metis](https://andromeda-explorer.metis.io/address/0x5f4d15d761528c57a5C30c43c1DAb26Fc5452731/contracts#address-tabs)"
+    },
+    {
+      "name": "CapsPlusRiskSteward - Optimism",
+      "address": "0x5e76e98e0963ecdc6a065d1435f84065b7523f39",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[optimism](https://optimistic.etherscan.io/address/0x5E76E98E0963EcDC6A065d1435F84065b7523f39#code#F1#L1)"
+    },
+    {
+      "name": "CapsPlusRiskSteward - Polygon",
+      "address": "0xc5de989e0d1bf605d19478fdd32aa827a10b464f",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[polygon](https://polygonscan.com/address/0xc5de989E0D1BF605d19478Fdd32Aa827a10b464f#code#F1#L1)"
+    },
+    {
+      "name": "Payload - Arbitrum",
+      "address": "0xe79ca44408dae5a57ea2a9594532f1e84d2edaa4",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- Payloads:\n  [arbitrum](https://arbiscan.io/address/0xe79ca44408dae5a57ea2a9594532f1e84d2edaa4#code#F1#L1)"
+    },
+    {
+      "name": "Payload - Avalanche",
+      "address": "0x7e1f23bdfc7287af276f77b5a867e85cf0377a31",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[avalanche](https://snowtrace.io/address/0x7e1f23bdfc7287af276f77b5a867e85cf0377a31#code#F1#L1)"
+    },
+    {
+      "name": "Payload - Mainnet",
+      "address": "0x90127a46207e97e4205db5ccc1ec9d6d43633fd4",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[mainnet](https://etherscan.io/address/https://etherscan.io/address/0x90127a46207e97e4205db5ccc1ec9d6d43633fd4#code#F1#L1)"
+    },
+    {
+      "name": "Payload - Metis",
+      "address": "0xd91d1331db4f436daf47ec9dd86decb8eef946b4",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[metis](https://andromeda-explorer.metis.io/address/0xd91d1331db4F436DaF47Ec9Dd86deCb8EEF946B4/contracts#address-tabs)"
+    },
+    {
+      "name": "Payload - Optimism",
+      "address": "0xa3e44d830440df5098520f62ebec285b1198c51e",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[optimism](https://optimistic.etherscan.io/address/0xA3e44d830440dF5098520F62Ebec285B1198c51E#code#F1#L1)"
+    },
+    {
+      "name": "Payload - Polygon",
+      "address": "0x4c0633bf70fb2bb984a9eec5d9052bdea451c70a",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[polygon](https://polygonscan.com/address/0x4C0633Bf70fB2bB984A9eEC5d9052BdEA451C70A#code#F1#L1)"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xadf86b537ef08591c2777e144322e8b0ca7e82a7",
+      "textual_evidence": "0xADf86b537eF08591c2777E144322E8b0Ca7E82a7"
+    },
+    {
+      "address": "0xd2c92b5a793e196ab11dbefbe3af6bdded6c3dd5",
+      "textual_evidence": "0xd2c92b5a793e196ab11dbefbe3af6bdded6c3dd5"
+    },
+    {
+      "address": "0x82dccf206ae2ab46e2099e663f70dee77cae7778",
+      "textual_evidence": "0x82dcCF206Ae2Ab46E2099e663F70DeE77caE7778"
+    },
+    {
+      "address": "0x5f4d15d761528c57a5c30c43c1dab26fc5452731",
+      "textual_evidence": "0x5f4d15d761528c57a5C30c43c1DAb26Fc5452731"
+    },
+    {
+      "address": "0x5e76e98e0963ecdc6a065d1435f84065b7523f39",
+      "textual_evidence": "0x5E76E98E0963EcDC6A065d1435F84065b7523f39"
+    },
+    {
+      "address": "0xc5de989e0d1bf605d19478fdd32aa827a10b464f",
+      "textual_evidence": "0xc5de989E0D1BF605d19478Fdd32Aa827a10b464f"
+    },
+    {
+      "address": "0xe79ca44408dae5a57ea2a9594532f1e84d2edaa4",
+      "textual_evidence": "0xe79ca44408dae5a57ea2a9594532f1e84d2edaa4"
+    },
+    {
+      "address": "0x7e1f23bdfc7287af276f77b5a867e85cf0377a31",
+      "textual_evidence": "0x7e1f23bdfc7287af276f77b5a867e85cf0377a31"
+    },
+    {
+      "address": "0x90127a46207e97e4205db5ccc1ec9d6d43633fd4",
+      "textual_evidence": "0x90127a46207e97e4205db5ccc1ec9d6d43633fd4"
+    },
+    {
+      "address": "0xd91d1331db4f436daf47ec9dd86decb8eef946b4",
+      "textual_evidence": "0xd91d1331db4F436DaF47Ec9Dd86deCb8EEF946B4"
+    },
+    {
+      "address": "0xa3e44d830440df5098520f62ebec285b1198c51e",
+      "textual_evidence": "0xA3e44d830440dF5098520F62Ebec285B1198c51E"
+    },
+    {
+      "address": "0x4c0633bf70fb2bb984a9eec5d9052bdea451c70a",
+      "textual_evidence": "0x4C0633Bf70fB2bB984A9eEC5d9052BdEA451C70A"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "grants the RISK_ADMIN role to a CapsPlusRiskStewards smart contract",
+      "canonical_action": "role_change",
+      "object": "CapsPlusRiskStewards",
+      "claimed_effect": "Enables CapsPlusRiskStewards to adjust caps",
+      "textual_evidence": "grants the `RISK_ADMIN` role to a `CapsPlusRiskStewards` smart contract on each network with an active instance of Aave v3",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "executes ACL_MANAGER.addRiskAdmin(STEWARD)",
+      "canonical_action": "role_change",
+      "object": "ACL_MANAGER",
+      "claimed_effect": "Adds CapsPlusRiskStewards as a risk admin",
+      "textual_evidence": "This proposal's payload executes `ACL_MANAGER.addRiskAdmin(STEWARD)` where `STEWARD` is the `CapsPlusRiskStewards`",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal assigns a role to a predefined contract to streamline a single parameter update process.",
+    "textual_evidence": "Simply grants the RISK_ADMIN role. The proposal payload executes ACL_MANAGER.addRiskAdmin(STEWARD)."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "addRiskAdmin",
+      "textual_evidence": "This proposal's payload executes `ACL_MANAGER.addRiskAdmin(STEWARD)`"
+    }
+  ],
+  "limitations": [
+    "No specific risk cap values or token names are listed in the proposal."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

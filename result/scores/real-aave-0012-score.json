@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "proposal_id": "178",
+    "generated_at": "2026-05-08T11:15:23.794260+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal increases the MaticX Supply Cap on Polygon v3 from 8.6M units to 17.2M units.",
+    "disclosed_entities": [
+      {
+        "name": "MaticX",
+        "address": "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Contract: polygon: 0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6"
+      },
+      {
+        "name": "Payload Implementation",
+        "address": "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Deployed Contracts (https://polygonscan.com/address/0x6b5af634e20eaa5fc85f9943913aa46a088ac29e)"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6",
+        "textual_evidence": "Contract: polygon: 0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6"
+      },
+      {
+        "address": "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e",
+        "textual_evidence": "Deployed Contracts (https://polygonscan.com/address/0x6b5af634e20eaa5fc85f9943913aa46a088ac29e)"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Increase the Supply Cap from 8.6M units to 17.2M units",
+        "canonical_action": "parameter_update",
+        "object": "MaticX SupplyCap",
+        "claimed_effect": "Increases the allowed supply cap for MaticX on Aave v3 Polygon to 17,200,000 to enable more deposits and SD rewards.",
+        "textual_evidence": "|SupplyCap|8.6M units|17.2M units|",
+        "confidence": 0.99
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal involves a single parameter update (SupplyCap) for an existing asset.",
+      "textual_evidence": "This proposal will increase the Supply Cap from 8.6M units to 17.2M units."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Does not specify exact function names used to enact the parameter change, though typical pool configrator actions are implied."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+        "value": "0x0",
+        "input": "0x4b64e4920000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x4b64e492",
+        "decoded_function": "execute(address)",
+        "decoded_args": [
+          "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+        "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+        "value": "0x0",
+        "input": "0xb4720477000000000000000000000000dc9a35b16db4e126cfedc41322b3a36454b1f7720000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000024000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000010000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000009657865637574652829000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xb4720477",
+        "decoded_function": "sendMessageToChild(address,bytes)",
+        "decoded_args": [
+          "0xdc9a35b16db4e126cfedc41322b3a36454b1f772",
+          "0x00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000010000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000009657865637574652829000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+        "to_address": "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+        "value": "0x0",
+        "input": "0x16f198310000000000000000000000008397259c983751daf40400790063935a11afa28a000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000002c0000000000000000000000000158a6bc04f0828318821bae797f50b0a1299d45b000000000000000000000000dc9a35b16db4e126cfedc41322b3a36454b1f7720000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000024000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000010000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000009657865637574652829000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0x16f19831",
+        "decoded_function": "syncState(address,bytes)",
+        "decoded_args": [
+          "0x8397259c983751daf40400790063935a11afa28a",
+          "0x000000000000000000000000158a6bc04f0828318821bae797f50b0a1299d45b000000000000000000000000dc9a35b16db4e126cfedc41322b3a36454b1f7720000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000024000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000010000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000009657865637574652829000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 2,
+    "unique_addresses": [
+      "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+      "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c",
+      "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 3,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execute(address)",
+      "sendMessageToChild(address,bytes)",
+      "syncState(address,bytes)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "178:1:bridge",
+      "action_type": "bridge",
+      "severity_hint": "high",
+      "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+      "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+      "depth": 1,
+      "function_selector": "0xb4720477",
+      "decoded_function": "sendMessageToChild(address,bytes)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+        "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+        "value": "0x0",
+        "input": "0xb4720477000000000000000000000000dc9a35b16db4e126cfedc41322b3a36454b1f7720000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000024000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000010000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000009657865637574652829000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xb4720477",
+        "decoded_function": "sendMessageToChild(address,bytes)",
+        "decoded_args": [
+          "0xdc9a35b16db4e126cfedc41322b3a36454b1f772",
+          "0x00000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000010000000000000000000000006b5af634e20eaa5fc85f9943913aa46a088ac29e00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000009657865637574652829000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 4,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered high-risk business action.",
+      "disclosed_addresses": [
+        "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e",
+        "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+        "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+                "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2"
+              ],
+              "related_actions": [
+                {
+                  "id": "178:1:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+                  "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+                  "depth": 1,
+                  "function_selector": "0xb4720477",
+                  "decoded_function": "sendMessageToChild(address,bytes)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "bridge"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "178:1:bridge",
+                  "action_type": "bridge",
+                  "severity_hint": "high",
+                  "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+                  "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+                  "depth": 1,
+                  "function_selector": "0xb4720477",
+                  "decoded_function": "sendMessageToChild(address,bytes)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ]
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e",
+            "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6"
+          ],
+          "trace_unique_addresses": [
+            "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+            "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c",
+            "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+            "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c",
+            "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "bridge"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 2,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal involves a single parameter update (SupplyCap) for an existing asset.",
+            "textual_evidence": "This proposal will increase the Supply Cap from 8.6M units to 17.2M units."
+          },
+          "actual_max_depth": 2,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "bridge"
+          ],
+          "uncovered_business_actions": [
+            "bridge"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "execute(address)",
+        "sendMessageToChild(address,bytes)",
+        "syncState(address,bytes)"
+      ],
+      "unmatched_functions": [
+        "bridge"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "bridge"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "parameter_update"
+              ],
+              "actual_business_actions": [
+                "bridge"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "execute(address)",
+                "sendMessageToChild(address,bytes)",
+                "syncState(address,bytes)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Increase the Supply Cap from 8.6M units to 17.2M units",
+              "canonical_action": "parameter_update",
+              "object": "MaticX SupplyCap",
+              "claimed_effect": "Increases the allowed supply cap for MaticX on Aave v3 Polygon to 17,200,000 to enable more deposits and SD rewards.",
+              "textual_evidence": "|SupplyCap|8.6M units|17.2M units|",
+              "confidence": 0.99
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "178:1:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+              "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+              "depth": 1,
+              "function_selector": "0xb4720477",
+              "decoded_function": "sendMessageToChild(address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "bridge"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "execute(address)",
+            "sendMessageToChild(address,bytes)",
+            "syncState(address,bytes)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+            "0x28e4f3a7f651294b9564800b2d01f35189a5bfbe",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c",
+            "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2"
+          ],
+          "related_actions": [
+            {
+              "id": "178:1:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+              "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+              "depth": 1,
+              "function_selector": "0xb4720477",
+              "decoded_function": "sendMessageToChild(address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "bridge"
+          ],
+          "material_related_actions": [
+            {
+              "id": "178:1:bridge",
+              "action_type": "bridge",
+              "severity_hint": "high",
+              "from_address": "0x158a6bc04f0828318821bae797f50b0a1299d45b",
+              "to_address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+              "depth": 1,
+              "function_selector": "0xb4720477",
+              "decoded_function": "sendMessageToChild(address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "parameter_update"
+          ],
+          "actual_business_actions": [
+            "bridge"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "execute(address)",
+            "sendMessageToChild(address,bytes)",
+            "syncState(address,bytes)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

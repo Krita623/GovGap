@@ -1,0 +1,34 @@
+{
+  "proposal_summary": "Approve the Lighthouse client ID (16) for Nouns Client Incentives.",
+  "disclosed_entities": [
+    {
+      "name": "Lighthouse",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Lighthouse is a native mobile app for iOS and Android that makes it easy to participation in on-chain communities."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "approve the Lighthouse client ID (16)",
+      "canonical_action": "parameter_update",
+      "object": "Client ID 16",
+      "claimed_effect": "Clears Lighthouse to receive Nouns Client Incentives.",
+      "textual_evidence": "If executed, this proposal approves the Lighthouse client ID (16) for Nouns Client Incentives.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal requires a straightforward approval of a client ID for an existing incentive system, with no complex architecture discussed.",
+    "textual_evidence": "If executed, this proposal approves the Lighthouse client ID (16) for Nouns Client Incentives."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses or technical execution details are provided in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

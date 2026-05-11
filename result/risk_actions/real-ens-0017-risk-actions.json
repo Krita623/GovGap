@@ -1,0 +1,9 @@
+{
+  "risk_actions": [],
+  "filtering_summary": {
+    "raw_detected_count": 0,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 0
+  }
+}

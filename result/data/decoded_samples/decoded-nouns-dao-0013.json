@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-nouns-dao-0013",
+  "source_raw_sample": "outputs/raw_samples/real-nouns-dao-0013.json",
+  "proposal": {
+    "dao": "Nouns DAO",
+    "chain_id": 1,
+    "proposal_id": "763",
+    "status": "executed",
+    "title": "# Nouns Deli Relocation: More Visibility, Greater Impact",
+    "description": "# Nouns Deli Relocation: More Visibility, Greater Impact\n\n![](https://nounsdeli.com/wp-content/uploads/2025/03/NOUNS-PROP-PM-BANNER-100.jpg)\n\n## TL;DR\n\nNouns Deli has been offered a prime spot in Prahran Market as part of its major redevelopment. With local council investing heavily in the market\u2019s future, this is a rare opportunity to relocate to a high-traffic, high-visibility location with minimal setup costs.\n\nWe are seeking $39,600 USD to cover relocation expenses, ensuring Nouns Deli remains at the forefront of Melbourne\u2019s food scene while continuing to proliferate Nouns.\n\n## WHERE\n\nPrahran Market, established in 1864, is one of Melbourne\u2019s premier food destinations and the city\u2019s oldest food market, currently attracting over 70,000 visitors per week. As part of its redevelopment, Market Square\u2014a central courtyard\u2014will be transformed into a vibrant cultural hub featuring weekly events, live music, and big-screen sports broadcasts. The market management envisions curating a selection of top-tier food operators, and Nouns Deli has been invited to play a key role in this transformation.\n\n[![NOUNS Proposal Video Thumbnail](https://nounsdeli.com/wp-content/uploads/2025/03/NOUNS-PROP-PM-VIDEO-THUMB-scaled.jpg \"https://youtu.be/APg-7Ej2y2s\")](https://youtu.be/APg-7Ej2y2s)\n\n## WHY\n\nWe firmly believe relocating to Prahran Market represents a significant step forward for Nouns Deli, unlocking new opportunities for growth, visibility, and community engagement. The redevelopment plans are set to attract over 5 million visitors annually, elevating our visibility and reach to an entirely new level. The council\u2019s commitment to activating Market Square weekly offers us the chance to host our own events, taking over the courtyard for exclusive Nouns activations more frequently and exposing our brand to a broader audience beyond our current impact zone.\n\n## HOW\n\nThe relocation will be designed to maximize cost-effectiveness by repurposing existing equipment and branding whenever possible, thereby minimizing the need for entirely new infrastructure. It\u2019s worth noting that Nouns Deli operates as a partnership rather than requesting the DAO to purchase the business; this reduces overall costs and limits operational risks for the DAO. \n\nWe\u2014Nouns Deli\u2014serve as the business vehicle to proliferate and activate the ethos of the Nouns DAO. \n\nThis proposal reflects only a fraction of the cost of building a commercial kitchen from the ground up\u2014estimated at $39,600 USD for partical essential design, installation, logistics, and minor modifications\u2014with Nouns Deli covering the remaining, and likely significant, portion of the budget. We aim to complete the relocation within three months, executing a smooth transition between sites with minimal closure periods.\n\n![](https://nounsdeli.com/wp-content/uploads/2025/03/NOUNS_SITE_PROPOSAL-REDNER.jpg)\n\n**Estimated Cost** (USD)\nShop Design & Drawings - $4,000\nConstruction & Fit-Out -    $24,000\nBranding & Signage -         $8,000\nContingency (10%) -          $3,600\n\n**Total Estimated Budget -   $39,600**\n\n## GM \u2310\u25e8-\u25e8\n\n> Bones here \u2013 since day one, my goal has been to demonstrate what the DAO is all about: bridging Web3 with everyday experiences by leveraging my years expertise in hospitality industry. I believe we\u2019ve successfully embodied this vision and hope the DAO continues to trust me in taking what I see as the right step forward for Nouns Deli\u2019s future.\n\n> This relocation offers a unique opportunity to position Nouns Deli in one of Melbourne\u2019s most vibrant food hubs\u2014a well-known destination for both locals and tourists\u2014strengthening its brand, community engagement, and long-term sustainability. I\u2019m confident this move aligns perfectly with our mission to proliferate Nouns and showcase the DAO\u2019s core pillars and values first-hand.\n\n> Let\u2019s take this next step together to bring \u2310\u25e8-\u25e8 into the world.\n\n## Appendix \u2013 The History of Nouns Deli\n\nSince March 2023, Nouns Deli has served over 50,000 guests, fulfilled 4,800 DoorDash orders, and catered major events, each proudly showcasing the Noggles. The deli has also earned significant recognition, with features in Australia\u2019s largest newspapers and media publications.\n\nStaying true to Proposals 254 and 577, we\u2019ve bridged Web3, CC0 culture, and real-world experiences\u2014minting CC0 recipes, Deli Art Editions, and Better Between Bread episodes, which have collectively achieved 2,000 mints and over 30,000 views. Collaborations with Gremplin, Chimpers, Deadfellaz, and Blockz have broadened our reach, while catering for Coinbase, Pudgy Penguins, BTC Markets, and FireBlocks\u2014to name just a few\u2014has solidified our Web3 presence. We\u2019ve even donned the \u2310\u25e8-\u25e8 in sandwich cook-offs at food conventions.\n\nThrough multiple \u2018Doing Good\u2019 activations, we\u2019ve raised over $8500 for charity, supporting Ronald McDonald House, FareShare, FoodBank, efforts to combat species extinction, and helping countless individuals and causes in need here in AUS.\n\nWe\u2019ve done a lot for a deli.\n\nWhile we\u2019ve expanded beyond our original proposals and reached notable milestones, we acknowledge that some deliverables from past proposals remain incomplete. These are not forgotten\u2014we\u2019re fully committed to finishing them. This relocation is not a reset but a strategic upgrade, designed to scale our impact, increase visibility, and further establish Nouns as a household name."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xd97Bcd9f47cEe35c0a9ec1dc40C1269afc9E8E1D",
+      "native_value": "0",
+      "function": "sendOrRegisterDebt(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "account",
+          "type": "address",
+          "value": "0x15bccb4300542eb2081ae8a71d874015f23f2781"
+        },
+        {
+          "index": 1,
+          "name": "amount",
+          "type": "uint256",
+          "value": "39600000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

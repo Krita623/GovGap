@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-ens-0002",
+  "dao": {
+    "name": "ENS",
+    "chain_id": 1,
+    "governor_address": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "43203199770691383238593940280239053946984014979449022275641313046078578194694",
+    "proposal_url": "https://www.tally.xyz/gov/ens/proposal/43203199770691383238593940280239053946984014979449022275641313046078578194694",
+    "source": "tally",
+    "created_block": 15272204,
+    "executed_block": 15342188,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Dissolve the community WG multisig per EP15",
+    "description": "# Dissolve the community WG multisig per EP15\nThis proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem. This enacts EP15 (formerly numbered EP14), the vote to dissolve the ENS community working group, as described [here](https://github.com/ensdomains/governance-docs/blob/main/governance-proposals/ep15-dissolution-of-the-community-working-group.md) and [passed on Snapshot](https://snapshot.org/#/ens.eth/proposal/0xa64ec8b446e509cb4b75092c4a714897790b70e2711fc3d6afa969c250e7eb92)."
+  },
+  "payload": {
+    "targets": [
+      "0x17FDC2Eaf2bd46f3e1052CCbccD9e6AD0296C42c"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0x346e5c48000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000002686a8919df194aa7673244549e68d42c1685d03"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xe827c55d935993070b2526ac730d417844f0a0e28180c85b4d6012b601f087e5",
+    "executed_tx_hash": "0xccc9f6d55774a0b8385eaa6a098f32c715856b97d46daec1f042cc868b991084"
+  }
+}

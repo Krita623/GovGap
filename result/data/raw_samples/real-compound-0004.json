@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-compound-0004",
+  "dao": {
+    "name": "Compound",
+    "chain_id": 1,
+    "governor_address": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "119",
+    "proposal_url": "https://www.tally.xyz/gov/compound/proposal/119",
+    "source": "tally",
+    "created_block": 15442123,
+    "executed_block": 15487430,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Oracle Update",
+    "description": "# Oracle Update"
+  },
+  "payload": {
+    "targets": [
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "_setPriceOracle(address)"
+    ],
+    "calldatas": [
+      "0x00000000000000000000000065c816077c29b557bee980ae3cc2dce80204a0c5"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x86ce1a49a8f3e6c6b1e0443bc7f426b5f41e3dd2b7c1bdcd9477791a20541b28",
+    "executed_tx_hash": "0x8c018d7bec2468d2b579cb6036dc7dd8c54c0fd01165494da36e40605f74c3e4"
+  }
+}

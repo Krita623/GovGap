@@ -1,0 +1,48 @@
+{
+  "proposal_summary": "Authorize Polygon Labs to deploy Uniswap V3 to the Polygon zkEVM rollup on behalf of the community.",
+  "disclosed_entities": [
+    {
+      "name": "Polygon Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We propose to authorize Polygon Labs to deploy Uniswap’s protocol to the Polygon Zero Knowledge Ethereum Virtual Machine rollup known as “zkEVM”"
+    },
+    {
+      "name": "Polygon Labs Services (Switzerland) AG",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The legal entity that is supporting this proposal is Polygon Labs Services (Switzerland) AG"
+    },
+    {
+      "name": "Uniswap",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Deploying early on zkEVM helps solidify Uniswap’s place as the number one DEX"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Deploy Uniswap V3 protocol to Polygon zkEVM",
+      "canonical_action": "governance_proposal_creation",
+      "object": "Uniswap V3 on Polygon zkEVM",
+      "claimed_effect": "Make Uniswap available on an EVM compatible ZK rollup",
+      "textual_evidence": "We propose to authorize Polygon Labs to deploy Uniswap’s protocol to the Polygon Zero Knowledge Ethereum Virtual Machine rollup known as “zkEVM” on behalf of the community.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Deploys an existing EVM codebase to an equivalent zk-rollup, but involves cross-chain components like arbitrary message passing through bridges.",
+    "textual_evidence": "As an Ethereum Layer Two, it uses Zero Knowledge proofs to inherit Ethereum’s core safety, while allowing developers to easily deploy existing EVM codebases."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit contract addresses or technical deployment parameters provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,40 @@
+{
+  "benchmark_id": "mutant-transfer-0004",
+  "chain_id": 1,
+  "dao": {
+    "name": "mutant",
+    "chain_id": 1,
+    "governor_address": "0x1000000000000000000000000000000000000002"
+  },
+  "proposal": {
+    "proposal_id": "mutant-transfer-0004",
+    "fork_block_number": 19000000
+  },
+  "proposal_text": {
+    "title": "Accounting maintenance batch 4",
+    "description": "This proposal refreshes accounting records and does not mention token movement."
+  },
+  "payload": {
+    "targets": [
+      "0x3000000000000000000000000000000000000004"
+    ],
+    "values": [
+      0
+    ],
+    "signatures": [
+      "transfer(address,uint256)"
+    ],
+    "calldatas": [
+      "0xa9059cbb00000000000000000000000040000000000000000000000000000000000000040000000000000000000000000000000000000000000000004563918244f40000"
+    ]
+  },
+  "transactions": {},
+  "rpc_url_env": "MAINNET_RPC_URL",
+  "timelock": "0x1000000000000000000000000000000000000001",
+  "executor": "0x1000000000000000000000000000000000000001",
+  "mutation": {
+    "constructed": true,
+    "risk_group": "transfer",
+    "expected_risk_action": "transfer"
+  }
+}

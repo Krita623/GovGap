@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-compound-0001",
+  "dao": {
+    "name": "Compound",
+    "chain_id": 1,
+    "governor_address": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "51",
+    "proposal_url": "https://www.tally.xyz/gov/compound/proposal/51",
+    "source": "tally",
+    "created_block": 12775987,
+    "executed_block": 12822385,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Contributor Grant: Getty Hill",
+    "description": "# Contributor Grant: Getty Hill\n### Background\nOver the last 6-months, Getty Hill has worked to improve Compound\u2019s oracle system; he coordinated [Proposal 47](https://compound.finance/governance/proposals/47), a months-long effort to harden the Compound price feed, which met the highest possible standard demanded by the Compound community.\n### Contributor Grant\nGetty requested an streaming grant for his prior and future efforts to coordinate oracle development;\n> While the major update has been made, more work is still needed. We still need to transition the Uniswap anchor from v2 to v3, support additional markets, [ongoing monitoring](http://defialerts.io/oracle), and further research the system\u2019s efficiency. The recent milestone is the beginning of a more vigilant and efficient Compound.\n> I am requesting a 0.000214 [Contributor Comp Speed grant](https://compound.finance/governance/proposals/30) from the protocol. Over the last 6-months, I acted as the project manager for the oracle improvement. I researched a myriad of options, worked closely with the Chainlink team, managed community feedback and input, championed the project, and most importantly, got it through governance. The ongoing contributor grant will be for the work I have done to get the oracle improvement in place and to manage it going forward.\nThis Contributor Grant will be used to carry on the work of improving the price feed, and represents the first streaming COMP grant. The grant runs in perpetuity until modified by governance.\n[Discussion](https://www.comp.xyz/t/oracle-contributor/1887)"
+  },
+  "payload": {
+    "targets": [
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "_setContributorCompSpeed(address,uint256)"
+    ],
+    "calldatas": [
+      "0x0000000000000000000000009b68c14e936104e9a7a24c712beecdc2200029840000000000000000000000000000000000000000000000000000c2a1c1fb6000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xb908fc9424b7b961a76dc1fb52cc1239d4a0408884babf22319e058fe36801b5",
+    "executed_tx_hash": "0x42dbbd8067e633b332fe855d092ad54958deaa2420a955d57afe0813f1988e2c"
+  }
+}

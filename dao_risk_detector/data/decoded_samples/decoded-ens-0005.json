@@ -1,0 +1,74 @@
+{
+  "benchmark_id": "real-ens-0005",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0005.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "27850654116740852236526757351596115114486670304472932313768517382407193376455",
+    "status": "defeated",
+    "title": "# Execute EP8, EP9 and EP10",
+    "description": "# Execute EP8, EP9 and EP10\nExecutes EP8, EP9 and EP10 as passed on Snapshot:\n\n- [EP8] [Executable] Reimburse True Names for expenses and tax obligations incurred on behalf of the DAO: [https://snapshot.org/#/ens.eth/proposal/0xdf7e59e58ab0cf5ee0a591bd65369db3ee5091ae3b7ca696a0d31c2eac9959f5](<https://snapshot.org/#/ens.eth/proposal/0xdf7e59e58ab0cf5ee0a591bd65369db3ee5091ae3b7ca696a0d31c2eac9959f5>)\n\n- [EP9] [Executable] Change to Exponential Premium Price Oracle: [https://snapshot.org/#/ens.eth/proposal/0xe040bdae812af4bd5b3b6e3f46ed1ff4701986c338b827ac8f05807c2b9b9d73](<https://snapshot.org/#/ens.eth/proposal/0xe040bdae812af4bd5b3b6e3f46ed1ff4701986c338b827ac8f05807c2b9b9d73>)\n\n- [EP10] [Executable] Fund a DAO-Governed Identity Server: [https://snapshot.org/#/ens.eth/proposal/0x104eb11d42813fadc2b408856e8fa2c10e34dbb4a87abaa2f089ece124263f16](<https://snapshot.org/#/ens.eth/proposal/0x104eb11d42813fadc2b408856e8fa2c10e34dbb4a87abaa2f089ece124263f16>)\n\n\n<!-- -->\n\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0x690f0581ececcf8389c223170778cd9d029606f2"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "1281407000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x283Af0B28c62C092C9727F1Ee09c02CA627EB7F5",
+      "native_value": "0",
+      "function": "setPriceOracle(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_prices",
+          "type": "address",
+          "value": "0x0b7cbee19e219050e38b419273229fd24590555a"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0x2686a8919df194aa7673244549e68d42c1685d03"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "250000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    }
+  ]
+}

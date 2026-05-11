@@ -1,0 +1,74 @@
+{
+  "proposal_id": "71941171835710778457735937894689629320431683601089057868136768380925169329077",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0xf07DeD9dC292157749B6Fd268E37DF6EA38395B9",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+          "gas": "0xe48fb8",
+          "gasUsed": "0x5208",
+          "to": "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5",
+          "input": "0x",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+      "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": []
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

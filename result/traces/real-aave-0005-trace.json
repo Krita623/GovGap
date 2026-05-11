@@ -1,0 +1,268 @@
+{
+  "proposal_id": "35",
+  "simulation_status": "reverted_with_trace",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "executor": "0xEC568fffba86c094cf06b22134B23074DFE2252c",
+      "warning": "fallback_to_governor",
+      "source": "dao.governor_address",
+      "confidence": 0.4,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+          "gas": "0xe48424",
+          "gasUsed": "0xd368",
+          "to": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+          "input": "0x3fa57231000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf02000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd49000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+          "error": "execution reverted",
+          "revertReason": "33",
+          "calls": [
+            {
+              "from": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "gas": "0xe0e59c",
+              "gasUsed": "0x9d2",
+              "to": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+              "input": "0x85c858b1",
+              "output": "0x000000000000000000000000311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "type": "STATICCALL"
+            },
+            {
+              "from": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "gas": "0xe0d0ba",
+              "gasUsed": "0x108",
+              "to": "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+              "input": "0xb16a19de",
+              "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+              "type": "STATICCALL"
+            },
+            {
+              "from": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "gas": "0xe0c474",
+              "gasUsed": "0x14a",
+              "to": "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+              "input": "0xb16a19de",
+              "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+              "type": "STATICCALL"
+            },
+            {
+              "from": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "gas": "0xe0b7ed",
+              "gasUsed": "0x14a",
+              "to": "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+              "input": "0xb16a19de",
+              "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+              "type": "STATICCALL"
+            },
+            {
+              "from": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "gas": "0xe0aad0",
+              "gasUsed": "0x2d34",
+              "to": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+              "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+              "error": "execution reverted",
+              "revertReason": "33",
+              "calls": [
+                {
+                  "from": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                  "gas": "0xdd1492",
+                  "gasUsed": "0x191e",
+                  "to": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+                  "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+                  "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+                  "error": "execution reverted",
+                  "revertReason": "33",
+                  "calls": [
+                    {
+                      "from": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                      "gas": "0xd99427",
+                      "gasUsed": "0x9fe",
+                      "to": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+                      "input": "0xaecda378",
+                      "output": "0x0000000000000000000000005300a1a15135ea4dc7ad5a167152c01efc9b192a",
+                      "type": "STATICCALL"
+                    }
+                  ],
+                  "value": "0x0",
+                  "type": "DELEGATECALL"
+                }
+              ],
+              "value": "0x0",
+              "type": "CALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "value": "0x0",
+        "input": "0x3fa57231000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf02000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd49000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x3fa57231",
+        "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+        "decoded_args": [
+          "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+          0,
+          0,
+          0,
+          2000,
+          18,
+          true,
+          false,
+          false
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0x85c858b1",
+        "output": "0x000000000000000000000000311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "depth": 1,
+        "function_selector": "0x85c858b1",
+        "decoded_function": "getLendingPoolConfigurator()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+        "value": "0",
+        "input": "0xb16a19de",
+        "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "depth": 1,
+        "function_selector": "0xb16a19de",
+        "decoded_function": "UNDERLYING_ASSET_ADDRESS()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+        "value": "0",
+        "input": "0xb16a19de",
+        "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "depth": 1,
+        "function_selector": "0xb16a19de",
+        "decoded_function": "UNDERLYING_ASSET_ADDRESS()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+        "value": "0",
+        "input": "0xb16a19de",
+        "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "depth": 1,
+        "function_selector": "0xb16a19de",
+        "decoded_function": "UNDERLYING_ASSET_ADDRESS()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "value": "0x0",
+        "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x6e801a71",
+        "decoded_function": "initReserve(address,address,address,uint8,address)",
+        "decoded_args": [
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          18,
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "value": "0x0",
+        "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x6e801a71",
+        "decoded_function": "initReserve(address,address,address,uint8,address)",
+        "decoded_args": [
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          18,
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0xaecda378",
+        "output": "0x0000000000000000000000005300a1a15135ea4dc7ad5a167152c01efc9b192a",
+        "depth": 3,
+        "function_selector": "0xaecda378",
+        "decoded_function": "getPoolAdmin()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+      "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+      "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+      "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+      "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+      "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 5,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "UNDERLYING_ASSET_ADDRESS()",
+      "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+      "getLendingPoolConfigurator()",
+      "getPoolAdmin()",
+      "initReserve(address,address,address,uint8,address)"
+    ]
+  },
+  "revert_reason": "33",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

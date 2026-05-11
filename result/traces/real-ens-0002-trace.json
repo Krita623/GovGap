@@ -1,0 +1,79 @@
+{
+  "proposal_id": "43203199770691383238593940280239053946984014979449022275641313046078578194694",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "gas": "0xe48d7c",
+          "gasUsed": "0x8204",
+          "to": "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+          "input": "0x346e5c48000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000002686a8919df194aa7673244549e68d42c1685d03",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+        "value": "0x0",
+        "input": "0x346e5c48000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000002686a8919df194aa7673244549e68d42c1685d03",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x346e5c48",
+        "decoded_function": "updatePodAdmin(uint256,address)",
+        "decoded_args": [
+          14,
+          "0x2686a8919df194aa7673244549e68d42c1685d03"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "updatePodAdmin(uint256,address)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

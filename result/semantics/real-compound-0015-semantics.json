@@ -1,0 +1,57 @@
+{
+  "proposal_summary": "Compound Growth Program (AlphaGrowth) proposes to add tETH as collateral into the cWETHv3 market on the Ethereum network, alongside upgrading Comet to a new version.",
+  "disclosed_entities": [
+    {
+      "name": "tETH",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adds tETH asset as collateral"
+    },
+    {
+      "name": "cWETHv3",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Add tETH as collateral into cWETHv3 on Mainnet"
+    },
+    {
+      "name": "Comet",
+      "address": null,
+      "entity_type": "implementation",
+      "disclosure_level": "explicit",
+      "textual_evidence": "deploys and upgrades Comet to a new version"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Add tETH asset as collateral with corresponding configurations.",
+      "canonical_action": "parameter_update",
+      "object": "tETH / cWETHv3",
+      "claimed_effect": "Risk parameters are set based on recommendations from Gauntlet and tETH becomes an accepted collateral.",
+      "textual_evidence": "The first action adds tETH asset as collateral with corresponding configurations.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Deploy and upgrade Comet to a new version.",
+      "canonical_action": "upgrade",
+      "object": "Comet",
+      "claimed_effect": "Upgrades the Compound III Comet implementation to a new version.",
+      "textual_evidence": "The second action deploys and upgrades Comet to a new version.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves adding a new collateral asset with configured risk parameters and an implementation upgrade of Comet.",
+    "textual_evidence": "The first action adds tETH asset as collateral... The second action deploys and upgrades Comet to a new version."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No smart contract addresses are provided in the proposal text.",
+    "Specific parameter values for the configurations (e.g., LTV, supply caps) are not disclosed in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

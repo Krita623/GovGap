@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "proposal_id": "50",
+    "generated_at": "2026-05-08T11:15:24.470080+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Proposal by Michigan Blockchain to deploy and officially recognize Uniswap v3 on the Filecoin Virtual Machine (FVM) and utilize Axelar as the interchain governance executor.",
+    "disclosed_entities": [
+      {
+        "name": "Michigan Blockchain",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Proposer: Michigan Blockchain\nThis entity is responsible for authoring the proposal & managing the governance process"
+      },
+      {
+        "name": "Axelar",
+        "address": null,
+        "entity_type": "bridge",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Deployer: Axelar\nThis entity is responsible for the technical deployment... Bridge Provider: Axelar"
+      },
+      {
+        "name": "UniswapV3Factory",
+        "address": "0xb4c47ed546fc31e26470a186ec2c5f19ef09ba41",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "UniswapV3Factory | 0xB4C47eD546Fc31E26470a186eC2C5F19eF09BA41"
+      },
+      {
+        "name": "InterchainProposalSender",
+        "address": "0x1f8a4d195b647647c7dd45650cbd553fd33ccaa6",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "InterchainProposalSender (Mainnet) | 0x1f8A4d195B647647c7dD45650CBd553FD33cCAA6"
+      },
+      {
+        "name": "InterchainProposalExecutor",
+        "address": "0xff3b2da1379cc67cc2755194604713f10b820b0e",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "InterchainProposalExecutor (Filecoin) | 0xFf3b2DA1379cc67cc2755194604713f10b820b0E"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xb4c47ed546fc31e26470a186ec2c5f19ef09ba41",
+        "textual_evidence": "UniswapV3Factory"
+      },
+      {
+        "address": "0xffd927d6f17495b28635dd49d24638e97bd8c8b8",
+        "textual_evidence": "Multicall2"
+      },
+      {
+        "address": "0xe9901ae78efb4386b1132009e310d08bcb445bf5",
+        "textual_evidence": "ProxyAdmin"
+      },
+      {
+        "address": "0x76c001ad9e527fefa8fa822a987ad44ce720baed",
+        "textual_evidence": "TickLens"
+      },
+      {
+        "address": "0xe909b0cae57ee7eff56a5ca7fc4b66cf4f7c2d38",
+        "textual_evidence": "NFTDescriptor"
+      },
+      {
+        "address": "0x22850a17032f40778c0c0a3fdd96905950a39f89",
+        "textual_evidence": "NonfungibleTokenPositionDescriptor"
+      },
+      {
+        "address": "0xf0198aaa4a8792e2a4a6e6fb3039e4b1c71f15bb",
+        "textual_evidence": "DescriptorProxy"
+      },
+      {
+        "address": "0x4cd986dd509fbb6a695ae971d5c56c8795f640ee",
+        "textual_evidence": "NonfungibleTokenPositionManager"
+      },
+      {
+        "address": "0x409af45457d4779828bfbcbe7aa653c38edb9ed9",
+        "textual_evidence": "V3Migrator"
+      },
+      {
+        "address": "0x915362b5450acbbc9f8044191ae7e35c86f2fe51",
+        "textual_evidence": "V3Staker"
+      },
+      {
+        "address": "0xe45c06922228a33fff1ed54638a0db78f69f9780",
+        "textual_evidence": "QuoterV2"
+      },
+      {
+        "address": "0xcab04058e60020d65d18d4b3dff2ca1445d7099f",
+        "textual_evidence": "SwapRouter02"
+      },
+      {
+        "address": "0x1f8a4d195b647647c7dd45650cbd553fd33ccaa6",
+        "textual_evidence": "InterchainProposalSender (Mainnet)"
+      },
+      {
+        "address": "0xff3b2da1379cc67cc2755194604713f10b820b0e",
+        "textual_evidence": "InterchainProposalExecutor (Filecoin)"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Recognize deployment as canonical and update ENS",
+        "canonical_action": "parameter_update",
+        "object": "v3-deployments.uniswap.eth",
+        "claimed_effect": "Includes the FVM deployment addresses into the canonical ENS registry.",
+        "textual_evidence": "The text record of the uniswap.eth ENS subdomain titled v3-deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on the FVM.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal primarily seeks canonical recognition and ENS updating for already deployed contracts.",
+      "textual_evidence": "The relevant Uniswap v3 contracts have also been deployed on the FVM. If this onchain vote passes, this deployment will be officially recognized as a canonical v3 deployment through an amendment to the v3deployments.uniswap.eth subdomain."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific smart contract execution details for the ENS update are included in the proposal text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "value": "0x0",
+        "input": "0x10f13a8c0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003333134000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000563078316638413464313935423634373634376337644434353635304342643535334644333363434141362c2030784234433437654435343646633331453236343730613138366543324335463139654630394241343100000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x10f13a8c",
+        "decoded_function": "setText(bytes32,string,string)",
+        "decoded_args": [
+          "0x0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+          "314",
+          "0x1f8A4d195B647647c7dD45650CBd553FD33cCAA6, 0xB4C47eD546Fc31E26470a186eC2C5F19eF09BA41"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0",
+        "input": "0x02571be30b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+        "output": "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+        "depth": 1,
+        "function_selector": "0x02571be3",
+        "decoded_function": "owner(bytes32)",
+        "decoded_args": [
+          "0x0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 1,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "owner(bytes32)",
+      "setText(bytes32,string,string)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x1f8a4d195b647647c7dd45650cbd553fd33ccaa6",
+        "0x22850a17032f40778c0c0a3fdd96905950a39f89",
+        "0x409af45457d4779828bfbcbe7aa653c38edb9ed9",
+        "0x4cd986dd509fbb6a695ae971d5c56c8795f640ee",
+        "0x76c001ad9e527fefa8fa822a987ad44ce720baed",
+        "0x915362b5450acbbc9f8044191ae7e35c86f2fe51",
+        "0xb4c47ed546fc31e26470a186ec2c5f19ef09ba41",
+        "0xcab04058e60020d65d18d4b3dff2ca1445d7099f",
+        "0xe45c06922228a33fff1ed54638a0db78f69f9780",
+        "0xe909b0cae57ee7eff56a5ca7fc4b66cf4f7c2d38",
+        "0xe9901ae78efb4386b1132009e310d08bcb445bf5",
+        "0xf0198aaa4a8792e2a4a6e6fb3039e4b1c71f15bb",
+        "0xff3b2da1379cc67cc2755194604713f10b820b0e",
+        "0xffd927d6f17495b28635dd49d24638e97bd8c8b8"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x1f8a4d195b647647c7dd45650cbd553fd33ccaa6",
+            "0x22850a17032f40778c0c0a3fdd96905950a39f89",
+            "0x409af45457d4779828bfbcbe7aa653c38edb9ed9",
+            "0x4cd986dd509fbb6a695ae971d5c56c8795f640ee",
+            "0x76c001ad9e527fefa8fa822a987ad44ce720baed",
+            "0x915362b5450acbbc9f8044191ae7e35c86f2fe51",
+            "0xb4c47ed546fc31e26470a186ec2c5f19ef09ba41",
+            "0xcab04058e60020d65d18d4b3dff2ca1445d7099f",
+            "0xe45c06922228a33fff1ed54638a0db78f69f9780",
+            "0xe909b0cae57ee7eff56a5ca7fc4b66cf4f7c2d38",
+            "0xe9901ae78efb4386b1132009e310d08bcb445bf5",
+            "0xf0198aaa4a8792e2a4a6e6fb3039e4b1c71f15bb",
+            "0xff3b2da1379cc67cc2755194604713f10b820b0e",
+            "0xffd927d6f17495b28635dd49d24638e97bd8c8b8"
+          ],
+          "trace_unique_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal primarily seeks canonical recognition and ENS updating for already deployed contracts.",
+            "textual_evidence": "The relevant Uniswap v3 contracts have also been deployed on the FVM. If this onchain vote passes, this deployment will be officially recognized as a canonical v3 deployment through an amendment to the v3deployments.uniswap.eth subdomain."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "owner(bytes32)",
+        "setText(bytes32,string,string)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Recognize deployment as canonical and update ENS",
+              "canonical_action": "parameter_update",
+              "object": "v3-deployments.uniswap.eth",
+              "claimed_effect": "Includes the FVM deployment addresses into the canonical ENS registry.",
+              "textual_evidence": "The text record of the uniswap.eth ENS subdomain titled v3-deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on the FVM.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "owner(bytes32)",
+            "setText(bytes32,string,string)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,591 @@
+{
+  "metadata": {
+    "proposal_id": "903",
+    "generated_at": "2026-05-08T11:15:24.440646+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal establishes a transparent, community-driven token-weighted approval voting process to elect two DUNA Admins (one Admin, one Reserve) via an off-chain vote on Nouns.gg, which will subsequently be finalized through an on-chain vote.",
+    "disclosed_entities": [
+      {
+        "name": "Nouns.gg",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "voting on Nouns.gg, achieved with Arweave"
+      },
+      {
+        "name": "Arweave",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Preserves History by archiving submissions with Arweave"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Approve the DUNA Admin election structure and authorize the preliminary voting round.",
+        "canonical_action": "governance_proposal_creation",
+        "object": "Election framework",
+        "claimed_effect": "Establishes a formal, 4+ week election process including warming-up, off-chain voting on Nouns.gg, and on-chain finalization.",
+        "textual_evidence": "A 'For' vote approves this election structure and authorizes conducting the preliminary voting round on Nouns.gg.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal defines a governance process and framework with off-chain steps leading to a future on-chain ratification vote. It contains no technical payload or smart contract interactions.",
+      "textual_evidence": "This proposal establishes a transparent, community-driven election process... followed by on-chain finalization."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "The proposal does not contain any executable on-chain payload, addresses, or smart contract function calls. It acts as a signaling or structural governance proposal."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "value": "0x0",
+        "input": "0x4223a5bb000000000000000000000000073f0dc58e9989c827ba5b7b35570b7315652e6300000000000000000000000000000000000000000000000000000000000f4240",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x4223a5bb",
+        "decoded_function": "sendOrRegisterDebt(address,uint256)",
+        "decoded_args": [
+          "0x073f0dc58e9989c827ba5b7b35570b7315652e63",
+          1000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000001ffd4c332c",
+        "depth": 1,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000001ffd4c332c",
+        "depth": 2,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000073f0dc58e9989c827ba5b7b35570b7315652e6300000000000000000000000000000000000000000000000000000000000f4240",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x073f0dc58e9989c827ba5b7b35570b7315652e63",
+          1000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000073f0dc58e9989c827ba5b7b35570b7315652e6300000000000000000000000000000000000000000000000000000000000f4240",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x073f0dc58e9989c827ba5b7b35570b7315652e63",
+          1000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 2,
+    "unique_addresses": [
+      "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+    ],
+    "delegatecall_count": 2,
+    "staticcall_count": 1,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "balanceOf(address)",
+      "sendOrRegisterDebt(address,uint256)",
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "903:3:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+      "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "depth": 1,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000073f0dc58e9989c827ba5b7b35570b7315652e6300000000000000000000000000000000000000000000000000000000000f4240",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x073f0dc58e9989c827ba5b7b35570b7315652e63",
+          1000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "903:2:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "depth": 2,
+      "function_selector": "0x70a08231",
+      "decoded_function": "balanceOf(address)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000001ffd4c332c",
+        "depth": 2,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "903:4:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "depth": 2,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000073f0dc58e9989c827ba5b7b35570b7315652e6300000000000000000000000000000000000000000000000000000000000f4240",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x073f0dc58e9989c827ba5b7b35570b7315652e63",
+          1000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+              ],
+              "related_actions": [
+                {
+                  "id": "903:3:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+                  "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "depth": 1,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "903:2:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                  "depth": 2,
+                  "function_selector": "0x70a08231",
+                  "decoded_function": "balanceOf(address)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "903:4:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                  "depth": 2,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "transfer"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 2,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal defines a governance process and framework with off-chain steps leading to a future on-chain ratification vote. It contains no technical payload or smart contract interactions.",
+            "textual_evidence": "This proposal establishes a transparent, community-driven election process... followed by on-chain finalization."
+          },
+          "actual_max_depth": 2,
+          "delegatecall_count": 2,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "balanceOf(address)",
+        "sendOrRegisterDebt(address,uint256)",
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "governance_proposal_creation"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "governance_proposal_creation"
+              ],
+              "actual_business_actions": [
+                "transfer"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "balanceOf(address)",
+                "sendOrRegisterDebt(address,uint256)",
+                "transfer(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Approve the DUNA Admin election structure and authorize the preliminary voting round.",
+              "canonical_action": "governance_proposal_creation",
+              "object": "Election framework",
+              "claimed_effect": "Establishes a formal, 4+ week election process including warming-up, off-chain voting on Nouns.gg, and on-chain finalization.",
+              "textual_evidence": "A 'For' vote approves this election structure and authorizes conducting the preliminary voting round on Nouns.gg.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "903:3:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+              "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "depth": 1,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "903:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 2,
+              "function_selector": "0x70a08231",
+              "decoded_function": "balanceOf(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "903:4:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "balanceOf(address)",
+            "sendOrRegisterDebt(address,uint256)",
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+          ],
+          "related_actions": [
+            {
+              "id": "903:3:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+              "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "depth": 1,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "903:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 2,
+              "function_selector": "0x70a08231",
+              "decoded_function": "balanceOf(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "903:4:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "governance_proposal_creation"
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "balanceOf(address)",
+            "sendOrRegisterDebt(address,uint256)",
+            "transfer(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

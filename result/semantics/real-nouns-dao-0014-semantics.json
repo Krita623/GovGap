@@ -1,0 +1,48 @@
+{
+  "proposal_summary": "NNS Labs requests $398k in funding for Season 3 (a 12-month mandate) to continue developing vertical products like NOGS, NNS, and Noggles Club to increase onboarding, utility, and revenue streams for the Nouns ecosystem.",
+  "disclosed_entities": [
+    {
+      "name": "NNS Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "NNS Labs is a development hub founded in 2022 and laser focused on the Nouns ecosystem."
+    },
+    {
+      "name": "NOGS",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "$NOGS, for one, is the first token in the Nouniverse to provide holders with tangible benefits"
+    },
+    {
+      "name": "NounsDAO Treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "This amount will be moved from the NFTs into NounsDAO treasury within 2 weeks."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Payment stream of $28k per month for 12 months and $60k upfront",
+      "canonical_action": "transfer",
+      "object": null,
+      "claimed_effect": "Fund NNS Labs team, engineering, community, marketing, and design for a 12-month period.",
+      "textual_evidence": "A payment stream of $28k per month for 12 months that will cover the operations... $60k that will give us more flexibility... Total Requested: $398k",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only requests standard DAO treasury payments (a stream and an upfront transfer).",
+    "textual_evidence": "We request a stream of $398k to drive these efforts over 12 months..."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific recipient addresses or tokens (USDC/ETH) are explicitly provided in the text for the $398k payment."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,48 @@
+{
+  "proposal_summary": "The Rari Foundation proposes to integrate Arbitrum One with the open-source Rarible Protocol (including an indexer, orderbook, and SDK) to jumpstart NFT ecosystem growth on Arbitrum, requesting 127,351 ARB from the DAO.",
+  "disclosed_entities": [
+    {
+      "name": "RARI Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The Rari Foundation is submitting a proposal to jumpstart the growth in the Arbitrum NFT ecosystem."
+    },
+    {
+      "name": "Arbitrum DAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "As such, the Arbitrum DAO has an opportunity to express its willingness to incentivize ecosystem growth"
+    },
+    {
+      "name": "Rarible Inc.",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Rarible Inc.: A leading NFT marketplace that allows users to mint, buy, and sell NFTs."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Payment of 127,351 ARB to Rari Foundation for integration costs",
+      "canonical_action": "transfer",
+      "object": null,
+      "claimed_effect": "Integration of Arbitrum One into Rarible Protocol and API",
+      "textual_evidence": "The 100,000 USD amount is payable in ARB under the exchange rate on the day of the proposal submission. As of Sept 13, the rate is 1 ARB = $0.785339, which translates to 127,351 ARB.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires a standard transfer of ARB tokens, along with technical efforts to integrate indexing, APIs, orderbooks, and deploying specific Rarible contracts to Arbitrum.",
+    "textual_evidence": "Tasks: Integration of Arbitrum One chain into Rarible Protocol... Contract Deployment: The Rarible Shared NFT, Rarible Factory (for creating collections), and Rarible ExchangeV2 contracts will be deployed to Arbitrum"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No destination address is provided for the ARB transfer in this text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

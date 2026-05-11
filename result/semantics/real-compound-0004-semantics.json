@@ -1,0 +1,26 @@
+{
+  "proposal_summary": "A highly abbreviated proposal indicating an update to an oracle.",
+  "disclosed_entities": [],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Oracle Update",
+      "canonical_action": "parameter_update",
+      "object": "Oracle",
+      "claimed_effect": "Updates the oracle system or parameters.",
+      "textual_evidence": "Oracle Update",
+      "confidence": 0.5
+    }
+  ],
+  "claimed_complexity": {
+    "level": "unknown",
+    "reason": "The text lacks any descriptive content beyond the phrase 'Oracle Update', making complexity impossible to determine.",
+    "textual_evidence": "Oracle Update"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal text is virtually empty, containing only a two-word title and description, leaving no exact addresses, entities, or detailed methodology."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

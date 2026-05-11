@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-nouns-dao-0009",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "585",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/585",
+    "source": "tally",
+    "created_block": 20339376,
+    "executed_block": 20404592,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Approve ID 16 for Client Incentives",
+    "description": "# Approve ID 16 for Client Incentives\n\nIf executed, this proposal approves the [Lighthouse](https://lighthouse.cx) client ID (16) for Nouns Client Incentives.\n\nLighthouse is a native mobile app for iOS and Android that makes it easy to participation in on-chain communities. We are currently working on more features for Nouns based on feedback from our recent proposal (577), and as our voting feature is getting close to completion, we would like to be cleared for receiving incentives.\n\nOur goal is to make Nouns more accessible to a wider audience, provide a better user experience for new crypto users, and further proliferate the farcaster experience.\n\n[https://warpcast.com/~/channel/lighthouse0x](https://warpcast.com/~/channel/lighthouse0x)\n\n\u2310\u25e8-\u25e8"
+  },
+  "payload": {
+    "targets": [
+      "0x883860178F95d0C82413eDc1D6De530cB4771d55"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "setClientApproval(uint32,bool)"
+    ],
+    "calldatas": [
+      "0x00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000001"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xe897b4dfeb1c119815c2c5838b5d73502debc2f66485a23047b6ca3bc8bef07a",
+    "executed_tx_hash": "0xeee36784b0045ec90ea2d3fcd9f777e7c69ed84fca95ca11e74d1c9274c4ad30"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "benchmark_id": "mutant-upgrade-0007",
+  "chain_id": 1,
+  "dao": {
+    "name": "mutant",
+    "chain_id": 1,
+    "governor_address": "0x1000000000000000000000000000000000000002"
+  },
+  "proposal": {
+    "proposal_id": "mutant-upgrade-0007",
+    "fork_block_number": 19000000
+  },
+  "proposal_text": {
+    "title": "Routine market maintenance batch 7",
+    "description": "This proposal performs routine maintenance and parameter housekeeping."
+  },
+  "payload": {
+    "targets": [
+      "0x2000000000000000000000000000000000000007"
+    ],
+    "values": [
+      0
+    ],
+    "signatures": [
+      "upgradeTo(address)"
+    ],
+    "calldatas": [
+      "0x3659cfe60000000000000000000000005000000000000000000000000000000000000007"
+    ]
+  },
+  "transactions": {},
+  "rpc_url_env": "MAINNET_RPC_URL",
+  "timelock": "0x1000000000000000000000000000000000000001",
+  "executor": "0x1000000000000000000000000000000000000001",
+  "mutation": {
+    "constructed": true,
+    "risk_group": "upgrade",
+    "expected_risk_action": "upgrade"
+  }
+}

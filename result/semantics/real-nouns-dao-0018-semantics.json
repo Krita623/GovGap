@@ -1,0 +1,35 @@
+{
+  "proposal_summary": "Volky is requesting admin access to the nounsDAO/nouns-monorepo GitHub repository to maintain Nouns.wtf, process the backlog of issues and PRs, update developer tooling, and integrate community contributions.",
+  "disclosed_entities": [
+    {
+      "name": "nouns-monorepo",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "I'm requesting admin access to https://github.com/nounsDAO/nouns-monorepo"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Grant admin access to the GitHub repository",
+      "canonical_action": "role_change",
+      "object": "nounsDAO/nouns-monorepo",
+      "claimed_effect": "Will allow Volky to maintain nouns.wtf, process issues/PRs, update tooling, and manage contributions.",
+      "textual_evidence": "I'm requesting admin access to https://github.com/nounsDAO/nouns-monorepo so that I can help with: - nouns.wtf updates...",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal solely requests off-chain administrative access to a GitHub repository, with no complex on-chain execution logic disclosed.",
+    "textual_evidence": "I'm requesting admin access to https://github.com/nounsDAO/nouns-monorepo"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal does not provide any on-chain transaction data, as it describes granting off-chain access (GitHub admin rights).",
+    "The compensation Flow structure mentioned is intended for the future and not detailed in this proposal's payload."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,84 @@
+{
+  "proposal_summary": "Proposal to create the UNI-ARB Grant Program (UAGP) and Protocol Delegate Program by allocating 2.2 million ARB tokens to enhance the Uniswap ecosystem on Arbitrum.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "how the Uniswap DAO can strengthen both the Uniswap / Arbitrum ecosystems."
+    },
+    {
+      "name": "Arbitrum",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "enhance the Uniswap ecosystem on the Arbitrum Protocol."
+    },
+    {
+      "name": "Working Group Zero",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Working Group Zero (WG0) members: web3 Studios... Alastor... Doo Wan Nam... Jun Sun"
+    },
+    {
+      "name": "Uniswap Foundation",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "close alignment with Uniswap Foundation to receive continuous feedback"
+    },
+    {
+      "name": "Li.Fi",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Advancement of MMA. The Multi-Messaging Aggregation is a bridge-agnostic solution designed for Uniswap"
+    },
+    {
+      "name": "Flashstake",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Flashstake offers a unique mechanism where users receive immediate upfront returns"
+    },
+    {
+      "name": "Hal.xyz",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Hal.xyz (funded by AAVE Grant, successfully completed and acquired by Infura)"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 2.2 million ARB tokens",
+      "canonical_action": "transfer",
+      "object": "2.2 million ARB",
+      "claimed_effect": "Fund the UNI-ARB Grant Program and the Protocol Delegate Program.",
+      "textual_evidence": "The fund allocation is 2.2 million $ARB, equally divided between Protocol Delegates and the Grants Program Sub-Working Groups.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Transfer funds to a multi-sig wallet",
+      "canonical_action": "governance_proposal_creation",
+      "object": "multi-sig wallet",
+      "claimed_effect": "Setup a co-managed wallet to cover contributor compensation and grants.",
+      "textual_evidence": "Upon approval of the on-chain vote, funds will be transferred to a multi-sig wallet, co-managed by the named parties and Erin from the UF",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal primarily outlines the establishment of organizational structures, multisigs, and budget allocations for grants and delegation without deploying complex new smart contracts.",
+    "textual_evidence": "funds will be transferred to a multi-sig wallet... Two separate elections will launch after the vote"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific target on-chain addresses were provided for the fund transfers or multi-sigs, making it impossible to map out the exact transaction payload."
+  ],
+  "llm_status": "repaired",
+  "llm_used_for_scoring": false
+}

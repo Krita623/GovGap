@@ -1,0 +1,72 @@
+{
+  "proposal_summary": "Gauntlet recommends adding COMP to the reward contracts for Ethereum (28,000 COMP), Base (3,600 COMP), and Arbitrum (2,250 COMP).",
+  "disclosed_entities": [
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adding COMP to the reward contracts"
+    },
+    {
+      "name": "Ethereum reward contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "reward contracts of Base, Ethereum, and Arbitrum"
+    },
+    {
+      "name": "Base reward contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "reward contracts of Base, Ethereum, and Arbitrum"
+    },
+    {
+      "name": "Arbitrum reward contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "reward contracts of Base, Ethereum, and Arbitrum"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Add 28,000 COMP to the Ethereum reward contract",
+      "canonical_action": "transfer",
+      "object": "Ethereum reward contract",
+      "claimed_effect": "Tops up the Ethereum reward contract with 28,000 COMP",
+      "textual_evidence": "| Ethereum | 28,000 |",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Add 3,600 COMP to the Base reward contract",
+      "canonical_action": "bridge",
+      "object": "Base reward contract",
+      "claimed_effect": "Tops up the Base reward contract with 3,600 COMP",
+      "textual_evidence": "| Base | 3,600 |",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "Add 2,250 COMP to the Arbitrum reward contract",
+      "canonical_action": "bridge",
+      "object": "Arbitrum reward contract",
+      "claimed_effect": "Tops up the Arbitrum reward contract with 2,250 COMP",
+      "textual_evidence": "| Arbitrum | 2,250 |",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only requires topping up reward contracts with specified amounts of COMP.",
+    "textual_evidence": "Simple Summary"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific contract addresses are provided for the reward contracts or the COMP token.",
+    "The exact bridge or transfer methods (functions) to be used are not detailed in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,480 @@
+{
+  "metadata": {
+    "proposal_id": "55",
+    "generated_at": "2026-05-08T11:15:24.488702+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "The proposal aims to lower the onchain proposal threshold for the Uniswap DAO from 2.5 million UNI to 1 million UNI, with the goal of increasing delegate engagement and decentralization.",
+    "disclosed_entities": [
+      {
+        "name": "Uniswap",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Uniswap’s current quorum is 40M UNI."
+      },
+      {
+        "name": "UNI",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "We are proposing to lower the current proposal threshold (PT) from 2.5M UNI to 1M UNI"
+      },
+      {
+        "name": "Gauntlet",
+        "address": "0x683a4f9915d6216f73d6df50151725036bd26c02",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0x683a4f9915d6216f73d6df50151725036bd26c02 | 7,501,052.07  | Gauntlet | Yes       | 90%    | 1                |"
+      },
+      {
+        "name": "Teemu",
+        "address": "0x553f674dd7d102ad79c644103974a1cc53b62ac2",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0x553f674dd7d102ad79c644103974a1cc53b62ac2 | 5,000,184.21  | Teemu    | Yes       | 80%    | 1                |"
+      },
+      {
+        "name": "Ken (UF)",
+        "address": "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1 | 5,000,021.65  | Ken (UF) | No        | 0%     | 1                |"
+      },
+      {
+        "name": "Michigan",
+        "address": "0x13bdae8c5f0fc40231f0e6a4ad70196f59138548",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0x13bdae8c5f0fc40231f0e6a4ad70196f59138548 | 3,851,337.13  | Michigan | Yes       | 100%   | 6                |"
+      },
+      {
+        "name": "Penn",
+        "address": "0x070341aa5ed571f0fb2c4a5641409b1a46b4961b",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0x070341aa5ed571f0fb2c4a5641409b1a46b4961b | 3,000,601.96  | Penn     | Yes       | 80%    | 2                |"
+      },
+      {
+        "name": "GFX Labs",
+        "address": "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0xa6e8772af29b29b9202a073f8e36f447689beef6 | 2,502,935.57  | GFX Labs | Yes       | 90%    | 5                |"
+      },
+      {
+        "name": "she256",
+        "address": "0xed11e5ea95a5a3440fbaadc4cc404c56d0a5bb04",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0xed11e5ea95a5a3440fbaadc4cc404c56d0a5bb04 | 2,500,839.08  | she256   | Yes       | 80%    | 2                |"
+      },
+      {
+        "name": "Argent",
+        "address": "0x5d8908afee1df9f7f0830105f8be828f97ce9e68",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0x5d8908afee1df9f7f0830105f8be828f97ce9e68 | 2,500,667.32  | Argent   | No        | 10%    | 1                |"
+      },
+      {
+        "name": "Berkeley",
+        "address": "0x7ae109a63ff4dc852e063a673b40bed85d22e585",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0x7ae109a63ff4dc852e063a673b40bed85d22e585 | 2,500,030.00  | Berkeley | No        | 20%    | 1                |"
+      },
+      {
+        "name": "Columbia",
+        "address": "0xdc1f98682f4f8a5c6d54f345f448437b83f5e432",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0xdc1f98682f4f8a5c6d54f345f448437b83f5e432 | 2,500,010.00  | Columbia | Sometimes | 60%    | 1                |"
+      },
+      {
+        "name": "Chicago",
+        "address": "0xb7771f70633c7e54e61dd38d01c26da0e86be1a5",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| 0xb7771f70633c7e54e61dd38d01c26da0e86be1a5 | 2,500,000.00  | Chicago  | No        | 10%    | 1                |"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x683a4f9915d6216f73d6df50151725036bd26c02",
+        "textual_evidence": "0x683a4f9915d6216f73d6df50151725036bd26c02"
+      },
+      {
+        "address": "0x553f674dd7d102ad79c644103974a1cc53b62ac2",
+        "textual_evidence": "0x553f674dd7d102ad79c644103974a1cc53b62ac2"
+      },
+      {
+        "address": "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
+        "textual_evidence": "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1"
+      },
+      {
+        "address": "0x13bdae8c5f0fc40231f0e6a4ad70196f59138548",
+        "textual_evidence": "0x13bdae8c5f0fc40231f0e6a4ad70196f59138548"
+      },
+      {
+        "address": "0x070341aa5ed571f0fb2c4a5641409b1a46b4961b",
+        "textual_evidence": "0x070341aa5ed571f0fb2c4a5641409b1a46b4961b"
+      },
+      {
+        "address": "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+        "textual_evidence": "0xa6e8772af29b29b9202a073f8e36f447689beef6"
+      },
+      {
+        "address": "0xed11e5ea95a5a3440fbaadc4cc404c56d0a5bb04",
+        "textual_evidence": "0xed11e5ea95a5a3440fbaadc4cc404c56d0a5bb04"
+      },
+      {
+        "address": "0x5d8908afee1df9f7f0830105f8be828f97ce9e68",
+        "textual_evidence": "0x5d8908afee1df9f7f0830105f8be828f97ce9e68"
+      },
+      {
+        "address": "0x7ae109a63ff4dc852e063a673b40bed85d22e585",
+        "textual_evidence": "0x7ae109a63ff4dc852e063a673b40bed85d22e585"
+      },
+      {
+        "address": "0xdc1f98682f4f8a5c6d54f345f448437b83f5e432",
+        "textual_evidence": "0xdc1f98682f4f8a5c6d54f345f448437b83f5e432"
+      },
+      {
+        "address": "0xb7771f70633c7e54e61dd38d01c26da0e86be1a5",
+        "textual_evidence": "0xb7771f70633c7e54e61dd38d01c26da0e86be1a5"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "lower the current proposal threshold",
+        "canonical_action": "parameter_update",
+        "object": "proposal threshold",
+        "claimed_effect": "lower from 2.5M UNI to 1M UNI",
+        "textual_evidence": "We are proposing to lower the current proposal threshold (PT) from 2.5M UNI to 1M UNI",
+        "confidence": 1.0
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal modifies a single governance parameter (proposal threshold).",
+      "textual_evidence": "We are proposing to lower the current proposal threshold (PT) from 2.5M UNI to 1M UNI"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific target smart contract or implementation details provided beyond the parameter change."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "value": "0x0",
+        "input": "0x17ba1b8b00000000000000000000000000000000000000000000d3c21bcecceda1000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x17ba1b8b",
+        "decoded_function": "_setProposalThreshold(uint256)",
+        "decoded_args": [
+          1000000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+        "value": "0x0",
+        "input": "0x17ba1b8b00000000000000000000000000000000000000000000d3c21bcecceda1000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x17ba1b8b",
+        "decoded_function": "_setProposalThreshold(uint256)",
+        "decoded_args": [
+          1000000000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+      "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "_setProposalThreshold(uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "55:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+      "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+      "depth": 1,
+      "function_selector": "0x17ba1b8b",
+      "decoded_function": "_setProposalThreshold(uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+        "value": "0x0",
+        "input": "0x17ba1b8b00000000000000000000000000000000000000000000d3c21bcecceda1000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x17ba1b8b",
+        "decoded_function": "_setProposalThreshold(uint256)",
+        "decoded_args": [
+          1000000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x070341aa5ed571f0fb2c4a5641409b1a46b4961b",
+        "0x13bdae8c5f0fc40231f0e6a4ad70196f59138548",
+        "0x553f674dd7d102ad79c644103974a1cc53b62ac2",
+        "0x5d8908afee1df9f7f0830105f8be828f97ce9e68",
+        "0x683a4f9915d6216f73d6df50151725036bd26c02",
+        "0x7ae109a63ff4dc852e063a673b40bed85d22e585",
+        "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
+        "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+        "0xb7771f70633c7e54e61dd38d01c26da0e86be1a5",
+        "0xdc1f98682f4f8a5c6d54f345f448437b83f5e432",
+        "0xed11e5ea95a5a3440fbaadc4cc404c56d0a5bb04"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+                "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+              ],
+              "related_actions": [
+                {
+                  "id": "55:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+                  "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+                  "depth": 1,
+                  "function_selector": "0x17ba1b8b",
+                  "decoded_function": "_setProposalThreshold(uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x070341aa5ed571f0fb2c4a5641409b1a46b4961b",
+            "0x13bdae8c5f0fc40231f0e6a4ad70196f59138548",
+            "0x553f674dd7d102ad79c644103974a1cc53b62ac2",
+            "0x5d8908afee1df9f7f0830105f8be828f97ce9e68",
+            "0x683a4f9915d6216f73d6df50151725036bd26c02",
+            "0x7ae109a63ff4dc852e063a673b40bed85d22e585",
+            "0xa2bf1b0a7e079767b4701b5a1d9d5700eb42d1d1",
+            "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+            "0xb7771f70633c7e54e61dd38d01c26da0e86be1a5",
+            "0xdc1f98682f4f8a5c6d54f345f448437b83f5e432",
+            "0xed11e5ea95a5a3440fbaadc4cc404c56d0a5bb04"
+          ],
+          "trace_unique_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+            "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+            "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal modifies a single governance parameter (proposal threshold).",
+            "textual_evidence": "We are proposing to lower the current proposal threshold (PT) from 2.5M UNI to 1M UNI"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "_setProposalThreshold(uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "lower the current proposal threshold",
+              "canonical_action": "parameter_update",
+              "object": "proposal threshold",
+              "claimed_effect": "lower from 2.5M UNI to 1M UNI",
+              "textual_evidence": "We are proposing to lower the current proposal threshold (PT) from 2.5M UNI to 1M UNI",
+              "confidence": 1.0
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "55:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+              "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+              "depth": 1,
+              "function_selector": "0x17ba1b8b",
+              "decoded_function": "_setProposalThreshold(uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "_setProposalThreshold(uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+            "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+          ],
+          "related_actions": [
+            {
+              "id": "55:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+              "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+              "depth": 1,
+              "function_selector": "0x17ba1b8b",
+              "decoded_function": "_setProposalThreshold(uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

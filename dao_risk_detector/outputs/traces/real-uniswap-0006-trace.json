@@ -1,0 +1,101 @@
+{
+  "proposal_id": "27",
+  "simulation_status": "reverted_with_trace",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0x1a9c8182c09f50c8318d769245bea52c32be35bc"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "gas": "0xe48fb8",
+          "gasUsed": "0x662b",
+          "to": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+          "input": "0x",
+          "error": "execution reverted",
+          "calls": [
+            {
+              "from": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+              "gas": "0xe0ea35",
+              "gasUsed": "0x2e",
+              "to": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+              "input": "0x",
+              "error": "execution reverted",
+              "value": "0x0",
+              "type": "DELEGATECALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+      "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": []
+  },
+  "revert_reason": "execution reverted",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

@@ -1,0 +1,578 @@
+{
+  "metadata": {
+    "proposal_id": "32",
+    "generated_at": "2026-05-08T11:15:23.754083+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Update the interest rate parameters on the AMPL market to account for an over-approximation in compounded interest computation, effectively implementing an exponential interest curve with a new Optimal Utilization rate, Slope1, and Slope2.",
+    "disclosed_entities": [
+      {
+        "name": "AMPL market",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Update interest rate on AMPL market to account for over-approximation"
+      },
+      {
+        "name": "Interest Strategy",
+        "address": "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "[https://etherscan.io/address/0x84d1FaD9559b8AC1Fda17d073B8542c8Fb6986dd#readContract]"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "textual_evidence": "[https://etherscan.io/address/0x84d1FaD9559b8AC1Fda17d073B8542c8Fb6986dd#readContract]"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Update interest rate on AMPL market",
+        "canonical_action": "parameter_update",
+        "object": "interest curve parameters",
+        "claimed_effect": "Sets new parameters (optimalUtilizationRate 80%, variableRateSlope1 2%, variableRateSlope2 750%) to adjust the interest rate curve.",
+        "textual_evidence": "We propose the following parameters... * Optimal utilization = 80% * Base rate = 1% * Slope1 = 2%# * Slope2 = 750%",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Adjusts parameter constants, but the calculations behind them require some mathematical evaluation due to exponential curve mechanics.",
+      "textual_evidence": "The over-approximation mentioned above results in an exponential curve... We propose the following parameters"
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "calculateCompoundedInterest",
+        "textual_evidence": "In calculateCompoundedInterest method"
+      }
+    ],
+    "limitations": [
+      "No target proxy or specific method signature for parameter update is explicitly provided in the implementation details, besides the Strategy address."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0x85c858b1",
+        "output": "0x000000000000000000000000311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "depth": 1,
+        "function_selector": "0x85c858b1",
+        "decoded_function": "getLendingPoolConfigurator()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "to_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "value": "0x0",
+        "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x1d2118f9",
+        "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+        "decoded_args": [
+          "0xd46ba6d942050d489dbd938a2c909a5d5039a161",
+          "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "value": "0x0",
+        "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x1d2118f9",
+        "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+        "decoded_args": [
+          "0xd46ba6d942050d489dbd938a2c909a5d5039a161",
+          "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0xaecda378",
+        "output": "0x0000000000000000000000005300a1a15135ea4dc7ad5a167152c01efc9b192a",
+        "depth": 3,
+        "function_selector": "0xaecda378",
+        "decoded_function": "getPoolAdmin()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x17ec6a7044c5b665d304126a96d8affca440715c",
+      "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+      "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 2,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execute()",
+      "getLendingPoolConfigurator()",
+      "getPoolAdmin()",
+      "setReserveInterestRateStrategyAddress(address,address)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "32:0:arbitrary_call",
+      "action_type": "arbitrary_call",
+      "severity_hint": "high",
+      "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+      "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+      "depth": 0,
+      "function_selector": "0x61461954",
+      "decoded_function": "execute()",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    },
+    {
+      "id": "32:3:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+      "depth": 2,
+      "function_selector": "0x1d2118f9",
+      "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "value": "0x0",
+        "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x1d2118f9",
+        "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+        "decoded_args": [
+          "0xd46ba6d942050d489dbd938a2c909a5d5039a161",
+          "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+        ],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "summary": "An undisclosed address participates in an uncovered critical business action.",
+      "disclosed_addresses": [
+        "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "CRITICAL",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x17ec6a7044c5b665d304126a96d8affca440715c",
+                "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+                "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c"
+              ],
+              "related_actions": [
+                {
+                  "id": "32:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                },
+                {
+                  "id": "32:3:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                  "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+                  "depth": 2,
+                  "function_selector": "0x1d2118f9",
+                  "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [
+                "arbitrary_call"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "32:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+                  "depth": 0,
+                  "function_selector": "0x61461954",
+                  "decoded_function": "execute()",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ]
+            }
+          ],
+          "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+          ],
+          "trace_unique_addresses": [
+            "0x17ec6a7044c5b665d304126a96d8affca440715c",
+            "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+            "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+            "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x17ec6a7044c5b665d304126a96d8affca440715c",
+            "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+            "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+            "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 3,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Adjusts parameter constants, but the calculations behind them require some mathematical evaluation due to exponential curve mechanics.",
+            "textual_evidence": "The over-approximation mentioned above results in an exponential curve... We propose the following parameters"
+          },
+          "actual_max_depth": 3,
+          "delegatecall_count": 1,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "execute()",
+        "getLendingPoolConfigurator()",
+        "getPoolAdmin()",
+        "setReserveInterestRateStrategyAddress(address,address)"
+      ],
+      "unmatched_functions": [
+        "arbitrary_call"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "arbitrary_call",
+        "parameter_update"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "parameter_update"
+              ],
+              "actual_business_actions": [
+                "arbitrary_call",
+                "parameter_update"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "execute()",
+                "getLendingPoolConfigurator()",
+                "getPoolAdmin()",
+                "setReserveInterestRateStrategyAddress(address,address)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Update interest rate on AMPL market",
+              "canonical_action": "parameter_update",
+              "object": "interest curve parameters",
+              "claimed_effect": "Sets new parameters (optimalUtilizationRate 80%, variableRateSlope1 2%, variableRateSlope2 750%) to adjust the interest rate curve.",
+              "textual_evidence": "We propose the following parameters... * Optimal utilization = 80% * Base rate = 1% * Slope1 = 2%# * Slope2 = 750%",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "32:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "32:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+              "depth": 2,
+              "function_selector": "0x1d2118f9",
+              "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "execute()",
+            "getLendingPoolConfigurator()",
+            "getPoolAdmin()",
+            "setReserveInterestRateStrategyAddress(address,address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "CRITICAL",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x17ec6a7044c5b665d304126a96d8affca440715c",
+            "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+            "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+            "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "related_actions": [
+            {
+              "id": "32:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "32:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+              "depth": 2,
+              "function_selector": "0x1d2118f9",
+              "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ],
+          "material_related_actions": [
+            {
+              "id": "32:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+              "depth": 0,
+              "function_selector": "0x61461954",
+              "decoded_function": "execute()",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ]
+        }
+      ],
+      "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "parameter_update"
+          ],
+          "actual_business_actions": [
+            "arbitrary_call",
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "execute()",
+            "getLendingPoolConfigurator()",
+            "getPoolAdmin()",
+            "setReserveInterestRateStrategyAddress(address,address)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

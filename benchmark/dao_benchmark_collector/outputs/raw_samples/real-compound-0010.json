@@ -1,0 +1,43 @@
+{
+  "benchmark_id": "real-compound-0010",
+  "dao": {
+    "name": "Compound",
+    "chain_id": 1,
+    "governor_address": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "341",
+    "proposal_url": "https://www.tally.xyz/gov/compound/proposal/341",
+    "source": "tally",
+    "created_block": 20915903,
+    "executed_block": 20963058,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Add tBTC as collateral into cUSDCv3 on Mainnet",
+    "description": "# Add tBTC as collateral into cUSDCv3 on Mainnet\n\n## Proposal summary\n\nCompound Growth Program [AlphaGrowth] proposes to add tBTC into cUSDCv3 on Ethereum network. This proposal takes the governance steps recommended and necessary to update a Compound III USDC market on Ethereum. Simulations have confirmed the market\u2019s readiness, as much as possible, using the [Comet scenario suite](https://github.com/compound-finance/comet/tree/main/scenario). The new parameters include setting the risk parameters based on the [recommendations from Gauntlet](https://www.comp.xyz/t/add-collateral-tbtc-to-eth-market-on-mainnet/5399/12).\n\nFurther detailed information can be found on the corresponding [proposal pull request](https://github.com/compound-finance/comet/pull/935) and [forum discussion](https://www.comp.xyz/t/add-collateral-tbtc-to-eth-market-on-mainnet/5399).\n\n\n## Proposal Actions\n\nThe first action adds tBTC asset as collateral with corresponding configurations.\n\nThe second action deploys and upgrades Comet to a new version."
+  },
+  "payload": {
+    "targets": [
+      "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "0x1EC63B5883C3481134FD50D5DAebc83Ecd2E8779"
+    ],
+    "values": [
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "addAsset(address,(address,address,uint8,uint64,uint64,uint64,uint128))",
+      "deployAndUpgradeTo(address,address)"
+    ],
+    "calldatas": [
+      "0x000000000000000000000000c3d688b66703497daa19211eedff47f25384cdc300000000000000000000000018084fba666a33d37592fa2633fd49a74dd93a88000000000000000000000000aa9527bf3183a96fe6e55831c96de5cd988d348400000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000a8c0ff92d4c00000000000000000000000000000000000000000000000000000b3db2b55c1100000000000000000000000000000000000000000000000000000c7d713b49da000000000000000000000000000000000000000000000000000f732b66015a540000",
+      "0x000000000000000000000000316f9708bb98af7da9c68c1c3b5e79039cd336e3000000000000000000000000c3d688b66703497daa19211eedff47f25384cdc3"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xe974404dd1636fa478260a485edd5ada43b8b87c87292e8793d4f75bb1bc0e90",
+    "executed_tx_hash": "0xd5aeae1c3ded466488aaad2cdc928059e2baf60c91b41195734c429a224bf493"
+  }
+}

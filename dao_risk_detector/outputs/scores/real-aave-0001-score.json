@@ -1,0 +1,818 @@
+{
+  "metadata": {
+    "proposal_id": "15",
+    "generated_at": "2026-05-08T11:15:23.724831+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal extends the ability for the Safety Module contracts (stkAAVE and stkABPT) to transfer AAVE rewards out of the Aave Ecosystem Reserve for the next year by executing approve functions.",
+    "disclosed_entities": [
+      {
+        "name": "Safety Module stkAAVE",
+        "address": "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "https://etherscan.io/address/0x4da27a545c0c5B758a6BA100e3a049001de870f5 is the stkAAVE contract"
+      },
+      {
+        "name": "Safety Module stkABPT",
+        "address": "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "and https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47 is the stkABPT address."
+      },
+      {
+        "name": "Aave ecosystem reserve",
+        "address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "entity_type": "treasury",
+        "disclosure_level": "explicit",
+        "textual_evidence": "on the Aave ecosystem reserve 0x25f2226b597e8f9514b3f68f00f494cf4f286491"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+        "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)"
+      },
+      {
+        "address": "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+        "textual_evidence": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750)"
+      },
+      {
+        "address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "textual_evidence": "on the Aave ecosystem reserve 0x25f2226b597e8f9514b3f68f00f494cf4f286491"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)",
+        "canonical_action": "approval",
+        "object": "stkAAVE contract",
+        "claimed_effect": "Approves 200,750 AAVE for the stkAAVE contract to distribute as safety incentives.",
+        "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750)",
+        "canonical_action": "approval",
+        "object": "stkABPT contract",
+        "claimed_effect": "Approves 200,750 AAVE for the stkABPT contract to distribute as safety incentives.",
+        "textual_evidence": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal consists entirely of performing two token approval actions on the Aave ecosystem reserve contract.",
+      "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve"
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "approve",
+        "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)"
+      }
+    ],
+    "limitations": [
+      "No precise token contract address is disclosed for AAVE, though it is implied to be handled via the reserve."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+        "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+        "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 4,
+    "unique_addresses": [
+      "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+      "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+      "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+      "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+    ],
+    "delegatecall_count": 4,
+    "staticcall_count": 0,
+    "external_call_count": 6,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "approve(address,address,uint256)",
+      "approve(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "15:0:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+      "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+      "depth": 0,
+      "function_selector": "0xe1f21c67",
+      "decoded_function": "approve(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+        "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:1:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+      "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "depth": 1,
+      "function_selector": "0xe1f21c67",
+      "decoded_function": "approve(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:2:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+      "depth": 2,
+      "function_selector": "0xe1f21c67",
+      "decoded_function": "approve(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:3:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "depth": 3,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:4:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+      "depth": 4,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+        "0xa1116930326d21fb917d5a27f1e9943a9595fb47"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+                "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+                "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+                "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+              ],
+              "related_actions": [
+                {
+                  "id": "15:0:approval",
+                  "action_type": "approval",
+                  "severity_hint": "medium",
+                  "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+                  "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+                  "depth": 0,
+                  "function_selector": "0xe1f21c67",
+                  "decoded_function": "approve(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "15:1:approval",
+                  "action_type": "approval",
+                  "severity_hint": "medium",
+                  "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+                  "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                  "depth": 1,
+                  "function_selector": "0xe1f21c67",
+                  "decoded_function": "approve(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "15:2:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                  "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+                  "depth": 2,
+                  "function_selector": "0xe1f21c67",
+                  "decoded_function": "approve(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "15:3:approval",
+                  "action_type": "approval",
+                  "severity_hint": "medium",
+                  "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                  "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                  "depth": 3,
+                  "function_selector": "0x095ea7b3",
+                  "decoded_function": "approve(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "15:4:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                  "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+                  "depth": 4,
+                  "function_selector": "0x095ea7b3",
+                  "decoded_function": "approve(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "approval"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+            "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+            "0xa1116930326d21fb917d5a27f1e9943a9595fb47"
+          ],
+          "trace_unique_addresses": [
+            "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+            "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+            "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+            "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+            "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+            "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+            "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+            "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+          ],
+          "covered_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 4,
+      "depth_mismatch": true,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal consists entirely of performing two token approval actions on the Aave ecosystem reserve contract.",
+            "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve"
+          },
+          "actual_max_depth": 4,
+          "delegatecall_count": 4,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "approve(address,address,uint256)",
+        "approve(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "approval",
+        "approval"
+      ],
+      "actual_actions": [
+        "approval"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)",
+              "canonical_action": "approval",
+              "object": "stkAAVE contract",
+              "claimed_effect": "Approves 200,750 AAVE for the stkAAVE contract to distribute as safety incentives.",
+              "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750)",
+              "canonical_action": "approval",
+              "object": "stkABPT contract",
+              "claimed_effect": "Approves 200,750 AAVE for the stkABPT contract to distribute as safety incentives.",
+              "textual_evidence": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "15:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+              "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+              "depth": 0,
+              "function_selector": "0xe1f21c67",
+              "decoded_function": "approve(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:1:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+              "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "depth": 1,
+              "function_selector": "0xe1f21c67",
+              "decoded_function": "approve(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+              "depth": 2,
+              "function_selector": "0xe1f21c67",
+              "decoded_function": "approve(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:3:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+              "depth": 3,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:4:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+              "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+              "depth": 4,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "approval"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "approve(address,address,uint256)",
+            "approve(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+            "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+            "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+            "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+          ],
+          "related_actions": [
+            {
+              "id": "15:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+              "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+              "depth": 0,
+              "function_selector": "0xe1f21c67",
+              "decoded_function": "approve(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:1:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+              "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "depth": 1,
+              "function_selector": "0xe1f21c67",
+              "decoded_function": "approve(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+              "depth": 2,
+              "function_selector": "0xe1f21c67",
+              "decoded_function": "approve(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:3:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+              "depth": 3,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "15:4:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+              "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+              "depth": 4,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

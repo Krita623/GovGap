@@ -1,0 +1,718 @@
+{
+  "metadata": {
+    "proposal_id": "711",
+    "generated_at": "2026-05-08T11:15:24.407145+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 3,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 3 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "NNS Labs requests $398k in funding for Season 3 (a 12-month mandate) to continue developing vertical products like NOGS, NNS, and Noggles Club to increase onboarding, utility, and revenue streams for the Nouns ecosystem.",
+    "disclosed_entities": [
+      {
+        "name": "NNS Labs",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "NNS Labs is a development hub founded in 2022 and laser focused on the Nouns ecosystem."
+      },
+      {
+        "name": "NOGS",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "$NOGS, for one, is the first token in the Nouniverse to provide holders with tangible benefits"
+      },
+      {
+        "name": "NounsDAO Treasury",
+        "address": null,
+        "entity_type": "treasury",
+        "disclosure_level": "implicit",
+        "textual_evidence": "This amount will be moved from the NFTs into NounsDAO treasury within 2 weeks."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Payment stream of $28k per month for 12 months and $60k upfront",
+        "canonical_action": "transfer",
+        "object": null,
+        "claimed_effect": "Fund NNS Labs team, engineering, community, marketing, and design for a 12-month period.",
+        "textual_evidence": "A payment stream of $28k per month for 12 months that will cover the operations... $60k that will give us more flexibility... Total Requested: $398k",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal only requests standard DAO treasury payments (a stream and an upfront transfer).",
+      "textual_evidence": "We request a stream of $398k to drive these efforts over 12 months..."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific recipient addresses or tokens (USDC/ETH) are explicitly provided in the text for the $398k payment."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "value": "0x0",
+        "input": "0x4223a5bb000000000000000000000000ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000000df8475800",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x4223a5bb",
+        "decoded_function": "sendOrRegisterDebt(address,uint256)",
+        "decoded_args": [
+          "0xea71f4f8a78dbf99d4af108ad5841c889f0800e5",
+          60000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "value": "0x0",
+        "input": "0x410aa522000000000000000000000000ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005231ecd511632da68116d1c0910590f483d3b7c6",
+        "output": "0x0000000000000000000000005231ecd511632da68116d1c0910590f483d3b7c6",
+        "depth": 0,
+        "function_selector": "0x410aa522",
+        "decoded_function": "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+        "decoded_args": [
+          "0xea71f4f8a78dbf99d4af108ad5841c889f0800e5",
+          338000000000,
+          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          1734822000,
+          1766358000,
+          0,
+          "0x5231ecd511632da68116d1c0910590f483d3b7c6"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CREATE2",
+        "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+        "value": "0x0",
+        "input": "0x6101143d81600a3d39f336602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef71ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000b2",
+        "output": "0x36602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef71ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000b2",
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+        "value": "0x0",
+        "input": "0x8129fc1c",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x8129fc1c",
+        "decoded_function": "initialize()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+        "to_address": "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+        "value": "0x0",
+        "input": "0x8129fc1c0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef71ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000b2",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0x8129fc1c",
+        "decoded_function": "initialize()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "value": "0x0",
+        "input": "0x4223a5bb0000000000000000000000005231ecd511632da68116d1c0910590f483d3b7c60000000000000000000000000000000000000000000000000000004eb25eb400",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x4223a5bb",
+        "decoded_function": "sendOrRegisterDebt(address,uint256)",
+        "decoded_args": [
+          "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+          338000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 2,
+    "unique_addresses": [
+      "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+      "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+      "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+    ],
+    "delegatecall_count": 3,
+    "staticcall_count": 2,
+    "external_call_count": 4,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "balanceOf(address)",
+      "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+      "initialize()",
+      "sendOrRegisterDebt(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "711:4:contract_creation",
+      "action_type": "contract_creation",
+      "severity_hint": "high",
+      "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+      "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+      "depth": 1,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CREATE2",
+        "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+        "value": "0x0",
+        "input": "0x6101143d81600a3d39f336602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef71ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000b2",
+        "output": "0x36602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef71ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000b2",
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "711:2:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "depth": 2,
+      "function_selector": "0x70a08231",
+      "decoded_function": "balanceOf(address)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0x70a08231000000000000000000000000d97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "711:6:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+      "to_address": "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+      "depth": 2,
+      "function_selector": "0x8129fc1c",
+      "decoded_function": "initialize()",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+        "to_address": "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+        "value": "0x0",
+        "input": "0x8129fc1c0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef71ea71f4f8a78dbf99d4af108ad5841c889f0800e50000000000000000000000000000000000000000000000000000004eb25eb400a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000676748700000000000000000000000000000000000000000000000000000000069487bf000b2",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0x8129fc1c",
+        "decoded_function": "initialize()",
+        "decoded_args": [],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 4,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered high-risk business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+        "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+                "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+                "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+                "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+              ],
+              "related_actions": [
+                {
+                  "id": "711:4:contract_creation",
+                  "action_type": "contract_creation",
+                  "severity_hint": "high",
+                  "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+                  "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "711:2:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                  "depth": 2,
+                  "function_selector": "0x70a08231",
+                  "decoded_function": "balanceOf(address)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "711:6:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+                  "to_address": "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+                  "depth": 2,
+                  "function_selector": "0x8129fc1c",
+                  "decoded_function": "initialize()",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "contract_creation"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "711:4:contract_creation",
+                  "action_type": "contract_creation",
+                  "severity_hint": "high",
+                  "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+                  "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ]
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+            "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+            "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "contract_creation"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 2,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal only requests standard DAO treasury payments (a stream and an upfront transfer).",
+            "textual_evidence": "We request a stream of $398k to drive these efforts over 12 months..."
+          },
+          "actual_max_depth": 2,
+          "delegatecall_count": 3,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "contract_creation"
+          ],
+          "uncovered_business_actions": [
+            "contract_creation"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 3,
+      "severity": "HIGH",
+      "matched_functions": [
+        "balanceOf(address)",
+        "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+        "initialize()",
+        "sendOrRegisterDebt(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "contract_creation"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer"
+      ],
+      "actual_actions": [
+        "contract_creation"
+      ],
+      "summary": "Trace includes an unclaimed high-risk business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Trace includes an unclaimed high-risk business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "transfer"
+              ],
+              "actual_business_actions": [
+                "contract_creation"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "balanceOf(address)",
+                "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+                "initialize()",
+                "sendOrRegisterDebt(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Payment stream of $28k per month for 12 months and $60k upfront",
+              "canonical_action": "transfer",
+              "object": null,
+              "claimed_effect": "Fund NNS Labs team, engineering, community, marketing, and design for a 12-month period.",
+              "textual_evidence": "A payment stream of $28k per month for 12 months that will cover the operations... $60k that will give us more flexibility... Total Requested: $398k",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "711:4:contract_creation",
+              "action_type": "contract_creation",
+              "severity_hint": "high",
+              "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "711:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 2,
+              "function_selector": "0x70a08231",
+              "decoded_function": "balanceOf(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "711:6:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+              "to_address": "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+              "depth": 2,
+              "function_selector": "0x8129fc1c",
+              "decoded_function": "initialize()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "contract_creation"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "balanceOf(address)",
+            "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+            "initialize()",
+            "sendOrRegisterDebt(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+            "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d"
+          ],
+          "related_actions": [
+            {
+              "id": "711:4:contract_creation",
+              "action_type": "contract_creation",
+              "severity_hint": "high",
+              "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "711:2:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 2,
+              "function_selector": "0x70a08231",
+              "decoded_function": "balanceOf(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "711:6:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+              "to_address": "0x0b9dff1aba32a9fa95011c7f097ec672f689038f",
+              "depth": 2,
+              "function_selector": "0x8129fc1c",
+              "decoded_function": "initialize()",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "contract_creation"
+          ],
+          "material_related_actions": [
+            {
+              "id": "711:4:contract_creation",
+              "action_type": "contract_creation",
+              "severity_hint": "high",
+              "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "to_address": "0x5231ecd511632da68116d1c0910590f483d3b7c6",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Trace includes an unclaimed high-risk business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "transfer"
+          ],
+          "actual_business_actions": [
+            "contract_creation"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "balanceOf(address)",
+            "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+            "initialize()",
+            "sendOrRegisterDebt(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

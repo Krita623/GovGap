@@ -1,0 +1,95 @@
+{
+  "proposal_summary": "Proposal for the partial activation of Aave Governance v3 in an interim Aave Governance v2.5 version. It migrates Level 1 (Short) permissions to v3 Executors, funds a.DI, Aave Robot, and the Aave Gelato gas tank.",
+  "disclosed_entities": [
+    {
+      "name": "a.DI",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Fund a.DI."
+    },
+    {
+      "name": "Aave Robot",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Fund Aave Robot."
+    },
+    {
+      "name": "Aave Gelato gas tank",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Fund the Aave Gelato gas tank."
+    },
+    {
+      "name": "AAVE",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Upgrade of the AAVE, aAAVE and stkAAVE implementations. (Note: not included in this proposal compared to 345)"
+    },
+    {
+      "name": "aAAVE",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Upgrade of the AAVE, aAAVE and stkAAVE implementations. (Note: not included in this proposal compared to 345)"
+    },
+    {
+      "name": "stkAAVE",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Upgrade of the AAVE, aAAVE and stkAAVE implementations. (Note: not included in this proposal compared to 345)"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Migrate all Level 1 (Short) permissions of the Aave ecosystem smart contracts from the v2 Executors to v3 Executors",
+      "canonical_action": "role_change",
+      "object": "v2 Executors / v3 Executors",
+      "claimed_effect": "Transitions Level 1 (Short) permissions to v3 Executors",
+      "textual_evidence": "- Migrate all Level 1 (Short) permissions of the Aave ecosystem smart contracts from the v2 Executors to v3 Executors.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Fund a.DI",
+      "canonical_action": "transfer",
+      "object": "a.DI",
+      "claimed_effect": "Provides funding to a.DI",
+      "textual_evidence": "- Fund a.DI.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Fund Aave Robot",
+      "canonical_action": "transfer",
+      "object": "Aave Robot",
+      "claimed_effect": "Provides funding to Aave Robot",
+      "textual_evidence": "- Fund Aave Robot.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Fund the Aave Gelato gas tank",
+      "canonical_action": "transfer",
+      "object": "Aave Gelato gas tank",
+      "claimed_effect": "Provides funding to the Aave Gelato gas tank",
+      "textual_evidence": "- Fund the Aave Gelato gas tank.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal deals with a partial migration to a new governance execution layer, migrating permissions across multiple networks and funding ecosystem components. Though described as a simplified interim version without complex voting assets, it still touches crucial ecosystem components.",
+    "textual_evidence": "Migrate all Level 1 (Short) permissions of the Aave ecosystem smart contracts from the v2 Executors to v3 Executors... Fund a.DI... Fund Aave Robot... Fund the Aave Gelato gas tank."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Smart contract addresses are not provided in the text, except via external github links.",
+    "Exact funding amounts and tokens are not explicitly detailed in the text.",
+    "List of contracts and detailed actions relies on an external link."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,62 @@
+{
+  "proposal_summary": "Proposal to renew the OpenZeppelin Security Partnership for 2025, funding a payment streamer contract with approximately 100,000 COMP (110% of $4M USDC equivalent) from the Comptroller.",
+  "disclosed_entities": [
+    {
+      "name": "payment streamer contract",
+      "address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract"
+    },
+    {
+      "name": "Comptroller",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal grants COMP from the Comptroller"
+    },
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "USDC-price-adjusted COMP streaming mechanism... deposit of 110% of the 4M USDC equivalent in COMP, approximately 100,000 COMP"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+      "textual_evidence": "[payment streamer contract](https://etherscan.io/address/0xcc14295eef16b26171b19a769c8a255b24305533#code)"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "grants COMP from the Comptroller to the payment streamer contract",
+      "canonical_action": "treasury_operation",
+      "object": "Comptroller",
+      "claimed_effect": "Funds the streamer contract with approximately 100,000 COMP to cover the annual security partnership fee.",
+      "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "initializes the stream",
+      "canonical_action": "parameter_update",
+      "object": "payment streamer contract",
+      "claimed_effect": "Starts the streaming process of the COMP tokens over the course of a year.",
+      "textual_evidence": "and initializes the stream.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal involves a straightforward token transfer from the treasury to an external streamer contract and a call to initialize the stream.",
+    "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract, created by the Streamer Factory... and initializes the stream."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Exact function names and signatures to execute the COMP grant and stream initialization are not detailed in the text.",
+    "The target address for the Comptroller is not provided, only the streamer contract address is given."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

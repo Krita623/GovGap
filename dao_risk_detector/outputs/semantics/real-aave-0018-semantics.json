@@ -1,0 +1,88 @@
+{
+  "proposal_summary": "A proposal by Gauntlet to reactivate CRV borrowing on Aave v3 for both Ethereum and Polygon, alongside related parameter adjustments such as supplyCap, borrowCap, and debtCeiling.",
+  "disclosed_entities": [
+    {
+      "name": "CRV",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "CRV borrowing was disabled on Ethereum and Polygon v3"
+    },
+    {
+      "name": "Aave v3 Ethereum",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "| Ethereum v3 | CRV   | supplyCap"
+    },
+    {
+      "name": "Aave v3 Polygon",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "| Polygon v3  | CRV   | borrowCap"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Set Ethereum v3 CRV supplyCap to 7.5m",
+      "canonical_action": "parameter_update",
+      "object": "CRV / Aave v3 Ethereum",
+      "claimed_effect": "Update supply cap from 51m to 7.5m",
+      "textual_evidence": "| Ethereum v3 | CRV | supplyCap | 51m | 7.5m |",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set Ethereum v3 CRV borrowCap to 5m",
+      "canonical_action": "parameter_update",
+      "object": "CRV / Aave v3 Ethereum",
+      "claimed_effect": "Update borrow cap from 7.7m to 5m",
+      "textual_evidence": "| Ethereum v3 | CRV | borrowCap | 7.7m | 5m |",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set Ethereum v3 CRV debtCeiling to $1m",
+      "canonical_action": "parameter_update",
+      "object": "CRV / Aave v3 Ethereum",
+      "claimed_effect": "Update debt ceiling from $5m to $1m",
+      "textual_evidence": "| Ethereum v3 | CRV | debtCeiling | $5m | $1m |",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set Ethereum v3 CRV isBorrowable to True",
+      "canonical_action": "parameter_update",
+      "object": "CRV / Aave v3 Ethereum",
+      "claimed_effect": "Reactivate CRV borrowing on Ethereum v3",
+      "textual_evidence": "| Ethereum v3 | CRV | isBorrowable | False | True |",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set Polygon v3 CRV borrowCap to 300k",
+      "canonical_action": "parameter_update",
+      "object": "CRV / Aave v3 Polygon",
+      "claimed_effect": "Update borrow cap from 900k to 300k",
+      "textual_evidence": "| Polygon v3 | CRV | borrowCap | 900k | 300k |",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set Polygon v3 CRV isBorrowable to True",
+      "canonical_action": "parameter_update",
+      "object": "CRV / Aave v3 Polygon",
+      "claimed_effect": "Reactivate CRV borrowing on Polygon v3",
+      "textual_evidence": "| Polygon v3 | CRV | isBorrowable | False | True |",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only consists of basic risk parameter updates for an existing asset on deployed markets.",
+    "textual_evidence": "we recommend a few other changes to CRV parameterization."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Smart contract addresses are not provided in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

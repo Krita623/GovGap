@@ -1,0 +1,63 @@
+{
+  "proposal_summary": "Gauntlet recommends updating risk parameters including Liquidation Penalty, Liquidation Factor, and Collateral Factor for WETH and wstETH collateral assets across multiple Compound V3 deployments on Ethereum, Arbitrum, Optimism, and Polygon.",
+  "disclosed_entities": [
+    {
+      "name": "Configurator",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator."
+    },
+    {
+      "name": "V3 Arbitrum USDC/USDT",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3 Arbitrum USDC/USDT | WETH | Liquidation Penalty"
+    },
+    {
+      "name": "V3 Optimism USDC/USDT",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3 Optimism USDC/USDT | WETH | Liquidation Penalty"
+    },
+    {
+      "name": "V3 Polygon USDC/USDT",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3 Polygon USDC/USDT | WETH | Liquidation Penalty"
+    },
+    {
+      "name": "V3 Ethereum USDS",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3 Ethereum USDS | wstETH | Collateral Factor"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "The proposal updates the parameters by using the respective methods on the Configurator.",
+      "canonical_action": "parameter_update",
+      "object": "Configurator",
+      "claimed_effect": "Updates the Liquidation Penalty, Liquidation Factor, and Collateral Factor for WETH and wstETH across multiple Comet instances.",
+      "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal simply updates numerical risk parameters via existing configurator methods.",
+    "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Does not disclose target contract addresses for the Comets or the Configurator.",
+    "Does not disclose specific function names or signatures being called to update the parameters."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,57 @@
+{
+  "proposal_summary": "Compound Growth Program (AlphaGrowth) proposes to add tBTC as collateral into the cUSDCv3 market on the Ethereum Mainnet, setting risk parameters based on Gauntlet's recommendations, and upgrading Comet to a new version.",
+  "disclosed_entities": [
+    {
+      "name": "tBTC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Add tBTC as collateral into cUSDCv3 on Mainnet"
+    },
+    {
+      "name": "cUSDCv3",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Add tBTC as collateral into cUSDCv3 on Mainnet"
+    },
+    {
+      "name": "Comet",
+      "address": null,
+      "entity_type": "implementation",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The second action deploys and upgrades Comet to a new version."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "adds tBTC asset as collateral with corresponding configurations.",
+      "canonical_action": "parameter_update",
+      "object": "cUSDCv3 Market",
+      "claimed_effect": "Makes tBTC available as collateral with Gauntlet's recommended risk parameters.",
+      "textual_evidence": "The first action adds tBTC asset as collateral with corresponding configurations.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "deploys and upgrades Comet to a new version.",
+      "canonical_action": "upgrade",
+      "object": "Comet",
+      "claimed_effect": "Upgrades the Comet implementation to support the new collateral.",
+      "textual_evidence": "The second action deploys and upgrades Comet to a new version.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves adding a new collateral asset with specific risk parameters and upgrading the Comet implementation.",
+    "textual_evidence": "This proposal takes the governance steps recommended and necessary to update a Compound III USDC market on Ethereum... The second action deploys and upgrades Comet to a new version."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No contract addresses are provided for tBTC, the cUSDCv3 market, or the Comet implementation.",
+    "Specific numeric values for the risk parameters configured are omitted from the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

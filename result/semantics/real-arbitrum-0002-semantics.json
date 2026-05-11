@@ -1,0 +1,71 @@
+{
+  "proposal_summary": "This proposal is an updated version of AIP-1.1, which proposes a lockup, budget, and transparency reporting for the 7.5% of ARB tokens distributed to the Foundation's Administrative Budget Wallet. It corrects a misconfigured 'start' date in the vesting contract from a previous proposal.",
+  "disclosed_entities": [
+    {
+      "name": "AIP1Point1Target",
+      "address": "0x9e43f733da0445b35f038fb34a6fb8c2947b984c",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "AIP smart contract (AIP1Point1Target)... [https://arbiscan.io/address/0x9E43f733Da0445b35f038FB34a6Fb8C2947B984C#code]"
+    },
+    {
+      "name": "Foundation Administrative Budget Wallet / vesting vault",
+      "address": "0x15533b77981cda0f85c4f9a485237df4285d6844",
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "arbitrumFoundationWallet parameter references smart contract at 0x15533b77981cda0f85c4f9a485237df4285d6844, which is the vesting vault."
+    },
+    {
+      "name": "ARB",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "after the vote the Foundation will move 700M ARB tokens that are subject of AIP 1.1 to this contract"
+    },
+    {
+      "name": "Arbitrum Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The Arbitrum Foundation was created to fill this need"
+    },
+    {
+      "name": "Security Council",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "it could be canceled by the Security Council"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x9e43f733da0445b35f038fb34a6fb8c2947b984c",
+      "textual_evidence": "AIP smart contract referenced by this vote: [https://arbiscan.io/address/0x9E43f733Da0445b35f038FB34a6Fb8C2947B984C#code]"
+    },
+    {
+      "address": "0x15533b77981cda0f85c4f9a485237df4285d6844",
+      "textual_evidence": "arbitrumFoundationWallet parameter references smart contract at 0x15533b77981cda0f85c4f9a485237df4285d6844, which is the vesting vault."
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "changing of the “passed” parameter on this AIP smart contract from false to true",
+      "canonical_action": "parameter_update",
+      "object": "AIP1Point1Target",
+      "claimed_effect": "documenting DAOs approval for the Foundation to use this referenced vesting vault",
+      "textual_evidence": "The on-chain action that the proposal is executing is changing of the “passed” parameter on this AIP smart contract from false to true, documenting DAOs approval for the Foundation to use this referenced vesting vault",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal executes a single parameter update on a specific smart contract to document DAO approval.",
+    "textual_evidence": "The on-chain action that the proposal is executing is changing of the “passed” parameter on this AIP smart contract from false to true"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal mentions moving 700M ARB tokens after the vote, but this appears to be a subsequent action rather than part of the direct on-chain execution of this proposal."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

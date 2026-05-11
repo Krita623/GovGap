@@ -1,0 +1,48 @@
+{
+  "proposal_summary": "Proposal to withdraw Noun 181 (Sasquatch) from the escrow contract back to the DAO treasury so that Proposal 428 can be successfully executed.",
+  "disclosed_entities": [
+    {
+      "name": "Noun 181",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The infamous Sasquatch, Noun 181, has continued to elude us."
+    },
+    {
+      "name": "Treasury / DAO",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "bring it back to the treasury... withdraw the noun from escrow into the DAO"
+    },
+    {
+      "name": "Escrow Contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "that noun is currently held in the escrow contract"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "withdraw the noun from escrow into the DAO",
+      "canonical_action": "treasury_operation",
+      "object": "Noun 181",
+      "claimed_effect": "Moves Noun 181 from the escrow contract to the DAO treasury to allow Proposal 428 to execute.",
+      "textual_evidence": "The transaction on this prop would use the appropriate transaction to withdraw the noun from escrow into the DAO and allow the original prop to be executed as intended.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal requires a single transaction to transfer a token from an escrow contract to the treasury.",
+    "textual_evidence": "The transaction on this prop would use the appropriate transaction to withdraw the noun from escrow into the DAO"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit contract addresses or function names are provided in the proposal text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,381 @@
+{
+  "metadata": {
+    "proposal_id": "mutant-upgrade-0006",
+    "generated_at": "2026-05-11T06:10:07.021009+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal performs routine maintenance and parameter housekeeping.",
+    "disclosed_entities": [
+      {
+        "name": "DAO timelock",
+        "address": "0x1000000000000000000000000000000000000001",
+        "entity_type": "timelock",
+        "disclosure_level": "implicit",
+        "textual_evidence": "standard DAO execution context"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "maintenance",
+        "canonical_action": "maintenance",
+        "object": null,
+        "claimed_effect": "Routine parameter maintenance and metadata refresh.",
+        "textual_evidence": "This proposal performs routine maintenance and parameter housekeeping.",
+        "confidence": 0.82
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The text describes routine single-step maintenance.",
+      "textual_evidence": "This proposal performs routine maintenance and parameter housekeeping."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Synthetic mutant semantics intentionally omit the risky business action."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x2000000000000000000000000000000000000006",
+        "value": "0x0",
+        "input": "0x3659cfe60000000000000000000000005000000000000000000000000000000000000006",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3659cfe6",
+        "decoded_function": "upgradeTo(address)",
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1000000000000000000000000000000000000001",
+      "0x2000000000000000000000000000000000000006"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "upgradeTo(address)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "mutant-upgrade-0006:0:upgrade",
+      "action_type": "upgrade",
+      "severity_hint": "critical",
+      "from_address": "0x1000000000000000000000000000000000000001",
+      "to_address": "0x2000000000000000000000000000000000000006",
+      "depth": 0,
+      "function_selector": "0x3659cfe6",
+      "decoded_function": "upgradeTo(address)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x2000000000000000000000000000000000000006",
+        "value": "0x0",
+        "input": "0x3659cfe60000000000000000000000005000000000000000000000000000000000000006",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x3659cfe6",
+        "decoded_function": "upgradeTo(address)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "summary": "An undisclosed address participates in an uncovered critical business action.",
+      "disclosed_addresses": [
+        "0x1000000000000000000000000000000000000001"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x2000000000000000000000000000000000000006"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "CRITICAL",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x2000000000000000000000000000000000000006"
+              ],
+              "related_actions": [
+                {
+                  "id": "mutant-upgrade-0006:0:upgrade",
+                  "action_type": "upgrade",
+                  "severity_hint": "critical",
+                  "from_address": "0x1000000000000000000000000000000000000001",
+                  "to_address": "0x2000000000000000000000000000000000000006",
+                  "depth": 0,
+                  "function_selector": "0x3659cfe6",
+                  "decoded_function": "upgradeTo(address)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "upgrade"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "mutant-upgrade-0006:0:upgrade",
+                  "action_type": "upgrade",
+                  "severity_hint": "critical",
+                  "from_address": "0x1000000000000000000000000000000000000001",
+                  "to_address": "0x2000000000000000000000000000000000000006",
+                  "depth": 0,
+                  "function_selector": "0x3659cfe6",
+                  "decoded_function": "upgradeTo(address)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ]
+            }
+          ],
+          "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x1000000000000000000000000000000000000001"
+          ],
+          "trace_unique_addresses": [
+            "0x1000000000000000000000000000000000000001",
+            "0x2000000000000000000000000000000000000006"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x2000000000000000000000000000000000000006"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "upgrade"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The text describes routine single-step maintenance.",
+            "textual_evidence": "This proposal performs routine maintenance and parameter housekeeping."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "upgrade"
+          ],
+          "uncovered_business_actions": [
+            "upgrade"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "upgradeTo(address)"
+      ],
+      "unmatched_functions": [
+        "upgrade"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "maintenance"
+      ],
+      "actual_actions": [
+        "upgrade"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "maintenance"
+              ],
+              "actual_business_actions": [
+                "upgrade"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "upgradeTo(address)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "maintenance",
+              "canonical_action": "maintenance",
+              "object": null,
+              "claimed_effect": "Routine parameter maintenance and metadata refresh.",
+              "textual_evidence": "This proposal performs routine maintenance and parameter housekeeping.",
+              "confidence": 0.82
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "mutant-upgrade-0006:0:upgrade",
+              "action_type": "upgrade",
+              "severity_hint": "critical",
+              "from_address": "0x1000000000000000000000000000000000000001",
+              "to_address": "0x2000000000000000000000000000000000000006",
+              "depth": 0,
+              "function_selector": "0x3659cfe6",
+              "decoded_function": "upgradeTo(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "upgrade"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "upgradeTo(address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "CRITICAL",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x2000000000000000000000000000000000000006"
+          ],
+          "related_actions": [
+            {
+              "id": "mutant-upgrade-0006:0:upgrade",
+              "action_type": "upgrade",
+              "severity_hint": "critical",
+              "from_address": "0x1000000000000000000000000000000000000001",
+              "to_address": "0x2000000000000000000000000000000000000006",
+              "depth": 0,
+              "function_selector": "0x3659cfe6",
+              "decoded_function": "upgradeTo(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "upgrade"
+          ],
+          "material_related_actions": [
+            {
+              "id": "mutant-upgrade-0006:0:upgrade",
+              "action_type": "upgrade",
+              "severity_hint": "critical",
+              "from_address": "0x1000000000000000000000000000000000000001",
+              "to_address": "0x2000000000000000000000000000000000000006",
+              "depth": 0,
+              "function_selector": "0x3659cfe6",
+              "decoded_function": "upgradeTo(address)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "maintenance"
+          ],
+          "actual_business_actions": [
+            "upgrade"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "upgradeTo(address)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

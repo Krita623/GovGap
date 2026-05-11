@@ -1,0 +1,27 @@
+{
+  "proposal_summary": "Enacts EP2 to execute a retrospective airdrop for accounts that owned another account's primary ENS.",
+  "disclosed_entities": [],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Retrospective Airdrop",
+      "canonical_action": "transfer",
+      "object": "tokens",
+      "claimed_effect": "Airdrops tokens to eligible accounts based on the Snapshot vote and EP2 spec.",
+      "textual_evidence": "[EP2] Retrospective Airdrop Enacts EP2 as approved by Snapshot vote",
+      "confidence": 0.8
+    }
+  ],
+  "claimed_complexity": {
+    "level": "unknown",
+    "reason": "The proposal text is too brief to determine complexity directly from the text.",
+    "textual_evidence": "Enacts EP2 as approved by Snapshot vote, and described in full here..."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal text relies entirely on an external GitHub link for details and execution specifics.",
+    "No addresses or specific smart contract actions are explicitly detailed in the provided text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

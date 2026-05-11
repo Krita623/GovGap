@@ -1,0 +1,40 @@
+{
+  "risk_actions": [
+    {
+      "id": "240:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+      "depth": 1,
+      "function_selector": "0xe4028eee",
+      "decoded_function": "_setCollateralFactor(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000e65cdb6479bac1e22340e4e755fae7e509ecd06c0000000000000000000000000000000000000000000000000494654067e10000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c",
+          330000000000000000
+        ],
+        "error": null,
+        "merged_count": 9
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 9,
+    "filtered_count": 0,
+    "deduplicated_count": 8,
+    "final_risk_action_count": 1
+  }
+}

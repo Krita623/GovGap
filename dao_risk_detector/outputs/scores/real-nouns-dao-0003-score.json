@@ -1,0 +1,318 @@
+{
+  "metadata": {
+    "proposal_id": "57",
+    "generated_at": "2026-05-08T11:15:24.348402+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "A proposal to fund the production, launch, and distribution of physical luxury Noun sunglasses tied to a consumable NFT collection, requesting 115 ETH and 1 Noun.",
+    "disclosed_entities": [
+      {
+        "name": "NounsDAO Treasury",
+        "address": null,
+        "entity_type": "treasury",
+        "disclosure_level": "explicit",
+        "textual_evidence": "This project would not have been possible without the NounsDAO and the treasury."
+      },
+      {
+        "name": "Zora",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "will be using Zora’s smart contract system to launch this NFT."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Transfer 115 ETH to the proposers",
+        "canonical_action": "transfer",
+        "object": "115 ETH",
+        "claimed_effect": "Fund smart contract, website, promotional material, distribution facility, and manufacturing.",
+        "textual_evidence": "115Ξ for creating the smart contract, website, promotional/marketing material... and to start manufacturing.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Transfer 1 Noun",
+        "canonical_action": "transfer",
+        "object": "1 Noun",
+        "claimed_effect": "Reward proposers upon successful delivery of the first physical pair.",
+        "textual_evidence": "1 Noun of the DAO's choice upon successful delivery of the first physical pair of glasses.",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The on-chain actions simply involve transferring ETH and an NFT (Noun) to the proposers, which requires standard execution.",
+      "textual_evidence": "Funds Requested - 115Ξ... - 1 Noun of the DAO's choice upon successful delivery"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific wallet or contract addresses are provided in the text for the transfer of the requested funds."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+        "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+        "value": "0x63bf212b431ec0000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+      "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 1,
+    "decoded_functions": []
+  },
+  "risk_actions": [
+    {
+      "id": "57:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+      "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x63bf212b431ec0000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+        "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+        "value": "0x63bf212b431ec0000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+        "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+                "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+              ],
+              "related_actions": [
+                {
+                  "id": "57:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+                  "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+                  "depth": 0,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x63bf212b431ec0000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+            "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+            "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The on-chain actions simply involve transferring ETH and an NFT (Noun) to the proposers, which requires standard execution.",
+            "textual_evidence": "Funds Requested - 115Ξ... - 1 Noun of the DAO's choice upon successful delivery"
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer",
+        "transfer"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Transfer 115 ETH to the proposers",
+              "canonical_action": "transfer",
+              "object": "115 ETH",
+              "claimed_effect": "Fund smart contract, website, promotional material, distribution facility, and manufacturing.",
+              "textual_evidence": "115Ξ for creating the smart contract, website, promotional/marketing material... and to start manufacturing.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Transfer 1 Noun",
+              "canonical_action": "transfer",
+              "object": "1 Noun",
+              "claimed_effect": "Reward proposers upon successful delivery of the first physical pair.",
+              "textual_evidence": "1 Noun of the DAO's choice upon successful delivery of the first physical pair of glasses.",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "57:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+              "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x63bf212b431ec0000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": []
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+            "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+          ],
+          "related_actions": [
+            {
+              "id": "57:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+              "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x63bf212b431ec0000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

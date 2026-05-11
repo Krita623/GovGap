@@ -1,0 +1,42 @@
+{
+  "risk_actions": [
+    {
+      "id": "42:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "to_address": "0x3a95ee42f080ff7289c8b4a14eb483a8644d7521",
+      "depth": 1,
+      "function_selector": "0x7c4e560b",
+      "decoded_function": "configureReserveAsCollateral(address,uint256,uint256,uint256)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x3a95ee42f080ff7289c8b4a14eb483a8644d7521",
+        "value": "0x0",
+        "input": "0x7c4e560b0000000000000000000000000d8775f648430679a709e98d2b0cb6250d2887ef0000000000000000000000000000000000000000000000000000000000001b580000000000000000000000000000000000000000000000000000000000001f4000000000000000000000000000000000000000000000000000000000000029fe",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x7c4e560b",
+        "decoded_function": "configureReserveAsCollateral(address,uint256,uint256,uint256)",
+        "decoded_args": [
+          "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+          7000,
+          8000,
+          10750
+        ],
+        "error": "execution reverted",
+        "merged_count": 8
+      },
+      "confidence": 0.75
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 8,
+    "filtered_count": 0,
+    "deduplicated_count": 7,
+    "final_risk_action_count": 1
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "proposal_summary": "Registers the 'on.eth' ENS name to the ENS DAO wallet and sets its resolver to an on-chain registry-resolver contract, updating previous proposal EP 6.34 to account for ownership model changes in the Base Registrar.",
+  "disclosed_entities": [
+    {
+      "name": "ENS DAO wallet",
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ENS DAO wallet (0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7)"
+    },
+    {
+      "name": "registry-resolver contract",
+      "address": "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "on-chain registry-resolver contract (0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A)"
+    },
+    {
+      "name": "RegistrarSecurityController",
+      "address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "RegistrarSecurityController • 0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b"
+    },
+    {
+      "name": "BaseRegistrarImplementation",
+      "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Registering the name `on.eth` to the DAO wallet... To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+    },
+    {
+      "name": "ENS Registry (Implied)",
+      "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Setting the deployed `ChainResolver` as the resolver for on.eth... To: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "textual_evidence": "ENS DAO wallet (0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7)"
+    },
+    {
+      "address": "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+      "textual_evidence": "on-chain registry-resolver contract (0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A)"
+    },
+    {
+      "address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+      "textual_evidence": "RegistrarSecurityController • 0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b"
+    },
+    {
+      "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "textual_evidence": "To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+    },
+    {
+      "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "textual_evidence": "To: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Adding the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+      "canonical_action": "role_change",
+      "object": "BaseRegistrarImplementation / RegistrarSecurityController",
+      "claimed_effect": "Gives the DAO wallet controller rights to register the name",
+      "textual_evidence": "1. Adding the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Registering the name `on.eth` to the DAO wallet.",
+      "canonical_action": "role_change",
+      "object": "BaseRegistrarImplementation / on.eth",
+      "claimed_effect": "Assigns ownership of on.eth to the DAO wallet",
+      "textual_evidence": "2. Registering the name `on.eth` to the DAO wallet.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Setting the deployed `ChainResolver` as the resolver for on.eth",
+      "canonical_action": "parameter_update",
+      "object": "ENS Registry / on.eth",
+      "claimed_effect": "Updates the resolver for on.eth to the new ChainResolver",
+      "textual_evidence": "3. Setting the deployed `ChainResolver` as the resolver for on.eth",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Removing the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+      "canonical_action": "role_change",
+      "object": "BaseRegistrarImplementation / RegistrarSecurityController",
+      "claimed_effect": "Revokes controller rights from the DAO wallet",
+      "textual_evidence": "4. Removing the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves temporarily taking controller privileges via another contract, making modifications, and then explicitly dropping privileges.",
+    "textual_evidence": "Adding the DAO wallet as a controller on the `BaseRegistrarImplementation`... Removing the DAO wallet as a controller"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Function names are not explicitly mentioned in the text, only calldata is provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

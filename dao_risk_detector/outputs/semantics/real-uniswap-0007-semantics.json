@@ -1,0 +1,119 @@
+{
+  "proposal_summary": "Proposal by Michigan Blockchain to deploy and officially recognize Uniswap v3 on the Filecoin Virtual Machine (FVM) and utilize Axelar as the interchain governance executor.",
+  "disclosed_entities": [
+    {
+      "name": "Michigan Blockchain",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Proposer: Michigan Blockchain\nThis entity is responsible for authoring the proposal & managing the governance process"
+    },
+    {
+      "name": "Axelar",
+      "address": null,
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Deployer: Axelar\nThis entity is responsible for the technical deployment... Bridge Provider: Axelar"
+    },
+    {
+      "name": "UniswapV3Factory",
+      "address": "0xb4c47ed546fc31e26470a186ec2c5f19ef09ba41",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV3Factory | 0xB4C47eD546Fc31E26470a186eC2C5F19eF09BA41"
+    },
+    {
+      "name": "InterchainProposalSender",
+      "address": "0x1f8a4d195b647647c7dd45650cbd553fd33ccaa6",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "InterchainProposalSender (Mainnet) | 0x1f8A4d195B647647c7dD45650CBd553FD33cCAA6"
+    },
+    {
+      "name": "InterchainProposalExecutor",
+      "address": "0xff3b2da1379cc67cc2755194604713f10b820b0e",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "InterchainProposalExecutor (Filecoin) | 0xFf3b2DA1379cc67cc2755194604713f10b820b0E"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xb4c47ed546fc31e26470a186ec2c5f19ef09ba41",
+      "textual_evidence": "UniswapV3Factory"
+    },
+    {
+      "address": "0xffd927d6f17495b28635dd49d24638e97bd8c8b8",
+      "textual_evidence": "Multicall2"
+    },
+    {
+      "address": "0xe9901ae78efb4386b1132009e310d08bcb445bf5",
+      "textual_evidence": "ProxyAdmin"
+    },
+    {
+      "address": "0x76c001ad9e527fefa8fa822a987ad44ce720baed",
+      "textual_evidence": "TickLens"
+    },
+    {
+      "address": "0xe909b0cae57ee7eff56a5ca7fc4b66cf4f7c2d38",
+      "textual_evidence": "NFTDescriptor"
+    },
+    {
+      "address": "0x22850a17032f40778c0c0a3fdd96905950a39f89",
+      "textual_evidence": "NonfungibleTokenPositionDescriptor"
+    },
+    {
+      "address": "0xf0198aaa4a8792e2a4a6e6fb3039e4b1c71f15bb",
+      "textual_evidence": "DescriptorProxy"
+    },
+    {
+      "address": "0x4cd986dd509fbb6a695ae971d5c56c8795f640ee",
+      "textual_evidence": "NonfungibleTokenPositionManager"
+    },
+    {
+      "address": "0x409af45457d4779828bfbcbe7aa653c38edb9ed9",
+      "textual_evidence": "V3Migrator"
+    },
+    {
+      "address": "0x915362b5450acbbc9f8044191ae7e35c86f2fe51",
+      "textual_evidence": "V3Staker"
+    },
+    {
+      "address": "0xe45c06922228a33fff1ed54638a0db78f69f9780",
+      "textual_evidence": "QuoterV2"
+    },
+    {
+      "address": "0xcab04058e60020d65d18d4b3dff2ca1445d7099f",
+      "textual_evidence": "SwapRouter02"
+    },
+    {
+      "address": "0x1f8a4d195b647647c7dd45650cbd553fd33ccaa6",
+      "textual_evidence": "InterchainProposalSender (Mainnet)"
+    },
+    {
+      "address": "0xff3b2da1379cc67cc2755194604713f10b820b0e",
+      "textual_evidence": "InterchainProposalExecutor (Filecoin)"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Recognize deployment as canonical and update ENS",
+      "canonical_action": "parameter_update",
+      "object": "v3-deployments.uniswap.eth",
+      "claimed_effect": "Includes the FVM deployment addresses into the canonical ENS registry.",
+      "textual_evidence": "The text record of the uniswap.eth ENS subdomain titled v3-deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on the FVM.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal primarily seeks canonical recognition and ENS updating for already deployed contracts.",
+    "textual_evidence": "The relevant Uniswap v3 contracts have also been deployed on the FVM. If this onchain vote passes, this deployment will be officially recognized as a canonical v3 deployment through an amendment to the v3deployments.uniswap.eth subdomain."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract execution details for the ENS update are included in the proposal text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

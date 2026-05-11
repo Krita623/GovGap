@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-ens-0002",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0002.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "43203199770691383238593940280239053946984014979449022275641313046078578194694",
+    "status": "executed",
+    "title": "# Dissolve the community WG multisig per EP15",
+    "description": "# Dissolve the community WG multisig per EP15\nThis proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem. This enacts EP15 (formerly numbered EP14), the vote to dissolve the ENS community working group, as described [here](https://github.com/ensdomains/governance-docs/blob/main/governance-proposals/ep15-dissolution-of-the-community-working-group.md) and [passed on Snapshot](https://snapshot.org/#/ens.eth/proposal/0xa64ec8b446e509cb4b75092c4a714897790b70e2711fc3d6afa969c250e7eb92)."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x17FDC2Eaf2bd46f3e1052CCbccD9e6AD0296C42c",
+      "native_value": "0",
+      "function": "updatePodAdmin(uint256,address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_podId",
+          "type": "uint256",
+          "value": "14"
+        },
+        {
+          "index": 1,
+          "name": "_newAdmin",
+          "type": "address",
+          "value": "0x2686a8919df194aa7673244549e68d42c1685d03"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    }
+  ]
+}

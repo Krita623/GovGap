@@ -1,0 +1,72 @@
+{
+  "benchmark_id": "real-compound-0002",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0002.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "188",
+    "status": "executed",
+    "title": "# [Gauntlet] Arbitrum v3 USDC Native - Risk Recommendations (2023-10-16)",
+    "description": "# [Gauntlet] Arbitrum v3 USDC Native - Risk Recommendations (2023-10-16)\n\n## Simple Summary\n\nA proposal from Gauntlet to adjust one risk parameter in the Arbitrum v3 USDC Native comet.\n\nGauntlet recommends the following risk parameter change:\n\n* Increase WBTC supply cap from 300 tokens to 600 tokens\n\nFor more details, see the full forum post [here]( https://www.comp.xyz/t/gauntlet-arbitrum-native-usdc-risk-recommendations-10-12-23/4721 ).\n\n## Motivation\n\nSupply cap for WBTC has recently reached 100%. This change will decrease WBTC supply cap utilization from 100% to 50%, resulting in $8.02M additional WBTC able to be supplied, to allow further long-term protocol usage and growth.\n\n[Full proposal and forum discussion](https://www.comp.xyz/t/gauntlet-arbitrum-native-usdc-risk-recommendations-10-12-23/4721)\n\n## Specification\n\nThis proposal updates the supply cap in the Arbitrum v3 USDC Native comet through the `updateAssetSupplyCap` method in the Configurator contract.\n\n*By approving this proposal, you agree that any services provided by Gauntlet shall be governed by the terms of service available at gauntlet.network/tos.*"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x4Dbd4fc535Ac27206064B68FfCf827b0A60BAB3f",
+      "native_value": "2977368000000000",
+      "function": "createRetryableTicket(address,uint256,uint256,address,address,uint256,uint256,bytes)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x42480c37b249e33aabaf4c22b20235656bd38068"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "0"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "type": "uint256",
+          "value": "1393610000000000"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "type": "address",
+          "value": "0x3fb4d38ea7ec20d91917c09591490eeda38cf88a"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "type": "address",
+          "value": "0x3fb4d38ea7ec20d91917c09591490eeda38cf88a"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "type": "uint256",
+          "value": "3167516"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "type": "uint256",
+          "value": "500000000"
+        },
+        {
+          "index": 7,
+          "name": null,
+          "type": "bytes",
+          "value": "0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000002600000000000000000000000000000000000000000000000000000000000000002000000000000000000000000b21b06d71c75973babde35b49ffdac3f82ad3775000000000000000000000000d10b40ff1d92e2267d099da3509253d9da4d715e0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000002d7570646174654173736574537570706c7943617028616464726573732c616464726573732c75696e74313238290000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000236465706c6f79416e6455706772616465546f28616464726573732c616464726573732900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000600000000000000000000000009c4ec768c28520b50860ea7a15bd7213a9ff58bf0000000000000000000000002f2a2543b76a4166549f7aab2e75bef0aefc5b0f0000000000000000000000000000000000000000000000000000000df84758000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000b21b06d71c75973babde35b49ffdac3f82ad37750000000000000000000000009c4ec768c28520b50860ea7a15bd7213a9ff58bf"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

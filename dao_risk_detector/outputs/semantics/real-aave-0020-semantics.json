@@ -1,0 +1,79 @@
+{
+  "proposal_summary": "Gauntlet recommends setting the isolated debt ceiling to 0 for MAI/MIMATIC on Arbitrum, Optimism, Avalanche, and Polygon v3 to strengthen protection against risky borrowing.",
+  "disclosed_entities": [
+    {
+      "name": "MAI/MIMATIC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "freeze MAI/MIMATIC and set LTV -> 0 ... recommends setting isolated debt ceilings to 0 for MAI/MIMATIC."
+    },
+    {
+      "name": "Arbitrum Payload",
+      "address": "0x32f3a6134590fc2d9440663d35a2f0a6265f04c4",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Arbitrum: [`0x32f3A6134590fc2d9440663d35a2F0a6265F04c4`]"
+    },
+    {
+      "name": "Optimism Payload",
+      "address": "0x0568a3aeb8e78262deff75ee68fac20ae35ffa91",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Optimism: [`0x0568a3aeb8E78262dEFf75ee68fAC20ae35ffA91`]"
+    },
+    {
+      "name": "Polygon Payload",
+      "address": "0xf7c3350757de224bdb2b77a3943c8667acee3d37",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Polygon: [`0xf7C3350757DE224bdB2b77A3943C8667aCEE3d37`]"
+    },
+    {
+      "name": "Avalanche Steward",
+      "address": "0x0cb2535d00cddfae5ed1aff2e5a0239fc947d17d",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Changes on Avalanche can be implemented using the pre-deployed steward located at [`0x0cb2535d00cddfae5ed1aff2e5a0239fc947d17d`]"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x32f3a6134590fc2d9440663d35a2f0a6265f04c4",
+      "textual_evidence": "Arbitrum: [`0x32f3A6134590fc2d9440663d35a2F0a6265F04c4`]"
+    },
+    {
+      "address": "0x0568a3aeb8e78262deff75ee68fac20ae35ffa91",
+      "textual_evidence": "Optimism: [`0x0568a3aeb8E78262dEFf75ee68fAC20ae35ffA91`]"
+    },
+    {
+      "address": "0xf7c3350757de224bdb2b77a3943c8667acee3d37",
+      "textual_evidence": "Polygon: [`0xf7C3350757DE224bdB2b77A3943C8667aCEE3d37`]"
+    },
+    {
+      "address": "0x0cb2535d00cddfae5ed1aff2e5a0239fc947d17d",
+      "textual_evidence": "using the pre-deployed steward located at [`0x0cb2535d00cddfae5ed1aff2e5a0239fc947d17d`]"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Set Debt Ceiling to 0",
+      "canonical_action": "parameter_update",
+      "object": "MAI/MIMATIC",
+      "claimed_effect": "Will further strengthen protection against potentially risky borrowing against MAI collateral.",
+      "textual_evidence": "recommends setting isolated debt ceilings to 0 for MAI/MIMATIC.",
+      "confidence": 0.99
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only consists of routine parameter changes (setting debt ceilings to 0) across multiple chains using pre-deployed payloads.",
+    "textual_evidence": "The proposal implements changes on Arbitrum, Optimism, Polygon, Avalanche v3 using the following pre-deployed payloads"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Does not detail exactly how Avalanche steward execution logic differs from the payload pattern utilized for the other chains."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

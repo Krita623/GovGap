@@ -1,0 +1,334 @@
+{
+  "metadata": {
+    "proposal_id": "80",
+    "generated_at": "2026-05-08T11:15:24.509379+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal outlines Cycle 3 of the Uniswap Delegate Reward Initiative, seeking to compensate up to 15 eligible delegates for their active participation in Uniswap governance over a 6-month period, with a total requested budget of 540,000 USD worth of UNI.",
+    "disclosed_entities": [
+      {
+        "name": "Uniswap",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Uniswap Delegate Reward Initiative - Cycle 3"
+      },
+      {
+        "name": "StableLab",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "In late February 2024, StableLab proposed the Uniswap Delegate Reward Initiative"
+      },
+      {
+        "name": "Uniswap Delegate Reward Working Group",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "formation of the Uniswap Delegate Reward Working Group"
+      },
+      {
+        "name": "Accountability Committee",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The total amount, once approved, will be sent to the Accountability Committee, which will be responsible for the monthly distribution"
+      },
+      {
+        "name": "UNI",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "We are requesting 540,000 [6000 USD *6 Months *15 Delegates ] USD worth of UNI for cycle 3"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "The total amount, once approved, will be sent to the Accountability Committee, which will be responsible for the monthly distribution of rewards to eligible delegates.",
+        "canonical_action": "transfer",
+        "object": "540,000 USD worth of UNI",
+        "claimed_effect": "Fund the Accountability Committee to distribute monthly rewards to up to 15 delegates for 6 months.",
+        "textual_evidence": "The total amount, once approved, will be sent to the Accountability Committee... We are requesting 540,000 [6000 USD *6 Months *15 Delegates ] USD worth of UNI",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal defines a comprehensive evaluation framework for selecting candidates and enforcing distribution requirements for delegates over 6 months.",
+      "textual_evidence": "Application Eligibility... Metrics... Delegate Reward Eligibility... Budget"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No target address, execution actions, or smart contract function calls are provided explicitly in the text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000003b59c6d0034490093460787566dc5d6ce17f2f9c000000000000000000000000000000000000000000000e346a0192ed93200000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x3b59c6d0034490093460787566dc5d6ce17f2f9c",
+          67080000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "80:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000003b59c6d0034490093460787566dc5d6ce17f2f9c000000000000000000000000000000000000000000000e346a0192ed93200000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x3b59c6d0034490093460787566dc5d6ce17f2f9c",
+          67080000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+              ],
+              "related_actions": [
+                {
+                  "id": "80:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal defines a comprehensive evaluation framework for selecting candidates and enforcing distribution requirements for delegates over 6 months.",
+            "textual_evidence": "Application Eligibility... Metrics... Delegate Reward Eligibility... Budget"
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "The total amount, once approved, will be sent to the Accountability Committee, which will be responsible for the monthly distribution of rewards to eligible delegates.",
+              "canonical_action": "transfer",
+              "object": "540,000 USD worth of UNI",
+              "claimed_effect": "Fund the Accountability Committee to distribute monthly rewards to up to 15 delegates for 6 months.",
+              "textual_evidence": "The total amount, once approved, will be sent to the Accountability Committee... We are requesting 540,000 [6000 USD *6 Months *15 Delegates ] USD worth of UNI",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "80:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "related_actions": [
+            {
+              "id": "80:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

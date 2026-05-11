@@ -1,0 +1,64 @@
+{
+  "proposal_summary": "Gauntlet recommends increasing the supply caps for weETH (from 12,000 to 24,000) and rETH (from 4,500 to 7,500) on the WETH Arbitrum Comet to improve capital efficiency.",
+  "disclosed_entities": [
+    {
+      "name": "WETH Arbitrum Comet",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- Increase WETH Arbitrum Comet’s weETH Supply Cap"
+    },
+    {
+      "name": "weETH",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "weETH Supply Cap"
+    },
+    {
+      "name": "rETH",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "rETH Supply Cap"
+    },
+    {
+      "name": "Configurator",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "updates the parameters by using the respective methods on the Configurator."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Increase WETH Arbitrum Comet’s weETH Supply Cap from 12,000 to 24,000",
+      "canonical_action": "parameter_update",
+      "object": "weETH Supply Cap",
+      "claimed_effect": "Increase capital efficiency within the Comets by raising the weETH supply cap.",
+      "textual_evidence": "Increase WETH Arbitrum Comet’s weETH Supply Cap from 12,000 to 24,000",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Increase WETH Arbitrum Comet’s rETH Supply Cap from 4,500 to 7,500",
+      "canonical_action": "parameter_update",
+      "object": "rETH Supply Cap",
+      "claimed_effect": "Increase capital efficiency within the Comets by raising the rETH supply cap.",
+      "textual_evidence": "Increase WETH Arbitrum Comet’s rETH Supply Cap from 4,500 to 7,500",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal consists entirely of straightforward parameter updates to supply caps on existing markets.",
+    "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit contract addresses were provided for the tokens, comet, or configurator.",
+    "The exact function names used to update parameters are not specified."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "proposal_id": "51",
+    "generated_at": "2026-05-08T11:15:23.947979+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "A proposal to create a streaming COMP grant (0.000214 Contributor Comp Speed) for Getty Hill to compensate for past and future work on coordinating and improving Compound's oracle system.",
+    "disclosed_entities": [
+      {
+        "name": "Getty Hill",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Over the last 6-months, Getty Hill has worked to improve Compound’s oracle system"
+      },
+      {
+        "name": "Compound",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "highest possible standard demanded by the Compound community."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Set Contributor Comp Speed grant",
+        "canonical_action": "treasury_operation",
+        "object": "Streaming COMP grant",
+        "claimed_effect": "Provide a continuous grant of 0.000214 to Getty Hill until modified by governance.",
+        "textual_evidence": "I am requesting a 0.000214 Contributor Comp Speed grant from the protocol. [...] The grant runs in perpetuity until modified by governance.",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal only involves setting up a streaming payment (Comp Speed grant) for a single contributor.",
+      "textual_evidence": "This Contributor Grant will be used to carry on the work of improving the price feed, and represents the first streaming COMP grant."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No recipient address provided for Getty Hill.",
+      "No specific contract or function names provided to execute the streaming grant."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0x598ee1cb0000000000000000000000009b68c14e936104e9a7a24c712beecdc2200029840000000000000000000000000000000000000000000000000000c2a1c1fb6000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x598ee1cb",
+        "decoded_function": "_setContributorCompSpeed(address,uint256)",
+        "decoded_args": [
+          "0x9b68c14e936104e9a7a24c712beecdc220002984",
+          214000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x75442ac771a7243433e033f3f8eab2631e22938f",
+        "value": "0x0",
+        "input": "0x598ee1cb0000000000000000000000009b68c14e936104e9a7a24c712beecdc2200029840000000000000000000000000000000000000000000000000000c2a1c1fb6000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x598ee1cb",
+        "decoded_function": "_setContributorCompSpeed(address,uint256)",
+        "decoded_args": [
+          "0x9b68c14e936104e9a7a24c712beecdc220002984",
+          214000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+      "0x75442ac771a7243433e033f3f8eab2631e22938f"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "_setContributorCompSpeed(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "51:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0x75442ac771a7243433e033f3f8eab2631e22938f",
+      "depth": 1,
+      "function_selector": "0x598ee1cb",
+      "decoded_function": "_setContributorCompSpeed(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x75442ac771a7243433e033f3f8eab2631e22938f",
+        "value": "0x0",
+        "input": "0x598ee1cb0000000000000000000000009b68c14e936104e9a7a24c712beecdc2200029840000000000000000000000000000000000000000000000000000c2a1c1fb6000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x598ee1cb",
+        "decoded_function": "_setContributorCompSpeed(address,uint256)",
+        "decoded_args": [
+          "0x9b68c14e936104e9a7a24c712beecdc220002984",
+          214000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 7,
+      "severity": "MEDIUM",
+      "summary": "Trace includes undisclosed addresses without evidence of an uncovered sensitive business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "0x75442ac771a7243433e033f3f8eab2631e22938f"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "MEDIUM",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+                "0x75442ac771a7243433e033f3f8eab2631e22938f"
+              ],
+              "related_actions": [
+                {
+                  "id": "51:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                  "to_address": "0x75442ac771a7243433e033f3f8eab2631e22938f",
+                  "depth": 1,
+                  "function_selector": "0x598ee1cb",
+                  "decoded_function": "_setContributorCompSpeed(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "parameter_update"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x75442ac771a7243433e033f3f8eab2631e22938f"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x75442ac771a7243433e033f3f8eab2631e22938f"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal only involves setting up a streaming payment (Comp Speed grant) for a single contributor.",
+            "textual_evidence": "This Contributor Grant will be used to carry on the work of improving the price feed, and represents the first streaming COMP grant."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "_setContributorCompSpeed(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "parameter_update"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "treasury_operation"
+              ],
+              "actual_business_actions": [
+                "parameter_update"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "_setContributorCompSpeed(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Set Contributor Comp Speed grant",
+              "canonical_action": "treasury_operation",
+              "object": "Streaming COMP grant",
+              "claimed_effect": "Provide a continuous grant of 0.000214 to Getty Hill until modified by governance.",
+              "textual_evidence": "I am requesting a 0.000214 Contributor Comp Speed grant from the protocol. [...] The grant runs in perpetuity until modified by governance.",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "51:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0x75442ac771a7243433e033f3f8eab2631e22938f",
+              "depth": 1,
+              "function_selector": "0x598ee1cb",
+              "decoded_function": "_setContributorCompSpeed(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "_setContributorCompSpeed(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "MEDIUM",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x75442ac771a7243433e033f3f8eab2631e22938f"
+          ],
+          "related_actions": [
+            {
+              "id": "51:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0x75442ac771a7243433e033f3f8eab2631e22938f",
+              "depth": 1,
+              "function_selector": "0x598ee1cb",
+              "decoded_function": "_setContributorCompSpeed(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "treasury_operation"
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "_setContributorCompSpeed(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

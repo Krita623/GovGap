@@ -1,0 +1,43 @@
+{
+  "benchmark_id": "real-compound-0016",
+  "dao": {
+    "name": "Compound",
+    "chain_id": 1,
+    "governor_address": "0x309a862bbC1A00e45506cB8A802D1ff10004c8C0",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "451",
+    "proposal_url": "https://www.tally.xyz/gov/compound/proposal/451",
+    "source": "tally",
+    "created_block": 22768587,
+    "executed_block": 22825543,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# OpenZeppelin Security Partnership - Annual Renewal 2025",
+    "description": "# OpenZeppelin Security Partnership - Annual Renewal 2025\n\n\n## Background\n\nOpenZeppelin has secured Compound since December 2021, establishing a proven track record of comprehensive protocol protection. In our current annual term (July 2024-June 2025), we\u2019ve completed 40+ security audits, reviewed 180+ governance proposals, and identified 6 critical vulnerabilities while maintaining zero protocol losses due to security exploits.\n\nThroughout this partnership, we\u2019ve maintained Compound\u2019s ecosystem security while flexibly responding to incidents and adapting to the DAO\u2019s evolving development needs. Our collaborative approach with key contributors has optimized processes and enabled early risk mitigation across protocol operations.\n\nThis renewal continues our [comprehensive security services](https://www.comp.xyz/t/openzeppelin-security-partnership-renewal-2025/6855#p-17213-services-2) with more detailed specifications of the coverage we\u2019ve been providing to Compound, making our commitments more explicit.\n\n## Compensation Structure\n\nPreviously OpenZeppelin used the Vendor Payment Aera Vault adopted in [Proposal 249](https://www.tally.xyz/gov/compound/proposal/249). With the deprecation of the Vendor Payment Aera Vault, Woof! Software proposed a [USDC-price-adjusted COMP streaming mechanism](https://www.comp.xyz/t/payment-streamer-audit/6779). This approach provides several benefits: \n\n* Reduced governance overhead for voters \n* Payment of USDC obligations using COMP \n* DAO clawback of unvested assets \n* DAO capture of net COMP appreciation\n \nOpenZeppelin will continue its annual renewal model for our Security Partnership adopting the same streaming approach. Our governance proposal will initiate a deposit of 110% of the 4M USDC equivalent in COMP, approximately 100,000 COMP at time of proposal, to be streamed over the course of a year starting at the beginning of Q3 2025.\n\nThe 10% buffer is designed to accommodate potential price fluctuations while balancing capital efficiency. **OpenZeppelin will only receive the prorated portion of the $4M annual value based on actual service duration**.\n\nGovernance may initiate early termination through a subsequent on-chain governance proposal with at least **60 days advance notice**. Unvested funds can be transferred to the DAO by anyone 10 days or more after the term ends or after the notice period expires.\n\nThis proposal grants COMP from the Comptroller to the [payment streamer contract](https://etherscan.io/address/0xcc14295eef16b26171b19a769c8a255b24305533#code), created by the [Streamer Factory](https://etherscan.io/tx/0x19eff859009dfd6fe92247cc2bf9bb4f1e2c2af11d2c9a0ae3281c53cdd73368) ([Audit Report](https://www.comp.xyz/t/compound-streamer-audit/6925)), and initializes the stream.\n\nMore detail in this [forum post](https://www.comp.xyz/t/openzeppelin-security-partnership-renewal-2025/6855).\n\nBy approving this proposal, you agree that any services provided by OpenZeppelin shall be governed by the [Terms of Service](https://docs.google.com/document/d/1eDcvirf0bdzpjIkfxQHm7fcV05O1IcLXL-Dl-U52Y4k) that were updated as of Sep 19th, 2023.\n"
+  },
+  "payload": {
+    "targets": [
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0xCC14295eEF16b26171B19a769C8a255b24305533"
+    ],
+    "values": [
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "",
+      ""
+    ],
+    "calldatas": [
+      "0x27efe3cb000000000000000000000000cc14295eef16b26171b19a769c8a255b2430553300000000000000000000000000000000000000000000152d02c7e14af6800000",
+      "0x8129fc1c"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x9b52aaef16766f96f9f398b2fd2afa037f058e5183b166d5f43f46e1ffc3fccd",
+    "executed_tx_hash": "0x73104bb8ec907c5bb0ad982a58cd1640fcdc4a22239e3db92a74077cace90092"
+  }
+}

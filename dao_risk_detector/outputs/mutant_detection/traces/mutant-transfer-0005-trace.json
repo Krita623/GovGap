@@ -1,0 +1,62 @@
+{
+  "proposal_id": "mutant-transfer-0005",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "executor": "0x1000000000000000000000000000000000000001",
+      "source": "proposal.executor",
+      "confidence": 1.0,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": false,
+      "anvil_reset_existing": false
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x1000000000000000000000000000000000000001",
+          "gas": "0xe48e18",
+          "gasUsed": "0x53a8",
+          "to": "0x3000000000000000000000000000000000000005",
+          "input": "0xa9059cbb000000000000000000000000400000000000000000000000000000000000000500000000000000000000000000000000000000000000000053444835ec580000",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x3000000000000000000000000000000000000005",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000400000000000000000000000000000000000000500000000000000000000000000000000000000000000000053444835ec580000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1000000000000000000000000000000000000001",
+      "0x3000000000000000000000000000000000000005"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,uint256)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

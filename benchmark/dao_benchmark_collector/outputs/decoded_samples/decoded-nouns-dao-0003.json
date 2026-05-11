@@ -1,0 +1,22 @@
+{
+  "benchmark_id": "real-nouns-dao-0003",
+  "source_raw_sample": "outputs/raw_samples/real-nouns-dao-0003.json",
+  "proposal": {
+    "dao": "Nouns DAO",
+    "chain_id": 1,
+    "proposal_id": "57",
+    "status": "executed",
+    "title": "# Bring luxury Noun sunglasses to market",
+    "description": "# Bring luxury Noun sunglasses to market\n\n## Summary\n\nA couple months ago small grants funded the prototyping of a luxury sunglass initiative by salvinoarmati: https://discourse.nouns.wtf/t/small-grant-request-create-luxury-noun-sunglasses-irl/658. This proposal is to fund the initial run and launch of the physical and NFT components of this project. More details here: https://ivory-pine-ebc.notion.site/NounsDAO-Proposal-29a658f763f74f958f7c6bd916533dbb.\n\n## Upcoming plan\n\nWe\u2019re planning to launch these as an NFT collection of limited-edition glasses. Each NFT is *consumable* in the sense that it can be used *once* to redeem a physical pair. Once the NFT is used, a boolean value is flipped to indicate consumed status and the underlying tokenURI is permanently changed. A physical pair of sunglasses is then sent to you.\n\n**~7.2% of supply reserved for NounsDAO Treasury**\n\nThe total supply of the collection will be 6969 units. This project would not have been possible without the NounsDAO and the treasury.  As a thank you, we\u2019ve decided to allocate ~7.2% of the supply to the treasury (500 units). We hope to make other such contributions as a thank you to the DAO in the future. \n\n**Custom Edition Glasses Just For Noun holders**\n\nWe\u2019re also making a custom \u201cspecial edition\u201d pair *exclusively* for noun owners. The design of these glasses will be based off of the under-appreciated and rare \u201cdisco\u201d glasses featured on some nouns. *There will only 500 of these glasses ever made, and will be available to the first 500 nouns during mint. This means, future nouns (up to #500) will also be able to receive the glasses.*\n\n## *High-level todos that still remain*\n\n- **Create Smart Contract, Website, Minting, and Redeeming Experience.**\n    - Have had a preliminary call with @blequity at Zora and will be using Zora\u2019s smart contract system to launch this NFT.\n    - Both Signora Armati and I are software engineers so will be able to build most of this \u2014but we may hire 1 or 2 engineers to accelerate the timeline.\n- **Finalize a storage/distribution facility for shipping the sunglasses.**\n    - We\u2019ll need to organize a distribution facility which will serve a few functions:\n        - Long-term storage of glasses (for those that are unredeemed or redeemed later)\n        - We have items coming from multiple manufacturers (Sunglasses, Nouns Box, Carrying case, polishing cloth, thank you cards) \u2014 and will need an area to assemble and ship out all boxes.\n- **Promotional Video / Ad**\n    - We want to create a fun promo (IRL) video that showcases the glasses + nouns brand. We\u2019ve had a preliminary call with [@jasonmorena_](https://twitter.com/jasonmorena_) (who was previously the filmmaker for Gary Vee) who has expressed interest in creating an ad for us.\n- **Finalize glass design and create units at scale.** \n\n### **Funds Requested**\n\n- 115\u039e for creating the smart contract, website, promotional/marketing material (this will be most of the remaining work), distribution facility, and to start manufacturing.\n- 1 Noun of the DAO's choice upon successful delivery of the first physical pair of glasses.\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x0B3CF56E7dF3BB3Fb7201fFcD96d279b05DDd2E3",
+      "native_value": "115000000000000000000",
+      "function": null,
+      "arguments": [],
+      "decode_status": "failed: calldata_empty"
+    }
+  ]
+}

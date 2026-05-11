@@ -1,0 +1,302 @@
+{
+  "proposal_summary": "This proposal enables five chain-specific reverse resolvers for L2 EVM networks (Arbitrum, Base, Linea, OP Mainnet and Scroll), one default reverse resolver as a fallback, and a new .eth registrar controller. It also sets the reverse records of some currently un-named ENS contracts.",
+  "disclosed_entities": [
+    {
+      "name": "registry.ens.eth",
+      "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "registry.ens.eth\nAddress: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    },
+    {
+      "name": "ETH Registrar",
+      "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ETH Registrar\nAddress: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+    },
+    {
+      "name": "Reverse Registrar",
+      "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Reverse Registrar\nAddress: 0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb"
+    },
+    {
+      "name": "Default Reverse Registrar",
+      "address": "0x283f227c4bd38ece252c4ae7ece650b0e913f1f9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Default Reverse Registrar\nAddress: 0x283F227c4Bd38ecE252C4Ae7ECE650B0e913f1f9"
+    },
+    {
+      "name": ".eth Resolver",
+      "address": "0x30200e0cb040f38e474e53ef437c95a1be723b2b",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": ".eth Resolver\nAddress: 0x30200E0cb040F38E474E53EF437c95A1bE723b2B"
+    },
+    {
+      "name": "wallet.ensdao.eth",
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "wallet.ensdao.eth → 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7"
+    },
+    {
+      "name": "DNSSEC contract",
+      "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "DNSSEC contract... address addr: 0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5"
+    },
+    {
+      "name": "root",
+      "address": "0xab528d626ec275e3fad363ff1393a41f581c5897",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Set primary name for root... address addr: 0xaB528d626EC275E3faD363fF1393A41F581c5897"
+    },
+    {
+      "name": "new controller",
+      "address": "0x59e16fccd424cc24e280be16e11bcd56fb0ce547",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "address controller: 0x59E16fcCd424Cc24e280Be16E11Bcd56fb0CE547"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "textual_evidence": "registry.ens.eth\nAddress: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+    },
+    {
+      "address": "0xa7d635c8de9a58a228aa69353a1699c7cc240dcf",
+      "textual_evidence": "address resolver: 0xA7d635c8de9a58a228AA69353a1699C7Cc240DCF"
+    },
+    {
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "textual_evidence": "wallet.ensdao.eth → 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7"
+    },
+    {
+      "address": "0x4b9572c03aaa8b0efa4b4b0f0cc0f0992bedb898",
+      "textual_evidence": "address resolver: 0x4b9572C03AAa8b0Efa4B4b0F0cc0f0992bEDB898"
+    },
+    {
+      "address": "0xc800dbc8ff9796e58efba2d7b35028ddd1997e5e",
+      "textual_evidence": "address resolver: 0xc800DBc8ff9796E58EfBa2d7b35028DdD1997E5e"
+    },
+    {
+      "address": "0x0ce08a41bdb10420fb5cac7da8ca508ea313aef8",
+      "textual_evidence": "address resolver: 0x0Ce08a41bdb10420FB5Cac7Da8CA508EA313aeF8"
+    },
+    {
+      "address": "0xf9edb1a21867ac11b023ce34abad916d29abf107",
+      "textual_evidence": "address resolver: 0xF9Edb1A21867aC11b023CE34Abad916D29aBF107"
+    },
+    {
+      "address": "0xd38bf7c18c25ac1b4ce2cc077cbc35b2b97f01e7",
+      "textual_evidence": "address resolver: 0xd38bf7c18c25AC1b4ce2CC077cbC35b2B97f01e7"
+    },
+    {
+      "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "textual_evidence": "Target: ETH Registrar\nAddress: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+    },
+    {
+      "address": "0x59e16fccd424cc24e280be16e11bcd56fb0ce547",
+      "textual_evidence": "address controller: 0x59E16fcCd424Cc24e280Be16E11Bcd56fb0CE547"
+    },
+    {
+      "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+      "textual_evidence": "Target: Reverse Registrar\nAddress: 0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb"
+    },
+    {
+      "address": "0x283f227c4bd38ece252c4ae7ece650b0e913f1f9",
+      "textual_evidence": "Target: Default Reverse Registrar\nAddress: 0x283F227c4Bd38ecE252C4Ae7ECE650B0e913f1f9"
+    },
+    {
+      "address": "0x30200e0cb040f38e474e53ef437c95a1be723b2b",
+      "textual_evidence": "Target: .eth Resolver\nAddress: 0x30200E0cb040F38E474E53EF437c95A1bE723b2B"
+    },
+    {
+      "address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+      "textual_evidence": "address resolver: 0xF29100983E058B709F3D539b0c765937B804AC15"
+    },
+    {
+      "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "textual_evidence": "address addr: 0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5"
+    },
+    {
+      "address": "0xab528d626ec275e3fad363ff1393a41f581c5897",
+      "textual_evidence": "address addr: 0xaB528d626EC275E3faD363fF1393A41F581c5897"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Call setResolver on registry.ens.eth",
+      "canonical_action": "parameter_update",
+      "object": "registry.ens.eth",
+      "claimed_effect": "Updates the resolver for the reverse node.",
+      "textual_evidence": "registry.ens.eth | setResolver | Call setResolver on registry.ens.eth",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set Arbitrum reverse namespace",
+      "canonical_action": "parameter_update",
+      "object": "registry.ens.eth",
+      "claimed_effect": "Configures reverse resolution for Arbitrum.",
+      "textual_evidence": "registry.ens.eth | setSubnodeRecord | Set Arbitrum reverse namespace",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set Base reverse namespace",
+      "canonical_action": "parameter_update",
+      "object": "registry.ens.eth",
+      "claimed_effect": "Configures reverse resolution for Base.",
+      "textual_evidence": "registry.ens.eth | setSubnodeRecord | Set Base reverse namespace",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set Linea reverse namespace",
+      "canonical_action": "parameter_update",
+      "object": "registry.ens.eth",
+      "claimed_effect": "Configures reverse resolution for Linea.",
+      "textual_evidence": "registry.ens.eth | setSubnodeRecord | Set Linea reverse namespace",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set Optimism reverse namespace",
+      "canonical_action": "parameter_update",
+      "object": "registry.ens.eth",
+      "claimed_effect": "Configures reverse resolution for Optimism.",
+      "textual_evidence": "registry.ens.eth | setSubnodeRecord | Set Optimism reverse namespace",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set Scroll reverse namespace",
+      "canonical_action": "parameter_update",
+      "object": "registry.ens.eth",
+      "claimed_effect": "Configures reverse resolution for Scroll.",
+      "textual_evidence": "registry.ens.eth | setSubnodeRecord | Set Scroll reverse namespace",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Authorise new controller on registrar",
+      "canonical_action": "role_change",
+      "object": "ETH Registrar",
+      "claimed_effect": "Grants authorization to a new controller on the registrar.",
+      "textual_evidence": "ETH Registrar | addController | Authorise new controller on registrar",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Authorise new controller on reverse registrar",
+      "canonical_action": "role_change",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Grants authorization to a new controller on the reverse registrar.",
+      "textual_evidence": "Reverse Registrar | setController | Authorise new controller on reverse registrar",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Authorise new controller on new default reverse registrar",
+      "canonical_action": "role_change",
+      "object": "Default Reverse Registrar",
+      "claimed_effect": "Grants authorization to a new controller on the new default reverse registrar.",
+      "textual_evidence": "Default Reverse Registrar | setController | Authorise new controller on new default reverse registrar",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set new controller interface to new controller on .eth resolver",
+      "canonical_action": "parameter_update",
+      "object": ".eth Resolver",
+      "claimed_effect": "Updates the controller interface.",
+      "textual_evidence": ".eth Resolver | setInterface | Set new controller interface to new controller on .eth resolver",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set default resolver to new public resolver on reverse registrar",
+      "canonical_action": "parameter_update",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Configures the default resolver.",
+      "textual_evidence": "Reverse Registrar | setDefaultResolver | Set default resolver to new public resolver on reverse registrar",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set primary name for DNSSEC contract",
+      "canonical_action": "parameter_update",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Assigns a primary ENS name to the DNSSEC contract.",
+      "textual_evidence": "Reverse Registrar | setNameForAddr | Set primary name for DNSSEC contract",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set primary name for registrar",
+      "canonical_action": "parameter_update",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Assigns a primary ENS name to the registrar.",
+      "textual_evidence": "Reverse Registrar | setNameForAddr | Set primary name for registrar",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set primary name for root",
+      "canonical_action": "parameter_update",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Assigns a primary ENS name to the root.",
+      "textual_evidence": "Reverse Registrar | setNameForAddr | Set primary name for root",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set primary name for new controller",
+      "canonical_action": "parameter_update",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Assigns a primary ENS name to the new controller.",
+      "textual_evidence": "Reverse Registrar | setNameForAddr | Set primary name for new controller",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Set primary name for default reverse registrar",
+      "canonical_action": "parameter_update",
+      "object": "Reverse Registrar",
+      "claimed_effect": "Assigns a primary ENS name to the default reverse registrar.",
+      "textual_evidence": "Reverse Registrar | setNameForAddr | Set primary name for default reverse registrar",
+      "confidence": 1.0
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires 16 separate transactions configuring namespaces across several L2s and managing roles/records for various ENS contracts. While not highly complex structurally, it touches a significant number of components.",
+    "textual_evidence": "This proposal contains 16 transaction(s) to be executed by the ENS DAO Timelock."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setResolver",
+      "textual_evidence": "Call setResolver on registry.ens.eth"
+    },
+    {
+      "function_name": "setSubnodeRecord",
+      "textual_evidence": "Set Arbitrum reverse namespace"
+    },
+    {
+      "function_name": "addController",
+      "textual_evidence": "Authorise new controller on registrar"
+    },
+    {
+      "function_name": "setController",
+      "textual_evidence": "Authorise new controller on reverse registrar"
+    },
+    {
+      "function_name": "setInterface",
+      "textual_evidence": "Set new controller interface to new controller on .eth resolver"
+    },
+    {
+      "function_name": "setDefaultResolver",
+      "textual_evidence": "Set default resolver to new public resolver on reverse registrar"
+    },
+    {
+      "function_name": "setNameForAddr",
+      "textual_evidence": "Set primary name for DNSSEC contract"
+    }
+  ],
+  "limitations": [],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

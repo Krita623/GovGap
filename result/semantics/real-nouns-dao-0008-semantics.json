@@ -1,0 +1,35 @@
+{
+  "proposal_summary": "Proposal to stake an additional 10000 ETH to Lido.",
+  "disclosed_entities": [
+    {
+      "name": "Lido",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Stake 10000 ETH to Lido"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Stake 10000 ETH",
+      "canonical_action": "treasury_operation",
+      "object": "10000 ETH",
+      "claimed_effect": "Stakes an additional 10000 ETH to the Lido protocol",
+      "textual_evidence": "This is a proposal to stake an additional 10000 ETH.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "unknown",
+    "reason": "The proposal text does not indicate any complexity level.",
+    "textual_evidence": ""
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses for Lido are provided.",
+    "No technical execution details or function calls are disclosed."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

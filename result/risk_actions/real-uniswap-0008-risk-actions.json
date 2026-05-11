@@ -1,0 +1,39 @@
+{
+  "risk_actions": [
+    {
+      "id": "65:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000001026d3d219098d7b1b0a180f7e557deea7da82c100000000000000000000000000000000000000000000104e2da94483f6200000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+          77000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 1,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 1
+  }
+}

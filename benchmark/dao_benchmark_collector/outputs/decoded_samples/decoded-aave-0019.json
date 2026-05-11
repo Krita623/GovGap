@@ -1,0 +1,35 @@
+{
+  "benchmark_id": "real-aave-0019",
+  "source_raw_sample": "outputs/raw_samples/real-aave-0019.json",
+  "proposal": {
+    "dao": "Aave",
+    "chain_id": 1,
+    "proposal_id": "390",
+    "status": "canceled",
+    "title": "#  Onboarding wstETH to Aave V3 on Base Network",
+    "description": "#  Onboarding wstETH to Aave V3 on Base Network\n\n---\ntitle: \"Onboarding wstETH to Aave V3 on Base Network\"\nauthor: \"Alice Rozengarden (@Rozengarden - Aave-chan initiative)\"\ndiscussions: \"https://governance.aave.com/t/arfc-onboarding-wsteth-to-aave-v3-on-base-network/15510\"\n---\n\n## Simple Summary\n\nThis AIP proposes the onboarding of wstETH (wrapped staked ETH) from Lido to the Aave V3 Base Network to enrich the diversity of the ecosystem's liquid staking assets.\n\n## Motivation\n\nThe onboarding of wstETH will provide Aave users with more options for earning staking rewards on their collateral, reinforcing Aave's position as a diverse and inclusive DeFi protocol.\n\n## Specification\n\nThe table below illustrates the configured risk parameters for **wstETH**\n\n| Parameter                          |                                      Value |\n| ---------------------------------- | -----------------------------------------: |\n| Isolation Mode                     |                                      false |\n| Borrowable                         |                                    ENABLED |\n| Collateral Enabled                 |                                       true |\n| Supply Cap (wstETH)                |                                      4,000 |\n| Borrow Cap (wstETH)                |                                        400 |\n| Debt Ceiling                       |                                      USD 0 |\n| LTV                                |                                       71 % |\n| LT                                 |                                       76 % |\n| Liquidation Bonus                  |                                        6 % |\n| Liquidation Protocol Fee           |                                       10 % |\n| Reserve Factor                     |                                       15 % |\n| Base Variable Borrow Rate          |                                        0 % |\n| Variable Slope 1                   |                                        7 % |\n| Variable Slope 2                   |                                      300 % |\n| Uoptimal                           |                                       45 % |\n| Stable Borrowing                   |                                   DISABLED |\n| Stable Slope1                      |                                       13 % |\n| Stable Slope2                      |                                      300 % |\n| Base Stable Rate Offset            |                                        3 % |\n| Stable Rate Excess Offset          |                                        5 % |\n| Optimal Stable To Total Debt Ratio |                                       20 % |\n| Flashloanable                      |                                    ENABLED |\n| Siloed Borrowing                   |                                   DISABLED |\n| Borrowable in Isolation            |                                   DISABLED |\n| Oracle                             | 0x945fD405773973d286De54E44649cc0d9e264F78 |\n\n- Contract Address: [wstETH - 0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452](https://basescan.org/address/0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452)\n\n## References\n\n- Implementation: [AaveV3Base](https://github.com/bgd-labs/aave-proposals-v3/blob/5a20ff77b5bc9ef8b9bf46a3212a9318750e75a6/src/20231127_AaveV3Base_OnboardingWstETHToAaveV3OnBaseNetwork/AaveV3Base_OnboardingWstETHToAaveV3OnBaseNetwork_20231127.sol)\n- Tests: [AaveV3Base](https://github.com/bgd-labs/aave-proposals-v3/blob/5a20ff77b5bc9ef8b9bf46a3212a9318750e75a6/src/20231127_AaveV3Base_OnboardingWstETHToAaveV3OnBaseNetwork/AaveV3Base_OnboardingWstETHToAaveV3OnBaseNetwork_20231127.t.sol)\n- [Snapshot](https://snapshot.org/#/aave.eth/proposal/0x9cf4ba743e0363f77fbbd1bf0d3946b06154abd57cd4bc897c23cdfcdb3bcbeb)\n- [Discussion](https://governance.aave.com/t/arfc-onboarding-wsteth-to-aave-v3-on-base-network/15510/5)\n\n## Copyright\n\nCopyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x9AEE0B04504CeF83A65AC3f0e838D0593BCb2BC7",
+      "native_value": "0",
+      "function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "(uint256,uint8,address,uint40)",
+          "value": [
+            "8453",
+            "1",
+            "0x2dc219e716793fb4b21548c0f009ba3af753ab01",
+            "3"
+          ]
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

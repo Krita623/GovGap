@@ -1,0 +1,107 @@
+{
+  "proposal_id": "119",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+          "gas": "0xe48e08",
+          "gasUsed": "0x8ae3",
+          "to": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+          "input": "0x55ee1fe100000000000000000000000065c816077c29b557bee980ae3cc2dce80204a0c5",
+          "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "calls": [
+            {
+              "from": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "gas": "0xe0e898",
+              "gasUsed": "0x22f8",
+              "to": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+              "input": "0x55ee1fe100000000000000000000000065c816077c29b557bee980ae3cc2dce80204a0c5",
+              "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "value": "0x0",
+              "type": "DELEGATECALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0x55ee1fe100000000000000000000000065c816077c29b557bee980ae3cc2dce80204a0c5",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x55ee1fe1",
+        "decoded_function": "_setPriceOracle(address)",
+        "decoded_args": [
+          "0x65c816077c29b557bee980ae3cc2dce80204a0c5"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0x55ee1fe100000000000000000000000065c816077c29b557bee980ae3cc2dce80204a0c5",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x55ee1fe1",
+        "decoded_function": "_setPriceOracle(address)",
+        "decoded_args": [
+          "0x65c816077c29b557bee980ae3cc2dce80204a0c5"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+      "0xbafe01ff935c7305907c33bf824352ee5979b526"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "_setPriceOracle(address)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

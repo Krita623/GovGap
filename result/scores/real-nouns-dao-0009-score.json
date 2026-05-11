@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "proposal_id": "585",
+    "generated_at": "2026-05-08T11:15:24.377202+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Approve the Lighthouse client ID (16) for Nouns Client Incentives.",
+    "disclosed_entities": [
+      {
+        "name": "Lighthouse",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Lighthouse is a native mobile app for iOS and Android that makes it easy to participation in on-chain communities."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "approve the Lighthouse client ID (16)",
+        "canonical_action": "parameter_update",
+        "object": "Client ID 16",
+        "claimed_effect": "Clears Lighthouse to receive Nouns Client Incentives.",
+        "textual_evidence": "If executed, this proposal approves the Lighthouse client ID (16) for Nouns Client Incentives.",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal requires a straightforward approval of a client ID for an existing incentive system, with no complex architecture discussed.",
+      "textual_evidence": "If executed, this proposal approves the Lighthouse client ID (16) for Nouns Client Incentives."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific smart contract addresses or technical execution details are provided in the text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+        "value": "0x0",
+        "input": "0xac4951f600000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xac4951f6",
+        "decoded_function": "setClientApproval(uint32,bool)",
+        "decoded_args": [
+          16,
+          true
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+        "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+        "value": "0x0",
+        "input": "0xac4951f600000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xac4951f6",
+        "decoded_function": "setClientApproval(uint32,bool)",
+        "decoded_args": [
+          16,
+          true
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x883860178f95d0c82413edc1d6de530cb4771d55",
+      "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+      "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "setClientApproval(uint32,bool)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "585:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+      "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+      "depth": 1,
+      "function_selector": "0xac4951f6",
+      "decoded_function": "setClientApproval(uint32,bool)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+        "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+        "value": "0x0",
+        "input": "0xac4951f600000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xac4951f6",
+        "decoded_function": "setClientApproval(uint32,bool)",
+        "decoded_args": [
+          16,
+          true
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x883860178f95d0c82413edc1d6de530cb4771d55",
+        "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+        "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x883860178f95d0c82413edc1d6de530cb4771d55",
+                "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+                "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+              ],
+              "related_actions": [
+                {
+                  "id": "585:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+                  "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+                  "depth": 1,
+                  "function_selector": "0xac4951f6",
+                  "decoded_function": "setClientApproval(uint32,bool)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x883860178f95d0c82413edc1d6de530cb4771d55",
+            "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x883860178f95d0c82413edc1d6de530cb4771d55",
+            "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal requires a straightforward approval of a client ID for an existing incentive system, with no complex architecture discussed.",
+            "textual_evidence": "If executed, this proposal approves the Lighthouse client ID (16) for Nouns Client Incentives."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "setClientApproval(uint32,bool)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "approve the Lighthouse client ID (16)",
+              "canonical_action": "parameter_update",
+              "object": "Client ID 16",
+              "claimed_effect": "Clears Lighthouse to receive Nouns Client Incentives.",
+              "textual_evidence": "If executed, this proposal approves the Lighthouse client ID (16) for Nouns Client Incentives.",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "585:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+              "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+              "depth": 1,
+              "function_selector": "0xac4951f6",
+              "decoded_function": "setClientApproval(uint32,bool)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "setClientApproval(uint32,bool)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x883860178f95d0c82413edc1d6de530cb4771d55",
+            "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+          ],
+          "related_actions": [
+            {
+              "id": "585:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+              "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+              "depth": 1,
+              "function_selector": "0xac4951f6",
+              "decoded_function": "setClientApproval(uint32,bool)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "proposal_summary": "A proposal to renew Gauntlet's 12-month continuous market risk management engagement with Aave, covering V2, V3, GHO, and an insolvency refund.",
+  "disclosed_entities": [
+    {
+      "name": "Gauntlet",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "A proposal to renew Gauntlet’s 12-month engagement with Aave"
+    },
+    {
+      "name": "aUSDT",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The annual fee will be a fixed fee of $1,600,000. This will be 50% in GHO and 50% in aUSDT."
+    },
+    {
+      "name": "GHO",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Deposit 480,000 aUSDT in a vault for the insolvency refund",
+      "canonical_action": "treasury_operation",
+      "object": "aUSDT",
+      "claimed_effect": "Sets aside 30% of the total annual fee in a vault to act as an insolvency refund.",
+      "textual_evidence": "30% of the total annual fee (480,000 in aUSDT) will be deposited in a vault for the insolvency refund.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Stream 320,000 aUSDT and 800,000 GHO linearly over 1 year",
+      "canonical_action": "treasury_operation",
+      "object": "aUSDT and GHO",
+      "claimed_effect": "Pays Gauntlet's remaining service fee progressively over 12 months.",
+      "textual_evidence": "The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only consists of transferring and streaming specific token amounts to compensate a service provider.",
+    "textual_evidence": "The Proposal Payload does the following: 30% of the total annual fee (480,000 in aUSDT) will be deposited... The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses or vault addresses are provided in the proposal text.",
+    "Functions and stream mechanics are not explicitly detailed, only described conceptually."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,141 @@
+# DAO Proposal Semantic Gap Audit Report
+
+**Generated At**: 2026-05-08 11:15:24 UTC
+**Proposal ID**: 903
+**Simulation Status**: success
+**Trace Source**: simulated_trace
+
+---
+
+## Consistency Score
+
+**Overall Score**: 4/10
+**Risk Level**: HIGH
+**Scoring Method**: worst-case risk gating, not weighted average.
+
+Overall score uses minimum dimension score 4 capped by highest severity HIGH.
+
+Some dimensions may be acceptable, but the overall score is limited by High or Critical rule-engine findings.
+
+---
+
+## Conflict Detection
+
+- Dimension score: 5/10
+- Severity: HIGH
+- Summary: An undisclosed address participates in an uncovered approval or transfer action.
+
+### Unaccounted Addresses
+- `0x43506849d7c04f9138d1a2050bbf3a0c054402dd`
+  - Risk level: HIGH
+  - Related actions: balanceOf(address), transfer(address,uint256)
+  - Evidence source: trace
+  - Note: this address was not explicitly disclosed in the proposal text. If the system cannot verify its role, manual review is required.
+- `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`
+  - Risk level: HIGH
+  - Related actions: balanceOf(address), transfer(address,uint256)
+  - Evidence source: trace
+  - Note: this address was not explicitly disclosed in the proposal text. If the system cannot verify its role, manual review is required.
+- `0xb1a32fc9f9d8b2cf86c068cae13108809547ef71`
+  - Risk level: HIGH
+  - Related actions: unable to confirm
+  - Evidence source: trace
+  - Note: this address was not explicitly disclosed in the proposal text. If the system cannot verify its role, manual review is required.
+- `0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d`
+  - Risk level: HIGH
+  - Related actions: transfer(address,uint256)
+  - Evidence source: trace
+  - Note: this address was not explicitly disclosed in the proposal text. If the system cannot verify its role, manual review is required.
+
+### Key Findings
+- Unaccounted trace addresses
+  - Risk level: HIGH
+  - Description: One or more addresses appeared in the trace without direct proposal text disclosure.
+  - Evidence source: trace
+
+---
+
+## Depth Analysis
+
+- Claimed complexity: simple
+- Actual max depth: 2
+- Depth mismatch: no
+- Delegatecall count: 2
+
+Summary: Observed trace depth is consistent with the claimed complexity.
+
+---
+
+## Function Semantic Match
+
+- Dimension score: 4/10
+- Severity: HIGH
+- Summary: Claimed business action categories differ from extracted business actions.
+- Claimed actions: governance_proposal_creation
+- Actual actions: transfer
+
+### Matched Functions
+- `balanceOf(address)`
+- `sendOrRegisterDebt(address,uint256)`
+- `transfer(address,uint256)`
+
+### Unmatched Or Additional Actions
+- `transfer`
+  - Risk level: HIGH
+  - Note: this action was not fully matched to the claimed proposal action. Review the linked evidence before relying on the proposal text.
+
+### Key Findings
+- Claimed actions do not fully match trace actions
+  - Risk level: HIGH
+  - Description: Claimed business action categories differ from extracted business actions.
+  - Evidence source: rule_engine
+
+---
+
+## Potential Risk Findings
+
+### 1. HIGH - Unaccounted trace addresses
+
+- **Severity**: HIGH
+- **Description**: One or more addresses appeared in the trace without direct proposal text disclosure.
+- **Evidence Source**: trace
+- **Confidence**: 0.9
+- **Recommendation**: Review whether the proposal text sufficiently discloses the business action and its counterparty.
+- **Key Evidence**:
+  - Unaccounted addresses: 0x43506849d7c04f9138d1a2050bbf3a0c054402dd, 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48, 0xb1a32fc9f9d8b2cf86c068cae13108809547ef71, 0xd97bcd9f47cee35c0a9ec1dc40c1269afc9e8e1d
+
+### 2. HIGH - Claimed actions do not fully match trace actions
+
+- **Severity**: HIGH
+- **Description**: Claimed business action categories differ from extracted business actions.
+- **Evidence Source**: rule_engine
+- **Confidence**: 0.9
+- **Recommendation**: Compare proposal action wording with decoded functions and risk actions before relying on the text.
+- **Key Evidence**:
+  - Action comparison: claimed=governance_proposal_creation, actual=unable to confirm
+
+---
+
+## Security Conclusion
+
+The proposal has a serious Semantic Gap. Some on-chain actions are not sufficiently covered by the proposal text and may affect governance participants' judgment. Pausing or escalating to manual audit is recommended.
+
+---
+
+## Summary
+
+The proposal text claims: This proposal establishes a transparent, community-driven token-weighted approval voting process to elect two DUNA Admins (one Admin, one Reserve) via an off-chain vote on Nouns.gg, which will subsequently be finalized through an on-chain vote.
+The payload actually shows: transfer. Decoded functions include: balanceOf(address), sendOrRegisterDebt(address,uint256), transfer(address,uint256).
+The most important scoring issue is `function_semantic_match`, which scored 4/10.
+High-risk findings include: Unaccounted trace addresses, Claimed actions do not fully match trace actions. Pausing or escalating to manual audit is recommended.
+
+---
+
+## Machine-Verifiable Controls
+
+- LLM used for scoring: false
+- LLM used for trace analysis: false
+- Unsupported claims allowed: false
+- Unknown fields preserved as unknown: true
+
+This report is generated from structured rule-engine output and a deterministic template. The LLM is only used for proposal-text semantic extraction and is not used for scoring, trace analysis, or final conclusions.

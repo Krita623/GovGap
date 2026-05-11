@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "proposal_id": "31038548146097859834078018568437840147798885401616129864120868194533406456350",
+    "generated_at": "2026-05-08T11:15:24.298207+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 9,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 9 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Registers the 'on.eth' ENS name to the ENS DAO wallet and sets its resolver to an on-chain registry-resolver contract, updating previous proposal EP 6.34 to account for ownership model changes in the Base Registrar.",
+    "disclosed_entities": [
+      {
+        "name": "ENS DAO wallet",
+        "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "entity_type": "treasury",
+        "disclosure_level": "explicit",
+        "textual_evidence": "ENS DAO wallet (0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7)"
+      },
+      {
+        "name": "registry-resolver contract",
+        "address": "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "on-chain registry-resolver contract (0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A)"
+      },
+      {
+        "name": "RegistrarSecurityController",
+        "address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "RegistrarSecurityController • 0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b"
+      },
+      {
+        "name": "BaseRegistrarImplementation",
+        "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "entity_type": "external_contract",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Registering the name `on.eth` to the DAO wallet... To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+      },
+      {
+        "name": "ENS Registry (Implied)",
+        "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "entity_type": "external_contract",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Setting the deployed `ChainResolver` as the resolver for on.eth... To: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "textual_evidence": "ENS DAO wallet (0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7)"
+      },
+      {
+        "address": "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+        "textual_evidence": "on-chain registry-resolver contract (0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A)"
+      },
+      {
+        "address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "textual_evidence": "RegistrarSecurityController • 0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b"
+      },
+      {
+        "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "textual_evidence": "To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85"
+      },
+      {
+        "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "textual_evidence": "To: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Adding the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+        "canonical_action": "role_change",
+        "object": "BaseRegistrarImplementation / RegistrarSecurityController",
+        "claimed_effect": "Gives the DAO wallet controller rights to register the name",
+        "textual_evidence": "1. Adding the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Registering the name `on.eth` to the DAO wallet.",
+        "canonical_action": "role_change",
+        "object": "BaseRegistrarImplementation / on.eth",
+        "claimed_effect": "Assigns ownership of on.eth to the DAO wallet",
+        "textual_evidence": "2. Registering the name `on.eth` to the DAO wallet.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Setting the deployed `ChainResolver` as the resolver for on.eth",
+        "canonical_action": "parameter_update",
+        "object": "ENS Registry / on.eth",
+        "claimed_effect": "Updates the resolver for on.eth to the new ChainResolver",
+        "textual_evidence": "3. Setting the deployed `ChainResolver` as the resolver for on.eth",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Removing the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+        "canonical_action": "role_change",
+        "object": "BaseRegistrarImplementation / RegistrarSecurityController",
+        "claimed_effect": "Revokes controller rights from the DAO wallet",
+        "textual_evidence": "4. Removing the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Involves temporarily taking controller privileges via another contract, making modifications, and then explicitly dropping privileges.",
+      "textual_evidence": "Adding the DAO wallet as a controller on the `BaseRegistrarImplementation`... Removing the DAO wallet as a controller"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Function names are not explicitly mentioned in the text, only calldata is provided."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "value": "0x0",
+        "input": "0xb229e85e000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xb229e85e",
+        "decoded_function": "addRegistrarController(address)",
+        "decoded_args": [
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "to_address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "value": "0x0",
+        "input": "0xa7fc7a07000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xa7fc7a07",
+        "decoded_function": "addController(address)",
+        "decoded_args": [
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "value": "0x0",
+        "input": "0xfca247ac6460d40e0362f6a2c743f205df8181010b7f26e76d5606847fb7be7fb6d135f9000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b70000000000000000000000000000000000000000000000000000000012cc0300",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xfca247ac",
+        "decoded_function": "register(uint256,address,uint256)",
+        "decoded_args": [
+          45402365724566784737799689503774969143694275755436707346024963105947305195001,
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          315360000
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0",
+        "input": "0x02571be393cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae",
+        "output": "0x00000000000000000000000057f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "depth": 1,
+        "function_selector": "0x02571be3",
+        "decoded_function": "owner(bytes32)",
+        "decoded_args": [
+          "0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0x0",
+        "input": "0x1896f70acabf8262fe531c2a7e8cd86e06342bc27fc0591ecd562fbac88280abc18ef8990000000000000000000000002a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x1896f70a",
+        "decoded_function": "setResolver(bytes32,address)",
+        "decoded_args": [
+          "0xcabf8262fe531c2a7e8cd86e06342bc27fc0591ecd562fbac88280abc18ef899",
+          "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "value": "0x0",
+        "input": "0x246b813e000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x246b813e",
+        "decoded_function": "removeRegistrarController(address)",
+        "decoded_args": [
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "to_address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "value": "0x0",
+        "input": "0xf6a74ed7000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xf6a74ed7",
+        "decoded_function": "removeController(address)",
+        "decoded_args": [
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+      "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 1,
+    "external_call_count": 6,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "addController(address)",
+      "addRegistrarController(address)",
+      "owner(bytes32)",
+      "register(uint256,address,uint256)",
+      "removeController(address)",
+      "removeRegistrarController(address)",
+      "setResolver(bytes32,address)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 10,
+      "severity": "LOW",
+      "summary": "All trace addresses are disclosed or system-whitelisted.",
+      "disclosed_addresses": [
+        "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+        "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+        "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [],
+      "findings": [],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a",
+            "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+            "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "trace_unique_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+            "0x7dd4d97653a67c2fd7fba0a84825ec09524d4e1b",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Involves temporarily taking controller privileges via another contract, making modifications, and then explicitly dropping privileges.",
+            "textual_evidence": "Adding the DAO wallet as a controller on the `BaseRegistrarImplementation`... Removing the DAO wallet as a controller"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "addController(address)",
+        "addRegistrarController(address)",
+        "owner(bytes32)",
+        "register(uint256,address,uint256)",
+        "removeController(address)",
+        "removeRegistrarController(address)",
+        "setResolver(bytes32,address)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "role_change",
+        "role_change",
+        "parameter_update",
+        "role_change"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Adding the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+              "canonical_action": "role_change",
+              "object": "BaseRegistrarImplementation / RegistrarSecurityController",
+              "claimed_effect": "Gives the DAO wallet controller rights to register the name",
+              "textual_evidence": "1. Adding the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Registering the name `on.eth` to the DAO wallet.",
+              "canonical_action": "role_change",
+              "object": "BaseRegistrarImplementation / on.eth",
+              "claimed_effect": "Assigns ownership of on.eth to the DAO wallet",
+              "textual_evidence": "2. Registering the name `on.eth` to the DAO wallet.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Setting the deployed `ChainResolver` as the resolver for on.eth",
+              "canonical_action": "parameter_update",
+              "object": "ENS Registry / on.eth",
+              "claimed_effect": "Updates the resolver for on.eth to the new ChainResolver",
+              "textual_evidence": "3. Setting the deployed `ChainResolver` as the resolver for on.eth",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Removing the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+              "canonical_action": "role_change",
+              "object": "BaseRegistrarImplementation / RegistrarSecurityController",
+              "claimed_effect": "Revokes controller rights from the DAO wallet",
+              "textual_evidence": "4. Removing the DAO wallet as a controller on the `BaseRegistrarImplementation` smart contract through the RegistrarSecurityController.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "addController(address)",
+            "addRegistrarController(address)",
+            "owner(bytes32)",
+            "register(uint256,address,uint256)",
+            "removeController(address)",
+            "removeRegistrarController(address)",
+            "setResolver(bytes32,address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

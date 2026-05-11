@@ -1,0 +1,70 @@
+{
+  "proposal_summary": "Deploy Uniswap v3 to Boba Network, an Ethereum L2 scaling solution. The proposal requests a license exemption for Boba Network to use the Uniswap V3 Core software code. Boba Network will provide $1M in BOBA tokens to foster usage via a multisig wallet co-owned by the Uniswap Grants Program and Boba Network.",
+  "disclosed_entities": [
+    {
+      "name": "Boba Network",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Boba Network and FranklinDAO (Prev. Penn Blockchain) are submitting this proposal to Deploy Uniswap v3 on Boba Network."
+    },
+    {
+      "name": "FranklinDAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Boba Network and FranklinDAO (Prev. Penn Blockchain) are submitting this proposal"
+    },
+    {
+      "name": "Uniswap Grants Program (UGP)",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The tokens will be sent to a multisig wallet co-owned by the Uniswap Grants Program (UGP) and Boba Network"
+    },
+    {
+      "name": "DMA Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "In cooperation with DMA Labs (a major contributor to ICHIs Uniswap v3 management protocols)"
+    },
+    {
+      "name": "multisig wallet",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The tokens will be sent to a multisig wallet co-owned by the Uniswap Grants Program (UGP) and Boba Network"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Grant an additional use grant to use the Uniswap V3 Core software code",
+      "canonical_action": "governance_proposal_creation",
+      "object": "Uniswap V3 Core software code",
+      "claimed_effect": "Boba Network receives license to use the Uniswap Code for a full deployment of the Uniswap Protocol v3 onto the Boba Network L2",
+      "textual_evidence": "The Boba Network is granted an additional use grant to use the Uniswap V3 Core software code",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Provide $1M $BOBA tokens",
+      "canonical_action": "treasury_operation",
+      "object": "$1M $BOBA tokens",
+      "claimed_effect": "Foster the usage of Uniswap v3 on Boba Network by funding incentives",
+      "textual_evidence": "Boba Network will provide $1M $BOBA tokens to foster the usage of Uniswap v3 on Boba Network. The tokens will be sent to a multisig wallet",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal primarily grants a license exemption for deploying the protocol on a new Layer 2 and arranging an incentive program via a multisig.",
+    "textual_evidence": "We are requesting an exemption that will allow Boba Network to use the Licensed Work to deploy it on Boba Network... Boba Network will provide $1M $BOBA tokens"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No smart contract code or addresses are provided for the actual deployment or execution."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

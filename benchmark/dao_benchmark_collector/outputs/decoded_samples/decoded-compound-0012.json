@@ -1,0 +1,212 @@
+{
+  "benchmark_id": "real-compound-0012",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0012.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "240",
+    "status": "defeated",
+    "title": "# [Gauntlet] Compound v2 Deprecation Phase 11 (2024-04-15)",
+    "description": "# [Gauntlet] Compound v2 Deprecation Phase 11 (2024-04-15)\n\n## Simple Summary\n\n  For Phase 11 of the Compound v2 deprecation, Gauntlet recommends decreasing the Collateral Factor for v2 collateral assets. Specifically, Gauntlet recommends the following changes:\n\n\n- Decrease **AAVE Collateral Factor** from 38% to **33%**\n- Decrease **BAT Collateral Factor** from 45% to **40%**\n- Decrease **COMP Collateral Factor** from 25% to **20%**\n- Decrease **LINK Collateral Factor** from 44% to **39%**\n- Decrease **MKR Collateral Factor** from 38% to **33%**\n- Decrease **SUSHI Collateral Factor** from 32% to **27%**\n- Decrease **UNI Collateral Factor** from 75% to **70%**\n- Decrease **YFI Collateral Factor** from 40% to **35%**\n- Decrease **ZRX Collateral Factor** from 30% to **25%**\n\nFor more details, see the full forum post [here](https://www.comp.xyz/t/gauntlet-compound-v2-deprecation-phase-11-04-12-2024/5163).\n\n## Motivation\nIn this September 2022 snapshot vote, the community voted that each asset\u2019s Collateral Factor may be reduced by an absolute percentage of up to 5%. After our analysis, Gauntlet recommends this max 5% decrease for each stated collateral asset in order to further deprecate the v2 market.\n[Full proposal and forum discussion](https://www.comp.xyz/t/gauntlet-compound-v2-deprecation-phase-11-04-12-2024/5163)\n\n## Specification\nThe proposal updates the parameters using the _setCollateralFactor method of the relevant cToken contracts.\n\n<sub>By approving this proposal, you agree that any services provided by Gauntlet shall be governed by the terms of service available at gauntlet.network/tos.<sub>"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "330000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "400000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "200000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xface851a4921ce59e912d19329929ce6da6eb0c7"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "390000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 4,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x95b4ef2869ebd94beb4eee400a99824bf5dc325b"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "330000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 5,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x4b0181102a0112a2ef11abee5563bb4a3176c9d7"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "270000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 6,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x35a18000230da775cac24873d00ff85bccded550"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "700000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 7,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x80a2ae356fc9ef4305676f7a3e2ed04e12c33946"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "350000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 8,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setCollateralFactor(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "250000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

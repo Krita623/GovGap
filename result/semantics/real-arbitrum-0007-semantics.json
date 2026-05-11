@@ -1,0 +1,54 @@
+{
+  "proposal_summary": "This proposal requests a contribution of 500,000 ARB each to Coin Center and DeFi Education Fund from the ArbitrumDAO to support their policy, litigation, and advocacy efforts regarding open-source software and developers' rights.",
+  "disclosed_entities": [
+    {
+      "name": "Coin Center",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The ArbitrumDAO is being provided the opportunity to vote & effect a contribution to Coin Center"
+    },
+    {
+      "name": "DeFi Education Fund",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The ArbitrumDAO is being provided the opportunity to vote & effect a contribution to the DEF"
+    },
+    {
+      "name": "Arbitrum Foundation",
+      "address": "0x5bb0a919345af084854bcdc9a6ddde8b7fee79ad",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The funds will from this proposal will initially be sent to an account controlled by the Arbitrum Foundation 0x5bb0a919345aF084854BCDc9A6DDdE8b7FEe79aD"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x5bb0a919345af084854bcdc9a6ddde8b7fee79ad",
+      "textual_evidence": "account controlled by the Arbitrum Foundation 0x5bb0a919345aF084854BCDc9A6DDdE8b7FEe79aD"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 500,000 ARB each to Coin Center and DeFi Education Fund via the Arbitrum Foundation.",
+      "canonical_action": "transfer",
+      "object": "500,000 ARB",
+      "claimed_effect": "Fund Coin Center and DeFi Education Fund for their advocacy and litigation efforts.",
+      "textual_evidence": "Coin Center and DeFi Education Fund will receive 500,000ARB each. The funds will from this proposal will initially be sent to an account controlled by the Arbitrum Foundation 0x5bb0a919345aF084854BCDc9A6DDdE8b7FEe79aD , who will handle the transfers",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal requires standard token transfers to specified organizations via a designated foundation address with a vesting schedule.",
+    "textual_evidence": "Coin Center and DeFi Education Fund will receive 500,000ARB each. ... 60% of the funds will be directly sent to Coin Center and DeFi Education Fund with the remaining 40% being vested in a linear manner with no cliff for a period of 4 months thereafter."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The target addresses for the actual recipient entities (Coin Center and DeFi Education Fund) are not provided.",
+    "The mechanism for linear vesting is not technically detailed."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

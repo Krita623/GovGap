@@ -1,0 +1,185 @@
+{
+  "proposal_summary": "A proposal to officially deploy and recognize Uniswap V3 on the Linea mainnet as a canonical deployment, integrating it with the ConsenSys product ecosystem including MetaMask.",
+  "disclosed_entities": [
+    {
+      "name": "ConsenSys",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Consensys is seeking a Uniswap V3 deployment for Linea’s mainnet launch"
+    },
+    {
+      "name": "GFX Labs",
+      "address": "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Proposer: Consensys & GFX Labs ... Proposer gfxlabs.eth 0xa6e8772af29b29B9202a073f8E36f447689BEef6"
+    },
+    {
+      "name": "Linea Native Bridge",
+      "address": null,
+      "entity_type": "bridge",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Bridge Provider: Linea Native Bridge"
+    },
+    {
+      "name": "v3CoreFactory",
+      "address": "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- v3CoreFactoryAddress"
+    },
+    {
+      "name": "multicall2",
+      "address": "0x93e253d101519578a8df0bce2a43d8292bfb3a1f",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- multicall2Address"
+    },
+    {
+      "name": "proxyAdmin",
+      "address": "0x091e99cb1c49331a94dd62755d168e941abd0693",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- proxyAdminAddress"
+    },
+    {
+      "name": "tickLens",
+      "address": "0x3334d83e224af5ef9c2e7dda7c7c98efd9621fa9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- tickLensAddress"
+    },
+    {
+      "name": "nftDescriptorLibraryV1_3_0",
+      "address": "0x0cdee061c75d43c82520ed998c23ac2991c9ac6d",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- nftDescriptorLibraryAddressV1_3_0"
+    },
+    {
+      "name": "nonfungibleTokenPositionDescriptorV1_3_0",
+      "address": "0xf9d1077fd35670d4acbd27af82652a8d84577d9f",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- nonfungibleTokenPositionDescriptorAddressV1_3_0"
+    },
+    {
+      "name": "descriptorProxy",
+      "address": "0x4f225937edc33efd6109c4cef7b560b2d6401009",
+      "entity_type": "proxy",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- descriptorProxyAddress"
+    },
+    {
+      "name": "nonfungibleTokenPositionManager",
+      "address": "0x4615c383f85d0a2bbed973d83ccecf5cb7121463",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- nonfungibleTokenPositionManagerAddress"
+    },
+    {
+      "name": "v3Migrator",
+      "address": "0x03a520b32c04bf3beef7beb72e919cf822ed34f1",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- v3MigratorAddress"
+    },
+    {
+      "name": "v3Staker",
+      "address": "0x68ed6c1d24a1aa74ef684e958dd6b6e1f1a90c57",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- v3StakerAddress"
+    },
+    {
+      "name": "quoterV2",
+      "address": "0x42be4d6527829fefa1493e1fb9f3676d2425c3c1",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- quoterV2Address"
+    },
+    {
+      "name": "swapRouter02",
+      "address": "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "- swapRouter02"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+      "textual_evidence": "v3CoreFactoryAddress 0x31FAfd4889FA1269F7a13A66eE0fB458f27D72A9"
+    },
+    {
+      "address": "0x93e253d101519578a8df0bce2a43d8292bfb3a1f",
+      "textual_evidence": "multicall2Address 0x93e253D101519578A8DF0BCe2A43D8292BFb3A1F"
+    },
+    {
+      "address": "0x091e99cb1c49331a94dd62755d168e941abd0693",
+      "textual_evidence": "proxyAdminAddress 0x091e99cb1C49331a94dD62755D168E941AbD0693"
+    },
+    {
+      "address": "0x3334d83e224af5ef9c2e7dda7c7c98efd9621fa9",
+      "textual_evidence": "tickLensAddress 0x3334d83e224aF5ef9C2E7DDA7c7C98Efd9621fA9"
+    },
+    {
+      "address": "0x0cdee061c75d43c82520ed998c23ac2991c9ac6d",
+      "textual_evidence": "nftDescriptorLibraryAddressV1_3_0 0x0CdeE061c75D43c82520eD998C23ac2991c9ac6d"
+    },
+    {
+      "address": "0xf9d1077fd35670d4acbd27af82652a8d84577d9f",
+      "textual_evidence": "nonfungibleTokenPositionDescriptorAddressV1_3_0 0xF9d1077fd35670d4ACbD27af82652a8d84577d9F"
+    },
+    {
+      "address": "0x4f225937edc33efd6109c4cef7b560b2d6401009",
+      "textual_evidence": "descriptorProxyAddress 0x4f225937EDc33EFD6109c4ceF7b560B2D6401009"
+    },
+    {
+      "address": "0x4615c383f85d0a2bbed973d83ccecf5cb7121463",
+      "textual_evidence": "nonfungibleTokenPositionManagerAddress 0x4615C383F85D0a2BbED973d83ccecf5CB7121463"
+    },
+    {
+      "address": "0x03a520b32c04bf3beef7beb72e919cf822ed34f1",
+      "textual_evidence": "v3MigratorAddress 0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1"
+    },
+    {
+      "address": "0x68ed6c1d24a1aa74ef684e958dd6b6e1f1a90c57",
+      "textual_evidence": "v3StakerAddress 0x68ED6C1d24A1aa74EF684E958dD6B6E1F1A90c57"
+    },
+    {
+      "address": "0x42be4d6527829fefa1493e1fb9f3676d2425c3c1",
+      "textual_evidence": "quoterV2Address 0x42bE4D6527829FeFA1493e1fb9F3676d2425C3C1"
+    },
+    {
+      "address": "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a",
+      "textual_evidence": "swapRouter02 0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a"
+    },
+    {
+      "address": "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+      "textual_evidence": "Proposer gfxlabs.eth 0xa6e8772af29b29B9202a073f8E36f447689BEef6"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Recognize deployment on Linea as canonical",
+      "canonical_action": "governance_proposal_creation",
+      "object": "v3deployments.uniswap.eth",
+      "claimed_effect": "The text record of the uniswap.eth ENS subdomain titled v3deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on Linea.",
+      "textual_evidence": "The text record of the uniswap.eth ENS subdomain titled v3deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on Linea.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Requires updating ENS subdomain records across networks.",
+    "textual_evidence": "If this onchain vote passes, this deployment will be officially recognized as a canonical v3 deployment through an amendment to the v3deployments.uniswap.eth subdomain."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No target smart contract functions (like setSubnodeRecord) are explicitly documented for the ENS update in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

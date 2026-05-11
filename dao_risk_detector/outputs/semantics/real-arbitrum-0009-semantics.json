@@ -1,0 +1,42 @@
+{
+  "proposal_summary": "This proposal seeks to allocate 125,000 $ARB tokens to retroactively reward 25 early community contributors known as 'Arbiters' for their efforts in the Arbitrum ecosystem between 2021 and 2023.",
+  "disclosed_entities": [
+    {
+      "name": "$ARB",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "allocate 125,000 $ARB tokens"
+    },
+    {
+      "name": "Arbitrum DAO",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "establishing a transparent and fair reward system through the Arbitrum DAO"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Allocate 125,000 $ARB tokens to Arbiters",
+      "canonical_action": "transfer",
+      "object": "$ARB tokens",
+      "claimed_effect": "Recognize and reward the outstanding contributions of the Arbitrum community members known as 'Arbiter'.",
+      "textual_evidence": "This proposal proposes to allocate 125,000 $ARB tokens, equal to 0.00125% of the total supply, to recognize and reward the outstanding contributions of the Arbitrum community member known as 'Arbiter'.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal involves a straightforward allocation and distribution of a fixed amount of tokens to a specific group of contributors.",
+    "textual_evidence": "This proposal proposes to allocate 125,000 $ARB tokens... agreed on an equal share of the reward amount."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal text does not provide specific wallet addresses for the recipients or the treasury.",
+    "No smart contract execution details or functions are disclosed."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

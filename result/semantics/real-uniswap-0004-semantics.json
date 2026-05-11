@@ -1,0 +1,60 @@
+{
+  "proposal_summary": "A proposal for the Uniswap community to allocate 500k UNI to the Protocol Guild Pilot, an initiative that rewards Ethereum core protocol contributors through a vested split contract over a 1-year period to align incentives and support infrastructure maintenance.",
+  "disclosed_entities": [
+    {
+      "name": "Protocol Guild",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This is a proposal for the Uniswap community to support important Ethereum Public Goods through the Protocol Guild"
+    },
+    {
+      "name": "Protocol Guild Pilot Vesting Contract",
+      "address": "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "1 Year Vesting Contract\nhttps://app.0xsplits.xyz/accounts/0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9/"
+    },
+    {
+      "name": "Uniswap Treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "We are inviting the Uniswap community to be part of this inaugural Pilot in the form of a 500k UNI transfer to the Protocol Guild’s vesting contract."
+    },
+    {
+      "name": "ChicagoDAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ChicagoDAO is partnering with Protocol Guild to bring this proposal to the Uniswap community!"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+      "textual_evidence": "1 Year Vesting Contract\nhttps://app.0xsplits.xyz/accounts/0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9/"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 500k UNI to the Protocol Guild’s vesting contract",
+      "canonical_action": "transfer",
+      "object": "500k UNI",
+      "claimed_effect": "Support the ongoing work of core contributors in the Protocol Guild Pilot.",
+      "textual_evidence": "We are inviting the Uniswap community to be part of this inaugural Pilot in the form of a 500k UNI transfer to the Protocol Guild’s vesting contract.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal asks for a simple transfer of UNI tokens to a specified external vesting contract.",
+    "textual_evidence": "We are inviting the Uniswap community to be part of this inaugural Pilot in the form of a 500k UNI transfer to the Protocol Guild’s vesting contract."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific target on-chain execution details are provided aside from the destination address."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

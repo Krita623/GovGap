@@ -1,0 +1,50 @@
+{
+  "proposal_summary": "Funding request for 3 months to develop Propdates 2.0, a tool for tracking proposal updates and successes, totaling 37 ETH.",
+  "disclosed_entities": [
+    {
+      "name": "Nouns DAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "expected that a proposer regularly updates the DAO on their work"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Fund Team via Stream",
+      "canonical_action": "treasury_operation",
+      "object": "30 ETH",
+      "claimed_effect": "Provide 3 months of funding to the development team via a stream.",
+      "textual_evidence": "Team: 30 ETH for three months (via Stream)",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Fund Incentives",
+      "canonical_action": "treasury_operation",
+      "object": "5 ETH",
+      "claimed_effect": "Provide 0.05 ETH to each of the first 100 successful props (before prop #363) that post a non-trivial update.",
+      "textual_evidence": "Incentives: 5 ETH (100 * 0.05 ETH)",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Fund OpEx",
+      "canonical_action": "treasury_operation",
+      "object": "2 ETH",
+      "claimed_effect": "Cover operational expenses.",
+      "textual_evidence": "OpEx: 2 ETH",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Includes setting up a payment stream and standard transfers, though specific technical parameters are not provided in the text.",
+    "textual_evidence": "Team: 30 ETH for three months (via Stream) | Incentives: 5 ETH | OpEx: 2 ETH"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No precise destination addresses or specific smart contract calls are provided in the proposal text to verify the on-chain execution payload."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

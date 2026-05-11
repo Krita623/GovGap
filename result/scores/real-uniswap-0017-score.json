@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "proposal_id": "78",
+    "generated_at": "2026-05-08T11:15:24.522554+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal establishes and confirms a set of principles for the Uniswap DAO to guide decision-making, which will be published on-chain to the uniswap.eth ENS record upon execution.",
+    "disclosed_entities": [
+      {
+        "name": "ENS Public Resolver contract",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "published onchain using the setText function of ENS Public Resolver contract"
+      },
+      {
+        "name": "uniswap.eth",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "for the uniswap.eth node"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Publish principles on-chain to ENS",
+        "canonical_action": "maintenance",
+        "object": "ENS Public Resolver",
+        "claimed_effect": "Updates the ENS text record for uniswap.eth with the approved DAO Principles.",
+        "textual_evidence": "On executing the proposal, the Principles will be published onchain using the setText function of ENS Public Resolver contract for the uniswap.eth node.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The only on-chain action is updating an ENS text record via a single function call.",
+      "textual_evidence": "On executing the proposal, the Principles will be published onchain using the setText function of ENS Public Resolver contract"
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "setText",
+        "textual_evidence": "published onchain using the setText function of ENS Public Resolver contract"
+      }
+    ],
+    "limitations": [
+      "No precise contract addresses (0x...) are provided in the text for the ENS Public Resolver or the exact target node hash."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "value": "0x0",
+        "input": "0x10f13a8cec9ec573cf97ad1c270be71ac1de3b382790cb346036130c7d7ff844bf8f4974000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000016556e69737761702044414f205072696e6369706c65730000000000000000000000000000000000000000000000000000000000000000000000000000000013c75468652064656c65676174657320616772656520746f207265636f676e697a652074686520666f6c6c6f77696e67207072696e6369706c657320616e64206c6574207468656d206775696465207468656972206465636973696f6e2d6d616b696e6720696e20556e69737761702044414f20676f7665726e616e63652e2050726f6365737375616c205072696e6369706c6573202053636f70652e2054686520707572706f7365206f662074686520556e69737761702044414f20697320746f20676f7665726e2074686520556e69737761702070726f746f636f6c205b315d2e205468697320696e636c756465732070726f746f636f6c20706172616d65746572732061646a7573746d656e747320616e642066756e6420616c6c6f636174696f6e20746f20666f73746572207468652067726f777468206f662074686520556e69737761702070726f746f636f6c205b325d2e2050726f636573732e2054686520556e69737761702044414f20666f6c6c6f77732074686520676f7665726e616e63652070726f63657373205b335d206173206f75746c696e656420696e2074686520556e697377617020446f637320616e64206f6e2074686520556e697377617020476f7665726e616e636520466f72756d2e204f6e636861696e20466f6375732e20546865206f7065726174696f6e73206f66207468652044414f2073686f756c6420666f637573206f6e206f6e2d636861696e206173736574732c20616e64206b6579206465636973696f6e732073686f756c64206265207265636f72646564206f6e636861696e20746f207072657365727665207472616e73706172656e637920617420626f7468206f7065726174696f6e616c20616e6420676f7665726e616e6365206c6576656c73205b345d2e205468697320696e636c75646573206d61696e7461696e696e67206f6e2d636861696e20766f74696e672061732070617274206f662074686520676f7665726e616e63652070726f636573732c2061732069732063757272656e746c7920646f6e652c20616e64207573696e67206f6e2d636861696e207472616e73616374696f6e7320746f207472616e736665722066756e64732e2020436f6e647563742d52656c61746564205072696e6369706c65732020446973636c6f737572652e20436f6e666c69637473206f6620696e7465726573742073686f756c6420626520646973636c6f73656420636c6561726c79206f6e207468652064656c6567617465206465736372697074696f6e207061676520616e642c207768656e657665722072656c6576616e742c20696e20666f72756d2064697363757373696f6e7320616e6420696e2074686520766f74696e6720726174696f6e616c652e2053657665726520636f6e666c69637473206f6620696e746572657374207468617420636f756c6420756e6465726d696e652074686520696e74656772697479206f6620676f7665726e616e6365206d7573742062652061766f696465642e20496620612070726f706f73616c20696e636c7564657320737065636966696320616374696f6e732c207375636820617320726571756972696e672064656c656761746573207769746820636f6e666c69637473206f6620696e74657265737420746f206162737461696e2c2074686573652064697265637469766573206d75737420626520666f6c6c6f7765642e20496e206361736573206f6620646f7562742c2064656c6567617465732073686f756c6420657272206f6e207468652073696465206f66207472616e73706172656e637920616e64206f70656e6e657373205b355d2e2053656375726974792e20476976656e207468652073797374656d696320696d706f7274616e6365206f662074686520556e69737761702070726f746f636f6c20746f204465466920616e64207468652073697a65206f66207468652044414f2074726561737572792c2064656c656761746573206d757374206361726566756c6c7920636f6e7369646572207365637572697479207768656e206d616b696e67206465636973696f6e732e20546865792073686f756c6420666f6c6c6f772065737461626c69736865642070726f63657373657320746f207365637572656c7920616e64206566666563746976656c792064656c697665722070726f647563747320746f207468652065636f73797374656d2c20616e6420766f746520616761696e73742070726f706f73616c732074686174206578706f7365207468652070726f746f636f6c206f7220747265617375727920746f207269736b732e20496e20616d626967756f75732063617365732c207468652070726f706f736572206d7573742064656d6f6e737472617465207468652070726f706f73616c20697320736166652e20486f77657665722c2064656c65676174657320617265206e6f74206163636f756e7461626c6520666f72206661696c696e6720746f20616e746963697061746520616c6c20696e64697265637420636f6e73657175656e636573206f6620612070726f706f73616c2e204c65676962696c6974792e20546f206d61696e7461696e2074686520696e74656772697479206f662074686520676f7665726e616e63652070726f636573732c20726174696f6e616c657320666f7220766f7465732073686f756c64206265207075626c697368656420696e2061206d616e6e6572207468617420697320756e6465727374616e6461626c6520746f207468652062726f6164657220636f6d6d756e6974792e2050726f706f73616c7320616e6420746865697220726561736f6e696e672073686f756c6420626520636c65617220746f206f75747369646572732c206576656e2074686f736520756e66616d696c69617220776974682074686520686973746f7279206f662044414f20766f746573206f7220776974686f75742061636365737320746f20736964652d6368616e6e656c20636f6d6d756e69636174696f6e206265747765656e2064656c6567617465732e20436f6e6372657465206461746120616e6420656d7069726963616c2065766964656e63652073686f756c6420626520696e636c7564656420746f206261636b206465636973696f6e2d6d616b696e67207768656e20617661696c61626c652e20476f6f642046616974682e2044656c6567617465732073686f756c6420616374207769746820686f6e6573747920616e6420696e74656772697479207768656e2070617274696369706174696e6720696e20676f7665726e616e63652c20616e6420766f746520696e206163636f7264616e63652077697468207768617420746865792062656c6965766520697320696e20746865206265737420696e746572657374206f662074686520556e69737761702070726f746f636f6c2e2044756520436172652e2044656c6567617465732073686f756c6420636f6e6475637420612070726f66657373696f6e616c20726576696577206f6620656163682070726f706f73616c207072696f7220746f20766f74696e672c20616e6420617265206164766973656420746f206162737461696e2066726f6d20766f74696e67207768656e20756e61626c6520746f20636f6e6475637420746865206e65636573736172792064696c6967656e636520746f20756e6465727374616e64206120676976656e2070726f706f73616c205075626c696320466565646261636b2e2044656c6567617465732073686f756c6420696e666f726d2074686520636f6d6d756e697479206966207468657920636f6e7369646572207468617420612070726f706f73616c20697320737570657266696369616c2c206c696768742c20756e636c656172206f7220756e7375627374616e74696174656420616e64206e6565647320746f20626520696d70726f766564206f722064656570656e6564206265666f7265206974206973207375626d697474656420746f206120766f74652e20205374727563747572616c205072696e6369706c65732020446563656e7472616c697a6174696f6e2e204465636973696f6e2d6d616b696e6720696e207468652044414f2073686f756c642072656d61696e20646563656e7472616c697a656420696e20616c6c20666f726d732c2077697468207468652061696d206f66206b656570696e67207468652044414f206372656469626c79206e65757472616c2c2063656e736f72736869702d726573697374616e7420616e6420726573696c69656e7420616761696e7374206361707475726520627920616e792073696e676c652067726f7570206f6620616c69676e6564206163746f72732c207768657468657220696e7465726e616c206f722065787465726e616c205b365d2e2044656c656761746573206d7573742070726576656e742074686520666f726d6174696f6e206f662063617274656c7320616e6420656e737572652074686174207468652070726f746f636f6c2069732070726f7465637465642066726f6d20616e792070726f706f73616c732064726976656e20627920706572736f6e616c206d6f7469766573207468617420646f206e6f7420616c69676e2077697468207468652070726f746f636f6ce2809973206265737420696e746572657374732e20526570726573656e746174696f6e2e2044656c656761746573207072696d6172696c7920726570726573656e7420554e4920746f6b656e20686f6c646572732c20686f77657665722c2064656c6567617465732073686f756c64206d616b65206120726561736f6e61626c65206566666f727420746f20756e6465727374616e642074686520617267756d656e74732066726f6d20616c6c20706f74656e7469616c6c79206166666563746564207374616b65686f6c64657273207768656e206d616b696e67206465636973696f6e7320616e64206265207265737065637466756c206f6620646966666572696e672076696577706f696e74732e204163636f756e746162696c6974792e2044656c65676174657320617265206163636f756e7461626c6520746f2074686520556e697377617020636f6d6d756e69747920616e642073686f756c642073686f7720612077696c6c696e676e65737320746f20636f6d6d756e69636174652077697468206166666563746564207374616b65686f6c646572732c2072656d61696e206f70656e20746f207363727574696e792c20616e642c20776865726520706f737369626c652c20636f6d6d756e6963617465206b657920726174696f6e616c657320746f206d61696e7461696e207472757374207468726f756768207472616e73706172656e74206465636973696f6e2d6d616b696e672070726f6365737365732e20546865207465726d7320e2809c73686f756c64e2809d20616e6420e2809c6d757374e2809d20696e2074686520746578742061726520657870656374656420746f20626520696e74657270726574656420666f6c6c6f77696e672074686520496e7465726e657420456e67696e656572696e67205461736b20466f726365202849455446292067756964656c696e6573205b375d2e20205265666572656e63657320205b315d20556e6973776170204f766572766965773a2050726f746f636f6c2c20496e746572666163652c204c6162732e2068747470733a2f2f646f63732e756e69737761702e6f72672f636f6e63657074732f6f7665727669657734205b325d20496e74726f647563696e6720554e492e2068747470733a2f2f626c6f672e756e69737761702e6f72672f756e6923636f6d6d756e6974792d7472656173757279205b335d20446576696e2057616c73682e20436f6d6d756e69747920476f7665726e616e63652050726f6365737320557064617465205b4a616e20323032335d2e2068747470733a2f2f676f762e756e69737761702e6f72672f742f636f6d6d756e6974792d676f7665726e616e63652d70726f636573732d7570646174652d6a616e2d323032332f3139393736205b345d20546865204c617720436f6d6d697373696f6e2028556e69746564204b696e67646f6d292e20446563656e7472616c69736564204175746f6e6f6d6f7573204f7267616e69736174696f6e73202844414f73293a20412053636f70696e672050617065722e2053656374696f6e20e2809c436f6d6d6f6e205068696c6f736f70686963616c20476f616c73206f662044414f732ee2809d2068747470733a2f2f636c6f75642d706c6174666f726d2d65323138663530613438313239363762613132313565616563656465393233662e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f73697465732f33302f323032342f30372f44414f732d73636f70696e672d70617065722d3131303732342e706466205b355d205b5246435d2044656c656761746520436f6465206f6620436f6e647563742e2068747470733a2f2f676f762e756e69737761702e6f72672f742f7266632d64656c65676174652d636f64652d6f662d636f6e647563742f3230393133205b365d204a204175737467656e2c20412046c3a162726567612c205320416c6c656e2c204b20426162656c2c204d204b656c6b61722c2041204a75656c732e2044414f20446563656e7472616c697a6174696f6e3a20566f74696e672d426c6f6320456e74726f70792c20427269626572792c20616e64204461726b2044414f732e2068747470733a2f2f61727869762e6f72672f6162732f323331312e3033353330205b375d20532e20427261646e65722e204b657920776f72647320666f722075736520696e205246437320746f20496e64696361746520526571756972656d656e74204c6576656c732e2052464320323131392c20494554462e2068747470733a2f2f64617461747261636b65722e696574662e6f72672f646f632f68746d6c2f7266633231313900000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x10f13a8c",
+        "decoded_function": "setText(bytes32,string,string)",
+        "decoded_args": [
+          "0xec9ec573cf97ad1c270be71ac1de3b382790cb346036130c7d7ff844bf8f4974",
+          "Uniswap DAO Principles",
+          "The delegates agree to recognize the following principles and let them guide their decision-making in Uniswap DAO governance. Processual Principles  Scope. The purpose of the Uniswap DAO is to govern the Uniswap protocol [1]. This includes protocol parameters adjustments and fund allocation to foster the growth of the Uniswap protocol [2]. Process. The Uniswap DAO follows the governance process [3] as outlined in the Uniswap Docs and on the Uniswap Governance Forum. Onchain Focus. The operations of the DAO should focus on on-chain assets, and key decisions should be recorded onchain to preserve transparency at both operational and governance levels [4]. This includes maintaining on-chain voting as part of the governance process, as is currently done, and using on-chain transactions to transfer funds.  Conduct-Related Principles  Disclosure. Conflicts of interest should be disclosed clearly on the delegate description page and, whenever relevant, in forum discussions and in the voting rationale. Severe conflicts of interest that could undermine the integrity of governance must be avoided. If a proposal includes specific actions, such as requiring delegates with conflicts of interest to abstain, these directives must be followed. In cases of doubt, delegates should err on the side of transparency and openness [5]. Security. Given the systemic importance of the Uniswap protocol to DeFi and the size of the DAO treasury, delegates must carefully consider security when making decisions. They should follow established processes to securely and effectively deliver products to the ecosystem, and vote against proposals that expose the protocol or treasury to risks. In ambiguous cases, the proposer must demonstrate the proposal is safe. However, delegates are not accountable for failing to anticipate all indirect consequences of a proposal. Legibility. To maintain the integrity of the governance process, rationales for votes should be published in a manner that is understandable to the broader community. Proposals and their reasoning should be clear to outsiders, even those unfamiliar with the history of DAO votes or without access to side-channel communication between delegates. Concrete data and empirical evidence should be included to back decision-making when available. Good Faith. Delegates should act with honesty and integrity when participating in governance, and vote in accordance with what they believe is in the best interest of the Uniswap protocol. Due Care. Delegates should conduct a professional review of each proposal prior to voting, and are advised to abstain from voting when unable to conduct the necessary diligence to understand a given proposal Public Feedback. Delegates should inform the community if they consider that a proposal is superficial, light, unclear or unsubstantiated and needs to be improved or deepened before it is submitted to a vote.  Structural Principles  Decentralization. Decision-making in the DAO should remain decentralized in all forms, with the aim of keeping the DAO credibly neutral, censorship-resistant and resilient against capture by any single group of aligned actors, whether internal or external [6]. Delegates must prevent the formation of cartels and ensure that the protocol is protected from any proposals driven by personal motives that do not align with the protocol’s best interests. Representation. Delegates primarily represent UNI token holders, however, delegates should make a reasonable effort to understand the arguments from all potentially affected stakeholders when making decisions and be respectful of differing viewpoints. Accountability. Delegates are accountable to the Uniswap community and should show a willingness to communicate with affected stakeholders, remain open to scrutiny, and, where possible, communicate key rationales to maintain trust through transparent decision-making processes. The terms “should” and “must” in the text are expected to be interpreted following the Internet Engineering Task Force (IETF) guidelines [7].  References  [1] Uniswap Overview: Protocol, Interface, Labs. https://docs.uniswap.org/concepts/overview4 [2] Introducing UNI. https://blog.uniswap.org/uni#community-treasury [3] Devin Walsh. Community Governance Process Update [Jan 2023]. https://gov.uniswap.org/t/community-governance-process-update-jan-2023/19976 [4] The Law Commission (United Kingdom). Decentralised Autonomous Organisations (DAOs): A Scoping Paper. Section “Common Philosophical Goals of DAOs.” https://cloud-platform-e218f50a4812967ba1215eaecede923f.s3.amazonaws.com/uploads/sites/30/2024/07/DAOs-scoping-paper-110724.pdf [5] [RFC] Delegate Code of Conduct. https://gov.uniswap.org/t/rfc-delegate-code-of-conduct/20913 [6] J Austgen, A Fábrega, S Allen, K Babel, M Kelkar, A Juels. DAO Decentralization: Voting-Bloc Entropy, Bribery, and Dark DAOs. https://arxiv.org/abs/2311.03530 [7] S. Bradner. Key words for use in RFCs to Indicate Requirement Levels. RFC 2119, IETF. https://datatracker.ietf.org/doc/html/rfc2119"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0",
+        "input": "0x02571be3ec9ec573cf97ad1c270be71ac1de3b382790cb346036130c7d7ff844bf8f4974",
+        "output": "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+        "depth": 1,
+        "function_selector": "0x02571be3",
+        "decoded_function": "owner(bytes32)",
+        "decoded_args": [
+          "0xec9ec573cf97ad1c270be71ac1de3b382790cb346036130c7d7ff844bf8f4974"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 1,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "owner(bytes32)",
+      "setText(bytes32,string,string)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 7,
+      "severity": "MEDIUM",
+      "summary": "Trace includes undisclosed addresses without evidence of an uncovered sensitive business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "MEDIUM",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "parameter_update"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The only on-chain action is updating an ENS text record via a single function call.",
+            "textual_evidence": "On executing the proposal, the Principles will be published onchain using the setText function of ENS Public Resolver contract"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "owner(bytes32)",
+        "setText(bytes32,string,string)"
+      ],
+      "unmatched_functions": [
+        "parameter_update"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "maintenance"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "maintenance"
+              ],
+              "actual_business_actions": [
+                "parameter_update"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "owner(bytes32)",
+                "setText(bytes32,string,string)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Publish principles on-chain to ENS",
+              "canonical_action": "maintenance",
+              "object": "ENS Public Resolver",
+              "claimed_effect": "Updates the ENS text record for uniswap.eth with the approved DAO Principles.",
+              "textual_evidence": "On executing the proposal, the Principles will be published onchain using the setText function of ENS Public Resolver contract for the uniswap.eth node.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "owner(bytes32)",
+            "setText(bytes32,string,string)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "MEDIUM",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "maintenance"
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "owner(bytes32)",
+            "setText(bytes32,string,string)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

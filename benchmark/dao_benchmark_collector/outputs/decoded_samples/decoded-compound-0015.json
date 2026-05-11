@@ -1,0 +1,66 @@
+{
+  "benchmark_id": "real-compound-0015",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0015.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "418",
+    "status": "executed",
+    "title": "# Add tETH as collateral into cWETHv3 on Mainnet",
+    "description": "# Add tETH as collateral into cWETHv3 on Mainnet\n\n## Proposal summary\n\nCompound Growth Program [AlphaGrowth] proposes to add tETH into cWETHv3 on Ethereum network. This proposal takes the governance steps recommended and necessary to update a Compound III WETH market on Ethereum. Simulations have confirmed the market\u2019s readiness, as much as possible, using the [Comet scenario suite](https://github.com/compound-finance/comet/tree/main/scenario). The new parameters include setting the risk parameters based on the [recommendations from Gauntlet](https://www.comp.xyz/t/listing-teth-on-compound/5925/4).\n\nFurther detailed information can be found on the corresponding [proposal pull request](https://github.com/compound-finance/comet/pull/955) and [forum discussion](https://www.comp.xyz/t/listing-teth-on-compound/5925).\n\n\n## Proposal Actions\n\nThe first action adds tETH asset as collateral with corresponding configurations.\n\nThe second action deploys and upgrades Comet to a new version."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "native_value": "0",
+      "function": "addAsset(address,(address,address,uint8,uint64,uint64,uint64,uint128))",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "cometProxy",
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        },
+        {
+          "index": 1,
+          "name": "assetConfig",
+          "type": "(address,address,uint8,uint64,uint64,uint64,uint128)",
+          "value": [
+            "0xd11c452fc99cf405034ee446803b6f6c1f6d5ed8",
+            "0x5ecf850c770f78dc7b9f9760672484b2ccaea818",
+            "18",
+            "880000000000000000",
+            "910000000000000000",
+            "960000000000000000",
+            "4000000000000000000000"
+          ]
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x1EC63B5883C3481134FD50D5DAebc83Ecd2E8779",
+      "native_value": "0",
+      "function": "deployAndUpgradeTo(address,address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "configuratorProxy",
+          "type": "address",
+          "value": "0x316f9708bb98af7da9c68c1c3b5e79039cd336e3"
+        },
+        {
+          "index": 1,
+          "name": "cometProxy",
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "proposal_summary": "Initialize a Compound III USDT market (cUSDTv3) on the Optimism network, including deployment, seeding reserves via a bridge, setting reward configurations, and updating the official markets ENS record.",
+  "disclosed_entities": [
+    {
+      "name": "cUSDT",
+      "address": "0xf650c3d88d12db855b8bf7d11be6c55a4e07dcc9",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The second action reduces Compound cUSDT reserves to Timelock"
+    },
+    {
+      "name": "L1StandardBridge",
+      "address": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "approves Optimism’s L1StandardBridge to take Timelock's USDT"
+    },
+    {
+      "name": "Timelock",
+      "address": null,
+      "entity_type": "timelock",
+      "disclosure_level": "implicit",
+      "textual_evidence": "reserves to Timelock, in order to seed the market reserves"
+    },
+    {
+      "name": "Comet",
+      "address": null,
+      "entity_type": "implementation",
+      "disclosure_level": "implicit",
+      "textual_evidence": "deploys a new Comet implementation on Optimism"
+    },
+    {
+      "name": "Optimism rewards contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "calls setRewardConfig on the Optimism rewards contract"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xf650c3d88d12db855b8bf7d11be6c55a4e07dcc9",
+      "textual_evidence": "Compound cUSDT reserves to Timelock"
+    },
+    {
+      "address": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+      "textual_evidence": "Optimism’s L1StandardBridge to take Timelock's USDT"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Set the Comet configuration and deploy a new Comet implementation on Optimism via cross-chain bridge.",
+      "canonical_action": "bridge",
+      "object": "Comet implementation",
+      "claimed_effect": "Deploys Compound III on Optimism with governance-approved parameters.",
+      "textual_evidence": "The first proposal action sets the Comet configuration and deploys a new Comet implementation on Optimism. This sends the encoded setFactory, setConfiguration and deployAndUpgradeTo calls across the bridge",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set reward config on the Optimism rewards contract.",
+      "canonical_action": "bridge",
+      "object": "Optimism rewards contract",
+      "claimed_effect": "Establishes bridged COMP as the reward token (5 COMP/day for supply/borrow).",
+      "textual_evidence": "It also calls setRewardConfig on the Optimism rewards contract, to establish Optimism’s bridged version of COMP as the reward token",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Reduces Compound cUSDT reserves to Timelock.",
+      "canonical_action": "transfer",
+      "object": "cUSDT reserves",
+      "claimed_effect": "Moves USDT reserves to Timelock to prepare for seeding the new market.",
+      "textual_evidence": "The second action reduces Compound cUSDT reserves to Timelock, in order to seed the market reserves",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Approves Optimism’s L1StandardBridge to take Timelock's USDT.",
+      "canonical_action": "bridge",
+      "object": "L1StandardBridge",
+      "claimed_effect": "Allows the bridge to pull USDT from Timelock for seeding reserves.",
+      "textual_evidence": "The third action approves Optimism’s L1StandardBridge to take Timelock's USDT, in order to seed the reserves",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Deposits 10K USDT from mainnet to the Optimism L1StandardBridge.",
+      "canonical_action": "bridge",
+      "object": "10K USDT",
+      "claimed_effect": "Bridges 10k USDT to Comet on Optimism to seed reserves.",
+      "textual_evidence": "The fourth action deposits 10K USDT from mainnet to the Optimism L1StandardBridge contract to bridge to Comet.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Updates the ENS TXT record v3-official-markets.",
+      "canonical_action": "parameter_update",
+      "object": "ENS TXT record",
+      "claimed_effect": "Updates the official markets JSON to include the new Optimism cUSDTv3 market.",
+      "textual_evidence": "The fifth action updates the ENS TXT record v3-official-markets on v3-additional-grants.compound-community-licenses.eth",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "complex",
+    "reason": "The proposal requires multiple steps, including cross-chain bridging of calls to deploy an implementation, reducing reserves, performing cross-chain token transfers to seed reserves, setting reward configs, and updating ENS records.",
+    "textual_evidence": "sends the encoded setFactory, setConfiguration and deployAndUpgradeTo calls across the bridge... reduces Compound cUSDT reserves... approves Optimism’s L1StandardBridge... deposits 10K USDT from mainnet... updates the ENS TXT record"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setFactory",
+      "textual_evidence": "sends the encoded setFactory, setConfiguration and deployAndUpgradeTo calls across the bridge"
+    },
+    {
+      "function_name": "setConfiguration",
+      "textual_evidence": "sends the encoded setFactory, setConfiguration and deployAndUpgradeTo calls across the bridge"
+    },
+    {
+      "function_name": "deployAndUpgradeTo",
+      "textual_evidence": "sends the encoded setFactory, setConfiguration and deployAndUpgradeTo calls across the bridge"
+    },
+    {
+      "function_name": "setRewardConfig",
+      "textual_evidence": "It also calls setRewardConfig on the Optimism rewards contract"
+    }
+  ],
+  "limitations": [
+    "Addresses for the Optimism rewards contract, deployed Comet proxy, and governance receivers are not explicitly listed in the text.",
+    "It assumes familiarity with the Comet suite and external Gauntlet recommendations referenced as links, whose precise parameters aren't explicitly written in the proposal body."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

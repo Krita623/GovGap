@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-nouns-dao-0007",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "435",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/435",
+    "source": "tally",
+    "created_block": 18528240,
+    "executed_block": 18612475,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Sasquatch Hunting",
+    "description": "# Sasquatch Hunting\n\n![Sasquatch Hunter](https://i.postimg.cc/br1s2yxW/snnj3fb.jpg)\n\nThe infamous Sasquatch, Noun 181, has continued to elude us.\n\nI am proposing that we go on the hunt for it and bring it back to the treasury. In doing so, we can finally send it to it's rightful owner\n\n- - -\n\n**Context:**\n[Proposal 428](https://nouns.wtf/vote/428) has just passed is and waiting to be executed. However, the transaction looks to send Noun 181 from the treasury to our [Sasquatch](https://warpcast.com/sasquatch). Unfortunately, that noun is currently held in the escrow contract.\n\nThe transaction on this prop would use the appropriate transaction to withdraw the noun from escrow into the DAO and allow the original prop to be executed as intended."
+  },
+  "payload": {
+    "targets": [
+      "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "withdrawDAONounsFromEscrowToTreasury(uint256[])"
+    ],
+    "calldatas": [
+      "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000b5"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xf904188e2adc929a609d753434a7063bd16516a927cf489747422b073c5633f0",
+    "executed_tx_hash": "0x05f04b94b7ecddbed64d53ce72a83dcbf5c5dd13a8da95459802695b6c56f28f"
+  }
+}

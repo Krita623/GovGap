@@ -1,0 +1,30 @@
+{
+  "benchmark_id": "real-nouns-dao-0008",
+  "source_raw_sample": "outputs/raw_samples/real-nouns-dao-0008.json",
+  "proposal": {
+    "dao": "Nouns DAO",
+    "chain_id": 1,
+    "proposal_id": "332",
+    "status": "executed",
+    "title": "# Stake 10000 ETH to Lido",
+    "description": "# Stake 10000 ETH to Lido\n\nThis is a proposal to stake an additional 10000 ETH."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      "native_value": "10000000000000000000000",
+      "function": "submit(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x0000000000000000000000000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

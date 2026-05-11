@@ -1,0 +1,76 @@
+{
+  "proposal_id": "70545629960586317780628692755032548222173912190231545322320044688071893662480",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x789fC99093B09aD01C34DC7251D0C89ce743e5a4",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+          "gas": "0xe48f78",
+          "gasUsed": "0xaf02",
+          "to": "0x9e43f733da0445b35f038fb34a6fb8c2947b984c",
+          "input": "0x35c2fabe",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0x9e43f733da0445b35f038fb34a6fb8c2947b984c",
+        "value": "0x0",
+        "input": "0x35c2fabe",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x35c2fabe",
+        "decoded_function": "effectuate()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x9e43f733da0445b35f038fb34a6fb8c2947b984c",
+      "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "effectuate()"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

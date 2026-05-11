@@ -1,0 +1,51 @@
+{
+  "benchmark_id": "real-nouns-dao-0011",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "554",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/554",
+    "source": "tally",
+    "created_block": 19985209,
+    "executed_block": 20063425,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Maty in Nouns (2024)",
+    "description": "# Maty in Nouns (2024)\n\n**TLDR**: Fund maty to continue tracking funded [proposals](http://www.proposal.wtf) and writing [weekly newsletter](https://nouns.substack.com/) for the rest of 2024.\n\n### Tracking proposals - proposal.wtf\n\nIt's hard for individuals to follow the progress of projects after they get funded, the information is scattered and the proposers often don't know how best to share the information. Accountability is important.\n\n- I'm following up with builders of all funded projects and sharing all the awesome work they've done. \n- I am trying to get the most out of these projects in other ways too - trying to salvage \"failed\" projects, getting assets and items that might otherwise go to waste (e.g. helping connect Nouns Coffee shop team with previous Nouns Coffee builders). \n- I am trying to direct proposers to post updates on [Updates.wtf](https://www.updates.wtf/) (e.g. updates by brandomighty, Blu, marc horowitz,...) \n- Thanks to those follow-ups, I have contributed to a lot funds being returned to the DAO (\\~175 ETH), both in terms of leftover funds, forgotten volatility buffers and revenue splits. \n- All of the data is stored in interconnected Notion dashboards, which allow searching and filtering based on many properties (category, value, true cost, ..). \n\n### Newsletter - paragraph.xyz/@nounsdao\n\nNouns DAO is very active, with hundreds of funded projects & still more seeking funding. That means there is a lot of information, scattered throughout different channels (multiple Discord servers, Discourse, Twitter, ..).\n\n- Im publishing a weekly [newsletter](https://paragraph.xyz/@nounsdao) highlighting the biggest things happening around Nouns, showcasing new and existing projects, proposals, art, and more.  \n- Serves both as an information distribution mechanism and as a historic snapshot of the DAO.\n  - I've been publishing weekly for over 2 years (apart from a short break in February 24), the newsletter now has over 750 subscribers. \n  - I've recently switched from [substack](https://nouns.substack.com/) to a web3 native Paragraph , which allows me to post the newsletter on Farcaster in a Frame format  \n- The Noun Square uses the newsletter as a source for their [Nouns Roundup videos](https://twitter.com/thenounsquare/status/1793728572592443765), spreading the information even wider! \n\n### Maty in Nouns\n\nI've been active in nouns pretty much daily since Nov 2021 (2.5 years now!). During this time I was fortunate enough to work with a lot of talented people and accomplish a lot. Most of my work has been centered around the above-mentioned newsletter and proposal tracking, but besides that:\n\n- I was one of the founding [Nouncil](https://nouncil.wtf/) and [Esports Pod](https://nouns.gg/) members, \n- I've guided and helped fund many projects and builders (via Small Grants and Prop 63),  \n- I've made a bunch of cool art, [noudry traits,](https://gallery.noundry.wtf/profile/0xdead753f9b1eb8f2f7372e8587e7c6e342daac89) logos (Nouns Esports, FOMO Nouns), executed multiple smaller projects like Instagram filters, playing cards, handmade rugs (some of which made it to the Wassie hotel), \n- I have also enjoyed being a delegate in the past - I have voted on over 80 proposals directly and over 300 via Nouncil! \n\n![collage2](https://i.ibb.co/NWNP4g3/collage2.jpg)\n\n## Funding\n\nMy previous [proposal](https://nouns.wtf/vote/345) ended in December 2023, but despite that, I have continued my work even until now. I would like to continue working for Nouns for the remainder of 2024 and I'm humbly asking for:\n\n- Noun 42 as a retro-reward for the past contributions and work done since December, I have enjoyed being a delegatee in the past (besides all the Nouncil voting) and would like to once again be part of the governance and on-chain discourse, \n- renewal stream for the remainder of 2024 (May-December) at the same rate as last prop - 4.5k/month, a total of 36k. \n\n![dawg3](https://i.ibb.co/1J6LT1H/dawg3.jpg)"
+  },
+  "payload": {
+    "targets": [
+      "0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03",
+      "0x0fd206FC7A7dBcD5661157eDCb1FFDD0D02A61ff",
+      "0xd97Bcd9f47cEe35c0a9ec1dc40C1269afc9E8E1D",
+      "0x4f2aCdc74f6941390d9b1804faBc3E780388cfe5"
+    ],
+    "values": [
+      "0",
+      "0",
+      "0",
+      "133067497688619001120"
+    ],
+    "signatures": [
+      "safeTransferFrom(address,address,uint256)",
+      "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+      "sendOrRegisterDebt(address,uint256)",
+      ""
+    ],
+    "calldatas": [
+      "0x000000000000000000000000b1a32fc9f9d8b2cf86c068cae13108809547ef71000000000000000000000000486fad96c217b0d85976e482a104829b23f76313000000000000000000000000000000000000000000000000000000000000002a",
+      "0x000000000000000000000000486fad96c217b0d85976e482a104829b23f763130000000000000000000000000000000000000000000000000000000861c46800000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000663169e000000000000000000000000000000000000000000000000000000000677325f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a329bd5670f8b480dad0f54b1654511159ce05a7",
+      "0x000000000000000000000000a329bd5670f8b480dad0f54b1654511159ce05a70000000000000000000000000000000000000000000000000000000861c46800",
+      "0x"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x6cd13322ae0b0f0f73dcea8c9952c95d939f47938406e83905dc6cd62f246209",
+    "executed_tx_hash": "0xaa05d993b05cf95059d654e841ef98386bb96ec8bd7afc8ba3def154491571d3"
+  }
+}

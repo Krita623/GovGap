@@ -1,0 +1,71 @@
+{
+  "benchmark_id": "real-compound-0012",
+  "dao": {
+    "name": "Compound",
+    "chain_id": 1,
+    "governor_address": "0xc0Da02939E1441F497fd74F78cE7Decb17B66529",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "240",
+    "proposal_url": "https://www.tally.xyz/gov/compound/proposal/240",
+    "source": "tally",
+    "created_block": 19668404,
+    "executed_block": null,
+    "status": "defeated"
+  },
+  "proposal_text": {
+    "title": "# [Gauntlet] Compound v2 Deprecation Phase 11 (2024-04-15)",
+    "description": "# [Gauntlet] Compound v2 Deprecation Phase 11 (2024-04-15)\n\n## Simple Summary\n\n  For Phase 11 of the Compound v2 deprecation, Gauntlet recommends decreasing the Collateral Factor for v2 collateral assets. Specifically, Gauntlet recommends the following changes:\n\n\n- Decrease **AAVE Collateral Factor** from 38% to **33%**\n- Decrease **BAT Collateral Factor** from 45% to **40%**\n- Decrease **COMP Collateral Factor** from 25% to **20%**\n- Decrease **LINK Collateral Factor** from 44% to **39%**\n- Decrease **MKR Collateral Factor** from 38% to **33%**\n- Decrease **SUSHI Collateral Factor** from 32% to **27%**\n- Decrease **UNI Collateral Factor** from 75% to **70%**\n- Decrease **YFI Collateral Factor** from 40% to **35%**\n- Decrease **ZRX Collateral Factor** from 30% to **25%**\n\nFor more details, see the full forum post [here](https://www.comp.xyz/t/gauntlet-compound-v2-deprecation-phase-11-04-12-2024/5163).\n\n## Motivation\nIn this September 2022 snapshot vote, the community voted that each asset\u2019s Collateral Factor may be reduced by an absolute percentage of up to 5%. After our analysis, Gauntlet recommends this max 5% decrease for each stated collateral asset in order to further deprecate the v2 market.\n[Full proposal and forum discussion](https://www.comp.xyz/t/gauntlet-compound-v2-deprecation-phase-11-04-12-2024/5163)\n\n## Specification\nThe proposal updates the parameters using the _setCollateralFactor method of the relevant cToken contracts.\n\n<sub>By approving this proposal, you agree that any services provided by Gauntlet shall be governed by the terms of service available at gauntlet.network/tos.<sub>"
+  },
+  "payload": {
+    "targets": [
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B"
+    ],
+    "values": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)",
+      "_setCollateralFactor(address,uint256)"
+    ],
+    "calldatas": [
+      "0x000000000000000000000000e65cdb6479bac1e22340e4e755fae7e509ecd06c0000000000000000000000000000000000000000000000000494654067e10000",
+      "0x0000000000000000000000006c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e000000000000000000000000000000000000000000000000058d15e176280000",
+      "0x00000000000000000000000070e36f6bf80a52b3b46b3af8e106cc0ed743e8e400000000000000000000000000000000000000000000000002c68af0bb140000",
+      "0x000000000000000000000000face851a4921ce59e912d19329929ce6da6eb0c700000000000000000000000000000000000000000000000005698eef06670000",
+      "0x00000000000000000000000095b4ef2869ebd94beb4eee400a99824bf5dc325b0000000000000000000000000000000000000000000000000494654067e10000",
+      "0x0000000000000000000000004b0181102a0112a2ef11abee5563bb4a3176c9d700000000000000000000000000000000000000000000000003bf3b91c95b0000",
+      "0x00000000000000000000000035a18000230da775cac24873d00ff85bccded55000000000000000000000000000000000000000000000000009b6e64a8ec60000",
+      "0x00000000000000000000000080a2ae356fc9ef4305676f7a3e2ed04e12c3394600000000000000000000000000000000000000000000000004db732547630000",
+      "0x000000000000000000000000b3319f5d18bc0d84dd1b4825dcde5d5f7266d40700000000000000000000000000000000000000000000000003782dace9d90000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xd0d472b5b2ea3ac1ba9b79553c2655ca2d1e60676ac8af926f3b4aaf1ba130bb",
+    "executed_tx_hash": null
+  }
+}

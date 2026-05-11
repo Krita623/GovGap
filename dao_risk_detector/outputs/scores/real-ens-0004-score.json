@@ -1,0 +1,428 @@
+{
+  "metadata": {
+    "proposal_id": "112764562576314516994943312429834673309292069549953740415731020720942627228986",
+    "generated_at": "2026-05-08T11:15:24.197318+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Funding True Names Ltd with an evergreen grant stream of $11,500 USDC daily, backdated to January 1st, 2022, to support the development of the ENS Protocol.",
+    "disclosed_entities": [
+      {
+        "name": "True Names Ltd",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "True Names Ltd (“TNL”) developed the Ethereum Name Service (“ENS”) protocol... True Names Ltd respectfully requests an evergreen grant stream"
+      },
+      {
+        "name": "ENS DAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "TNL initiated the creation of the ENS DAO"
+      },
+      {
+        "name": "USDC",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "For Calendar Year 2022, this request will amount to $4,197,500 USDC which is equivalent to a daily stream of $11,500 USDC."
+      },
+      {
+        "name": "Token streaming contract",
+        "address": "0xb1377e4f32e6746444970823d5506f98f5a04201",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "approving a dedicated token streaming contract at 0xB1377e4f32e6746444970823D5506F98f5A04201 to spend USDC on behalf of the DAO"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xb1377e4f32e6746444970823d5506f98f5a04201",
+        "textual_evidence": "token streaming contract at 0xB1377e4f32e6746444970823D5506F98f5A04201 to spend USDC"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "approve a daily grant of $11,500 USDC to True Names Ltd",
+        "canonical_action": "approval",
+        "object": "0xB1377e4f32e6746444970823D5506F98f5A04201",
+        "claimed_effect": "allows the dedicated token streaming contract to spend USDC on behalf of the DAO",
+        "textual_evidence": "This will be accomplished by approving a dedicated token streaming contract at 0xB1377e4f32e6746444970823D5506F98f5A04201 to spend USDC on behalf of the DAO.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal involves a single approval transaction to a streaming contract.",
+      "textual_evidence": "This will be accomplished by approving a dedicated token streaming contract at 0xB1377e4f32e6746444970823D5506F98f5A04201 to spend USDC on behalf of the DAO."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific function names are provided in the text, only a plain English description of approval."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000b1377e4f32e6746444970823d5506f98f5a04201ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xb1377e4f32e6746444970823d5506f98f5a04201",
+          115792089237316195423570985008687907853269984665640564039457584007913129639935
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000b1377e4f32e6746444970823d5506f98f5a04201ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xb1377e4f32e6746444970823d5506f98f5a04201",
+          115792089237316195423570985008687907853269984665640564039457584007913129639935
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "approve(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:0:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "depth": 0,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000b1377e4f32e6746444970823d5506f98f5a04201ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xb1377e4f32e6746444970823d5506f98f5a04201",
+          115792089237316195423570985008687907853269984665640564039457584007913129639935
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "to_address": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+      "depth": 1,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000b1377e4f32e6746444970823d5506f98f5a04201ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xb1377e4f32e6746444970823d5506f98f5a04201",
+          115792089237316195423570985008687907853269984665640564039457584007913129639935
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0xb1377e4f32e6746444970823d5506f98f5a04201"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [
+                {
+                  "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:0:approval",
+                  "action_type": "approval",
+                  "severity_hint": "medium",
+                  "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+                  "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "depth": 0,
+                  "function_selector": "0x095ea7b3",
+                  "decoded_function": "approve(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to_address": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+                  "depth": 1,
+                  "function_selector": "0x095ea7b3",
+                  "decoded_function": "approve(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "approval"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0xb1377e4f32e6746444970823d5506f98f5a04201"
+          ],
+          "trace_unique_addresses": [
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal involves a single approval transaction to a streaming contract.",
+            "textual_evidence": "This will be accomplished by approving a dedicated token streaming contract at 0xB1377e4f32e6746444970823D5506F98f5A04201 to spend USDC on behalf of the DAO."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "approve(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "approval"
+      ],
+      "actual_actions": [
+        "approval"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "approve a daily grant of $11,500 USDC to True Names Ltd",
+              "canonical_action": "approval",
+              "object": "0xB1377e4f32e6746444970823D5506F98f5A04201",
+              "claimed_effect": "allows the dedicated token streaming contract to spend USDC on behalf of the DAO",
+              "textual_evidence": "This will be accomplished by approving a dedicated token streaming contract at 0xB1377e4f32e6746444970823D5506F98f5A04201 to spend USDC on behalf of the DAO.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "depth": 0,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+              "depth": 1,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "approval"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "approve(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [
+            {
+              "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "depth": 0,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "112764562576314516994943312429834673309292069549953740415731020720942627228986:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf",
+              "depth": 1,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

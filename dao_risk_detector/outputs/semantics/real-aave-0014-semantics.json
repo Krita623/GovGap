@@ -1,0 +1,70 @@
+{
+  "proposal_summary": "This proposal outlines a partnership between TokenLogic and karpatkey to provide financial services to the Aave DAO for an initial period of 180 days, with a combined budget of 400k GHO. It creates two GHO streams and cancels an existing one.",
+  "disclosed_entities": [
+    {
+      "name": "TokenLogic & karpatkey",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This AIP onboards TokenLogic & karpatkey to provide financial services to the Aave DAO"
+    },
+    {
+      "name": "TokenLogic recipient",
+      "address": "0x3e4a9f478c0c13a15137fc81e9d8269f127b4b40",
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The following address will be the recipient of the 180k GHO stream: Address: 0x3e4A9f478C0c13A15137Fc81e9d8269F127b4B40"
+    },
+    {
+      "name": "karpatkey recipient",
+      "address": "0x58e6c7ab55aa9012eacca16d1ed4c15795669e1c",
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The following address will be the recipient of the 220k GHO stream: Address: 0x58e6c7ab55aa9012eacca16d1ed4c15795669e1c"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x58e6c7ab55aa9012eacca16d1ed4c15795669e1c",
+      "textual_evidence": "The following address will be the recipient of the 220k GHO stream: Address: 0x58e6c7ab55aa9012eacca16d1ed4c15795669e1c"
+    },
+    {
+      "address": "0x3e4a9f478c0c13a15137fc81e9d8269f127b4b40",
+      "textual_evidence": "The following address will be the recipient of the 180k GHO stream: Address: 0x3e4A9f478C0c13A15137Fc81e9d8269F127b4B40"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "The AIP will call the createStream() method of the IAaveEcosystemReserveController interface to create two 180-day streams for 220k and 180k of GHO.",
+      "canonical_action": "transfer",
+      "object": "GHO streams",
+      "claimed_effect": "Creates two 180-day GHO streams to the service providers.",
+      "textual_evidence": "The AIP will call the createStream() method of the IAaveEcosystemReserveController interface to create two 180-day streams for 220k and 180k of GHO.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Upon execution of this AIP, TokenLogic's Orbit program GHO stream (StreamID 100017) will be cancelled.",
+      "canonical_action": "transfer",
+      "object": "GHO stream 100017",
+      "claimed_effect": "Cancels TokenLogic's prior GHO stream.",
+      "textual_evidence": "Upon execution of this AIP, TokenLogic's Orbit program GHO stream (StreamID 100017) will be cancelled.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Includes stream creation, stream cancellation, and initiates a strategic partnership with multiple ongoing operational mandates.",
+    "textual_evidence": "The AIP will call the createStream() method of the IAaveEcosystemReserveController interface to create two 180-day streams for 220k and 180k of GHO... Upon execution of this AIP, TokenLogic's Orbit program GHO stream (StreamID 100017) will be cancelled."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "createStream",
+      "textual_evidence": "The AIP will call the createStream() method of the IAaveEcosystemReserveController interface"
+    }
+  ],
+  "limitations": [
+    "Identities for the specific recipient addresses aren't explicitly assigned (just 220k and 180k to two addresses without identifying which is TokenLogic vs karpatkey)"
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

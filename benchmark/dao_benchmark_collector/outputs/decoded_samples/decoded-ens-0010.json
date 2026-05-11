@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-ens-0010",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0010.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "40272043175867710511047990376059633000673751036364092383567949469124429500507",
+    "status": "executed",
+    "title": "[EP 5.27][Executable] Revoke the DAO's ability to upgrade the name wrapper",
+    "description": "# [EP 5.27][Executable] Revoke the DAO's ability to upgrade the name wrapper\n## Abstract\n\nThe Name Wrapper\u2019s upgrade mechanism contains a vulnerability whereby a malicious DAO could use the upgrade mechanism to seize control of wrapped names without the owner\u2019s consent, documented\u00a0[here](https://discuss.ens.domains/t/security-advisory-a-malicious-dao-update-could-reduce-the-registration-duration-of-registered-eth-2lds/17576/1).\n\nSince the v2 migration plan makes the upgrade mechanism obsolete, we now know the mechanism will never be required. This EP proposes to remove the DAO\u2019s ability to upgrade the name wrapper.\n\n## Specification\n\nAdmin control over the name wrapper gives the DAO two functions: it can set the upgrade contract, and it can specify the address of the metadata contract. Since we want to remove the former ability while preserving the latter, we propose the following sequence of actions:\n\n1. Deploy a new metadata contract, identical to the current one but using a proxy. The proxy instance should be owned by the DAO to provide for future metadata upgrades.\n2. Update the name wrapper to reference the new metadata contract instead of the old one.\n3. Revoke admin ownership over the name wrapper.\n\nA new metadata service has been deployed at 0x806f84F3789f51352C1B0aB3fFa192665d283808, and a transparent proxy was deployed in transaction 0xd0aca1f2efb2db5e3d494649004e341decb2e94a1f30e94f301b6626702ee4c8, at address 0xabb76d7e79de010117b147761013f11630a6799f, with the initial implementation set to the above address, and the owner set to wallet.ensdao.eth. The admin contract for this proxy is at 0xeae9309ddb1aadb4cf1ebad5e51aef999833a992.\n\n\n\nThe executable component of this proposal sets the metadata service address on the name wrapper to the above proxy, then revokes ownership over it."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401",
+      "native_value": "0",
+      "function": "setMetadataService(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_metadataService",
+          "type": "address",
+          "value": "0xabb76d7e79de010117b147761013f11630a6799f"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0xD4416b13d2b3a9aBae7AcD5D6C2BbDBE25686401",
+      "native_value": "0",
+      "function": "renounceOwnership()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

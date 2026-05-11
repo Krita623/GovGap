@@ -1,0 +1,94 @@
+{
+  "proposal_summary": "This proposal aims to fix the cross-chain governance bridge for Uniswap on Arbitrum. It involves temporarily disabling address-aliasing for the L1 Timelock, calling setOwner on the L2 Uniswap Factory to set the owner to the properly aliased L1 Timelock address, and then re-enabling aliasing.",
+  "disclosed_entities": [
+    {
+      "name": "L1 Uniswap Timelock contract",
+      "address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "entity_type": "timelock",
+      "disclosure_level": "explicit",
+      "textual_evidence": "...disable address-aliasing for messages from the L1 TimeLock contract, 0x1a9c8182c09f50c8318d769245bea52c32be35bc."
+    },
+    {
+      "name": "L2 Uniswap factory",
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The Uniswap Factory was deployed with the owner set to the same, unaliased address of the L1 Uniswap Timelock contract. To verify, see: owner address... set at https://arbiscan.io/address/0x1F98431c8aD98523631AE4a59f267346ea31F984#readContract"
+    },
+    {
+      "name": "L1 Timelock’s address alias",
+      "address": "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "...setting the owner to the L1 Timelock’s address alias, 0x2BAD8182C09F50c8318d769245beA52C32Be46CD."
+    },
+    {
+      "name": "Governance deployer key",
+      "address": "0x41653c7d61609d856f29355e404f310ec4142cfb",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The governance deployer key on Arbitrum has burned the nonce... verifiable here: https://arbiscan.io/address/0x41653c7d61609d856f29355e404f310ec4142cfb"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "textual_evidence": "0x1a9c8182c09f50c8318d769245bea52c32be35bc"
+    },
+    {
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "textual_evidence": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    },
+    {
+      "address": "0x2bad8182c09f50c8318d769245bea52c32be46cd",
+      "textual_evidence": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD"
+    },
+    {
+      "address": "0x41653c7d61609d856f29355e404f310ec4142cfb",
+      "textual_evidence": "0x41653c7d61609d856f29355e404f310ec4142cfb"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Disable address-aliasing for messages from the L1 TimeLock contract",
+      "canonical_action": "bridge",
+      "object": "Arbitrum bridge",
+      "claimed_effect": "Allows messages from L1 Timelock to preserve original L1 sender address",
+      "textual_evidence": "Arbitrum will add a temporary exception to disable address-aliasing for messages from the L1 TimeLock contract",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "Send cross-chain message to call setOwner on L2 Uniswap factory",
+      "canonical_action": "role_change",
+      "object": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+      "claimed_effect": "Updates the owner of the L2 Uniswap Factory to the aliased L1 Timelock",
+      "textual_evidence": "the Uniswap governance contract will send a cross-chain message from the L1 Timelock contract to call setOwner on the L2 Uniswap factory, setting the owner to the L1 Timelock’s address alias",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Re-enable aliasing for L1 Timelock",
+      "canonical_action": "bridge",
+      "object": "Arbitrum bridge",
+      "claimed_effect": "Restores normal cross-chain bridge behavior for L1 Timelock",
+      "textual_evidence": "Arbitrum will re-enable aliasing for the L1 Timelock contract address.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires coordinated off-chain actions by the Arbitrum team to temporarily modify bridge behavior, alongside an on-chain cross-chain call.",
+    "textual_evidence": "The system governing the Arbitrum deployment was mis-configured... will require more involved intervention to repair. ... Arbitrum will add a temporary exception to disable address-aliasing... Once the final on-chain governance vote passes..."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setOwner",
+      "textual_evidence": "call setOwner on the L2 Uniswap factory"
+    }
+  ],
+  "limitations": [
+    "The exact implementation details of how Arbitrum disables/re-enables aliasing are not specified.",
+    "No target address or signature provided for the governance execution steps."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

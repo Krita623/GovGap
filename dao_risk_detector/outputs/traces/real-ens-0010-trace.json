@@ -1,0 +1,104 @@
+{
+  "proposal_id": "40272043175867710511047990376059633000673751036364092383567949469124429500507",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "gas": "0xe48e08",
+          "gasUsed": "0x716f",
+          "to": "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+          "input": "0x1534e177000000000000000000000000abb76d7e79de010117b147761013f11630a6799f",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      },
+      {
+        "payload_call_index": 1,
+        "trace": {
+          "from": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "gas": "0xe48f78",
+          "gasUsed": "0x5b07",
+          "to": "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+          "input": "0x715018a6",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+        "value": "0x0",
+        "input": "0x1534e177000000000000000000000000abb76d7e79de010117b147761013f11630a6799f",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x1534e177",
+        "decoded_function": "setMetadataService(address)",
+        "decoded_args": [
+          "0xabb76d7e79de010117b147761013f11630a6799f"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+        "value": "0x0",
+        "input": "0x715018a6",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x715018a6",
+        "decoded_function": "renounceOwnership()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "renounceOwnership()",
+      "setMetadataService(address)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

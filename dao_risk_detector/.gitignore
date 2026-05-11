@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Environment
+.env
+
+# Generated outputs
+!outputs/traces/.gitkeep
+!outputs/risk_actions/.gitkeep
+!outputs/semantics/.gitkeep
+!outputs/scores/.gitkeep
+!outputs/reports/.gitkeep
+!outputs/run_summaries/.gitkeep
+
+docs/

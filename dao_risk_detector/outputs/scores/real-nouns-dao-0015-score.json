@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "proposal_id": "676",
+    "generated_at": "2026-05-08T11:15:24.411128+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Retrofund Yukigesho 9 ETH for 2 years of maintenance and 5 months of active work on Nouns Terminal, an alternative Nouns auction client.",
+    "disclosed_entities": [
+      {
+        "name": "Nouns Terminal",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Nouns Terminal is an alternative Nouns auction client focused on high information density."
+      },
+      {
+        "name": "Yukigesho",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Support Yukigasho — talented raising star developer in the Nouns ecosystem"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Retrofund Yukigesho 9 ETH",
+        "canonical_action": "maintenance",
+        "object": "9 ETH",
+        "claimed_effect": "Rewarding 2 years of maintenance and 5 months of active work, while ensuring guaranteed maintenance through May 2025.",
+        "textual_evidence": "9 ETH for 2 years of maintenance and 5 months of Yukigasho’s active work on Nouns Terminal",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal asks for a straightforward transfer of 9 ETH.",
+      "textual_evidence": "9 ETH for 2 years of maintenance and 5 months of Yukigasho’s active work on Nouns Terminal"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No target address or multisig is explicitly provided in the text for the ETH transfer."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x023875c1c757953aa2ff410da001e79f2edb730d",
+        "value": "0x7ce66c50e2840000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x023875c1c757953aa2ff410da001e79f2edb730d",
+      "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 1,
+    "decoded_functions": []
+  },
+  "risk_actions": [
+    {
+      "id": "676:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "to_address": "0x023875c1c757953aa2ff410da001e79f2edb730d",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x7ce66c50e2840000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x023875c1c757953aa2ff410da001e79f2edb730d",
+        "value": "0x7ce66c50e2840000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x023875c1c757953aa2ff410da001e79f2edb730d",
+        "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x023875c1c757953aa2ff410da001e79f2edb730d",
+                "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+              ],
+              "related_actions": [
+                {
+                  "id": "676:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                  "to_address": "0x023875c1c757953aa2ff410da001e79f2edb730d",
+                  "depth": 0,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x7ce66c50e2840000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "transfer"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x023875c1c757953aa2ff410da001e79f2edb730d",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x023875c1c757953aa2ff410da001e79f2edb730d",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal asks for a straightforward transfer of 9 ETH.",
+            "textual_evidence": "9 ETH for 2 years of maintenance and 5 months of Yukigasho’s active work on Nouns Terminal"
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [],
+      "unmatched_functions": [
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "maintenance"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "maintenance"
+              ],
+              "actual_business_actions": [
+                "transfer"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Retrofund Yukigesho 9 ETH",
+              "canonical_action": "maintenance",
+              "object": "9 ETH",
+              "claimed_effect": "Rewarding 2 years of maintenance and 5 months of active work, while ensuring guaranteed maintenance through May 2025.",
+              "textual_evidence": "9 ETH for 2 years of maintenance and 5 months of Yukigasho’s active work on Nouns Terminal",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "676:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0x023875c1c757953aa2ff410da001e79f2edb730d",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x7ce66c50e2840000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": []
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x023875c1c757953aa2ff410da001e79f2edb730d",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+          ],
+          "related_actions": [
+            {
+              "id": "676:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0x023875c1c757953aa2ff410da001e79f2edb730d",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x7ce66c50e2840000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "maintenance"
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

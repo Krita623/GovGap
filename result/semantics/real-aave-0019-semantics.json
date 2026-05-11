@@ -1,0 +1,64 @@
+{
+  "proposal_summary": "This proposal aims to onboard wstETH (wrapped staked ETH) from Lido to the Aave V3 Base Network, enriching the liquid staking assets options and configuring specific risk parameters.",
+  "disclosed_entities": [
+    {
+      "name": "wstETH",
+      "address": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Contract Address: wstETH - 0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452"
+    },
+    {
+      "name": "Oracle",
+      "address": "0x945fd405773973d286de54e44649cc0d9e264f78",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Oracle | 0x945fD405773973d286De54E44649cc0d9e264F78"
+    },
+    {
+      "name": "Lido",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "onboarding of wstETH (wrapped staked ETH) from Lido"
+    },
+    {
+      "name": "AaveV3Base",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Implementation: AaveV3Base"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+      "textual_evidence": "Contract Address: wstETH - 0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452"
+    },
+    {
+      "address": "0x945fd405773973d286de54e44649cc0d9e264f78",
+      "textual_evidence": "Oracle | 0x945fD405773973d286De54E44649cc0d9e264F78"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Onboard wstETH to Aave V3 Base Network by configuring risk parameters",
+      "canonical_action": "parameter_update",
+      "object": "Aave V3 Base Network",
+      "claimed_effect": "Will provide Aave users with more options for earning staking rewards on their collateral by allowing wstETH to be supplied and borrowed.",
+      "textual_evidence": "The table below illustrates the configured risk parameters for wstETH",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal is a standard asset onboarding procedure with a clearly defined set of risk parameters and no complex contract modifications.",
+    "textual_evidence": "Simple Summary\n\nThis AIP proposes the onboarding of wstETH"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No precise implementation contract address is provided, only a GitHub link to the source code."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

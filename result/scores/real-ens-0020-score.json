@@ -1,0 +1,272 @@
+{
+  "metadata": {
+    "proposal_id": "93339540979084434403669350155813124666788975924280943502320960019054315770244",
+    "generated_at": "2026-05-08T11:15:24.334893+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Updates DNSSECImpl's algorithm 7 (RSASHA1-NSEC3-SHA1) to point to the patched RSASHA1Algorithm contract to fix a padding validation vulnerability, matching the configuration of algorithm 5.",
+    "disclosed_entities": [
+      {
+        "name": "DNSSECImpl",
+        "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "A single setAlgorithm call on DNSSECImpl (0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5)"
+      },
+      {
+        "name": "pre-patch contract",
+        "address": "0x6ca8624bc207f043d140125486de0f7e624e37a1",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Algorithm 7 currently still points to the pre-patch contract at 0x6ca8624Bc207F043D140125486De0f7E624e37A1"
+      },
+      {
+        "name": "RSASHA1Algorithm (patched)",
+        "address": "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "7 (RSASHA1-NSEC3-SHA1) | RSASHA1Algorithm (patched) | 0x58E0383E21f25DaB957F6664240445A514E9f5e8"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+        "textual_evidence": "A single setAlgorithm call on DNSSECImpl (0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5)"
+      },
+      {
+        "address": "0x6ca8624bc207f043d140125486de0f7e624e37a1",
+        "textual_evidence": "pre-patch contract at 0x6ca8624Bc207F043D140125486De0f7E624e37A1"
+      },
+      {
+        "address": "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+        "textual_evidence": "0x58E0383E21f25DaB957F6664240445A514E9f5e8"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "setAlgorithm(uint8,address)",
+        "canonical_action": "parameter_update",
+        "object": "DNSSECImpl",
+        "claimed_effect": "Updates the address for algorithm 7 in DNSSECImpl to the patched RSASHA1Algorithm contract.",
+        "textual_evidence": "A single setAlgorithm call on DNSSECImpl ... setAlgorithm(uint8,address) | 7, 0x58E0383E21f25DaB957F6664240445A514E9f5e8",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal requires only a single state-changing transaction on an existing contract and reuses an already deployed patched contract.",
+      "textual_evidence": "A single setAlgorithm call on DNSSECImpl ... No new contract deployment is needed — this reuses the same patched contract already serving algorithm 5."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "setAlgorithm",
+        "textual_evidence": "setAlgorithm(uint8,address)"
+      },
+      {
+        "function_name": "algorithms",
+        "textual_evidence": "algorithms(uint8)(address)"
+      }
+    ],
+    "limitations": [],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+        "value": "0x0",
+        "input": "0x020ed8d3000000000000000000000000000000000000000000000000000000000000000700000000000000000000000058e0383e21f25dab957f6664240445a514e9f5e8",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x020ed8d3",
+        "decoded_function": "setAlgorithm(uint8,address)",
+        "decoded_args": [
+          7,
+          "0x58e0383e21f25dab957f6664240445a514e9f5e8"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "setAlgorithm(uint8,address)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+        "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+        "0x6ca8624bc207f043d140125486de0f7e624e37a1"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+            "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+            "0x6ca8624bc207f043d140125486de0f7e624e37a1"
+          ],
+          "trace_unique_addresses": [
+            "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal requires only a single state-changing transaction on an existing contract and reuses an already deployed patched contract.",
+            "textual_evidence": "A single setAlgorithm call on DNSSECImpl ... No new contract deployment is needed — this reuses the same patched contract already serving algorithm 5."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "setAlgorithm(uint8,address)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "setAlgorithm(uint8,address)",
+              "canonical_action": "parameter_update",
+              "object": "DNSSECImpl",
+              "claimed_effect": "Updates the address for algorithm 7 in DNSSECImpl to the patched RSASHA1Algorithm contract.",
+              "textual_evidence": "A single setAlgorithm call on DNSSECImpl ... setAlgorithm(uint8,address) | 7, 0x58E0383E21f25DaB957F6664240445A514E9f5e8",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "setAlgorithm(uint8,address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

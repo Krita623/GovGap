@@ -1,0 +1,47 @@
+{
+  "benchmark_id": "real-aave-0020",
+  "dao": {
+    "name": "Aave",
+    "chain_id": 1,
+    "governor_address": "0xEC568fffba86c094cf06b22134B23074DFE2252c",
+    "governance_system": "aave"
+  },
+  "proposal": {
+    "proposal_id": "321",
+    "proposal_url": "https://www.tally.xyz/gov/aave/proposal/321",
+    "source": "tally",
+    "created_block": 18138170,
+    "executed_block": null,
+    "status": "canceled"
+  },
+  "proposal_text": {
+    "title": "# Gauntlet recommendation to set MAI/MIMATIC isolated debt ceiling to 0 for Arbitrum, Avalanche, Polygon, Optimism v3",
+    "description": "# Gauntlet recommendation to set MAI/MIMATIC isolated debt ceiling to 0 for Arbitrum, Avalanche, Polygon, Optimism v3\n\n\n\n__Author(s): Paul Lei, Watson Fu, Nick Del Zingaro, Walter Li, Jonathan Reem, Nick Cannon, Sarah Chen, Dana Tung__\n\n## Summary\n\nThe AIP to freeze MAI/MIMATIC and set LTV -> 0 has been executed. This will prevent additional borrow and supply of MAI/MIMATIC, and additional borrow against MAI collateral outside of emode.\n\nGiven community preference for more caution, Gauntlet also recommends setting isolated debt ceilings to 0 for MAI/MIMATIC. This will further strengthen protection against potentially risky borrowing against MAI collateral.\n\nGauntlet is exploring ways to move MAI/MIMATIC out of emode for Avalanche and Polygon v3.\n\n\n\n## Specification\n\n\n| Chain | Asset | Action |\n|-------|-------|-----|\n| Arbitrum | MAI/MIMATIC | Set Debt Ceiling to 0\n| Optimism | MAI/MIMATIC | Set Debt Ceiling to 0\n| Avalanche | MAI/MIMATIC | Set Debt Ceiling to 0\n| Polygon | MAI/MIMATIC | Set Debt Ceiling to 0\n\n\n## Implementation\n\nThe proposal implements changes on Arbitrum, Optimism, Polygon, Avalanche v3 using the following pre-deployed payloads:\n  - Arbitrum: [`0x32f3A6134590fc2d9440663d35a2F0a6265F04c4`](https://arbiscan.io/address/0x32f3A6134590fc2d9440663d35a2F0a6265F04c4)\n  - Optimism: [`0x0568a3aeb8E78262dEFf75ee68fAC20ae35ffA91`](https://optimistic.etherscan.io/address/0x0568a3aeb8E78262dEFf75ee68fAC20ae35ffA91)\n  - Polygon: [`0xf7C3350757DE224bdB2b77A3943C8667aCEE3d37`](https://polygonscan.com/address/0xf7C3350757DE224bdB2b77A3943C8667aCEE3d37)\n\nChanges on Avalanche can be implemented using the pre-deployed steward located at [`0x0cb2535d00cddfae5ed1aff2e5a0239fc947d17d`](https://snowtrace.io/address/0x0cb2535d00cddfae5ed1aff2e5a0239fc947d17d)\n\n## Disclaimer\nGauntlet has not received any compensation from any third-party in exchange for recommending any of the actions contained in this proposal.\n\n\n## Copyright\n\nCopyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n\n*By approving this proposal, you agree that any services provided by Gauntlet shall be governed by the terms of service available at gauntlet.network/tos.*\n\n\nDiscussion: (https://governance.aave.com/t/arfc-recommendations-for-mai-mimatic-2023-09-08/14799)"
+  },
+  "payload": {
+    "targets": [
+      "0xd1B3E25fD7C8AE7CADDC6F71b461b79CD4ddcFa3",
+      "0x5f5C02875a8e9B5A26fbd09040ABCfDeb2AA6711",
+      "0x158a6bC04F0828318821baE797f50B0A1299d45b"
+    ],
+    "values": [
+      "0",
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "execute(address)",
+      "execute(address)",
+      "execute(address)"
+    ],
+    "calldatas": [
+      "0x00000000000000000000000032f3a6134590fc2d9440663d35a2f0a6265f04c4",
+      "0x0000000000000000000000000568a3aeb8e78262deff75ee68fac20ae35ffa91",
+      "0x000000000000000000000000f7c3350757de224bdb2b77a3943c8667acee3d37"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x33bf0d27584d0963cac89d9720084b9a1cb3a148bdc5ad0159218cb2e0d82a5f",
+    "executed_tx_hash": null
+  }
+}

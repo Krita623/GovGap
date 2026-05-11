@@ -1,0 +1,100 @@
+{
+  "proposal_summary": "A proposal by Gauntlet to adjust nine risk parameters (LTV, Liquidation Threshold, and Liquidation Bonus) across eight Aave V2 assets.",
+  "disclosed_entities": [
+    {
+      "name": "LendingPoolConfigurator",
+      "address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "calling configureReserveAsCollateral on the LendingPoolConfigurator contract at 0x311Bb771e4F8952E6Da169b425E7e92d6Ac45756"
+    },
+    {
+      "name": "BAT",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "BAT Liquidation Threshold"
+    },
+    {
+      "name": "CRV",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "CRV Loan To Value"
+    },
+    {
+      "name": "ENJ",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "ENJ Loan To Value"
+    },
+    {
+      "name": "REN",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "REN Loan To Value"
+    },
+    {
+      "name": "SUSHI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "SUSHI Loan To Value"
+    },
+    {
+      "name": "UNI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "UNI Loan To Value"
+    },
+    {
+      "name": "WBTC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "WBTC Liquidation Bonus"
+    },
+    {
+      "name": "YFI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "YFI Liquidation Bonus"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "textual_evidence": "LendingPoolConfigurator contract at 0x311Bb771e4F8952E6Da169b425E7e92d6Ac45756"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Call configureReserveAsCollateral",
+      "canonical_action": "parameter_update",
+      "object": "LendingPoolConfigurator",
+      "claimed_effect": "Sets the LTV, liquidation bonuses, and liquidation threshold ratios for specific tokens.",
+      "textual_evidence": "The proposal sets the LTV, liquidation bonuses, and liquidation threshold ratios by calling configureReserveAsCollateral on the LendingPoolConfigurator contract",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "Standard parameter update modifying existing protocol risk settings using a single configurator function.",
+    "textual_evidence": "This proposal is a batch update of three risk parameters to align with the the Moderate risk level"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "configureReserveAsCollateral",
+      "textual_evidence": "by calling configureReserveAsCollateral on the LendingPoolConfigurator contract"
+    }
+  ],
+  "limitations": [
+    "Addresses for the 8 assets being updated are not explicitly provided in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

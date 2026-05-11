@@ -1,0 +1,36 @@
+{
+  "risk_actions": [
+    {
+      "id": "mutant-permission-0008:0:permission_change",
+      "action_type": "permission_change",
+      "severity_hint": "high",
+      "from_address": "0x1000000000000000000000000000000000000001",
+      "to_address": "0x6000000000000000000000000000000000000008",
+      "depth": 0,
+      "function_selector": "0x2f2ff15d",
+      "decoded_function": "grantRole(bytes32,address)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x6000000000000000000000000000000000000008",
+        "value": "0x0",
+        "input": "0x2f2ff15d00000000000000000000000000000000000000000000000000000000000000080000000000000000000000004000000000000000000000000000000000000008",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x2f2ff15d",
+        "decoded_function": "grantRole(bytes32,address)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 1,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 1
+  }
+}

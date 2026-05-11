@@ -1,0 +1,95 @@
+{
+  "proposal_summary": "This AIP introduces ArbOS Version 11, bringing improvements to Arbitrum chains including support for the EVM Shanghai upgrade (and PUSH0 opcode), retryable fixes, precompile fixes, and L1 pricing parameter updates. The upgrade applies to Arbitrum One and Arbitrum Nova.",
+  "disclosed_entities": [
+    {
+      "name": "SetArbOneArbOS11ModuleRootAction",
+      "address": "0x3b70f2da6f3b01f9a53dcbcb3e59ad3ad8bed924",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[SetArbOneArbOS11ModuleRootAction](https://etherscan.io/address/0x3b70f2da6f3b01f9a53dcbcb3e59ad3ad8bed924#code)"
+    },
+    {
+      "name": "SetNovaArbOS11ModuleRootAction",
+      "address": "0x54c2c372943572ac2a8e84d502ebc13f14b62246",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[SetNovaArbOS11ModuleRootAction](https://etherscan.io/address/0x54c2c372943572ac2a8e84d502ebc13f14b62246#code)"
+    },
+    {
+      "name": "SetArbOS11VersionAction",
+      "address": "0xf6c7dc6eae78abf2f32df899654ca425dfa99481",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[SetArbOS11VersionAction](https://arbiscan.io/address/0xF6c7Dc6eaE78aBF2f32df899654ca425Dfa99481#code)"
+    },
+    {
+      "name": "SetArbOS11VersionAction (Nova)",
+      "address": "0x5357f4d3e8f8250a77bcddd5e58886ad1358220c",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[SetArbOS11VersionAction](https://nova.arbiscan.io/address/0x5357f4d3e8f8250a77bcddd5e58886ad1358220c#code)"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x3b70f2da6f3b01f9a53dcbcb3e59ad3ad8bed924",
+      "textual_evidence": "[SetArbOneArbOS11ModuleRootAction](https://etherscan.io/address/0x3b70f2da6f3b01f9a53dcbcb3e59ad3ad8bed924#code)"
+    },
+    {
+      "address": "0x54c2c372943572ac2a8e84d502ebc13f14b62246",
+      "textual_evidence": "[SetNovaArbOS11ModuleRootAction](https://etherscan.io/address/0x54c2c372943572ac2a8e84d502ebc13f14b62246#code)"
+    },
+    {
+      "address": "0xf6c7dc6eae78abf2f32df899654ca425dfa99481",
+      "textual_evidence": "[SetArbOS11VersionAction](https://arbiscan.io/address/0xF6c7Dc6eaE78aBF2f32df899654ca425Dfa99481#code)"
+    },
+    {
+      "address": "0x5357f4d3e8f8250a77bcddd5e58886ad1358220c",
+      "textual_evidence": "[SetArbOS11VersionAction](https://nova.arbiscan.io/address/0x5357f4d3e8f8250a77bcddd5e58886ad1358220c#code)"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Set ArbOne ArbOS 11 Module Root",
+      "canonical_action": "upgrade",
+      "object": "Arbitrum One Rollup",
+      "claimed_effect": "Updates the WASM module root to the new ArbOS 11 hash",
+      "textual_evidence": "The Action smart contracts used to execute the on-chain upgrade... SetArbOneArbOS11ModuleRootAction",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set Nova ArbOS 11 Module Root",
+      "canonical_action": "upgrade",
+      "object": "Arbitrum Nova Rollup",
+      "claimed_effect": "Updates the WASM module root for Nova to the new ArbOS 11 hash",
+      "textual_evidence": "SetNovaArbOS11ModuleRootAction",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set ArbOS 11 Version",
+      "canonical_action": "upgrade",
+      "object": "Arbitrum Rollups",
+      "claimed_effect": "Upgrades the active ArbOS version to 11",
+      "textual_evidence": "SetArbOS11VersionAction",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "complex",
+    "reason": "It involves a network-wide update mimicking a hardfork, changing WASM module roots, and enabling EVM Shanghai features across multiple Arbitrum networks.",
+    "textual_evidence": "On a high level an ArbOS upgrade can be seen as Arbitrum's equivalent of a hardfork"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "arbBlockHash",
+      "textual_evidence": "Some precompile methods such as ArbSys’s arbBlockHash method"
+    },
+    {
+      "function_name": "wasmModuleRoot",
+      "textual_evidence": "what the rollup contract’s wasmModuleRoot() method returns"
+    }
+  ],
+  "limitations": [],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

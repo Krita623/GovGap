@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "proposal_id": "43203199770691383238593940280239053946984014979449022275641313046078578194694",
+    "generated_at": "2026-05-08T11:15:24.189000+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Reassigns ownership of the ENS community pod, making it a sub-pod of the ENS ecosystem and dissolving the community working group multisig per EP15.",
+    "disclosed_entities": [
+      {
+        "name": "community WG multisig / ENS community pod",
+        "address": null,
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Dissolve the community WG multisig per EP15\nThis proposal reassigns ownership of the ENS community pod"
+      },
+      {
+        "name": "ENS ecosystem",
+        "address": null,
+        "entity_type": "multisig",
+        "disclosure_level": "implicit",
+        "textual_evidence": "making it a sub-pod of ENS ecosystem"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "reassigns ownership of the ENS community pod",
+        "canonical_action": "role_change",
+        "object": "ENS community pod",
+        "claimed_effect": "making it a sub-pod of ENS ecosystem",
+        "textual_evidence": "This proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal consists of a straightforward ownership transfer of a single community pod.",
+      "textual_evidence": "This proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No on-chain addresses for the relevant multisigs or pods are provided in the text, so the exact transaction details cannot be derived."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+        "value": "0x0",
+        "input": "0x346e5c48000000000000000000000000000000000000000000000000000000000000000e0000000000000000000000002686a8919df194aa7673244549e68d42c1685d03",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x346e5c48",
+        "decoded_function": "updatePodAdmin(uint256,address)",
+        "decoded_args": [
+          14,
+          "0x2686a8919df194aa7673244549e68d42c1685d03"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "updatePodAdmin(uint256,address)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Trace includes undisclosed execution path components without extracted risk actions.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal consists of a straightforward ownership transfer of a single community pod.",
+            "textual_evidence": "This proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "updatePodAdmin(uint256,address)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "role_change"
+      ],
+      "actual_actions": [],
+      "summary": "No deterministic business action was extracted from the trace.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "reassigns ownership of the ENS community pod",
+              "canonical_action": "role_change",
+              "object": "ENS community pod",
+              "claimed_effect": "making it a sub-pod of ENS ecosystem",
+              "textual_evidence": "This proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "updatePodAdmin(uint256,address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x17fdc2eaf2bd46f3e1052ccbccd9e6ad0296c42c",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

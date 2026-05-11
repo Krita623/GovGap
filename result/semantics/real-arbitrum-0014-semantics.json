@@ -1,0 +1,75 @@
+{
+  "proposal_summary": "Establish Treasury and Growth Management tracks with their own 3-seat committees (TMC and GMC). The proposal outlines transferring 7,500 ETH and 26M ARB to the Arbitrum Foundation to execute yield-bearing onchain strategies, strategic partnerships, and create a stablecoin reserve to cover DAO expenses.",
+  "disclosed_entities": [
+    {
+      "name": "Arbitrum Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the Arbitrum Foundation serves as the custodian/counterparty of the funds at all times"
+    },
+    {
+      "name": "Arbitrum DAO Treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "I.e., chain profits (ETH) and tokens that have been authorized for spend but have not entered circulation yet (ARB)."
+    },
+    {
+      "name": "ARB",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "tokens that have been authorized for spend but have not entered circulation yet (ARB)"
+    },
+    {
+      "name": "ETH",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "chain profits (ETH)"
+    },
+    {
+      "name": "USDC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The additional 1M ARB being transferred to the Foundation will be liquidated for 300k USDC"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+      "textual_evidence": "7,500 ETH and 26M ARB will be moved to this address"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 7,500 ETH and 26M ARB to intermediate address then Foundation",
+      "canonical_action": "treasury_operation",
+      "object": "0xAc20CD734C65Baf48a1476447af7D3E3165DC739",
+      "claimed_effect": "Custodies the funds with the Arbitrum Foundation for use in treasury and growth management strategies",
+      "textual_evidence": "If this vote passes onchain via Tally, 7,500 ETH and 26M ARB will be moved to this address, and then transferred to two separate foundation controlled addresses.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Liquidate 1M ARB for 300k USDC",
+      "canonical_action": "treasury_operation",
+      "object": "Arbitrum Foundation",
+      "claimed_effect": "Funds the 300k USDC required to pay the members of the committees",
+      "textual_evidence": "The additional 1M ARB being transferred to the Foundation will be liquidated for 300k USDC in the most suitable manner to pay committee members",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal coordinates simple fund transfers and conversions, combined with the social establishment of committees to manage those funds. There are no highly technical smart contract upgrades claimed.",
+    "textual_evidence": "7,500 ETH and 26M ARB will be moved to this address, and then transferred to two separate foundation controlled addresses. No funds can be deployed by either the TMC or GMC"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The addresses of the final 'two separate foundation controlled addresses' are not provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

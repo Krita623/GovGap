@@ -1,0 +1,193 @@
+{
+  "proposal_id": "412",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+          "gas": "0xe48fb8",
+          "gasUsed": "0x5208",
+          "to": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+          "input": "0x",
+          "value": "0x6124fee993bc0000",
+          "type": "CALL"
+        }
+      },
+      {
+        "payload_call_index": 1,
+        "trace": {
+          "from": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+          "gas": "0xe48874",
+          "gasUsed": "0x22655",
+          "to": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+          "input": "0x410aa52200000000000000000000000020bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd",
+          "output": "0x30116425",
+          "error": "execution reverted",
+          "calls": [
+            {
+              "from": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "gas": "0xe074a3",
+              "gasUsed": "0xe074a3",
+              "input": "0x6101143d81600a3d39f336602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef7120bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d8000b2",
+              "error": "CreateCollision",
+              "value": "0x0",
+              "type": "CREATE2"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      },
+      {
+        "payload_call_index": 2,
+        "trace": {
+          "from": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+          "gas": "0xe48f78",
+          "gasUsed": "0x6d22",
+          "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "input": "0xd0e30db0",
+          "value": "0x1a055690d9db80000",
+          "type": "CALL"
+        }
+      },
+      {
+        "payload_call_index": 3,
+        "trace": {
+          "from": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+          "gas": "0xe48d34",
+          "gasUsed": "0xc996",
+          "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "input": "0xa9059cbb000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd000000000000000000000000000000000000000000000001a055690d9db80000",
+          "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+        "value": "0x6124fee993bc0000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "value": "0x0",
+        "input": "0x410aa52200000000000000000000000020bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd",
+        "output": "0x30116425",
+        "depth": 0,
+        "function_selector": "0x410aa522",
+        "decoded_function": "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+        "decoded_args": [
+          "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+          30000000000000000000,
+          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          1698710400,
+          1706659200,
+          0,
+          "0xd4b6472934c16ff3d81cc3502f853988cfb078dd"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CREATE2",
+        "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "to_address": null,
+        "value": "0x0",
+        "input": "0x6101143d81600a3d39f336602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef7120bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d8000b2",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "CreateCollision"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "value": "0x1a055690d9db80000",
+        "input": "0xd0e30db0",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xd0e30db0",
+        "decoded_function": "deposit()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd000000000000000000000000000000000000000000000001a055690d9db80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xd4b6472934c16ff3d81cc3502f853988cfb078dd",
+          30000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+      "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+      "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 4,
+    "value_transfer_count": 2,
+    "decoded_functions": [
+      "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+      "deposit()",
+      "transfer(address,uint256)"
+    ]
+  },
+  "revert_reason": "execution reverted",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

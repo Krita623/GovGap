@@ -1,0 +1,467 @@
+{
+  "metadata": {
+    "proposal_id": "215",
+    "generated_at": "2026-05-08T11:15:24.338906+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Fund the Calabara team with 50 ETH to build uplink.wtf, a marketing and proliferation platform for Nouns featuring Creator Contests and a new Nouns Raffle application.",
+    "disclosed_entities": [
+      {
+        "name": "NounsDAO",
+        "address": null,
+        "entity_type": "governor",
+        "disclosure_level": "explicit",
+        "textual_evidence": "With a proven track record of funding high-quality content initiatives such as the Ordinary Folk video, Nounish productions, and more, NounsDAO boasts a diverse portfolio of content ready for widespread distribution."
+      },
+      {
+        "name": "SharkDAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "SharkDAO - source and vote on community art pieces to mint as open-editions from the DAO."
+      },
+      {
+        "name": "GnarsDAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Gnars - \"Skate Your City Series\". Worldwide digital skate competitions hosted by Gnars, run on Creator Contests, judged by GnarsDAO."
+      },
+      {
+        "name": "TNS",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "We launched creator contests in September, and have since helped groups like TNS, Composables, SharkDAO, and others"
+      },
+      {
+        "name": "Composables",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Composables - recently hosted a contest in which they observed 30+ new collections"
+      },
+      {
+        "name": "NSFW",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "SharkDAO and NSFW both awarded us small grants to build the underlying infrastructure."
+      },
+      {
+        "name": "nickdodson.eth",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Nick: nickdodson.eth"
+      },
+      {
+        "name": "signed.benbodhi.eth",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Benbodhi: signed.benbodhi.eth"
+      },
+      {
+        "name": "juanx.eth",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Juan: juanx.eth"
+      },
+      {
+        "name": "joshuafisher.eth",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "JoshuaFisher: joshuafisher.eth"
+      },
+      {
+        "name": "toadyhawk.eth",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "ToadyHawk: toadyhawk.eth"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "30 ETH to team wallet upon execution",
+        "canonical_action": "transfer",
+        "object": "team wallet",
+        "claimed_effect": "Transfer 30 ETH to the team wallet",
+        "textual_evidence": "30 ETH to team wallet upon execution",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "20 ETH streamed over 3 months",
+        "canonical_action": "transfer",
+        "object": "streamed to team",
+        "claimed_effect": "Stream 20 ETH over 3 months",
+        "textual_evidence": "20 ETH streamed over 3 months",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal primarily requests funding via a transfer and stream. The underlying software development is complex (real-time concurrency, zk-snark research), but the on-chain action requested is straightforward.",
+      "textual_evidence": "We're requesting 50 ETH to fund a 3 month development cycle to deploy Creator Contests v2 and a brand new Nouns Raffle application to the new uplink.wtf platform.\n... \n50 ETH for development\n* 30 ETH to team wallet upon execution\n* 20 ETH streamed over 3 months"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Could not extract actual wallet addresses for multisig signers, as only ENS names were provided."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+        "to_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+        "value": "0x2b5e3af16b1880000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x2b5e3af16b1880000",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+      "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+      "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 2,
+    "decoded_functions": []
+  },
+  "risk_actions": [
+    {
+      "id": "215:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+      "to_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x2b5e3af16b1880000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+        "to_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+        "value": "0x2b5e3af16b1880000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "215:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+      "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+      "depth": 1,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x2b5e3af16b1880000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x2b5e3af16b1880000",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+        "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+        "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+                "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+                "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+              ],
+              "related_actions": [
+                {
+                  "id": "215:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+                  "to_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+                  "depth": 0,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x2b5e3af16b1880000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "215:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+                  "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x2b5e3af16b1880000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+            "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+            "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal primarily requests funding via a transfer and stream. The underlying software development is complex (real-time concurrency, zk-snark research), but the on-chain action requested is straightforward.",
+            "textual_evidence": "We're requesting 50 ETH to fund a 3 month development cycle to deploy Creator Contests v2 and a brand new Nouns Raffle application to the new uplink.wtf platform.\n... \n50 ETH for development\n* 30 ETH to team wallet upon execution\n* 20 ETH streamed over 3 months"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer",
+        "transfer"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "30 ETH to team wallet upon execution",
+              "canonical_action": "transfer",
+              "object": "team wallet",
+              "claimed_effect": "Transfer 30 ETH to the team wallet",
+              "textual_evidence": "30 ETH to team wallet upon execution",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "20 ETH streamed over 3 months",
+              "canonical_action": "transfer",
+              "object": "streamed to team",
+              "claimed_effect": "Stream 20 ETH over 3 months",
+              "textual_evidence": "20 ETH streamed over 3 months",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "215:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+              "to_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x2b5e3af16b1880000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "215:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x2b5e3af16b1880000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": []
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+            "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+          ],
+          "related_actions": [
+            {
+              "id": "215:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+              "to_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x2b5e3af16b1880000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "215:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x55d1f4091ced357cd4c4f9dd12531b8fdbe2dd26",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x2b5e3af16b1880000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

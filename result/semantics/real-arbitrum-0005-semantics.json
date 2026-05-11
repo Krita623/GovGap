@@ -1,0 +1,117 @@
+{
+  "proposal_summary": "This proposal establishes the Arbitrum Research & Development Collective (ARDC) for a 6-month term with a budget of 1,761,000 ARB. The ARDC will feature elected roles (DAOAdvocate, Risk, Security, Research) to review governance proposals, conduct security reviews, and provide economic risk analyses.",
+  "disclosed_entities": [
+    {
+      "name": "Blockworks Research",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal intends on forking the Arbitrum Coalition proposal that was submitted & spearheaded by Blockworks Research, Gauntlet & Trail of Bits on the 25th of October 2023"
+    },
+    {
+      "name": "Gauntlet",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Blockworks Research, Gauntlet & Trail of Bits"
+    },
+    {
+      "name": "Trail of Bits",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Blockworks Research, Gauntlet & Trail of Bits"
+    },
+    {
+      "name": "ImmutableLawyer",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "@Immutablelawyer will be announcing the starting date of the election process."
+    },
+    {
+      "name": "ARB token",
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "token holders of the ARB token with the following contract address [0x912CE59144191C1204E64559FE8253a0e49E6548]"
+    },
+    {
+      "name": "Sam [Gains Network]",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Sam [Gains Network]"
+    },
+    {
+      "name": "Matt [StableLab]",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Matt [StableLab]"
+    },
+    {
+      "name": "Max [Connext]",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Max [Connext]"
+    },
+    {
+      "name": "Brian [Gamma Strategies]",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Brian [Gamma Strategies]"
+    },
+    {
+      "name": "Arbitrum Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "with the Arbitrum Foundation serving as a counterparty to the Agreement."
+    },
+    {
+      "name": "ARDC Multisig",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The ARDC’s 3/5 multisig is being created."
+    },
+    {
+      "name": "Hedgey",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Streaming of funds to the multi-sig every second week for the ARDC’s term using Hedgey."
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "textual_evidence": "[0x912CE59144191C1204E64559FE8253a0e49E6548]"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Fund the ARDC",
+      "canonical_action": "transfer",
+      "object": "1.715 Million ARB + Multi-Sig Budget",
+      "claimed_effect": "Funds the ARDC multisig for a 6 month term",
+      "textual_evidence": "Fund the ARDC with 1.715 Million ARB + Multi-Sig Budget for a 6-Month Term.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires setting up a multisig, streaming funds via Hedgey, holding an election process, but the on-chain execution itself is likely just transferring funds and streaming setup.",
+    "textual_evidence": "Streaming of funds to the multi-sig every second week for the ARDC’s term using Hedgey."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No precise addresses other than ARB provided.",
+    "Lack of exact executable code."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

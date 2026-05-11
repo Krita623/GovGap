@@ -1,0 +1,22 @@
+{
+  "benchmark_id": "real-uniswap-0005",
+  "source_raw_sample": "outputs/raw_samples/real-uniswap-0005.json",
+  "proposal": {
+    "dao": "Uniswap",
+    "chain_id": 1,
+    "proposal_id": "26",
+    "status": "canceled",
+    "title": "Fix the Cross Chain Messaging Bridge on Arbitrum",
+    "description": "# Fix the Cross Chain Messaging Bridge on Arbitrum\n## Background:\n\nOn Ethereum, Uniswap Labs governance consists of a suite of smart contracts. However, in addition to its original deployment on Ethereum L1 mainnet, Uniswap contracts are also deployed on four additional domains - Polygon, Optimism, Celo, and Arbitrum.\n\nUniswap deployments on these domains do not have native access to the on-chain governance system, nor the UNI tokens which grant voting power in this system on Ethereum mainnet; in order for the existing Uniswap governance system to execute proposals governing these deployments, there must be some method of passing governance decisions from Ethereum mainnet to other domains.\n\nPresently, this method has been implemented differently for each of the four chains. The system governing Optimism and Polygon follow similar design principles, and should be functional for passing proposals.\n\n***The system governing the Arbitrum deployment was mis-configured due to a mis-communication between developers, and will require more involved intervention to repair.***\n\n## Problem:\n\nArbitrum was initially going to allow L1 addresses to pass calls directly to L2 with msg.sender preserved. After realizing security issues with this approach, Arbitrum team instead shifted their approach to use aliasing (this method transforms L1 addresses to be a different address when represented on an L2):\n\nUniswap Labs was not made aware of this change in approach before deploying on Arbitrum. The Uniswap Factory was deployed with the owner set to the same, unaliased address of the L1 Uniswap Timelock contract.\nTo verify, see: owner address https://arbiscan.io/address/0x1a9c8182c09f50c8318d769245bea52c32be35bc set at https://arbiscan.io/address/0x1F98431c8aD98523631AE4a59f267346ea31F984#readContract\nThis address on Arbitrum is an EOA (not a contract) which nobody has the private key to control\nThe governance deployer key on Arbitrum has burned the nonce that could deploy a contract to this address, verifiable here: https://arbiscan.io/address/0x41653c7d61609d856f29355e404f310ec4142cfb\nTherefore, nobody can execute governance proposals on Arbitrum in the current state\n\n## Solution:\n\nTo fix the cross chain messaging bridge, Arbitrum proposes the following:\n\n1. Final governance vote kicks off (after Temperature and Consensus checks pass).\n2. Before the vote passes, Arbitrum will add a temporary exception to disable address-aliasing for messages from the L1 TimeLock contract, 0x1a9c8182c09f50c8318d769245bea52c32be35bc. Arbitrum will notify the Uniswap community via the Uniswap governance forum once this is done.\n3. Once the final on-chain governance vote passes, the Uniswap governance contract will send a cross-chain message from the L1 Timelock contract to call setOwner on the L2 Uniswap factory, setting the owner to the L1 Timelock\u2019s address alias, 0x2BAD8182C09F50c8318d769245beA52C32Be46CD.\n\n* <em>This is the L1 Timelock address + the alias offset: 0x1a9c8182c09f50c8318d769245bea52c32be35bc + 0x111\n1000000000000000000000000000000001111 as described further at https://developer.offchainlabs.com/arbos/l1-to-l2-messaging#address-aliasing</em>\n\n4. We will be able to see when this is completed on-chain. Arbitrum will re-enable aliasing for the L1 Timelock contract address. Once this is complete, cross-chain governance between Uniswap and Arbitrum will be fully functional.\n\n## Conclusion\n\nUniswap is currently the leading decentralized exchange by TVL on Arbitrum, and if this proposal passes the temperature check and continues along the governance process, it will strengthen the current relationship between the two projects. \n\nSnapshot Polls:\n\n[Temperature Check: ](https://snapshot.org/#/uniswap/proposal/0xa4a21c808b28a61562c6b4ebf5b71c0cd37ee2d630bcbdf91ffaf5f683cc650f)\n[Consensus Check: ](https://snapshot.org/#/uniswap/proposal/0x31c3409c09f5561d6aff1e0adeee6c83a5e73768a5d5c3e01b2a48a3894eda54)\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "native_value": "0",
+      "function": null,
+      "arguments": [],
+      "decode_status": "failed: calldata_empty"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "proposal_id": "48262157524430528705514027771464261215955420389394621161356313649894506972547",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "gas": "0xe48e08",
+          "gasUsed": "0x5640",
+          "to": "0x1eacd100b0546e433fbf4d773109cad482c34686",
+          "input": "0x344fbd200000000000000000000000003303a9a3eb71836c0e88e8ab4eaf0d478e29e04c",
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x1eacd100b0546e433fbf4d773109cad482c34686",
+        "value": "0x0",
+        "input": "0x344fbd200000000000000000000000003303a9a3eb71836c0e88e8ab4eaf0d478e29e04c",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x344fbd20",
+        "decoded_function": "adoptSafeHarbor(address)",
+        "decoded_args": [
+          "0x3303a9a3eb71836c0e88e8ab4eaf0d478e29e04c"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1eacd100b0546e433fbf4d773109cad482c34686",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "adoptSafeHarbor(address)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

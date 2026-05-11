@@ -1,0 +1,46 @@
+{
+  "proposal_summary": "This proposal establishes and confirms a set of principles for the Uniswap DAO to guide decision-making, which will be published on-chain to the uniswap.eth ENS record upon execution.",
+  "disclosed_entities": [
+    {
+      "name": "ENS Public Resolver contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "published onchain using the setText function of ENS Public Resolver contract"
+    },
+    {
+      "name": "uniswap.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "for the uniswap.eth node"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Publish principles on-chain to ENS",
+      "canonical_action": "maintenance",
+      "object": "ENS Public Resolver",
+      "claimed_effect": "Updates the ENS text record for uniswap.eth with the approved DAO Principles.",
+      "textual_evidence": "On executing the proposal, the Principles will be published onchain using the setText function of ENS Public Resolver contract for the uniswap.eth node.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The only on-chain action is updating an ENS text record via a single function call.",
+    "textual_evidence": "On executing the proposal, the Principles will be published onchain using the setText function of ENS Public Resolver contract"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setText",
+      "textual_evidence": "published onchain using the setText function of ENS Public Resolver contract"
+    }
+  ],
+  "limitations": [
+    "No precise contract addresses (0x...) are provided in the text for the ENS Public Resolver or the exact target node hash."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

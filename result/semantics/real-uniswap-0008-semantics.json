@@ -1,0 +1,73 @@
+{
+  "proposal_summary": "The proposal requests the Uniswap DAO to match the 1M ARB grant received from the Arbitrum LTIPP by allocating $750k in UNI. These funds will be distributed alongside the LTIPP grant to incentivize liquidity providers on Uniswap via Gauntlet's dynamic optimization engine.",
+  "disclosed_entities": [
+    {
+      "name": "LTIPP Multisig",
+      "address": "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Multisig Address: 0x1026D3D219098D7b1B0A180F7E557DEeA7DA82C1 (⅔ Signers)"
+    },
+    {
+      "name": "Juanbug",
+      "address": "0xb8dcad009e533066f12e408075e10e3a30f1f15a",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "@Juanbug (UADP), 0xB8Dcad009E533066F12e408075E10E3a30F1f15A"
+    },
+    {
+      "name": "AbdullahUmar",
+      "address": "0x3d0e30031b547737ffcf13c127350159a6c4ce17",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "@AbdullahUmar (UADP), 0x3d0e30031b547737fFCf13c127350159A6C4ce17"
+    },
+    {
+      "name": "Picodes",
+      "address": "0x34eb88ead486a09cacd8dabe013682dc5f1dc41d",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Picodes (Merkl), 0x34Eb88EAD486A09CAcD8DaBe013682Dc5F1DC41D"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+      "textual_evidence": "Multisig Address: 0x1026D3D219098D7b1B0A180F7E557DEeA7DA82C1 (⅔ Signers)"
+    },
+    {
+      "address": "0xb8dcad009e533066f12e408075e10e3a30f1f15a",
+      "textual_evidence": "0xB8Dcad009E533066F12e408075E10E3a30F1f15A"
+    },
+    {
+      "address": "0x3d0e30031b547737ffcf13c127350159a6c4ce17",
+      "textual_evidence": "0x3d0e30031b547737fFCf13c127350159A6C4ce17"
+    },
+    {
+      "address": "0x34eb88ead486a09cacd8dabe013682dc5f1dc41d",
+      "textual_evidence": "0x34Eb88EAD486A09CAcD8DaBe013682Dc5F1DC41D"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Match Arbitrum LTIPP incentives by allocating $750k in UNI",
+      "canonical_action": "treasury_operation",
+      "object": "UNI",
+      "claimed_effect": "Allocates $750,000 worth of UNI to be matched alongside the ARB grant to incentivize liquidity providers.",
+      "textual_evidence": "The snapshot finished with the winner being $750k, hence we will move forward with this being the amount proposed. We will use the price of $9.74 per UNI for calculations.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal describes straightforward allocation of funds to match the Arbitrum LTIPP grant to be managed by a previously established entity structure.",
+    "textual_evidence": "If any funds are approved, they will follow a similar distribution structure and execution as above and be grouped together in Gauntlet’s incentives allocation."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No target address is explicitly provided for the UNI treasury transfer, though the funds will likely go to the disclosed multisig.",
+    "The exact on-chain payload is missing from the proposal description, only off-chain decisions and addresses are presented."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

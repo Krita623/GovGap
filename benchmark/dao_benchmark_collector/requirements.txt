@@ -1,0 +1,4 @@
+requests
+python-dotenv
+eth-abi
+eth-utils

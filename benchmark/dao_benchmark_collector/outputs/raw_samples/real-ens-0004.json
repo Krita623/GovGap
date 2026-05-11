@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-ens-0004",
+  "dao": {
+    "name": "ENS",
+    "chain_id": 1,
+    "governor_address": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "112764562576314516994943312429834673309292069549953740415731020720942627228986",
+    "proposal_url": "https://www.tally.xyz/gov/ens/proposal/112764562576314516994943312429834673309292069549953740415731020720942627228986",
+    "source": "tally",
+    "created_block": 15089482,
+    "executed_block": 15155489,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# [EP14][Executable] Funding True Names Ltd",
+    "description": "# [EP14][Executable] Funding True Names Ltd\n**Discussion Thread**: [Discuss](https://discuss.ens.domains/t/ep-executable-funding-true-names-ltd/13391)\n\n# Abstract\n\n  True Names Ltd (\u201cTNL\u201d) developed the Ethereum Name Service (\u201cENS\u201d) protocol, continues to manage the development of the ENS Protocol and solely focuses on this project. Incubated at the Ethereum Foundation in 2017, TNL spun out in 2018 with the charge of designing and deploying THE next generation naming service. TNL is now a growing team of web3 enthusiasts from across the globe working together to support the ENS Ecosystem that now has a passionate community that has registered over 1 million ENS names and uses more than 500 integrations. \n\nIn 2021, TNL initiated the creation of the ENS DAO with the goal of 1) furthering the development of the ENS Protocol and 2) funding public goods projects.\n\n \nIn consideration of the work completed thus far this calendar year and the work in the months and years to come, per Article III of the ENS Constitution, True Names Ltd respectfully requests an evergreen grant stream that will allow the organization to continue the development and improvement of the ENS Protocol. For Calendar Year 2022, this request will amount to $4,197,500 USDC which is equivalent to a daily stream of $11,500 USDC. In Q1 of each year, TNL or the ENS Dao may make requests to alter and/or terminate this evergreen grant stream.\n\n# Specification\nWe request that the ENS DAO approve a daily grant of $11,500 USDC to True Names Ltd, backdated to January 1st, 2022.\n\nThis will be accomplished by approving a dedicated token streaming contract at `0xB1377e4f32e6746444970823D5506F98f5A04201` to spend USDC on behalf of the DAO.\n"
+  },
+  "payload": {
+    "targets": [
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0x095ea7b3000000000000000000000000b1377e4f32e6746444970823d5506f98f5a04201ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xa217c0a9d5de2f1a70a10dbb2ba89c7505ce1198d5a1f1652af114f4d113850c",
+    "executed_tx_hash": "0xc4a4af68331ae686ad86e6171447f31512f9d2d66617d49f66dec3bcf60e491a"
+  }
+}

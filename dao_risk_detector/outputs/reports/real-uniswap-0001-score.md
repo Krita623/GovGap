@@ -1,0 +1,111 @@
+# DAO Proposal Semantic Gap Audit Report
+
+**Generated At**: 2026-05-08 11:15:24 UTC
+**Proposal ID**: 14
+**Simulation Status**: success
+**Trace Source**: simulated_trace
+
+---
+
+## Consistency Score
+
+**Overall Score**: 8/10
+**Risk Level**: LOW
+**Scoring Method**: worst-case risk gating, not weighted average.
+
+Overall score uses minimum dimension score 8 capped by highest severity LOW.
+
+---
+
+## Conflict Detection
+
+- Dimension score: 8/10
+- Severity: LOW
+- Summary: Execution includes undisclosed path components, but core business actions match proposal text.
+
+### Addresses Disclosed In Proposal Text
+- `0x1a9c8182c09f50c8318d769245bea52c32be35bc`
+- `0x1f98431c8ad98523631ae4a59f267346ea31f984`
+- `0x3d1d3e34f7fb6d26245e6640e1c50710efff15ba`
+- `0x5e4be8bc9637f0eaa1a755019e06a68ce081d58f`
+- `0x8397259c983751daf40400790063935a11afa28a`
+- `0x8a1b966ac46f42275860f905dbc75efbfdc12374`
+- `0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2`
+
+### Unaccounted Addresses
+- `0x28e4f3a7f651294b9564800b2d01f35189a5bfbe`
+  - Risk level: LOW
+  - Related actions: unable to confirm
+  - Evidence source: trace
+  - Note: this address was not explicitly disclosed in the proposal text. If the system cannot verify its role, manual review is required.
+
+### Key Findings
+- Unaccounted trace addresses
+  - Risk level: LOW
+  - Description: One or more addresses appeared in the trace without direct proposal text disclosure.
+  - Evidence source: trace
+
+---
+
+## Depth Analysis
+
+- Claimed complexity: moderate
+- Actual max depth: 1
+- Depth mismatch: no
+- Delegatecall count: 0
+
+Summary: Core business actions match proposal text; observed wrapper depth is within a normal review range.
+
+---
+
+## Function Semantic Match
+
+- Dimension score: 10/10
+- Severity: LOW
+- Summary: Claimed business actions match extracted business actions.
+- Claimed actions: parameter_update, bridge
+- Actual actions: bridge
+
+### Matched Functions
+- `sendMessageToChild(address,bytes)`
+- `syncState(address,bytes)`
+
+---
+
+## Potential Risk Findings
+
+### 1. LOW - Unaccounted trace addresses
+
+- **Severity**: LOW
+- **Description**: One or more addresses appeared in the trace without direct proposal text disclosure.
+- **Evidence Source**: trace
+- **Confidence**: 0.9
+- **Recommendation**: Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.
+- **Key Evidence**:
+  - Unaccounted addresses: 0x28e4f3a7f651294b9564800b2d01f35189a5bfbe
+
+---
+
+## Security Conclusion
+
+The proposal text and the observed payload effects are broadly consistent. No clear Semantic Gap was found. Reviewers should still manually review any low-risk undisclosed addresses or unknown selectors.
+
+---
+
+## Summary
+
+The proposal text claims: A proposal to implement the 1 basis point (1bp) / 1 tick fee tier on Polygon, serving as the first Uniswap cross-chain governance proposal utilizing the Fx-Portal messaging mechanism between Ethereum and Polygon.
+The payload actually shows: bridge. Decoded functions include: sendMessageToChild(address,bytes), syncState(address,bytes).
+The most important scoring issue is `conflict_detection`, which scored 8/10.
+No HIGH or CRITICAL finding was generated. Unknown or unclear fields should still be manually reviewed.
+
+---
+
+## Machine-Verifiable Controls
+
+- LLM used for scoring: false
+- LLM used for trace analysis: false
+- Unsupported claims allowed: false
+- Unknown fields preserved as unknown: true
+
+This report is generated from structured rule-engine output and a deterministic template. The LLM is only used for proposal-text semantic extraction and is not used for scoring, trace analysis, or final conclusions.

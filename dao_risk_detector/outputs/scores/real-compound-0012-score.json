@@ -1,0 +1,1325 @@
+{
+  "metadata": {
+    "proposal_id": "240",
+    "generated_at": "2026-05-08T11:15:24.055590+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Gauntlet recommends decreasing the Collateral Factor by 5% for various Compound v2 collateral assets (AAVE, BAT, COMP, LINK, MKR, SUSHI, UNI, YFI, ZRX) as part of Phase 11 of the v2 deprecation.",
+    "disclosed_entities": [
+      {
+        "name": "cToken contracts",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "implicit",
+        "textual_evidence": "updates the parameters using the _setCollateralFactor method of the relevant cToken contracts."
+      },
+      {
+        "name": "Gauntlet",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Gauntlet recommends decreasing the Collateral Factor for v2 collateral assets."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Decrease Collateral Factor",
+        "canonical_action": "parameter_update",
+        "object": "cToken contracts",
+        "claimed_effect": "Decreases the Collateral Factor for AAVE, BAT, COMP, LINK, MKR, SUSHI, UNI, YFI, and ZRX by up to 5% to further deprecate the v2 market.",
+        "textual_evidence": "Decrease AAVE Collateral Factor from 38% to 33% ... updates the parameters using the _setCollateralFactor method",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal only consists of routine collateral factor parameter updates.",
+      "textual_evidence": "Simple Summary\nFor Phase 11 of the Compound v2 deprecation, Gauntlet recommends decreasing the Collateral Factor for v2 collateral assets."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "_setCollateralFactor",
+        "textual_evidence": "The proposal updates the parameters using the _setCollateralFactor method of the relevant cToken contracts."
+      }
+    ],
+    "limitations": [
+      "No explicit contract addresses are provided in the proposal text, so it is impossible to verify the exact targets purely from this text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000e65cdb6479bac1e22340e4e755fae7e509ecd06c0000000000000000000000000000000000000000000000000494654067e10000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c",
+          330000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000e65cdb6479bac1e22340e4e755fae7e509ecd06c0000000000000000000000000000000000000000000000000494654067e10000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c",
+          330000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df000000000000000000000000e65cdb6479bac1e22340e4e755fae7e509ecd06c",
+        "output": "0x000000000000000000000000000000000000000000000005065561bcf5b8b400",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+        "to_address": "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000500000000000051b5000000000000000000000000000000000000000000000000000000022879ddd50000000000000000000000000000000000000000000000000000000069fcb12d0000000000000000000000000000000000000000000000000000000069fcb13b00000000000000000000000000000000000000000000000500000000000051b5",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+        "to_address": "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000000000000000051b5000000000000000000000000000000000000000000000000000000022879ddd50000000000000000000000000000000000000000000000000000000069fcb12d0000000000000000000000000000000000000000000000000000000069fcb13b00000000000000000000000000000000000000000000000000000000000051b5",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee0000000000000000000000006c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e000000000000000000000000000000000000000000000000058d15e176280000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e",
+          400000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee0000000000000000000000006c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e000000000000000000000000000000000000000000000000058d15e176280000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e",
+          400000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df0000000000000000000000006c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e",
+        "output": "0x0000000000000000000000000000000000000000000000000174f77fe4544800",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+        "to_address": "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000600000000000038590000000000000000000000000000000000000000000000000000000000a030220000000000000000000000000000000000000000000000000000000069fcafa40000000000000000000000000000000000000000000000000000000069fcafbb0000000000000000000000000000000000000000000000060000000000003859",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+        "to_address": "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000000000000000038590000000000000000000000000000000000000000000000000000000000a030220000000000000000000000000000000000000000000000000000000069fcafa40000000000000000000000000000000000000000000000000000000069fcafbb0000000000000000000000000000000000000000000000000000000000003859",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000070e36f6bf80a52b3b46b3af8e106cc0ed743e8e400000000000000000000000000000000000000000000000002c68af0bb140000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
+          200000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000070e36f6bf80a52b3b46b3af8e106cc0ed743e8e400000000000000000000000000000000000000000000000002c68af0bb140000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
+          200000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df00000000000000000000000070e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
+        "output": "0x00000000000000000000000000000000000000000000000145170c1bb9190800",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "to_address": "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x0000000000000000000000000000000000000000000000060000000000004f0f000000000000000000000000000000000000000000000000000000008ba006d20000000000000000000000000000000000000000000000000000000069fcbc020000000000000000000000000000000000000000000000000000000069fcbc1b0000000000000000000000000000000000000000000000060000000000004f0f",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "to_address": "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000004f0f000000000000000000000000000000000000000000000000000000008ba006d20000000000000000000000000000000000000000000000000000000069fcbc020000000000000000000000000000000000000000000000000000000069fcbc1b0000000000000000000000000000000000000000000000000000000000004f0f",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000face851a4921ce59e912d19329929ce6da6eb0c700000000000000000000000000000000000000000000000005698eef06670000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xface851a4921ce59e912d19329929ce6da6eb0c7",
+          390000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000face851a4921ce59e912d19329929ce6da6eb0c700000000000000000000000000000000000000000000000005698eef06670000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xface851a4921ce59e912d19329929ce6da6eb0c7",
+          390000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df000000000000000000000000face851a4921ce59e912d19329929ce6da6eb0c7",
+        "output": "0x00000000000000000000000000000000000000000000000089acdc24d886b400",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0xface851a4921ce59e912d19329929ce6da6eb0c7"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+        "to_address": "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000007000000000000686f000000000000000000000000000000000000000000000000000000003b218d550000000000000000000000000000000000000000000000000000000069fcbd780000000000000000000000000000000000000000000000000000000069fcbd8f000000000000000000000000000000000000000000000007000000000000686f",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+        "to_address": "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000000000000000000686f000000000000000000000000000000000000000000000000000000003b218d550000000000000000000000000000000000000000000000000000000069fcbd780000000000000000000000000000000000000000000000000000000069fcbd8f000000000000000000000000000000000000000000000000000000000000686f",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000095b4ef2869ebd94beb4eee400a99824bf5dc325b0000000000000000000000000000000000000000000000000494654067e10000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x95b4ef2869ebd94beb4eee400a99824bf5dc325b",
+          330000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000095b4ef2869ebd94beb4eee400a99824bf5dc325b0000000000000000000000000000000000000000000000000494654067e10000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x95b4ef2869ebd94beb4eee400a99824bf5dc325b",
+          330000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df00000000000000000000000095b4ef2869ebd94beb4eee400a99824bf5dc325b",
+        "output": "0x000000000000000000000000000000000000000000000064a0d97c286aab7000",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0x95b4ef2869ebd94beb4eee400a99824bf5dc325b"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xec1d1b3b0443256cc3860e24a46f108e699484aa",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xec1d1b3b0443256cc3860e24a46f108e699484aa",
+        "to_address": "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xec1d1b3b0443256cc3860e24a46f108e699484aa",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x0000000000000000000000000000000000000000000000030000000000004a340000000000000000000000000000000000000000000000000000002b38335cbc0000000000000000000000000000000000000000000000000000000069fcb9b50000000000000000000000000000000000000000000000000000000069fcb9c30000000000000000000000000000000000000000000000030000000000004a34",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xec1d1b3b0443256cc3860e24a46f108e699484aa",
+        "to_address": "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000004a340000000000000000000000000000000000000000000000000000002b38335cbc0000000000000000000000000000000000000000000000000000000069fcb9b50000000000000000000000000000000000000000000000000000000069fcb9c30000000000000000000000000000000000000000000000000000000000004a34",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee0000000000000000000000004b0181102a0112a2ef11abee5563bb4a3176c9d700000000000000000000000000000000000000000000000003bf3b91c95b0000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x4b0181102a0112a2ef11abee5563bb4a3176c9d7",
+          270000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee0000000000000000000000004b0181102a0112a2ef11abee5563bb4a3176c9d700000000000000000000000000000000000000000000000003bf3b91c95b0000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x4b0181102a0112a2ef11abee5563bb4a3176c9d7",
+          270000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df0000000000000000000000004b0181102a0112a2ef11abee5563bb4a3176c9d7",
+        "output": "0x0000000000000000000000000000000000000000000000000326a239b73f4000",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0x4b0181102a0112a2ef11abee5563bb4a3176c9d7"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+        "to_address": "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000004000000000000439000000000000000000000000000000000000000000000000000000000015a72500000000000000000000000000000000000000000000000000000000069fca3e10000000000000000000000000000000000000000000000000000000069fca3f70000000000000000000000000000000000000000000000040000000000004390",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+        "to_address": "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000000000000000000439000000000000000000000000000000000000000000000000000000000015a72500000000000000000000000000000000000000000000000000000000069fca3e10000000000000000000000000000000000000000000000000000000069fca3f70000000000000000000000000000000000000000000000000000000000004390",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000035a18000230da775cac24873d00ff85bccded55000000000000000000000000000000000000000000000000009b6e64a8ec60000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x35a18000230da775cac24873d00ff85bccded550",
+          700000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000035a18000230da775cac24873d00ff85bccded55000000000000000000000000000000000000000000000000009b6e64a8ec60000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x35a18000230da775cac24873d00ff85bccded550",
+          700000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df00000000000000000000000035a18000230da775cac24873d00ff85bccded550",
+        "output": "0x0000000000000000000000000000000000000000000000002f78d434bf413000",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0x35a18000230da775cac24873d00ff85bccded550"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x553303d460ee0afb37edff9be42922d8ff63220e",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x553303d460ee0afb37edff9be42922d8ff63220e",
+        "to_address": "0xdef8c51d7c1040637a198effc39613865b32ea51",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x553303d460ee0afb37edff9be42922d8ff63220e",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000007000000000000522700000000000000000000000000000000000000000000000000000000146399ac0000000000000000000000000000000000000000000000000000000069fcb32c0000000000000000000000000000000000000000000000000000000069fcb33f0000000000000000000000000000000000000000000000070000000000005227",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x553303d460ee0afb37edff9be42922d8ff63220e",
+        "to_address": "0xdef8c51d7c1040637a198effc39613865b32ea51",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000000000000000000522700000000000000000000000000000000000000000000000000000000146399ac0000000000000000000000000000000000000000000000000000000069fcb32c0000000000000000000000000000000000000000000000000000000069fcb33f0000000000000000000000000000000000000000000000000000000000005227",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000080a2ae356fc9ef4305676f7a3e2ed04e12c3394600000000000000000000000000000000000000000000000004db732547630000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x80a2ae356fc9ef4305676f7a3e2ed04e12c33946",
+          350000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee00000000000000000000000080a2ae356fc9ef4305676f7a3e2ed04e12c3394600000000000000000000000000000000000000000000000004db732547630000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0x80a2ae356fc9ef4305676f7a3e2ed04e12c33946",
+          350000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df00000000000000000000000080a2ae356fc9ef4305676f7a3e2ed04e12c33946",
+        "output": "0x0000000000000000000000000000000000000000000000922153b7e92b9b4000",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0x80a2ae356fc9ef4305676f7a3e2ed04e12c33946"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+        "to_address": "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x0000000000000000000000000000000000000000000000060000000000002bff0000000000000000000000000000000000000000000000000000003ec32f01500000000000000000000000000000000000000000000000000000000069fca3de0000000000000000000000000000000000000000000000000000000069fca3eb0000000000000000000000000000000000000000000000060000000000002bff",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+        "to_address": "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000002bff0000000000000000000000000000000000000000000000000000003ec32f01500000000000000000000000000000000000000000000000000000000069fca3de0000000000000000000000000000000000000000000000000000000069fca3eb0000000000000000000000000000000000000000000000000000000000002bff",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000b3319f5d18bc0d84dd1b4825dcde5d5f7266d40700000000000000000000000000000000000000000000000003782dace9d90000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407",
+          250000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000b3319f5d18bc0d84dd1b4825dcde5d5f7266d40700000000000000000000000000000000000000000000000003782dace9d90000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407",
+          250000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "value": "0",
+        "input": "0xfc57d4df000000000000000000000000b3319f5d18bc0d84dd1b4825dcde5d5f7266d407",
+        "output": "0x0000000000000000000000000000000000000000000000000194afc00e52e400",
+        "depth": 2,
+        "function_selector": "0xfc57d4df",
+        "decoded_function": "getUnderlyingPrice(address)",
+        "decoded_args": [
+          "0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 3,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+        "to_address": "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+        "value": "0",
+        "input": "0x313ce567",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000008",
+        "depth": 4,
+        "function_selector": "0x313ce567",
+        "decoded_function": "decimals()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "to_address": "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000700000000000037fb0000000000000000000000000000000000000000000000000000000000adcfc10000000000000000000000000000000000000000000000000000000069fca2940000000000000000000000000000000000000000000000000000000069fca2a700000000000000000000000000000000000000000000000700000000000037fb",
+        "depth": 3,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+        "to_address": "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000000000000000037fb0000000000000000000000000000000000000000000000000000000000adcfc10000000000000000000000000000000000000000000000000000000069fca2940000000000000000000000000000000000000000000000000000000069fca2a700000000000000000000000000000000000000000000000000000000000037fb",
+        "depth": 4,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 4,
+    "unique_addresses": [
+      "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+      "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+      "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+      "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+      "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+      "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+      "0x553303d460ee0afb37edff9be42922d8ff63220e",
+      "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+      "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+      "0x8cf42b08ad13761345531b839487aa4d113955d9",
+      "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+      "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+      "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+      "0xbafe01ff935c7305907c33bf824352ee5979b526",
+      "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+      "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+      "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+      "0xdef8c51d7c1040637a198effc39613865b32ea51",
+      "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+      "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+      "0xec1d1b3b0443256cc3860e24a46f108e699484aa"
+    ],
+    "delegatecall_count": 9,
+    "staticcall_count": 45,
+    "external_call_count": 9,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "_setCollateralFactor(address,uint256)",
+      "decimals()",
+      "getUnderlyingPrice(address)",
+      "latestRoundData()"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "240:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+      "depth": 1,
+      "function_selector": "0xe4028eee",
+      "decoded_function": "_setCollateralFactor(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0xe4028eee000000000000000000000000e65cdb6479bac1e22340e4e755fae7e509ecd06c0000000000000000000000000000000000000000000000000494654067e10000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe4028eee",
+        "decoded_function": "_setCollateralFactor(address,uint256)",
+        "decoded_args": [
+          "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c",
+          330000000000000000
+        ],
+        "error": null,
+        "merged_count": 9
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+        "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+        "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+        "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+        "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+        "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+        "0x553303d460ee0afb37edff9be42922d8ff63220e",
+        "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+        "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "0x8cf42b08ad13761345531b839487aa4d113955d9",
+        "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+        "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+        "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+        "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+        "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+        "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "0xdef8c51d7c1040637a198effc39613865b32ea51",
+        "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+        "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+        "0xec1d1b3b0443256cc3860e24a46f108e699484aa"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+                "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+                "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+                "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+                "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+                "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+                "0x553303d460ee0afb37edff9be42922d8ff63220e",
+                "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+                "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+                "0x8cf42b08ad13761345531b839487aa4d113955d9",
+                "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+                "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+                "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+                "0xbafe01ff935c7305907c33bf824352ee5979b526",
+                "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+                "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+                "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+                "0xdef8c51d7c1040637a198effc39613865b32ea51",
+                "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+                "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+                "0xec1d1b3b0443256cc3860e24a46f108e699484aa"
+              ],
+              "related_actions": [
+                {
+                  "id": "240:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                  "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+                  "depth": 1,
+                  "function_selector": "0xe4028eee",
+                  "decoded_function": "_setCollateralFactor(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+            "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+            "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+            "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+            "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+            "0x553303d460ee0afb37edff9be42922d8ff63220e",
+            "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x8cf42b08ad13761345531b839487aa4d113955d9",
+            "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+            "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+            "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+            "0xbafe01ff935c7305907c33bf824352ee5979b526",
+            "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+            "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+            "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+            "0xdef8c51d7c1040637a198effc39613865b32ea51",
+            "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+            "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+            "0xec1d1b3b0443256cc3860e24a46f108e699484aa"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+            "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+            "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+            "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+            "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+            "0x553303d460ee0afb37edff9be42922d8ff63220e",
+            "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x8cf42b08ad13761345531b839487aa4d113955d9",
+            "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+            "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+            "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+            "0xbafe01ff935c7305907c33bf824352ee5979b526",
+            "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+            "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+            "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+            "0xdef8c51d7c1040637a198effc39613865b32ea51",
+            "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+            "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+            "0xec1d1b3b0443256cc3860e24a46f108e699484aa"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 4,
+      "depth_mismatch": true,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal only consists of routine collateral factor parameter updates.",
+            "textual_evidence": "Simple Summary\nFor Phase 11 of the Compound v2 deprecation, Gauntlet recommends decreasing the Collateral Factor for v2 collateral assets."
+          },
+          "actual_max_depth": 4,
+          "delegatecall_count": 9,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "_setCollateralFactor(address,uint256)",
+        "decimals()",
+        "getUnderlyingPrice(address)",
+        "latestRoundData()"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Decrease Collateral Factor",
+              "canonical_action": "parameter_update",
+              "object": "cToken contracts",
+              "claimed_effect": "Decreases the Collateral Factor for AAVE, BAT, COMP, LINK, MKR, SUSHI, UNI, YFI, and ZRX by up to 5% to further deprecate the v2 market.",
+              "textual_evidence": "Decrease AAVE Collateral Factor from 38% to 33% ... updates the parameters using the _setCollateralFactor method",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "240:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+              "depth": 1,
+              "function_selector": "0xe4028eee",
+              "decoded_function": "_setCollateralFactor(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "_setCollateralFactor(address,uint256)",
+            "decimals()",
+            "getUnderlyingPrice(address)",
+            "latestRoundData()"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1c9049c48c24111a3546a73c67fd2a4fc6c86fdc",
+            "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+            "0x2885d15b8af22648b98b122b22fdf4d2a56c6023",
+            "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c",
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x525b031c1ee01502c113500a2d1a999cd3f9c98f",
+            "0x547a514d5e3769680ce22b2361c10ea13619e8a9",
+            "0x553303d460ee0afb37edff9be42922d8ff63220e",
+            "0x658aa21601c8c0bb511c21999f7cad35b6a15192",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x8cf42b08ad13761345531b839487aa4d113955d9",
+            "0x9441d7556e7820b5ca42082cfa99487d56aca958",
+            "0x96d6e33b411dc1f4e3f1e894a5a5d9ce0f96738d",
+            "0xa027702dbb89fbd58938e4324ac03b58d812b0e1",
+            "0xbafe01ff935c7305907c33bf824352ee5979b526",
+            "0xcc70f09a6cc17553b2e31954cd36e4a2d89501f7",
+            "0xd8b9aa6e811c935ef63e877cfa7be276931293da",
+            "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+            "0xdef8c51d7c1040637a198effc39613865b32ea51",
+            "0xe88c679e2d42963acdc76810d21dac2e6a8d7c29",
+            "0xe9a6bccde4875f8c1228975f9c84598558a75ac8",
+            "0xec1d1b3b0443256cc3860e24a46f108e699484aa"
+          ],
+          "related_actions": [
+            {
+              "id": "240:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+              "depth": 1,
+              "function_selector": "0xe4028eee",
+              "decoded_function": "_setCollateralFactor(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "proposal_summary": "The proposal packages and executes three previously passed Snapshot proposals: EP8 to reimburse True Names, EP9 to change to the Exponential Premium Price Oracle, and EP10 to fund a DAO-Governed Identity Server.",
+  "disclosed_entities": [
+    {
+      "name": "True Names",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Reimburse True Names for expenses and tax obligations"
+    },
+    {
+      "name": "DAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "incurred on behalf of the DAO"
+    },
+    {
+      "name": "Exponential Premium Price Oracle",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Change to Exponential Premium Price Oracle"
+    },
+    {
+      "name": "DAO-Governed Identity Server",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Fund a DAO-Governed Identity Server"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Reimburse True Names for expenses and tax obligations",
+      "canonical_action": "transfer",
+      "object": "True Names",
+      "claimed_effect": "Reimburses the entity for expenses incurred for the DAO",
+      "textual_evidence": "[EP8] [Executable] Reimburse True Names for expenses and tax obligations incurred on behalf of the DAO",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "Change to Exponential Premium Price Oracle",
+      "canonical_action": "parameter_update",
+      "object": "Exponential Premium Price Oracle",
+      "claimed_effect": "Updates the oracle used for ENS premium pricing",
+      "textual_evidence": "[EP9] [Executable] Change to Exponential Premium Price Oracle",
+      "confidence": 0.8
+    },
+    {
+      "raw_action": "Fund a DAO-Governed Identity Server",
+      "canonical_action": "treasury_operation",
+      "object": "DAO-Governed Identity Server",
+      "claimed_effect": "Allocates funds to an identity server governed by the DAO",
+      "textual_evidence": "[EP10] [Executable] Fund a DAO-Governed Identity Server",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal bundles three distinct executable items (fund transfers and an oracle update), requiring multiple state changes.",
+    "textual_evidence": "Executes EP8, EP9 and EP10 as passed on Snapshot"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The text only includes Snapshot hashes, but lacks the actual on-chain payload addresses, target contract addresses, and execution parameters (such as fund amounts)."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

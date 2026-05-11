@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-ens-0003",
+  "dao": {
+    "name": "ENS",
+    "chain_id": 1,
+    "governor_address": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "90476529665364161211265365238121921179703522228680648046371476645353679539653",
+    "proposal_url": "https://www.tally.xyz/gov/ens/proposal/90476529665364161211265365238121921179703522228680648046371476645353679539653",
+    "source": "tally",
+    "created_block": 13942537,
+    "executed_block": 14005716,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "[EP2] Retrospective Airdrop ",
+    "description": "[EP2] Retrospective Airdrop \nEnacts EP2 as approved by Snapshot vote, and described in full here: https://github.com/ensdomains/governance-docs/blob/main/governance-proposals/ep2-executable-retrospective-airdrop-for-accounts-that-owned-another-accounts-primary-ens-1.md"
+  },
+  "payload": {
+    "targets": [
+      "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0x095ea7b30000000000000000000000004a1241c2cf2fd4a39918bcd738f90bd7094ec2dc000000000000000000000000000000000000000000002e700a82ee7da5733d9f"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x41d1495f2c642821e6ead76c689ba9c6e8bfba91e6149a3c2eaa7d60e379b357",
+    "executed_tx_hash": "0xe0b0c1ec787b0e24e079734dda5f6571d5495518700aed89d6da87d9fd47475e"
+  }
+}

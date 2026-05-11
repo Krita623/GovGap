@@ -1,0 +1,54 @@
+{
+  "proposal_summary": "Requesting 694.20 ETH for Gnars to scale the provision of extremely nounish public goods through action sports activations, onboarding initiatives via Prop House and That's Gnarly, and funding the Gnars treasury.",
+  "disclosed_entities": [
+    {
+      "name": "gnars.eth",
+      "address": "0x0658f4ed17289144717713adffc2539ef7c2ef8e",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Funding receival to gnars.eth, a gnosis safe multisig governed by Gnars DAO members... [gnosis safe](https://gnosis-safe.io/app/eth:0x0658f4eD17289144717713ADfFC2539eF7c2EF8e/settings/owners)"
+    },
+    {
+      "name": "Gnars DAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "governed by Gnars DAO members as described in Proposal 51"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x0658f4ed17289144717713adffc2539ef7c2ef8e",
+      "textual_evidence": "https://gnosis-safe.io/app/eth:0x0658f4eD17289144717713ADfFC2539eF7c2EF8e/settings/owners"
+    },
+    {
+      "address": "0xdd930e878bdf23a78573998a451464c5bf56eeca",
+      "textual_evidence": "https://create.zora.co/collections/0xdd930e878bdf23a78573998a451464c5bf56eeca"
+    },
+    {
+      "address": "0x8c5effc5fb5d3805212713115427f4efe82a40be",
+      "textual_evidence": "https://create.zora.co/collections/0x8c5effc5fb5d3805212713115427f4efe82a40be"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 694.20 ETH to gnars.eth multisig",
+      "canonical_action": "treasury_operation",
+      "object": "gnars.eth multisig",
+      "claimed_effect": "Fund the activities, onboarding campaigns, and treasury acquisitions described in the proposal.",
+      "textual_evidence": "Requesting 694.20 ETH... Funding receival to gnars.eth, a gnosis safe multisig",
+      "confidence": 1.0
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires a standard transfer of funds to a specified multisig, although it funds a broad set of operational goals rather than complex on-chain logic.",
+    "textual_evidence": "Funding receival to gnars.eth, a gnosis safe multisig governed by Gnars DAO members"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No on-chain contract code beyond address transfers is provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

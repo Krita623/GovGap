@@ -1,0 +1,80 @@
+{
+  "proposal_summary": "Add wsuperOETHb as collateral into the cUSDCv3 market on Base.",
+  "disclosed_entities": [
+    {
+      "name": "wsuperOETHb",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "WOOF! proposes to add wsuperOETHb into cUSDCv3 on Base network."
+    },
+    {
+      "name": "cUSDCv3",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "add wsuperOETHb into cUSDCv3 on Base network"
+    },
+    {
+      "name": "USDC Comet",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adds wsuperOETHb to the USDC Comet on Base"
+    },
+    {
+      "name": "bridge",
+      "address": null,
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "calls across the bridge to the governance receiver on Base."
+    },
+    {
+      "name": "governance receiver",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "calls across the bridge to the governance receiver on Base."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "add wsuperOETHb to the USDC Comet on Base",
+      "canonical_action": "parameter_update",
+      "object": "wsuperOETHb",
+      "claimed_effect": "Adds wsuperOETHb as collateral with parameters from Gauntlet",
+      "textual_evidence": "The first proposal action adds wsuperOETHb to the USDC Comet on Base.",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "sends encoded calls across the bridge",
+      "canonical_action": "bridge",
+      "object": "bridge",
+      "claimed_effect": "Triggers 'addAsset' and 'deployAndUpgradeTo' on the Base governance receiver",
+      "textual_evidence": "This sends the encoded 'addAsset' and 'deployAndUpgradeTo' calls across the bridge to the governance receiver on Base.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves cross-chain actions and parameter updates as well as market upgrades via a bridge.",
+    "textual_evidence": "This sends the encoded 'addAsset' and 'deployAndUpgradeTo' calls across the bridge to the governance receiver on Base."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "addAsset",
+      "textual_evidence": "encoded 'addAsset' and 'deployAndUpgradeTo' calls"
+    },
+    {
+      "function_name": "deployAndUpgradeTo",
+      "textual_evidence": "encoded 'addAsset' and 'deployAndUpgradeTo' calls"
+    }
+  ],
+  "limitations": [
+    "No precise contract addresses are provided in the text.",
+    "Specific parameter bounds (LTV, borrow limits) are omitted, deferring to external links."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

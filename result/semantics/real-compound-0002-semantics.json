@@ -1,0 +1,54 @@
+{
+  "proposal_summary": "A proposal by Gauntlet to increase the WBTC supply cap in the Arbitrum v3 USDC Native comet from 300 to 600 tokens.",
+  "disclosed_entities": [
+    {
+      "name": "Arbitrum v3 USDC Native comet",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adjust one risk parameter in the Arbitrum v3 USDC Native comet."
+    },
+    {
+      "name": "WBTC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Increase WBTC supply cap from 300 tokens to 600 tokens"
+    },
+    {
+      "name": "Configurator",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "through the updateAssetSupplyCap method in the Configurator contract."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Increase WBTC supply cap from 300 tokens to 600 tokens",
+      "canonical_action": "parameter_update",
+      "object": "WBTC supply cap",
+      "claimed_effect": "decrease WBTC supply cap utilization from 100% to 50%, resulting in $8.02M additional WBTC able to be supplied",
+      "textual_evidence": "Increase WBTC supply cap from 300 tokens to 600 tokens ... This change will decrease WBTC supply cap utilization from 100% to 50%",
+      "confidence": 1.0
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only adjusts a single risk parameter (a supply cap) on a single asset.",
+    "textual_evidence": "adjust one risk parameter"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "updateAssetSupplyCap",
+      "textual_evidence": "through the updateAssetSupplyCap method in the Configurator contract."
+    }
+  ],
+  "limitations": [
+    "No target contract addresses are disclosed in the proposal text.",
+    "No explicit calldata or transaction payloads are provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

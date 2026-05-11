@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "proposal_id": "71020107401388505040510993373598301285550678565865201408741893567942851985019",
+    "generated_at": "2026-05-08T11:15:23.921256+00:00",
+    "chain_id": 42161,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal requests Arbitrum DAO to register the Sky Custom Gateway contracts in the Arbitrum Router to allow users to bridge USDS and sUSDS through the official Arbitrum Bridge UI.",
+    "disclosed_entities": [
+      {
+        "name": "USDS on Ethereum",
+        "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "USDS address on Ethereum - https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F"
+      },
+      {
+        "name": "sUSDS on Ethereum",
+        "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "sUSDS address on Ethereum - https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD"
+      },
+      {
+        "name": "Sky Custom Gateway on Ethereum",
+        "address": "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+        "entity_type": "bridge",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Sky Custom Gateway on Ethereum - https://etherscan.io/address/0x84b9700e28b23f873b82c1beb23d86c091b6079e"
+      },
+      {
+        "name": "Sky Custom Gateway on Arbitrum",
+        "address": "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+        "entity_type": "bridge",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Sky Custom Gateway on Arbitrum - https://arbiscan.io/address/0x13f7f24ca959359a4d710d32c715d4bce273c793"
+      },
+      {
+        "name": "Official USDS on Arbitrum",
+        "address": "0x6491c05a82219b8d1479057361ff1654749b876b",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Official USDS address on Arbitrum - https://arbiscan.io/token/0x6491c05a82219b8d1479057361ff1654749b876b"
+      },
+      {
+        "name": "Official sUSDS on Arbitrum",
+        "address": "0xddb46999f8891663a8f2828d25298f70416d7610",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Official sUSDS address on Arbitrum - https://arbiscan.io/token/0xdDb46999F8891663a8F2828d25298f70416d7610"
+      },
+      {
+        "name": "L1GatewayRouter",
+        "address": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "entity_type": "bridge",
+        "disclosure_level": "explicit",
+        "textual_evidence": "L1GatewayRouter contract [2] on Ethereum... [2] https://etherscan.io/address/0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "textual_evidence": "https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F"
+      },
+      {
+        "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "textual_evidence": "https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD"
+      },
+      {
+        "address": "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+        "textual_evidence": "https://etherscan.io/address/0x84b9700e28b23f873b82c1beb23d86c091b6079e"
+      },
+      {
+        "address": "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+        "textual_evidence": "https://arbiscan.io/address/0x13f7f24ca959359a4d710d32c715d4bce273c793"
+      },
+      {
+        "address": "0x6491c05a82219b8d1479057361ff1654749b876b",
+        "textual_evidence": "https://arbiscan.io/token/0x6491c05a82219b8d1479057361ff1654749b876b"
+      },
+      {
+        "address": "0xddb46999f8891663a8f2828d25298f70416d7610",
+        "textual_evidence": "https://arbiscan.io/token/0xdDb46999F8891663a8F2828d25298f70416d7610"
+      },
+      {
+        "address": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "textual_evidence": "https://etherscan.io/address/0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens. This action will register the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router.",
+        "canonical_action": "parameter_update",
+        "object": "L1GatewayRouter",
+        "claimed_effect": "Updates gateway routes for USDS and sUSDS in the L1 router",
+        "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Requires updating the L1GatewayRouter mapping through a DAO action, which requires technical collaboration with Offchain Labs and standard DAO voting processes.",
+      "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "setGateways",
+        "textual_evidence": "execution of the setGateways method [1] on the L1GatewayRouter contract"
+      }
+    ],
+    "limitations": [
+      "No explicit ABI details."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0x0000000000000000000000000000000000000064",
+        "value": "0x0",
+        "input": "0x928c169a000000000000000000000000e6841d92b0c345144506576ec13ecf5103ac7f49000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000003a48f2a0bb000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000003a190ca590a6180243a42a14ffea85b209f13ffbcdacd53669a94f4e2b85c2be000000000000000000000000000000000000000000000000000000000003f48000000000000000000000000000000000000000000000000000000000000000010000000000000000000000003fffbadaf827559da092217e474760e2b2c3cedd00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000001c6bf526340000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001e41cff79cd0000000000000000000000007f089c0daf0181f7afd533f5f3265301bb09d56200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000164594767d500000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001c6bf526340000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000dc035d45d973e3ec169d2276ddab16f1e407384f000000000000000000000000a3931d71877c0e7a3148cb7eb4463524fec27fbd000000000000000000000000000000000000000000000000000000000000000200000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e00000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x928c169a",
+        "decoded_function": "sendTxToL1(address,bytes)",
+        "decoded_args": [
+          "0xe6841d92b0c345144506576ec13ecf5103ac7f49",
+          "0x8f2a0bb000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000003a190ca590a6180243a42a14ffea85b209f13ffbcdacd53669a94f4e2b85c2be000000000000000000000000000000000000000000000000000000000003f48000000000000000000000000000000000000000000000000000000000000000010000000000000000000000003fffbadaf827559da092217e474760e2b2c3cedd00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000001c6bf526340000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001e41cff79cd0000000000000000000000007f089c0daf0181f7afd533f5f3265301bb09d56200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000164594767d500000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001c6bf526340000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000dc035d45d973e3ec169d2276ddab16f1e407384f000000000000000000000000a3931d71877c0e7a3148cb7eb4463524fec27fbd000000000000000000000000000000000000000000000000000000000000000200000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e00000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": "invalid opcode: INVALID"
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x0000000000000000000000000000000000000064",
+      "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "sendTxToL1(address,bytes)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Trace includes undisclosed execution path components without extracted risk actions.",
+      "disclosed_addresses": [
+        "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+        "0x6491c05a82219b8d1479057361ff1654749b876b",
+        "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+        "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "0xddb46999f8891663a8f2828d25298f70416d7610"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0000000000000000000000000000000000000064",
+        "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0000000000000000000000000000000000000064",
+                "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+            "0x6491c05a82219b8d1479057361ff1654749b876b",
+            "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+            "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+            "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+            "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+            "0xddb46999f8891663a8f2828d25298f70416d7610"
+          ],
+          "trace_unique_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Requires updating the L1GatewayRouter mapping through a DAO action, which requires technical collaboration with Offchain Labs and standard DAO voting processes.",
+            "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "sendTxToL1(address,bytes)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [],
+      "summary": "No deterministic business action was extracted from the trace.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens. This action will register the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router.",
+              "canonical_action": "parameter_update",
+              "object": "L1GatewayRouter",
+              "claimed_effect": "Updates gateway routes for USDS and sUSDS in the L1 router",
+              "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "sendTxToL1(address,bytes)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

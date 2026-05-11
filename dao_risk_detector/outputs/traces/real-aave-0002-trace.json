@@ -1,0 +1,97 @@
+{
+  "proposal_id": "7",
+  "simulation_status": "reverted_with_trace",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "executor": "0xEC568fffba86c094cf06b22134B23074DFE2252c",
+      "warning": "fallback_to_governor",
+      "source": "dao.governor_address",
+      "confidence": 0.4,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+          "gas": "0xbe69cb",
+          "gasUsed": "0x6843",
+          "to": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+          "input": "0x61461954",
+          "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+          "error": "execution reverted",
+          "revertReason": "Ownable: caller is not the owner",
+          "calls": [
+            {
+              "from": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+              "gas": "0xbb6485",
+              "gasUsed": "0x9fa",
+              "to": "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+              "input": "0x5aef021f000000000000000000000000db9217fad3c1463093fc2801dd0a22c930850a61",
+              "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+              "error": "execution reverted",
+              "revertReason": "Ownable: caller is not the owner",
+              "value": "0x0",
+              "type": "CALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+        "to_address": "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+        "value": "0x0",
+        "input": "0x5aef021f000000000000000000000000db9217fad3c1463093fc2801dd0a22c930850a61",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 1,
+        "function_selector": "0x5aef021f",
+        "decoded_function": "setLendingPoolImpl(address)",
+        "decoded_args": [
+          "0xdb9217fad3c1463093fc2801dd0a22c930850a61"
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",
+      "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execute()",
+      "setLendingPoolImpl(address)"
+    ]
+  },
+  "revert_reason": "Ownable: caller is not the owner",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

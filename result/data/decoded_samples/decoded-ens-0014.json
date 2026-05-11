@@ -1,0 +1,96 @@
+{
+  "benchmark_id": "real-ens-0014",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0014.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "31038548146097859834078018568437840147798885401616129864120868194533406456350",
+    "status": "executed",
+    "title": "[EP 6.36][Executable] Register on.eth to the ENS DAO wallet and set the resolver",
+    "description": "# [EP 6.36][Executable] Register on.eth to the ENS DAO wallet and set the resolver\n# Previous Context\n\nThis proposal passed as [EP 6.34](https://www.tally.xyz/gov/ens/proposal/69304512515872868228453463730257567312488838925636819022683533220991373699419 \"EP 6.34\") and was queued for execution. Unfortunately, that proposal cannot be executed on-chain in its current form.\n\nWhilst the calldata was correct, and the simulations passed as expected, the calldata was generated against the blockchain state at the time and did not give consideration to other ongoing executable proposals.\n\nAlongside this proposal, another proposal was in motion ([Tally | ENS | Enable Root and Registrar Security Controllers](https://www.tally.xyz/gov/ens/proposal/7432320732701654700329828389963546575346476886035742386260284098817526767149 \"Enable Root and Registrar Security Controllers\")), which passed and was executed prior to 6.34.\n\nThat proposal changed a dependency on which 6.34 relied - specifically, the ownership of the Base Registrar.&#x20;\n\nThis proposal is the updated proposal with calldata that gives appropriate consideration to the updated ownership model.\n\n**There are no material changes.**\n\n\nDescription\n===========\n\nThis proposal registers the \\`on.eth\\` ENS name to the ENS DAO wallet (`0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7`) and sets the resolver to an on-chain registry-resolver contract (`0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A`).\n\n# Motivation\n\nThe Chain Registry-Resolver is a smart contract that acts as a\u00a0**canonical, on-chain registry**\u00a0for blockchain metadata. It serves as the resolver for the\u00a0`on.eth`\u00a0namespace and enables applications and users to retrieve metadata for\u00a0**any**\u00a0blockchain using a single human-readable identifier, such as \\`base\\` or \\`solana\\`.\n\nHistorically, blockchain metadata has been stored in centralized, fragmented repositories maintained by third parties. The Chain Registry-Resolver brings this metadata on-chain into a single, extensible registry, where control and update authority are delegated to the relevant chain operators.\n\n\n# Specification\n\n## Additional Relevant Contracts\n\n\n\n* `RegistrarSecurityController` \u2022 `0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b` \u2022 [Etherscan](https://etherscan.io/address/0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b#code)\n\n\n\nPlease see [https://discuss.ens.domains/t/executable-enable-root-and-registrar-security-controllers/21872](https://discuss.ens.domains/t/executable-enable-root-and-registrar-security-controllers/21872) for additional context.\n\n\n\n## Updated Proposal\n\n\n\nThis proposal includes four components.\n\n\n\n**1. Adding the DAO wallet as a controller on the \\`BaseRegistrarImplementation\\` smart contract through the RegistrarSecurityController.**\n\n\n\n`To: 0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b`\n\n`Value: 0`\n\n`Calldata: 0xb229e85e000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7`\n\n\n\nSimulation: [https://www.tdly.co/shared/simulation/d0d646ce-ca82-4e1b-9777-e207292f5ee8](https://www.tdly.co/shared/simulation/d0d646ce-ca82-4e1b-9777-e207292f5ee8)\n\n\n\n**2. Registering the name \\`on.eth\\` to the DAO wallet.**\n\n\n\n`To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85`\n\n`Value: 0`\n\n`Calldata: 0xfca247ac6460d40e0362f6a2c743f205df8181010b7f26e76d5606847fb7be7fb6d135f9000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b70000000000000000000000000000000000000000000000000000000012cc0300`\n\n\n\nSimulation: [https://www.tdly.co/shared/simulation/457f778d-110b-4ff3-a120-ac0801a7ac9a](https://www.tdly.co/shared/simulation/457f778d-110b-4ff3-a120-ac0801a7ac9a)\n\n\n\n**3. Setting the deployed \\`ChainResolver\\` as the resolver for**` on.eth`\n\n\n\n`To: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e`\n\n`Value: 0`\n\n`Calldata: 0x1896f70acabf8262fe531c2a7e8cd86e06342bc27fc0591ecd562fbac88280abc18ef8990000000000000000000000002a9b5787207863cf2d63d20172ed1f7bb2c9487a`\n\n\n\nSimulation: [https://www.tdly.co/shared/simulation/aaa4c105-0efb-4f5a-92a0-bfea8fa376c8](https://www.tdly.co/shared/simulation/aaa4c105-0efb-4f5a-92a0-bfea8fa376c8)\n\n\n\n**4. Removing the DAO wallet as a controller on the \\`BaseRegistrarImplementation\\` smart contract through the RegistrarSecurityController.**\n\n\n\n`To: 0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b`\n\n`Value: 0`\n\n`Calldata: 0x246b813e000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7`\n\n\n\nSimulation: [https://www.tdly.co/shared/simulation/264b8117-23a3-47e4-b84e-be49d8ffc4b4](https://www.tdly.co/shared/simulation/264b8117-23a3-47e4-b84e-be49d8ffc4b4)\n\n\n\n## Notes\n\n\n\n* For complete clarity, what differentiates this updated proposal from the original is that transactions 1, and 4 target **the RegistrarSecurityController**. The new security model for the \\`BaseRegistrarImplementation\\` proxies the addition and removal of controllers through this contract.\n* Explicit consideration has been given to other ongoing executable proposals. The only current proposal is [https://www.tally.xyz/gov/ens/proposal/28252712932062322633429808688780331957150867173093906455161078029287649387260](https://www.tally.xyz/gov/ens/proposal/28252712932062322633429808688780331957150867173093906455161078029287649387260) which does not modify any dependencies on which this proposal relies."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b",
+      "native_value": "0",
+      "function": "addRegistrarController(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "controller",
+          "type": "address",
+          "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "native_value": "0",
+      "function": "register(uint256,address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "id",
+          "type": "uint256",
+          "value": "45402365724566784737799689503774969143694275755436707346024963105947305195001"
+        },
+        {
+          "index": 1,
+          "name": "owner",
+          "type": "address",
+          "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        },
+        {
+          "index": 2,
+          "name": "duration",
+          "type": "uint256",
+          "value": "315360000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+      "native_value": "0",
+      "function": "setResolver(bytes32,address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "node",
+          "type": "bytes32",
+          "value": "0xcabf8262fe531c2a7e8cd86e06342bc27fc0591ecd562fbac88280abc18ef899"
+        },
+        {
+          "index": 1,
+          "name": "resolver",
+          "type": "address",
+          "value": "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0x7dd4d97653A67C2FD7fbA0a84825eC09524D4E1b",
+      "native_value": "0",
+      "function": "removeRegistrarController(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "controller",
+          "type": "address",
+          "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

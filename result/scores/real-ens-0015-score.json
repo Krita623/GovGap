@@ -1,0 +1,680 @@
+{
+  "metadata": {
+    "proposal_id": "108835189906614532703236602621229289879643217303874617456878894788222576090451",
+    "generated_at": "2026-05-08T11:15:24.304722+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Establish reverse ENS records (primary names) for core ENS DAO addresses, specifically the ENS DAO wallet, ENS token contract, and the ENS Endowment wallet.",
+    "disclosed_entities": [
+      {
+        "name": "ENS DAO wallet",
+        "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The ENS DAO wallet"
+      },
+      {
+        "name": "ENS token",
+        "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The ENS token"
+      },
+      {
+        "name": "ENS Endowment wallet",
+        "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The ENS Endowment wallet"
+      },
+      {
+        "name": "Reverse Registrar (reverse.ens.eth)",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar (reverse.ens.eth)"
+      },
+      {
+        "name": "0xF29100983E058B709F3D539b0c765937B804AC15",
+        "address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+        "entity_type": "unknown",
+        "disclosure_level": "not_disclosed",
+        "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")`"
+      },
+      {
+        "name": "0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb",
+        "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "entity_type": "unknown",
+        "disclosure_level": "not_disclosed",
+        "textual_evidence": "To: 0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "textual_evidence": "The ENS DAO wallet"
+      },
+      {
+        "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "textual_evidence": "The ENS token"
+      },
+      {
+        "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "textual_evidence": "The ENS Endowment wallet"
+      },
+      {
+        "address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+        "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")`"
+      },
+      {
+        "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "textual_evidence": "To: 0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "textual_evidence": "GasToken: 0x0000000000000000000000000000000000000000"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar",
+        "canonical_action": "parameter_update",
+        "object": "ENS DAO wallet reverse record",
+        "claimed_effect": "set the reverse record of 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+        "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar (reverse.ens.eth) to set the reverse record of 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Call `setNameForAddr(...)` on the Reverse Registrar",
+        "canonical_action": "parameter_update",
+        "object": "ENS token reverse record",
+        "claimed_effect": "set the reverse record of 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+        "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")` on the Reverse Registrar to set the reverse record of 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Call `execTransaction()` on the Endowment multisig with the encoded calldata for `setName(\"endowment.ensdao.eth\")`",
+        "canonical_action": "parameter_update",
+        "object": "Endowment multisig reverse record",
+        "claimed_effect": "set the reverse record of 0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+        "textual_evidence": "Call `execTransaction()` on the Endowment multisig (endowment.ensdao.eth) with the encoded calldata for `setName(\"endowment.ensdao.eth\")` to set the reverse record of 0x4F2083f5fBede34C2714aFfb3105539775f7FE64.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal only updates reverse records (primary ENS names) for three addresses using a few direct contract calls.",
+      "textual_evidence": "Several ENS DAO contracts lack primary names. This proposal establishes reverse records for core DAO addresses."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "setName",
+        "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")`"
+      },
+      {
+        "function_name": "setNameForAddr",
+        "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")`"
+      },
+      {
+        "function_name": "execTransaction",
+        "textual_evidence": "Call `execTransaction()` on the Endowment multisig"
+      }
+    ],
+    "limitations": [
+      "One address (0xF291...) used in setNameForAddr is not explained.",
+      "One target address (0xa58E...) in the Safe tx block is not mapped explicitly in the text description."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "value": "0x0",
+        "input": "0xc47f00270000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001177616c6c65742e656e7364616f2e657468000000000000000000000000000000",
+        "output": "0xeea353246d5d1e1be4fb87f982273878ea45fd7b0c6c7b332b50fdddcb7f2e43",
+        "depth": 0,
+        "function_selector": "0xc47f0027",
+        "decoded_function": "setName(string)",
+        "decoded_args": [
+          "wallet.ensdao.eth"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0x0",
+        "input": "0x5ef2c7f091d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2e2a02694dbcdde88fab069b358922545e5ea320d345c6f1141df76c260148dcf000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000f29100983e058b709f3d539b0c765937b804ac150000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x5ef2c7f0",
+        "decoded_function": "setSubnodeRecord(bytes32,bytes32,address,address,uint64)",
+        "decoded_args": [
+          "0x91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2",
+          "0xe2a02694dbcdde88fab069b358922545e5ea320d345c6f1141df76c260148dcf",
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "0xf29100983e058b709f3d539b0c765937b804ac15",
+          0
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+        "value": "0x0",
+        "input": "0x77372213eea353246d5d1e1be4fb87f982273878ea45fd7b0c6c7b332b50fdddcb7f2e430000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001177616c6c65742e656e7364616f2e657468000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x77372213",
+        "decoded_function": "setName(bytes32,string)",
+        "decoded_args": [
+          "0xeea353246d5d1e1be4fb87f982273878ea45fd7b0c6c7b332b50fdddcb7f2e43",
+          "wallet.ensdao.eth"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "value": "0x0",
+        "input": "0x7a806d6b000000000000000000000000c18360217d8f7ab5e7c516566761ea12ce7f9d72000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000f29100983e058b709f3d539b0c765937b804ac1500000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000010746f6b656e2e656e7364616f2e65746800000000000000000000000000000000",
+        "output": "0x5043438742ba9b893f4c6cdeeef30720b56955b79f650dc24b474b50f1ca32c2",
+        "depth": 0,
+        "function_selector": "0x7a806d6b",
+        "decoded_function": "setNameForAddr(address,address,address,string)",
+        "decoded_args": [
+          "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "0xf29100983e058b709f3d539b0c765937b804ac15",
+          "token.ensdao.eth"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0",
+        "input": "0xe985e9c5000000000000000000000000c18360217d8f7ab5e7c516566761ea12ce7f9d72000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xe985e9c5",
+        "decoded_function": "isApprovedForAll(address,address)",
+        "decoded_args": [
+          "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "value": "0",
+        "input": "0x8da5cb5b",
+        "output": "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "depth": 1,
+        "function_selector": "0x8da5cb5b",
+        "decoded_function": "owner()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0x0",
+        "input": "0x5ef2c7f091d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2e5676d6e4fba5d48041d47c7f77194cae4eedaa44b32d338c77d1101cd9dd631000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000f29100983e058b709f3d539b0c765937b804ac150000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x5ef2c7f0",
+        "decoded_function": "setSubnodeRecord(bytes32,bytes32,address,address,uint64)",
+        "decoded_args": [
+          "0x91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2",
+          "0xe5676d6e4fba5d48041d47c7f77194cae4eedaa44b32d338c77d1101cd9dd631",
+          "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+          "0xf29100983e058b709f3d539b0c765937b804ac15",
+          0
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+        "value": "0x0",
+        "input": "0x773722135043438742ba9b893f4c6cdeeef30720b56955b79f650dc24b474b50f1ca32c200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000010746f6b656e2e656e7364616f2e65746800000000000000000000000000000000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x77372213",
+        "decoded_function": "setName(bytes32,string)",
+        "decoded_args": [
+          "0x5043438742ba9b893f4c6cdeeef30720b56955b79f650dc24b474b50f1ca32c2",
+          "token.ensdao.eth"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "value": "0x0",
+        "input": "0x6a761202000000000000000000000000a58e81fe9b61b5c3fe2afd33cf304c454abfc7cb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e00000000000000000000000000000000000000000000000000000000000000064c47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b700000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x6a761202",
+        "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "decoded_args": [
+          "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+          0,
+          "0xc47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000",
+          0,
+          0,
+          0,
+          0,
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x0",
+        "input": "0x6a761202000000000000000000000000a58e81fe9b61b5c3fe2afd33cf304c454abfc7cb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e00000000000000000000000000000000000000000000000000000000000000064c47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b700000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x6a761202",
+        "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "decoded_args": [
+          "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+          0,
+          "0xc47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000",
+          0,
+          0,
+          0,
+          0,
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "value": "0x0",
+        "input": "0xc47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000",
+        "output": "0x9e019be953f4d1529ae3db5ee3ed3eb02907ceae1cedc221f1060f17d2866b4d",
+        "depth": 2,
+        "function_selector": "0xc47f0027",
+        "decoded_function": "setName(string)",
+        "decoded_args": [
+          "endowment.ensdao.eth"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0x0",
+        "input": "0x5ef2c7f091d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e28ab16f2f7a36267fc9925c11c1755843d730ca74afe1865e773e97583c3d45050000000000000000000000004f2083f5fbede34c2714affb3105539775f7fe64000000000000000000000000f29100983e058b709f3d539b0c765937b804ac150000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0x5ef2c7f0",
+        "decoded_function": "setSubnodeRecord(bytes32,bytes32,address,address,uint64)",
+        "decoded_args": [
+          "0x91d1777781884d03a6757a803996e38de2a42967fb37eeaca72729271025a9e2",
+          "0x8ab16f2f7a36267fc9925c11c1755843d730ca74afe1865e773e97583c3d4505",
+          "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+          "0xf29100983e058b709f3d539b0c765937b804ac15",
+          0
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "to_address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+        "value": "0x0",
+        "input": "0x773722139e019be953f4d1529ae3db5ee3ed3eb02907ceae1cedc221f1060f17d2866b4d00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000",
+        "output": null,
+        "depth": 3,
+        "function_selector": "0x77372213",
+        "decoded_function": "setName(bytes32,string)",
+        "decoded_args": [
+          "0x9e019be953f4d1529ae3db5ee3ed3eb02907ceae1cedc221f1060f17d2866b4d",
+          "endowment.ensdao.eth"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+      "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+      "0xf29100983e058b709f3d539b0c765937b804ac15",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 2,
+    "external_call_count": 10,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+      "isApprovedForAll(address,address)",
+      "owner()",
+      "setName(bytes32,string)",
+      "setName(string)",
+      "setNameForAddr(address,address,address,string)",
+      "setSubnodeRecord(bytes32,bytes32,address,address,uint64)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "108835189906614532703236602621229289879643217303874617456878894788222576090451:9:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+      "depth": 1,
+      "function_selector": "0x6a761202",
+      "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x0",
+        "input": "0x6a761202000000000000000000000000a58e81fe9b61b5c3fe2afd33cf304c454abfc7cb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e00000000000000000000000000000000000000000000000000000000000000064c47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b700000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x6a761202",
+        "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "decoded_args": [
+          "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+          0,
+          "0xc47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014656e646f776d656e742e656e7364616f2e657468000000000000000000000000",
+          0,
+          0,
+          0,
+          0,
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x0000000000000000000000000000000000000000",
+        "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+        "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "0xf29100983e058b709f3d539b0c765937b804ac15",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+                "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+              ],
+              "related_actions": [
+                {
+                  "id": "108835189906614532703236602621229289879643217303874617456878894788222576090451:9:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+                  "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+                  "depth": 1,
+                  "function_selector": "0x6a761202",
+                  "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x0000000000000000000000000000000000000000",
+            "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+            "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xf29100983e058b709f3d539b0c765937b804ac15",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "trace_unique_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+            "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+            "0xf29100983e058b709f3d539b0c765937b804ac15",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 3,
+      "depth_mismatch": true,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal only updates reverse records (primary ENS names) for three addresses using a few direct contract calls.",
+            "textual_evidence": "Several ENS DAO contracts lack primary names. This proposal establishes reverse records for core DAO addresses."
+          },
+          "actual_max_depth": 3,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "isApprovedForAll(address,address)",
+        "owner()",
+        "setName(bytes32,string)",
+        "setName(string)",
+        "setNameForAddr(address,address,address,string)",
+        "setSubnodeRecord(bytes32,bytes32,address,address,uint64)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update",
+        "parameter_update",
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar",
+              "canonical_action": "parameter_update",
+              "object": "ENS DAO wallet reverse record",
+              "claimed_effect": "set the reverse record of 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+              "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar (reverse.ens.eth) to set the reverse record of 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Call `setNameForAddr(...)` on the Reverse Registrar",
+              "canonical_action": "parameter_update",
+              "object": "ENS token reverse record",
+              "claimed_effect": "set the reverse record of 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+              "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")` on the Reverse Registrar to set the reverse record of 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Call `execTransaction()` on the Endowment multisig with the encoded calldata for `setName(\"endowment.ensdao.eth\")`",
+              "canonical_action": "parameter_update",
+              "object": "Endowment multisig reverse record",
+              "claimed_effect": "set the reverse record of 0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+              "textual_evidence": "Call `execTransaction()` on the Endowment multisig (endowment.ensdao.eth) with the encoded calldata for `setName(\"endowment.ensdao.eth\")` to set the reverse record of 0x4F2083f5fBede34C2714aFfb3105539775f7FE64.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "108835189906614532703236602621229289879643217303874617456878894788222576090451:9:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": "0x6a761202",
+              "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+            "isApprovedForAll(address,address)",
+            "owner()",
+            "setName(bytes32,string)",
+            "setName(string)",
+            "setNameForAddr(address,address,address,string)",
+            "setSubnodeRecord(bytes32,bytes32,address,address,uint64)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552"
+          ],
+          "related_actions": [
+            {
+              "id": "108835189906614532703236602621229289879643217303874617456878894788222576090451:9:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": "0x6a761202",
+              "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "proposal_id": "40272043175867710511047990376059633000673751036364092383567949469124429500507",
+    "generated_at": "2026-05-08T11:15:24.228708+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Revoke the DAO's ability to upgrade the name wrapper by setting a new proxy-based metadata service address and then revoking admin ownership of the name wrapper.",
+    "disclosed_entities": [
+      {
+        "name": "New Metadata Service (Implementation)",
+        "address": "0x806f84f3789f51352c1b0ab3ffa192665d283808",
+        "entity_type": "implementation",
+        "disclosure_level": "explicit",
+        "textual_evidence": "A new metadata service has been deployed at 0x806f84F3789f51352C1B0aB3fFa192665d283808"
+      },
+      {
+        "name": "Metadata Proxy",
+        "address": "0xabb76d7e79de010117b147761013f11630a6799f",
+        "entity_type": "proxy",
+        "disclosure_level": "explicit",
+        "textual_evidence": "a transparent proxy was deployed in transaction... at address 0xabb76d7e79de010117b147761013f11630a6799f"
+      },
+      {
+        "name": "Proxy Admin",
+        "address": "0xeae9309ddb1aadb4cf1ebad5e51aef999833a992",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The admin contract for this proxy is at 0xeae9309ddb1aadb4cf1ebad5e51aef999833a992"
+      },
+      {
+        "name": "wallet.ensdao.eth",
+        "address": null,
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "and the owner set to wallet.ensdao.eth"
+      },
+      {
+        "name": "Name Wrapper",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Admin control over the name wrapper gives the DAO two functions"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x806f84f3789f51352c1b0ab3ffa192665d283808",
+        "textual_evidence": "A new metadata service has been deployed at 0x806f84F3789f51352C1B0aB3fFa192665d283808"
+      },
+      {
+        "address": "0xabb76d7e79de010117b147761013f11630a6799f",
+        "textual_evidence": "transparent proxy was deployed... at address 0xabb76d7e79de010117b147761013f11630a6799f"
+      },
+      {
+        "address": "0xeae9309ddb1aadb4cf1ebad5e51aef999833a992",
+        "textual_evidence": "The admin contract for this proxy is at 0xeae9309ddb1aadb4cf1ebad5e51aef999833a992"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "sets the metadata service address on the name wrapper to the above proxy",
+        "canonical_action": "parameter_update",
+        "object": "Name Wrapper",
+        "claimed_effect": "Updates the Name Wrapper to use the newly deployed metadata proxy.",
+        "textual_evidence": "The executable component of this proposal sets the metadata service address on the name wrapper to the above proxy",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "revokes ownership over it.",
+        "canonical_action": "role_change",
+        "object": "Name Wrapper",
+        "claimed_effect": "Removes the DAO's administrative control over the Name Wrapper, preventing future upgrades.",
+        "textual_evidence": "then revokes ownership over it.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal performs two straightforward actions: updating an address parameter and revoking admin ownership.",
+      "textual_evidence": "The executable component of this proposal sets the metadata service address on the name wrapper to the above proxy, then revokes ownership over it."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No explicit contract addresses were provided for the existing Name Wrapper contract.",
+      "Exact function signature names for setting the metadata address or revoking ownership were not disclosed in the text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+        "value": "0x0",
+        "input": "0x1534e177000000000000000000000000abb76d7e79de010117b147761013f11630a6799f",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x1534e177",
+        "decoded_function": "setMetadataService(address)",
+        "decoded_args": [
+          "0xabb76d7e79de010117b147761013f11630a6799f"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+        "value": "0x0",
+        "input": "0x715018a6",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x715018a6",
+        "decoded_function": "renounceOwnership()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "renounceOwnership()",
+      "setMetadataService(address)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x806f84f3789f51352c1b0ab3ffa192665d283808",
+        "0xabb76d7e79de010117b147761013f11630a6799f",
+        "0xeae9309ddb1aadb4cf1ebad5e51aef999833a992"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [
+                "parameter_update",
+                "permission_change"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x806f84f3789f51352c1b0ab3ffa192665d283808",
+            "0xabb76d7e79de010117b147761013f11630a6799f",
+            "0xeae9309ddb1aadb4cf1ebad5e51aef999833a992"
+          ],
+          "trace_unique_addresses": [
+            "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [
+            "parameter_update",
+            "permission_change"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal performs two straightforward actions: updating an address parameter and revoking admin ownership.",
+            "textual_evidence": "The executable component of this proposal sets the metadata service address on the name wrapper to the above proxy, then revokes ownership over it."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update",
+            "permission_change"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "renounceOwnership()",
+        "setMetadataService(address)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update",
+        "role_change"
+      ],
+      "actual_actions": [
+        "parameter_update",
+        "permission_change"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "sets the metadata service address on the name wrapper to the above proxy",
+              "canonical_action": "parameter_update",
+              "object": "Name Wrapper",
+              "claimed_effect": "Updates the Name Wrapper to use the newly deployed metadata proxy.",
+              "textual_evidence": "The executable component of this proposal sets the metadata service address on the name wrapper to the above proxy",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "revokes ownership over it.",
+              "canonical_action": "role_change",
+              "object": "Name Wrapper",
+              "claimed_effect": "Removes the DAO's administrative control over the Name Wrapper, preventing future upgrades.",
+              "textual_evidence": "then revokes ownership over it.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [
+            "parameter_update",
+            "permission_change"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "renounceOwnership()",
+            "setMetadataService(address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0xd4416b13d2b3a9abae7acd5d6c2bbdbe25686401",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [
+            "parameter_update",
+            "permission_change"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

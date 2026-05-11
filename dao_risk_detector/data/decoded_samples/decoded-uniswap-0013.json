@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-uniswap-0013",
+  "source_raw_sample": "outputs/raw_samples/real-uniswap-0013.json",
+  "proposal": {
+    "dao": "Uniswap",
+    "chain_id": 1,
+    "proposal_id": "70",
+    "status": "executed",
+    "title": "Uniswap Accountability S3 Renewal and Rebalance",
+    "description": "# Uniswap Accountability S3 Renewal and Rebalance\n# Summary&#x20;\n\nThis vote combines the snapshot budget approval for the Uniswap Accountability Renewal (UAC) Season 3, Approved Budget Rebalance, and extra 16th delegate cycle 2 spot for Argonaut and Tane.\n\nUAC S3: 37,038 UNI ($242,600 @ $6.55/UNI)\n\nBudget Rebalance: 42,060 UNI\n\nAdding 16th Delegate Rewards Spot: 5,496 UNI ($36,000 @ $6.55/UNI)\n\nTotal: 84,594 UNI will be sent to the UAC wallet at this address: 0x3B59C6d0034490093460787566dc5D6cE17F2f9C\n\n## Descriptions\n\n**UAC Renewal S3**\n\nFor the full proposal, please see\u00a0[this forum post](https://gov.uniswap.org/t/uniswap-accountability-committee-uac-season-2-report/24492).\n\nThe UAC has ramped up contributions in its current iteration, demanding more hours from members than in the past. Collectively, with our new much expanded scope, we have contributed more than originally expected, which was the limited 10 hours/month per member. In total over 6.5 months, committee members have worked 359 hours, 99 hours more than the expected 260 hours for this time frame. Note that the extra hours have not been paid out. Today, the scope of the UAC can broadly relate to DAO operations, program oversight, and protocol growth\u2013the specifics of these categories will continue to evolve to meet the needs of the DAO.\n\nGoing forward, we propose a few key areas of focus for the committee:\n\n* Proposing new incentive programs, including a potential exploration into Protocol Owned Liquidity and other forms of growth beyond mere incentives\n* Administering an operational framework for the Uniswap DAO to best sustain efficiency with ever increasing programs and working groups\n* Continuing our role as an escrow service for DAO-funded programs\n* Polishing our accounting and record-keeping to improve reporting\n* Exploring and implementing growth programs related to Uni v4\n\nTo accommodate this expanded focus, we propose the following next steps to operationalize the committee going forward:\n\n* Add an additional member (going from 4 to 5 members) to increase work capacity and multisig security\n* Increase the maximum hours per member from 10 hours/month to 30 hours/month\n* Institute a staggered election system to retain three current members on the committee\u2013this helps retain momentum and continuity with existing projects. We believe a degree of stickiness with the UAC team is important since conducting the noted operations requires subject matter expertise and familiarity with the DAO.\n  * Going forward, the UAC will internally hold a vote to decide which of the \u2156 members will be up for reelection\u2013that is, if two members don\u2019t resign by default\n  * For this election, @0xpibblez has stepped down, so there are automatically 2 available seats for the Season 3 election\n* Approve the $32.6k of wages payable to accommodate for Season 2 overtime\n* Fund the committee with an additional $210,000 of $UNI for payroll through March 2025 (this assumes that all 5 members spend 30 hours per month for all 7 months, given the $200/hour rate)\n\n*Note: The UAGP is funding legal research into an entity structure that would be suitable for the UAC. This would, among other aspects, allow the committee to sign incentive matching agreements with protocols to which Uniswap is being deployed. The introduction of a legal entity may change the dynamic of the UAC and its election setup as well.*\n\n\n\n### Approved Budgets Rebalancing\n\nFor the full proposal, please see\u00a0[this forum post](https://gov.uniswap.org/t/uniswap-accountability-committee-uac-season-2-report/24492).\n\nFluctuations in the UNI token price means that the accounts for various programs become unbalanced\u2013sometimes at a surplus and other times at a deficit. Since programs are almost always budgeted in terms of dollars, we are looking to top up those balances to ensure liabilities around sustaining elected DAO programs are covered. This temperature check associated with rebalancing is being run separately from the UAC Season 3 renewal vote\u2013the vote will request 42,060 UNI.\n\nFurther details on the request and breakdown of budgets can be found at the forum linked above.\n\n\n\n### Uniswap Delegate Race Tiebreaker\n\nUpon conclusion of the cycle 2 for delegate rewards, two candidates were incredibly close for the last 15th spot. More information and rational can be found on this\u00a0[forum post](https://gov.uniswap.org/t/uniswap-delegate-reward-initiative-cycle-2-application/24434/34)\u00a0regarding specifics of the tiebreaker.\n\nThe snapshot link is [here](https://snapshot.org/#/uniswapgovernance.eth/proposal/0x8eb2e8135cab63b0ff987dff2bda9b651f86bf6cc90336a9b11b92640e16405b)."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "dst",
+          "type": "address",
+          "value": "0x3b59c6d0034490093460787566dc5d6ce17f2f9c"
+        },
+        {
+          "index": 1,
+          "name": "rawAmount",
+          "type": "uint256",
+          "value": "84594000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

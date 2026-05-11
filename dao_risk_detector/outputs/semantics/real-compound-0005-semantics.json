@@ -1,0 +1,53 @@
+{
+  "proposal_summary": "Proposal to launch Compound Grants Program (CGP) 2.0 by Questbook, utilizing delegated domain allocation. It requests a transfer of 24,467.82 COMP to a multi-sig to fund 4 domain allocators, community grants, and operational costs over 2 quarters.",
+  "disclosed_entities": [
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Transfer 24467.82 COMP to..."
+    },
+    {
+      "name": "Grants SAFE",
+      "address": "0xbfda7f4ab1e146505a78e4659aec7acab39adbb0",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Action: Transfer 24467.82 COMP to 0xBfdA7F4ab1E146505A78E4659aEc7ACaB39ADbb0"
+    },
+    {
+      "name": "Questbook",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "CGP 2.0 by Questbook... Questbook is a decentralized grants orchestration tool."
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xbfda7f4ab1e146505a78e4659aec7acab39adbb0",
+      "textual_evidence": "Action: Transfer 24467.82 COMP to 0xBfdA7F4ab1E146505A78E4659aEc7ACaB39ADbb0"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 24467.82 COMP to 0xBfdA7F4ab1E146505A78E4659aEc7ACaB39ADbb0",
+      "canonical_action": "transfer",
+      "object": "COMP Token",
+      "claimed_effect": "Funds the CGP 2.0 multi-sig with COMP to be disbursed by domain allocators.",
+      "textual_evidence": "Action: Transfer 24467.82 COMP to 0xBfdA7F4ab1E146505A78E4659aEc7ACaB39ADbb0",
+      "confidence": 0.99
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal dictates a single on-chain action consisting of transferring tokens to a multi-sig address.",
+    "textual_evidence": "Action: Transfer 24467.82 COMP to 0xBfdA7F4ab1E146505A78E4659aEc7ACaB39ADbb0"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses or code provided for evaluation beyond the destination multi-sig."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

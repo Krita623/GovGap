@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "proposal_id": "112325874093084064493910714319140234408317576120604499542718372361020687891105",
+    "generated_at": "2026-05-08T11:15:23.908518+00:00",
+    "chain_id": 42161,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal transfers the proposer and canceller roles from the current Arbitrum Core Governor and Arbitrum Treasury Governor to newly deployed Governor contracts to upgrade the governance infrastructure.",
+    "disclosed_entities": [
+      {
+        "name": "Current Arbitrum Core Governor",
+        "address": null,
+        "entity_type": "governor",
+        "disclosure_level": "implicit",
+        "textual_evidence": "transfer the proposer and canceller roles from the current Arbitrum Core Governor"
+      },
+      {
+        "name": "Current Arbitrum Treasury Governor",
+        "address": null,
+        "entity_type": "governor",
+        "disclosure_level": "implicit",
+        "textual_evidence": "transfer the proposer and canceller roles from the current Arbitrum Core Governor and Arbitrum Treasury Governor"
+      },
+      {
+        "name": "New Core Governor",
+        "address": "0x7796f378b3c56ced57350b938561d8c52256456b",
+        "entity_type": "governor",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Core Governor: 0x7796F378B3c56ceD57350B938561D8c52256456b"
+      },
+      {
+        "name": "New Treasury Governor",
+        "address": "0x4fd1216c8b5e72b22785169ae5c1e8f3b30c19e4",
+        "entity_type": "governor",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Treasury Governor: 0x4fd1216c8b5E72b22785169Ae5C1e8f3b30C19E4"
+      },
+      {
+        "name": "Timelock contract",
+        "address": null,
+        "entity_type": "timelock",
+        "disclosure_level": "implicit",
+        "textual_evidence": "on the timelock contract"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x7796f378b3c56ced57350b938561d8c52256456b",
+        "textual_evidence": "Core Governor: 0x7796F378B3c56ceD57350B938561D8c52256456b"
+      },
+      {
+        "address": "0x4fd1216c8b5e72b22785169ae5c1e8f3b30c19e4",
+        "textual_evidence": "Treasury Governor: 0x4fd1216c8b5E72b22785169Ae5C1e8f3b30C19E4"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Grant the newly deployed Core Governor and Treasury Governor contracts the 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+        "canonical_action": "treasury_operation",
+        "object": "Timelock contract",
+        "claimed_effect": "The new Governor contracts will have the ability to propose and cancel proposals on the timelock.",
+        "textual_evidence": "Grant the newly deployed Core Governor and Treasury Governor contracts the 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Revoke the current Core Governor and Treasury Governor contracts' 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+        "canonical_action": "treasury_operation",
+        "object": "Timelock contract",
+        "claimed_effect": "The old Governor contracts will no longer have the ability to execute proposals.",
+        "textual_evidence": "Revoke the current Core Governor and Treasury Governor contracts' 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Involves changing multiple roles for several contracts on a timelock",
+      "textual_evidence": "transfer the proposer and canceller roles"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Addresses for current Governors and timelock contract are not disclosed"
+    ],
+    "llm_status": "repaired",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0x0000000000000000000000000000000000000064",
+        "value": "0x0",
+        "input": "0x928c169a000000000000000000000000e6841d92b0c345144506576ec13ecf5103ac7f490000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000026401d5062a000000000000000000000000a723c008e76e379c55599d2e4d93879beafda79c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000008a34047cf660f138789c5e21de8969c30ceedea124e117e795d848cebf4b5c5600000000000000000000000000000000000000000000000000000000000d2f0000000000000000000000000000000000000000000000000000000000000001800000000000000000000000004dbd4fc535ac27206064b68ffcf827b0a60bab3f000000000000000000000000cf57572261c7c2bcf21ffd220ea7d1a27d40a82700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000841cff79cd0000000000000000000000001a425339a34ea3c75fd96d6b08358ee3f6e29f3b00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000004b147f40c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x928c169a",
+        "decoded_function": "sendTxToL1(address,bytes)",
+        "decoded_args": [
+          "0xe6841d92b0c345144506576ec13ecf5103ac7f49",
+          "0x01d5062a000000000000000000000000a723c008e76e379c55599d2e4d93879beafda79c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000008a34047cf660f138789c5e21de8969c30ceedea124e117e795d848cebf4b5c5600000000000000000000000000000000000000000000000000000000000d2f0000000000000000000000000000000000000000000000000000000000000001800000000000000000000000004dbd4fc535ac27206064b68ffcf827b0a60bab3f000000000000000000000000cf57572261c7c2bcf21ffd220ea7d1a27d40a82700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000841cff79cd0000000000000000000000001a425339a34ea3c75fd96d6b08358ee3f6e29f3b00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000004b147f40c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": "invalid opcode: INVALID"
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x0000000000000000000000000000000000000064",
+      "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "sendTxToL1(address,bytes)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Trace includes undisclosed execution path components without extracted risk actions.",
+      "disclosed_addresses": [
+        "0x4fd1216c8b5e72b22785169ae5c1e8f3b30c19e4",
+        "0x7796f378b3c56ced57350b938561d8c52256456b"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0000000000000000000000000000000000000064",
+        "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0000000000000000000000000000000000000064",
+                "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x4fd1216c8b5e72b22785169ae5c1e8f3b30c19e4",
+            "0x7796f378b3c56ced57350b938561d8c52256456b"
+          ],
+          "trace_unique_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Involves changing multiple roles for several contracts on a timelock",
+            "textual_evidence": "transfer the proposer and canceller roles"
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "sendTxToL1(address,bytes)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation",
+        "treasury_operation"
+      ],
+      "actual_actions": [],
+      "summary": "No deterministic business action was extracted from the trace.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Grant the newly deployed Core Governor and Treasury Governor contracts the 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+              "canonical_action": "treasury_operation",
+              "object": "Timelock contract",
+              "claimed_effect": "The new Governor contracts will have the ability to propose and cancel proposals on the timelock.",
+              "textual_evidence": "Grant the newly deployed Core Governor and Treasury Governor contracts the 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Revoke the current Core Governor and Treasury Governor contracts' 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+              "canonical_action": "treasury_operation",
+              "object": "Timelock contract",
+              "claimed_effect": "The old Governor contracts will no longer have the ability to execute proposals.",
+              "textual_evidence": "Revoke the current Core Governor and Treasury Governor contracts' 'PROPOSER_ROLE' and 'CANCELLER_ROLE' on the timelock contract.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "sendTxToL1(address,bytes)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

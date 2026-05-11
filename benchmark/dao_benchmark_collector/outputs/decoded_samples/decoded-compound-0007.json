@@ -1,0 +1,222 @@
+{
+  "benchmark_id": "real-compound-0007",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0007.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "255",
+    "status": "executed",
+    "title": "# [Gauntlet] Rewards Contract Top-Up for BASE, Ethereum, and Arbitrum (06/03/24)",
+    "description": "# [Gauntlet] Rewards Contract Top-Up for BASE, Ethereum, and Arbitrum (06/03/24)\n\n## Simple Summary\n\nGauntlet recommends adding COMP to the reward contracts of Base, Ethereum, and  Arbitrum:\n\n| Chain | Reward Amount |\n| --- | --- |\n| Ethereum | 28,000 |\n| Base | 3,600 |\n| Arbitrum | 2,250 |\n\nFor more details, see the full forum post [here](https://www.comp.xyz/t/gauntlet-rewards-contract-top-up-for-base-ethereum-and-arbitrum-05-24-24/5278).\n\n<sub> By approving this proposal, you agree that any services provided by Gauntlet shall be governed by the terms of service available at gauntlet.network/tos. </sub>\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_grantComp(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x1b0e765f6224c21223aea2af16c1c46e38885a40"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "28000000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_grantComp(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "3600000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
+      "native_value": "0",
+      "function": "approve(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "spender",
+          "type": "address",
+          "value": "0x3154cf16ccdb4c6d922629664174b904d80f2c35"
+        },
+        {
+          "index": 1,
+          "name": "rawAmount",
+          "type": "uint256",
+          "value": "3600000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0x3154Cf16ccdb4C6d922629664174b904d80F2C35",
+      "native_value": "0",
+      "function": "depositERC20To(address,address,address,uint256,uint32,bytes)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xc00e94cb662c3520282e6f5717214004a7f26888"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "address",
+          "value": "0x9e1028f5f1d5ede59748ffcee5532509976840e0"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "type": "address",
+          "value": "0x123964802e6ababbe1bc9547d72ef1b69b00a6b1"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "type": "uint256",
+          "value": "3600000000000000000000"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "type": "uint32",
+          "value": "200000"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "type": "bytes",
+          "value": "0x"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 4,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_grantComp(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "2250000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 5,
+      "target_contract": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
+      "native_value": "0",
+      "function": "approve(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "spender",
+          "type": "address",
+          "value": "0xa3a7b6f88361f48403514059f1f16c8e78d60eec"
+        },
+        {
+          "index": 1,
+          "name": "rawAmount",
+          "type": "uint256",
+          "value": "2250000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 6,
+      "target_contract": "0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef",
+      "native_value": "1000775000000000",
+      "function": "outboundTransferCustomRefund(address,address,address,uint256,uint256,uint256,bytes)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xc00e94cb662c3520282e6f5717214004a7f26888"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "address",
+          "value": "0x3fb4d38ea7ec20d91917c09591490eeda38cf88a"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "type": "address",
+          "value": "0x88730d254a2f7e6ac8388c3198afd694ba9f7fae"
+        },
+        {
+          "index": 3,
+          "name": null,
+          "type": "uint256",
+          "value": "2250000000000000000000"
+        },
+        {
+          "index": 4,
+          "name": null,
+          "type": "uint256",
+          "value": "663930"
+        },
+        {
+          "index": 5,
+          "name": null,
+          "type": "uint256",
+          "value": "500000000"
+        },
+        {
+          "index": 6,
+          "name": null,
+          "type": "bytes",
+          "value": "0x000000000000000000000000000000000000000000000000000260477678e40000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

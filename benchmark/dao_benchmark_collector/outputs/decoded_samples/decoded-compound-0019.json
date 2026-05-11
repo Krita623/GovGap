@@ -1,0 +1,282 @@
+{
+  "benchmark_id": "real-compound-0019",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0019.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "545",
+    "status": "canceled",
+    "title": "DESCRIPTION",
+    "description": "DESCRIPTION"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xF088339DD8e79819A41aDD5FFB75d9F245AfaAb1",
+      "native_value": "0",
+      "function": "sweepRemaining()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x334791289a906Ac8f96ac0f90E7A91Bf4AaE4A60",
+      "native_value": "0",
+      "function": "terminateStream(uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_terminationTimestamp",
+          "type": "uint256",
+          "value": "0"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0xAF9CEE006AE377e88f3BBd668e3d67807F546Bd8",
+      "native_value": "0",
+      "function": "terminateStream(uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_terminationTimestamp",
+          "type": "uint256",
+          "value": "0"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0x36a0eB84154797DAdCEaCFD046785dB31094C308",
+      "native_value": "0",
+      "function": "terminateStream(uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_terminationTimestamp",
+          "type": "uint256",
+          "value": "0"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 4,
+      "target_contract": "0xEA2B6BC719CF6D2Fed07865d26987D32d570DbBD",
+      "native_value": "0",
+      "function": "terminateStream(uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "_terminationTimestamp",
+          "type": "uint256",
+          "value": "0"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 5,
+      "target_contract": "0x8624f61Cc6e5A86790e173712AfDd480fa8b73Ba",
+      "native_value": "0",
+      "function": "execute((address,uint256,bytes))",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "operation",
+          "type": "(address,uint256,bytes)",
+          "value": [
+            "0xc3d688b66703497daa19211eedff47f25384cdc3",
+            "0",
+            "0xc3b35a7e0000000000000000000000006d903f6003cca6255d85cca4d3b5e5146dc33925000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000000000000000000000000000000001a07cc9e000"
+          ]
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 6,
+      "target_contract": "0x3D6eEf6A92b15361697698695334E98C5db91D6b",
+      "native_value": "0",
+      "function": "execute((address,uint256,bytes))",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "operation",
+          "type": "(address,uint256,bytes)",
+          "value": [
+            "0xc3d688b66703497daa19211eedff47f25384cdc3",
+            "0",
+            "0xc3b35a7e0000000000000000000000006d903f6003cca6255d85cca4d3b5e5146dc33925000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000061b7333e98"
+          ]
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 7,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0x72bf2d7b05152ef282805f3e38752c436d94e4af"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "464283041600"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 8,
+      "target_contract": "0x72Bf2D7b05152ef282805F3e38752c436d94e4AF",
+      "native_value": "0",
+      "function": "initialize()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 9,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0xba3cdb9d5c2119137126989f81edaea8b50331d2"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "759218377100"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 10,
+      "target_contract": "0xbA3CdB9d5C2119137126989F81edaeA8b50331d2",
+      "native_value": "0",
+      "function": "initialize()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 11,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0xe9c21ebc3815cdfbe07f721126d3cb46407fd79a"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "109083541900"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 12,
+      "target_contract": "0xE9c21ebc3815CDfbE07F721126D3cB46407FD79A",
+      "native_value": "0",
+      "function": "initialize()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 13,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0x96a0029c945898de1072ea8f33aa88b7fde3b125"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "62527087300"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 14,
+      "target_contract": "0x96A0029c945898DE1072EA8f33aA88B7fde3B125",
+      "native_value": "0",
+      "function": "initialize()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    },
+    {
+      "payload_call_index": 15,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "to",
+          "type": "address",
+          "value": "0x12875aed495cd573433f0c93d538c0ccc9e2b8fa"
+        },
+        {
+          "index": 1,
+          "name": "value",
+          "type": "uint256",
+          "value": "813373368700"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "implementation_abi"
+    },
+    {
+      "payload_call_index": 16,
+      "target_contract": "0x12875aED495cd573433f0C93D538c0cCc9E2B8fA",
+      "native_value": "0",
+      "function": "initialize()",
+      "arguments": [],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    }
+  ]
+}

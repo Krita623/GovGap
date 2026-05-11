@@ -1,0 +1,68 @@
+{
+  "proposal_summary": "Updates DNSSECImpl's algorithm 7 (RSASHA1-NSEC3-SHA1) to point to the patched RSASHA1Algorithm contract to fix a padding validation vulnerability, matching the configuration of algorithm 5.",
+  "disclosed_entities": [
+    {
+      "name": "DNSSECImpl",
+      "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "A single setAlgorithm call on DNSSECImpl (0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5)"
+    },
+    {
+      "name": "pre-patch contract",
+      "address": "0x6ca8624bc207f043d140125486de0f7e624e37a1",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Algorithm 7 currently still points to the pre-patch contract at 0x6ca8624Bc207F043D140125486De0f7E624e37A1"
+    },
+    {
+      "name": "RSASHA1Algorithm (patched)",
+      "address": "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "7 (RSASHA1-NSEC3-SHA1) | RSASHA1Algorithm (patched) | 0x58E0383E21f25DaB957F6664240445A514E9f5e8"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "textual_evidence": "A single setAlgorithm call on DNSSECImpl (0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5)"
+    },
+    {
+      "address": "0x6ca8624bc207f043d140125486de0f7e624e37a1",
+      "textual_evidence": "pre-patch contract at 0x6ca8624Bc207F043D140125486De0f7E624e37A1"
+    },
+    {
+      "address": "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+      "textual_evidence": "0x58E0383E21f25DaB957F6664240445A514E9f5e8"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "setAlgorithm(uint8,address)",
+      "canonical_action": "parameter_update",
+      "object": "DNSSECImpl",
+      "claimed_effect": "Updates the address for algorithm 7 in DNSSECImpl to the patched RSASHA1Algorithm contract.",
+      "textual_evidence": "A single setAlgorithm call on DNSSECImpl ... setAlgorithm(uint8,address) | 7, 0x58E0383E21f25DaB957F6664240445A514E9f5e8",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal requires only a single state-changing transaction on an existing contract and reuses an already deployed patched contract.",
+    "textual_evidence": "A single setAlgorithm call on DNSSECImpl ... No new contract deployment is needed — this reuses the same patched contract already serving algorithm 5."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setAlgorithm",
+      "textual_evidence": "setAlgorithm(uint8,address)"
+    },
+    {
+      "function_name": "algorithms",
+      "textual_evidence": "algorithms(uint8)(address)"
+    }
+  ],
+  "limitations": [],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,298 @@
+{
+  "proposal_summary": "This proposal expands Uniswap protocol fees on v2 and v3 to Arbitrum, Base, Celo, OP Mainnet, Soneium, X Layer, Worldchain, and Zora. It also enables fees uniformly on all v3 pools via a new tier-based v3OpenFeeAdapter on Mainnet and the selected L2s, and routes fees to L2 TokenJars for UNI burn on Mainnet.",
+  "disclosed_entities": [
+    {
+      "name": "UniswapV3Factory",
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV3Factory | 0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    },
+    {
+      "name": "V3OpenFeeAdapter",
+      "address": "0x3e40db80450f025b01e45c58b0af763c7a29a8bd",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3OpenFeeAdapter | 0x3e40DB80450f025b01E45c58b0aF763C7A29a8bd"
+    },
+    {
+      "name": "V3FeeAdapter",
+      "address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3FeeAdapter | 0x5E74C9f42EEd283bFf3744fBD1889d398d40867d"
+    },
+    {
+      "name": "TokenJar",
+      "address": "0x95e337c5b155385945d407f5396387d0c2a3a263",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "TokenJar | 0x95E337C5B155385945D407f5396387D0c2a3A263"
+    },
+    {
+      "name": "Releaser (ArbitrumBridgedResourceFirepit)",
+      "address": "0xb8018422bce25d82e70cb98fda96a4f502d89427",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Releaser (ArbitrumBridgedResourceFirepit) | 0xB8018422bcE25D82E70cB98FdA96a4f502D89427"
+    },
+    {
+      "name": "V3OpenFeeAdapter (Arbitrum)",
+      "address": "0xff7ad5da31fecdc678796c88b05926db896b0699",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3OpenFeeAdapter | 0xFF7aD5dA31fECdC678796c88B05926dB896b0699"
+    },
+    {
+      "name": "UniswapV2Factory (Arbitrum)",
+      "address": "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV2Factory | 0xf1D7CC64Fb4452F05c498126312eBE29f30Fbcf9"
+    },
+    {
+      "name": "TokenJar (OP Mainnet)",
+      "address": "0xb13285df724ea75f3f1e9912010b7e491dcd5ee3",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "TokenJar | 0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+    },
+    {
+      "name": "Releaser (OptimismBridgedResourceFirepit) (OP Mainnet)",
+      "address": "0x94460443ca27ffc1baeca61165fde18346c91abd",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0x94460443Ca27FFC1baeCa61165fde18346C91AbD"
+    },
+    {
+      "name": "V3OpenFeeAdapter (OP Mainnet)",
+      "address": "0xec23cf5a1db3dcc6595385d28b2a4d9b52503be4",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3OpenFeeAdapter | 0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4"
+    },
+    {
+      "name": "UniswapV2Factory (OP Mainnet)",
+      "address": "0x0c3c1c532f1e39edf36be9fe0be1410313e074bf",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV2Factory | 0x0c3c1c532F1e39EdF36BE9Fe0bE1410313E074Bf"
+    },
+    {
+      "name": "TokenJar (Base)",
+      "address": "0x9bd25e67bf390437c8faf480ac735a27bcf6168c",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "TokenJar | 0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+    },
+    {
+      "name": "Releaser (OptimismBridgedResourceFirepit) (Base)",
+      "address": "0xff77c0ed0b6b13a20446969107e5867abc46f53a",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0xFf77c0ED0B6b13A20446969107E5867abc46f53a"
+    },
+    {
+      "name": "V3OpenFeeAdapter (Base)",
+      "address": "0xabea76658b205696d49b5f91b2a03536cb8a3be1",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "V3OpenFeeAdapter | 0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1"
+    },
+    {
+      "name": "UniswapV3Factory (Base)",
+      "address": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV3Factory | 0x33128a8fC17869897dcE68Ed026d694621f6FDfD"
+    },
+    {
+      "name": "UniswapV2Factory (Base)",
+      "address": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV2Factory | 0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6"
+    },
+    {
+      "name": "CrossChainAccount (Celo)",
+      "address": "0x044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "CrossChainAccount | 0x044aAF330d7fD6AE683EEc5c1C1d1fFf5196B6b7"
+    },
+    {
+      "name": "UniswapV3Factory (Celo)",
+      "address": "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV3Factory | 0xAfE208a311B21f13EF87E33A90049fC17A7acDEc"
+    },
+    {
+      "name": "UniswapV2Factory (Celo)",
+      "address": "0x114a43df6c5f54ebb8a9d70cd1951d3dd68004c7",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "UniswapV2Factory | 0x114A43DF6C5f54EBB8A9d70Cd1951D3dD68004c7"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x3e40db80450f025b01e45c58b0af763c7a29a8bd",
+      "textual_evidence": "V3OpenFeeAdapter | 0x3e40DB80450f025b01E45c58b0aF763C7A29a8bd"
+    },
+    {
+      "address": "0x5e74c9f42eed283bff3744fbd1889d398d40867d",
+      "textual_evidence": "V3FeeAdapter | 0x5E74C9f42EEd283bFf3744fBD1889d398d40867d"
+    },
+    {
+      "address": "0x95e337c5b155385945d407f5396387d0c2a3a263",
+      "textual_evidence": "TokenJar | 0x95E337C5B155385945D407f5396387D0c2a3A263"
+    },
+    {
+      "address": "0xb8018422bce25d82e70cb98fda96a4f502d89427",
+      "textual_evidence": "Releaser (ArbitrumBridgedResourceFirepit) | 0xB8018422bcE25D82E70cB98FdA96a4f502D89427"
+    },
+    {
+      "address": "0xff7ad5da31fecdc678796c88b05926db896b0699",
+      "textual_evidence": "V3OpenFeeAdapter | 0xFF7aD5dA31fECdC678796c88B05926dB896b0699"
+    },
+    {
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "textual_evidence": "UniswapV3Factory | 0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    },
+    {
+      "address": "0xf1d7cc64fb4452f05c498126312ebe29f30fbcf9",
+      "textual_evidence": "UniswapV2Factory | 0xf1D7CC64Fb4452F05c498126312eBE29f30Fbcf9"
+    },
+    {
+      "address": "0xb13285df724ea75f3f1e9912010b7e491dcd5ee3",
+      "textual_evidence": "TokenJar | 0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+    },
+    {
+      "address": "0x94460443ca27ffc1baeca61165fde18346c91abd",
+      "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0x94460443Ca27FFC1baeCa61165fde18346C91AbD"
+    },
+    {
+      "address": "0xec23cf5a1db3dcc6595385d28b2a4d9b52503be4",
+      "textual_evidence": "V3OpenFeeAdapter | 0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4"
+    },
+    {
+      "address": "0x0c3c1c532f1e39edf36be9fe0be1410313e074bf",
+      "textual_evidence": "UniswapV2Factory | 0x0c3c1c532F1e39EdF36BE9Fe0bE1410313E074Bf"
+    },
+    {
+      "address": "0x9bd25e67bf390437c8faf480ac735a27bcf6168c",
+      "textual_evidence": "TokenJar | 0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+    },
+    {
+      "address": "0xff77c0ed0b6b13a20446969107e5867abc46f53a",
+      "textual_evidence": "Releaser (OptimismBridgedResourceFirepit) | 0xFf77c0ED0B6b13A20446969107E5867abc46f53a"
+    },
+    {
+      "address": "0xabea76658b205696d49b5f91b2a03536cb8a3be1",
+      "textual_evidence": "V3OpenFeeAdapter | 0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1"
+    },
+    {
+      "address": "0x33128a8fc17869897dce68ed026d694621f6fdfd",
+      "textual_evidence": "UniswapV3Factory | 0x33128a8fC17869897dcE68Ed026d694621f6FDfD"
+    },
+    {
+      "address": "0x8909dc15e40173ff4699343b6eb8132c65e18ec6",
+      "textual_evidence": "UniswapV2Factory | 0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6"
+    },
+    {
+      "address": "0x044aaf330d7fd6ae683eec5c1c1d1fff5196b6b7",
+      "textual_evidence": "CrossChainAccount | 0x044aAF330d7fD6AE683EEc5c1C1d1fFf5196B6b7"
+    },
+    {
+      "address": "0xafe208a311b21f13ef87e33a90049fc17a7acdec",
+      "textual_evidence": "UniswapV3Factory | 0xAfE208a311B21f13EF87E33A90049fC17A7acDEc"
+    },
+    {
+      "address": "0x114a43df6c5f54ebb8a9d70cd1951d3dd68004c7",
+      "textual_evidence": "UniswapV2Factory | 0x114A43DF6C5f54EBB8A9d70Cd1951D3dD68004c7"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "V3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));",
+      "canonical_action": "role_change",
+      "object": "UniswapV3Factory",
+      "claimed_effect": "Change the owner on UniswapV3Factory to v3OpenFeeAdapter",
+      "textual_evidence": "/// Change the owner on UniswapV3Factory to v3OpenFeeAdapter\nV3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "V3_FACTORY.setOwner(address(v3OpenFeeAdapter));",
+      "canonical_action": "role_change",
+      "object": "UniswapV3Factory",
+      "claimed_effect": "Set the owner of the V3 Factory to the V3OpenFeeAdapter",
+      "textual_evidence": "/// Set the owner of the V3 Factory to the V3OpenFeeAdapter\nV3_FACTORY.setOwner(address(v3OpenFeeAdapter));",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "V2_FACTORY.setFeeTo(address(tokenJar));",
+      "canonical_action": "parameter_update",
+      "object": "UniswapV2Factory",
+      "claimed_effect": "Set the recipient of V2 protocol fees to the TokenJar",
+      "textual_evidence": "/// Set the recipient of V2 protocol fees to the TokenJar\nV2_FACTORY.setFeeTo(address(tokenJar));",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "V2_FACTORY.setFeeToSetter(CrossChainAccount)",
+      "canonical_action": "role_change",
+      "object": "UniswapV2Factory",
+      "claimed_effect": "Transfer v2 setFeeToSetter role",
+      "textual_evidence": "/// Transfer v2 setFeeToSetter role\nV2_FACTORY.setFeeToSetter(CrossChainAccount)",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "V3_FACTORY.setOwner(CrossChainAccount)",
+      "canonical_action": "role_change",
+      "object": "UniswapV3Factory",
+      "claimed_effect": "Transfer UniswapV3Factory owner role",
+      "textual_evidence": "/// Transfer UniswapV3Factory owner role \nV3_FACTORY.setOwner(CrossChainAccount)",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "POOL_MANAGER.transferOwnership(CrossChainAccount)",
+      "canonical_action": "role_change",
+      "object": "POOL_MANAGER",
+      "claimed_effect": "Transfer Uniswap v4 PoolManager owner role",
+      "textual_evidence": "// Transfer Uniswap v4 PoolManager owner role\nPOOL_MANAGER.transferOwnership(CrossChainAccount)",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves executing ten transactions across multiple chains, setting up new fee architecture and fee adapters.",
+    "textual_evidence": "Because these transactions are crosschain, governance front ends may not decode them correctly."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setFactoryOwner",
+      "textual_evidence": "V3_FEE_ADAPTER.setFactoryOwner(address(v3OpenFeeAdapter));"
+    },
+    {
+      "function_name": "setOwner",
+      "textual_evidence": "V3_FACTORY.setOwner(address(v3OpenFeeAdapter));"
+    },
+    {
+      "function_name": "setFeeTo",
+      "textual_evidence": "V2_FACTORY.setFeeTo(address(tokenJar));"
+    },
+    {
+      "function_name": "setFeeToSetter",
+      "textual_evidence": "V2_FACTORY.setFeeToSetter(CrossChainAccount)"
+    },
+    {
+      "function_name": "transferOwnership",
+      "textual_evidence": "POOL_MANAGER.transferOwnership(CrossChainAccount)"
+    }
+  ],
+  "limitations": [
+    "No specific parameters for fees sizes, pools, or execution logic other than ownership and fee-to updates were provided in the text snippet itself."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

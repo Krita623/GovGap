@@ -1,0 +1,43 @@
+{
+  "benchmark_id": "real-compound-0015",
+  "dao": {
+    "name": "Compound",
+    "chain_id": 1,
+    "governor_address": "0x309a862bbC1A00e45506cB8A802D1ff10004c8C0",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "418",
+    "proposal_url": "https://www.tally.xyz/gov/compound/proposal/418",
+    "source": "tally",
+    "created_block": 22043816,
+    "executed_block": 22097180,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Add tETH as collateral into cWETHv3 on Mainnet",
+    "description": "# Add tETH as collateral into cWETHv3 on Mainnet\n\n## Proposal summary\n\nCompound Growth Program [AlphaGrowth] proposes to add tETH into cWETHv3 on Ethereum network. This proposal takes the governance steps recommended and necessary to update a Compound III WETH market on Ethereum. Simulations have confirmed the market\u2019s readiness, as much as possible, using the [Comet scenario suite](https://github.com/compound-finance/comet/tree/main/scenario). The new parameters include setting the risk parameters based on the [recommendations from Gauntlet](https://www.comp.xyz/t/listing-teth-on-compound/5925/4).\n\nFurther detailed information can be found on the corresponding [proposal pull request](https://github.com/compound-finance/comet/pull/955) and [forum discussion](https://www.comp.xyz/t/listing-teth-on-compound/5925).\n\n\n## Proposal Actions\n\nThe first action adds tETH asset as collateral with corresponding configurations.\n\nThe second action deploys and upgrades Comet to a new version."
+  },
+  "payload": {
+    "targets": [
+      "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "0x1EC63B5883C3481134FD50D5DAebc83Ecd2E8779"
+    ],
+    "values": [
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "",
+      ""
+    ],
+    "calldatas": [
+      "0xea31a447000000000000000000000000a17581a9e3356d9a858b789d68b4d866e593ae94000000000000000000000000d11c452fc99cf405034ee446803b6f6c1f6d5ed80000000000000000000000005ecf850c770f78dc7b9f9760672484b2ccaea81800000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000c3663566a5800000000000000000000000000000000000000000000000000000ca0f82db99b00000000000000000000000000000000000000000000000000000d529ae9e86000000000000000000000000000000000000000000000000000d8d726b7177a800000",
+      "0x9627816f000000000000000000000000316f9708bb98af7da9c68c1c3b5e79039cd336e3000000000000000000000000a17581a9e3356d9a858b789d68b4d866e593ae94"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xcae300e6564712643d11c36d510db26dbec683f7b86916c50745748d6924ed75",
+    "executed_tx_hash": "0x555333df232b5d31c19f50a51cfac15e9e0e62a5d49852da680560934c38f1aa"
+  }
+}

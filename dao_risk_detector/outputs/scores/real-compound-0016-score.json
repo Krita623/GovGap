@@ -1,0 +1,594 @@
+{
+  "metadata": {
+    "proposal_id": "451",
+    "generated_at": "2026-05-08T11:15:24.098784+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Proposal to renew the OpenZeppelin Security Partnership for 2025, funding a payment streamer contract with approximately 100,000 COMP (110% of $4M USDC equivalent) from the Comptroller.",
+    "disclosed_entities": [
+      {
+        "name": "payment streamer contract",
+        "address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract"
+      },
+      {
+        "name": "Comptroller",
+        "address": null,
+        "entity_type": "treasury",
+        "disclosure_level": "explicit",
+        "textual_evidence": "This proposal grants COMP from the Comptroller"
+      },
+      {
+        "name": "COMP",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "USDC-price-adjusted COMP streaming mechanism... deposit of 110% of the 4M USDC equivalent in COMP, approximately 100,000 COMP"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+        "textual_evidence": "[payment streamer contract](https://etherscan.io/address/0xcc14295eef16b26171b19a769c8a255b24305533#code)"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "grants COMP from the Comptroller to the payment streamer contract",
+        "canonical_action": "treasury_operation",
+        "object": "Comptroller",
+        "claimed_effect": "Funds the streamer contract with approximately 100,000 COMP to cover the annual security partnership fee.",
+        "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "initializes the stream",
+        "canonical_action": "parameter_update",
+        "object": "payment streamer contract",
+        "claimed_effect": "Starts the streaming process of the COMP tokens over the course of a year.",
+        "textual_evidence": "and initializes the stream.",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal involves a straightforward token transfer from the treasury to an external streamer contract and a call to initialize the stream.",
+      "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract, created by the Streamer Factory... and initializes the stream."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Exact function names and signatures to execute the COMP grant and stream initialization are not detailed in the text.",
+      "The target address for the Comptroller is not provided, only the streamer contract address is given."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "value": "0x0",
+        "input": "0x27efe3cb000000000000000000000000cc14295eef16b26171b19a769c8a255b2430553300000000000000000000000000000000000000000000152d02c7e14af6800000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x27efe3cb",
+        "decoded_function": "_grantComp(address,uint256)",
+        "decoded_args": [
+          "0xcc14295eef16b26171b19a769c8a255b24305533",
+          100000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0x27efe3cb000000000000000000000000cc14295eef16b26171b19a769c8a255b2430553300000000000000000000000000000000000000000000152d02c7e14af6800000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x27efe3cb",
+        "decoded_function": "_grantComp(address,uint256)",
+        "decoded_args": [
+          "0xcc14295eef16b26171b19a769c8a255b24305533",
+          100000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0",
+        "input": "0x70a082310000000000000000000000003d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "output": "0x000000000000000000000000000000000000000000008d3ec01b15998602fde9",
+        "depth": 2,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000cc14295eef16b26171b19a769c8a255b2430553300000000000000000000000000000000000000000000152d02c7e14af6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xcc14295eef16b26171b19a769c8a255b24305533",
+          100000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+        "value": "0x0",
+        "input": "0x8129fc1c",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x8129fc1c",
+        "decoded_function": "initialize()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0",
+        "input": "0x70a08231000000000000000000000000cc14295eef16b26171b19a769c8a255b24305533",
+        "output": "0x00000000000000000000000000000000000000000000152d02c7e14af6800000",
+        "depth": 1,
+        "function_selector": "0x70a08231",
+        "decoded_function": "balanceOf(address)",
+        "decoded_args": [
+          "0xcc14295eef16b26171b19a769c8a255b24305533"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+        "to_address": "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000006000000000000288600000000000000000000000000000000000000000000000000000000fc1a6fd800000000000000000000000000000000000000000000000000000000686409cc00000000000000000000000000000000000000000000000000000000686409e30000000000000000000000000000000000000000000000060000000000002886",
+        "depth": 1,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5",
+        "to_address": "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x000000000000000000000000000000000000000000000000000000000000288600000000000000000000000000000000000000000000000000000000fc1a6fd800000000000000000000000000000000000000000000000000000000686409cc00000000000000000000000000000000000000000000000000000000686409e30000000000000000000000000000000000000000000000000000000000002886",
+        "depth": 2,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xcc14295eef16b26171b19a769c8a255b24305533",
+        "to_address": "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000300000000000001750000000000000000000000000000000000000000000000000000000005f5d126000000000000000000000000000000000000000000000000000000006863958000000000000000000000000000000000000000000000000000000000686395970000000000000000000000000000000000000000000000030000000000000175",
+        "depth": 1,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+        "to_address": "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+        "value": "0",
+        "input": "0xfeaf968c",
+        "output": "0x00000000000000000000000000000000000000000000000000000000000001750000000000000000000000000000000000000000000000000000000005f5d126000000000000000000000000000000000000000000000000000000006863958000000000000000000000000000000000000000000000000000000000686395970000000000000000000000000000000000000000000000000000000000000175",
+        "depth": 2,
+        "function_selector": "0xfeaf968c",
+        "decoded_function": "latestRoundData()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 2,
+    "unique_addresses": [
+      "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+      "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+      "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+      "0xbafe01ff935c7305907c33bf824352ee5979b526",
+      "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+      "0xcc14295eef16b26171b19a769c8a255b24305533",
+      "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 6,
+    "external_call_count": 3,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "_grantComp(address,uint256)",
+      "balanceOf(address)",
+      "initialize()",
+      "latestRoundData()",
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "451:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+      "depth": 1,
+      "function_selector": "0x27efe3cb",
+      "decoded_function": "_grantComp(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0x27efe3cb000000000000000000000000cc14295eef16b26171b19a769c8a255b2430553300000000000000000000000000000000000000000000152d02c7e14af6800000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x27efe3cb",
+        "decoded_function": "_grantComp(address,uint256)",
+        "decoded_args": [
+          "0xcc14295eef16b26171b19a769c8a255b24305533",
+          100000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "451:3:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "depth": 2,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000cc14295eef16b26171b19a769c8a255b2430553300000000000000000000000000000000000000000000152d02c7e14af6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xcc14295eef16b26171b19a769c8a255b24305533",
+          100000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0xcc14295eef16b26171b19a769c8a255b24305533"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+        "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+        "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+        "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+                "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+                "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+                "0xbafe01ff935c7305907c33bf824352ee5979b526",
+                "0xc00e94cb662c3520282e6f5717214004a7f26888",
+                "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+                "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"
+              ],
+              "related_actions": [
+                {
+                  "id": "451:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                  "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+                  "depth": 1,
+                  "function_selector": "0x27efe3cb",
+                  "decoded_function": "_grantComp(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "451:3:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+                  "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+                  "depth": 2,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0xcc14295eef16b26171b19a769c8a255b24305533"
+          ],
+          "trace_unique_addresses": [
+            "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+            "0xbafe01ff935c7305907c33bf824352ee5979b526",
+            "0xc00e94cb662c3520282e6f5717214004a7f26888",
+            "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+            "0xcc14295eef16b26171b19a769c8a255b24305533",
+            "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+            "0xbafe01ff935c7305907c33bf824352ee5979b526",
+            "0xc00e94cb662c3520282e6f5717214004a7f26888",
+            "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+            "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 2,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal involves a straightforward token transfer from the treasury to an external streamer contract and a call to initialize the stream.",
+            "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract, created by the Streamer Factory... and initializes the stream."
+          },
+          "actual_max_depth": 2,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "_grantComp(address,uint256)",
+        "balanceOf(address)",
+        "initialize()",
+        "latestRoundData()",
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation",
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "grants COMP from the Comptroller to the payment streamer contract",
+              "canonical_action": "treasury_operation",
+              "object": "Comptroller",
+              "claimed_effect": "Funds the streamer contract with approximately 100,000 COMP to cover the annual security partnership fee.",
+              "textual_evidence": "This proposal grants COMP from the Comptroller to the payment streamer contract",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "initializes the stream",
+              "canonical_action": "parameter_update",
+              "object": "payment streamer contract",
+              "claimed_effect": "Starts the streaming process of the COMP tokens over the course of a year.",
+              "textual_evidence": "and initializes the stream.",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "451:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+              "depth": 1,
+              "function_selector": "0x27efe3cb",
+              "decoded_function": "_grantComp(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "451:3:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "_grantComp(address,uint256)",
+            "balanceOf(address)",
+            "initialize()",
+            "latestRoundData()",
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x24e3c657c27dfc7ea6f9f58e86387d846b3baa59",
+            "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0x8fffffd4afb6115b954bd326cbe7b4ba576818f6",
+            "0xbafe01ff935c7305907c33bf824352ee5979b526",
+            "0xc00e94cb662c3520282e6f5717214004a7f26888",
+            "0xc9e1a09622afdb659913fefe800feae5dbbfe9d7",
+            "0xdbd020caef83efd542f4de03e3cf0c28a4428bd5"
+          ],
+          "related_actions": [
+            {
+              "id": "451:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+              "depth": 1,
+              "function_selector": "0x27efe3cb",
+              "decoded_function": "_grantComp(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "451:3:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+              "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

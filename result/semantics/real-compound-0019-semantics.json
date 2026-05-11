@@ -1,0 +1,17 @@
+{
+  "proposal_summary": "Empty proposal text provided, only placeholder headings.",
+  "disclosed_entities": [],
+  "disclosed_addresses": [],
+  "claimed_actions": [],
+  "claimed_complexity": {
+    "level": "unknown",
+    "reason": "No text provided to determine complexity",
+    "textual_evidence": ""
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No meaningful text provided to extract entities or actions."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

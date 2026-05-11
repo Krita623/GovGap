@@ -1,0 +1,49 @@
+{
+  "proposal_summary": "Funding request of 190 ETH for 5 months to develop House of Nouns v2, a suite of governance tools including a pre-proposal client, ideas client, and open-source infrastructure for Nounish DAOs.",
+  "disclosed_entities": [
+    {
+      "name": "House of Nouns",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "House of Nouns v2"
+    },
+    {
+      "name": "Nouns DAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "Nouns’ participation and ultimate success"
+    },
+    {
+      "name": "Collective",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "House of Nouns is by Collective"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 190 ETH to fund 5 months of development",
+      "canonical_action": "transfer",
+      "object": "190 ETH",
+      "claimed_effect": "Fund 5 months of development for House of Nouns v2",
+      "textual_evidence": "We’re asking for 190 ETH to fund 5 months of development for House of Nouns v2.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal asks for funding to support development work with multiple product features, but does not indicate complex on-chain execution beyond a standard transfer.",
+    "textual_evidence": "We’re asking for 190 ETH to fund 5 months of development for House of Nouns v2."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No on-chain addresses provided for the transfer.",
+    "Function calls and ABIs are not included."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

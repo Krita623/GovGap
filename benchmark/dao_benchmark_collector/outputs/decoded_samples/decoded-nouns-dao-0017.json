@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-nouns-dao-0017",
+  "source_raw_sample": "outputs/raw_samples/real-nouns-dao-0017.json",
+  "proposal": {
+    "dao": "Nouns DAO",
+    "chain_id": 1,
+    "proposal_id": "743",
+    "status": "executed",
+    "title": "# \"Benbodhi: Decoded\" - Submit Ben's documentary to 48 film festivals",
+    "description": "# \"Benbodhi: Decoded\" - Submit Ben's documentary to 48 film festivals\n\n# \"Benbodhi: Decoded\" - Submit Ben's documentary to 48 film festivals\n\n[![Benbodhi-Decoded-Thumbnail-1.jpg](https://i.postimg.cc/3xHz0wCb/Benbodhi-Decoded-Thumbnail-1.jpg \"https://postimg.cc/Mvd9hqLy\")](https://postimg.cc/Mvd9hqLy)\n\n**TL;DR**  **Let\u2019s send \"Benbodhi: Decoded\" to 48 of the best-rated film and documentary festivals around the world.**\n\n---\n\n**Budget: $2,854.00 USDC**\n\n---\n\n\ud83d\udcfd\ufe0f **THE PLAN**\n\nMost Nounsfolk who watched Ben's film had great things to say about it.\n\nLet's give it one more push into the unknown and try and inspire a new audience.\n\nHere is the film on YouTube: [https://youtu.be/B9xxBuckhxs](https://youtu.be/B9xxBuckhxs)\n\nWith \"Non-Fungible Aotearoa\" we were selected by 8 festivals in 2024  thanks to props 71 and 405:\n\n[![Page-1.png](https://i.postimg.cc/hjM5H8Hk/Page-1.png \"https://postimg.cc/8JJ4vvk4\")](https://postimg.cc/8JJ4vvk4)\n\nI am confident Ben's documentary will do much better.\nWhat do you say?\n\nI will front the soundtrack cost out of pocket and Nouns can fund the festivals' fees.\n\nHere is the list:\n\n[![Ben-film-festival.png](https://i.postimg.cc/8c9tSZw0/Ben-film-festival.png \"https://postimg.cc/sGPpP9kY\")](https://postimg.cc/sGPpP9kY)\n\n---\n\n\ud83e\udec2  **THE TEAM**\n\n- Leo Clark (Director/Producer) [https://warpcast.com/leoclark.eth](https://warpcast.com/leoclark.eth) Trying to inspire the world to join our onchain journey.\n  One documentary at a time. \n\nI would love to count on your support this time.\n\nThank you for reading and considering our proposal \ud83d\ude4f"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xd97Bcd9f47cEe35c0a9ec1dc40C1269afc9E8E1D",
+      "native_value": "0",
+      "function": "sendOrRegisterDebt(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "account",
+          "type": "address",
+          "value": "0x4316aab2b8bff2b278fd426dc1580d3311eb2152"
+        },
+        {
+          "index": 1,
+          "name": "amount",
+          "type": "uint256",
+          "value": "2854000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

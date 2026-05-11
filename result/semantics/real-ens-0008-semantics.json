@@ -1,0 +1,88 @@
+{
+  "proposal_summary": "The proposal expands the ENS Endowment by transferring a third tranche of 5,000 ETH from the ENS DAO. It also updates the Allowance Module on the ENS Endowment to reduce the reset time for ETH fee allowances from 30 days to 25 days to mitigate payment delays.",
+  "disclosed_entities": [
+    {
+      "name": "ENS Endowment",
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64)"
+    },
+    {
+      "name": "ENS DAO Multisig",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Executed by the ENS DAO Multisig"
+    },
+    {
+      "name": "Allowance Module",
+      "address": "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Update the Allowance Module\nExecuted by the ENS Endowment. [...] Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module"
+    },
+    {
+      "name": "main.mg.wg.ens.eth",
+      "address": "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module"
+    },
+    {
+      "name": "Karpatkey",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Author - karpatkey"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64)"
+    },
+    {
+      "address": "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+      "textual_evidence": "Update the Allowance Module \nCurrently, the parameters..."
+    },
+    {
+      "address": "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+      "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "textual_evidence": "\"token\": \"0x0000000000000000000000000000000000000000\","
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 5,000 ETH to the Endowment",
+      "canonical_action": "transfer",
+      "object": "5,000 ETH",
+      "claimed_effect": "Fund the Endowment with its third tranche of 5,000 ETH from the ENS DAO Multisig.",
+      "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64) Value: 5000000000000000000000",
+      "confidence": 0.99
+    },
+    {
+      "raw_action": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module from 30 days to 25 days",
+      "canonical_action": "approval",
+      "object": "Allowance Module (0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134)",
+      "claimed_effect": "Lowers the reset window for fee extraction allowances from 30 days to 25 days, preventing payment delays.",
+      "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module from 30 days to 25 days (i.e. 43200 minutes to 36000)",
+      "confidence": 0.99
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal executes exactly two straightforward operations: a native ETH transfer and an update to a numeric parameter (resetTimeMin) in an existing Allowance module.",
+    "textual_evidence": "1. Fund Transfer ... 2. Update the Allowance Module"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The specific ABI function signature used to execute the parameter update on the Allowance Module is not provided explicitly in the text (only field names like 'resetTimeMin').",
+    "Claims surrounding specific ROI percentages and operations performed externally by Karpatkey cannot be computationally verified via the proposed execution payloads alone."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

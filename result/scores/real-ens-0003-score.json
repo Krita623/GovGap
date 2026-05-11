@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "proposal_id": "90476529665364161211265365238121921179703522228680648046371476645353679539653",
+    "generated_at": "2026-05-08T11:15:24.193028+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Enacts EP2 to execute a retrospective airdrop for accounts that owned another account's primary ENS.",
+    "disclosed_entities": [],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Retrospective Airdrop",
+        "canonical_action": "transfer",
+        "object": "tokens",
+        "claimed_effect": "Airdrops tokens to eligible accounts based on the Snapshot vote and EP2 spec.",
+        "textual_evidence": "[EP2] Retrospective Airdrop Enacts EP2 as approved by Snapshot vote",
+        "confidence": 0.8
+      }
+    ],
+    "claimed_complexity": {
+      "level": "unknown",
+      "reason": "The proposal text is too brief to determine complexity directly from the text.",
+      "textual_evidence": "Enacts EP2 as approved by Snapshot vote, and described in full here..."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "The proposal text relies entirely on an external GitHub link for details and execution specifics.",
+      "No addresses or specific smart contract actions are explicitly detailed in the provided text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004a1241c2cf2fd4a39918bcd738f90bd7094ec2dc000000000000000000000000000000000000000000002e700a82ee7da5733d9f",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4a1241c2cf2fd4a39918bcd738f90bd7094ec2dc",
+          219295650978169915391391
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "approve(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "90476529665364161211265365238121921179703522228680648046371476645353679539653:0:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "depth": 0,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004a1241c2cf2fd4a39918bcd738f90bd7094ec2dc000000000000000000000000000000000000000000002e700a82ee7da5733d9f",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4a1241c2cf2fd4a39918bcd738f90bd7094ec2dc",
+          219295650978169915391391
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [
+                {
+                  "id": "90476529665364161211265365238121921179703522228680648046371476645353679539653:0:approval",
+                  "action_type": "approval",
+                  "severity_hint": "medium",
+                  "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+                  "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+                  "depth": 0,
+                  "function_selector": "0x095ea7b3",
+                  "decoded_function": "approve(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "approval"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "approval"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "unknown",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Text complexity is unknown; observed trace depth is low to moderate.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "unknown",
+            "reason": "The proposal text is too brief to determine complexity directly from the text.",
+            "textual_evidence": "Enacts EP2 as approved by Snapshot vote, and described in full here..."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "approval"
+          ],
+          "uncovered_business_actions": [
+            "approval"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "approve(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "approval"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer"
+      ],
+      "actual_actions": [
+        "approval"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "transfer"
+              ],
+              "actual_business_actions": [
+                "approval"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "approve(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Retrospective Airdrop",
+              "canonical_action": "transfer",
+              "object": "tokens",
+              "claimed_effect": "Airdrops tokens to eligible accounts based on the Snapshot vote and EP2 spec.",
+              "textual_evidence": "[EP2] Retrospective Airdrop Enacts EP2 as approved by Snapshot vote",
+              "confidence": 0.8
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "90476529665364161211265365238121921179703522228680648046371476645353679539653:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+              "depth": 0,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "approval"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "approve(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [
+            {
+              "id": "90476529665364161211265365238121921179703522228680648046371476645353679539653:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+              "depth": 0,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "approval"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "transfer"
+          ],
+          "actual_business_actions": [
+            "approval"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "approve(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

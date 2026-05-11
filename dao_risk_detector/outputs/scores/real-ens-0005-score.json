@@ -1,0 +1,517 @@
+{
+  "metadata": {
+    "proposal_id": "27850654116740852236526757351596115114486670304472932313768517382407193376455",
+    "generated_at": "2026-05-08T11:15:24.204356+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "The proposal packages and executes three previously passed Snapshot proposals: EP8 to reimburse True Names, EP9 to change to the Exponential Premium Price Oracle, and EP10 to fund a DAO-Governed Identity Server.",
+    "disclosed_entities": [
+      {
+        "name": "True Names",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Reimburse True Names for expenses and tax obligations"
+      },
+      {
+        "name": "DAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "incurred on behalf of the DAO"
+      },
+      {
+        "name": "Exponential Premium Price Oracle",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Change to Exponential Premium Price Oracle"
+      },
+      {
+        "name": "DAO-Governed Identity Server",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Fund a DAO-Governed Identity Server"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Reimburse True Names for expenses and tax obligations",
+        "canonical_action": "transfer",
+        "object": "True Names",
+        "claimed_effect": "Reimburses the entity for expenses incurred for the DAO",
+        "textual_evidence": "[EP8] [Executable] Reimburse True Names for expenses and tax obligations incurred on behalf of the DAO",
+        "confidence": 0.9
+      },
+      {
+        "raw_action": "Change to Exponential Premium Price Oracle",
+        "canonical_action": "parameter_update",
+        "object": "Exponential Premium Price Oracle",
+        "claimed_effect": "Updates the oracle used for ENS premium pricing",
+        "textual_evidence": "[EP9] [Executable] Change to Exponential Premium Price Oracle",
+        "confidence": 0.8
+      },
+      {
+        "raw_action": "Fund a DAO-Governed Identity Server",
+        "canonical_action": "treasury_operation",
+        "object": "DAO-Governed Identity Server",
+        "claimed_effect": "Allocates funds to an identity server governed by the DAO",
+        "textual_evidence": "[EP10] [Executable] Fund a DAO-Governed Identity Server",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal bundles three distinct executable items (fund transfers and an oracle update), requiring multiple state changes.",
+      "textual_evidence": "Executes EP8, EP9 and EP10 as passed on Snapshot"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "The text only includes Snapshot hashes, but lacks the actual on-chain payload addresses, target contract addresses, and execution parameters (such as fund amounts)."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000690f0581ececcf8389c223170778cd9d029606f20000000000000000000000000000000000000000000000000000012a59cf1dc0",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002645524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e63650000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x690f0581ececcf8389c223170778cd9d029606f2",
+          1281407000000
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000690f0581ececcf8389c223170778cd9d029606f20000000000000000000000000000000000000000000000000000012a59cf1dc0",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002645524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e63650000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x690f0581ececcf8389c223170778cd9d029606f2",
+          1281407000000
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+        "value": "0x0",
+        "input": "0x530e784f0000000000000000000000000b7cbee19e219050e38b419273229fd24590555a",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x530e784f",
+        "decoded_function": "setPriceOracle(address)",
+        "decoded_args": [
+          "0x0b7cbee19e219050e38b419273229fd24590555a"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000002686a8919df194aa7673244549e68d42c1685d030000000000000000000000000000000000000000000000000000003a35294400",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x2686a8919df194aa7673244549e68d42c1685d03",
+          250000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000002686a8919df194aa7673244549e68d42c1685d030000000000000000000000000000000000000000000000000000003a35294400",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x2686a8919df194aa7673244549e68d42c1685d03",
+          250000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+      "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 2,
+    "staticcall_count": 0,
+    "external_call_count": 3,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "setPriceOracle(address)",
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000690f0581ececcf8389c223170778cd9d029606f20000000000000000000000000000000000000000000000000000012a59cf1dc0",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002645524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e63650000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x690f0581ececcf8389c223170778cd9d029606f2",
+          1281407000000
+        ],
+        "error": "execution reverted",
+        "merged_count": 2
+      },
+      "confidence": 0.75
+    },
+    {
+      "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "depth": 1,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000690f0581ececcf8389c223170778cd9d029606f20000000000000000000000000000000000000000000000000000012a59cf1dc0",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002645524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e63650000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x690f0581ececcf8389c223170778cd9d029606f2",
+          1281407000000
+        ],
+        "error": "execution reverted",
+        "merged_count": 2
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+        "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+                "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [
+                {
+                  "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+                  "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                },
+                {
+                  "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                  "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+                  "depth": 1,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [
+                "parameter_update",
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [
+            "parameter_update",
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal bundles three distinct executable items (fund transfers and an oracle update), requiring multiple state changes.",
+            "textual_evidence": "Executes EP8, EP9 and EP10 as passed on Snapshot"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 2,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "parameter_update",
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "setPriceOracle(address)",
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer",
+        "parameter_update",
+        "treasury_operation"
+      ],
+      "actual_actions": [
+        "parameter_update",
+        "transfer"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Reimburse True Names for expenses and tax obligations",
+              "canonical_action": "transfer",
+              "object": "True Names",
+              "claimed_effect": "Reimburses the entity for expenses incurred for the DAO",
+              "textual_evidence": "[EP8] [Executable] Reimburse True Names for expenses and tax obligations incurred on behalf of the DAO",
+              "confidence": 0.9
+            },
+            {
+              "raw_action": "Change to Exponential Premium Price Oracle",
+              "canonical_action": "parameter_update",
+              "object": "Exponential Premium Price Oracle",
+              "claimed_effect": "Updates the oracle used for ENS premium pricing",
+              "textual_evidence": "[EP9] [Executable] Change to Exponential Premium Price Oracle",
+              "confidence": 0.8
+            },
+            {
+              "raw_action": "Fund a DAO-Governed Identity Server",
+              "canonical_action": "treasury_operation",
+              "object": "DAO-Governed Identity Server",
+              "claimed_effect": "Allocates funds to an identity server governed by the DAO",
+              "textual_evidence": "[EP10] [Executable] Fund a DAO-Governed Identity Server",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 1,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "parameter_update",
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "setPriceOracle(address)",
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+            "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [
+            {
+              "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "27850654116740852236526757351596115114486670304472932313768517382407193376455:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+              "to_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+              "depth": 1,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [
+            "parameter_update",
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

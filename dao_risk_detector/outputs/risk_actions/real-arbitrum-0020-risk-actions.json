@@ -1,0 +1,122 @@
+{
+  "risk_actions": [
+    {
+      "id": "41764616447638715300612914863093416410063619332654034338488569044333128121381:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+      "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "depth": 0,
+      "function_selector": "0xbeabacc8",
+      "decoded_function": "transfer(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000a797804aec211158be407189ef881ad2d0c3fd6e000000000000000000000000000000000000000000008f0c8dff70aa8ce80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xa797804aec211158be407189ef881ad2d0c3fd6e",
+          675530000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "41764616447638715300612914863093416410063619332654034338488569044333128121381:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+      "depth": 1,
+      "function_selector": "0xbeabacc8",
+      "decoded_function": "transfer(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000a797804aec211158be407189ef881ad2d0c3fd6e000000000000000000000000000000000000000000008f0c8dff70aa8ce80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xa797804aec211158be407189ef881ad2d0c3fd6e",
+          675530000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "41764616447638715300612914863093416410063619332654034338488569044333128121381:2:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "depth": 2,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000a797804aec211158be407189ef881ad2d0c3fd6e000000000000000000000000000000000000000000008f0c8dff70aa8ce80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "41764616447638715300612914863093416410063619332654034338488569044333128121381:3:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "to_address": "0xd47d14a315394ddf063174f2286ab4eb7c507fa0",
+      "depth": 3,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "to_address": "0xd47d14a315394ddf063174f2286ab4eb7c507fa0",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000a797804aec211158be407189ef881ad2d0c3fd6e000000000000000000000000000000000000000000008f0c8dff70aa8ce80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 4,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 4
+  }
+}

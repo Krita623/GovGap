@@ -1,0 +1,108 @@
+{
+  "proposal_id": "390",
+  "simulation_status": "reverted_with_trace",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "owners": [
+        {
+          "target": "0x9AEE0B04504CeF83A65AC3f0e838D0593BCb2BC7",
+          "owner": "0x5300a1a15135ea4dc7ad5a167152c01efc9b192a"
+        }
+      ],
+      "source": "payload_target.owner()",
+      "confidence": 0.8,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x5300a1a15135ea4dc7ad5a167152c01efc9b192a",
+          "gas": "0xe48c58",
+          "gasUsed": "0x72f7",
+          "to": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+          "input": "0x9ec17673000000000000000000000000000000000000000000000000000000000000210500000000000000000000000000000000000000000000000000000000000000010000000000000000000000002dc219e716793fb4b21548c0f009ba3af753ab010000000000000000000000000000000000000000000000000000000000000003",
+          "error": "execution reverted",
+          "calls": [
+            {
+              "from": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+              "gas": "0xe0de1c",
+              "gasUsed": "0xeb",
+              "to": "0x58bcb647c4beff253b4b6996c62f737b783f2cdd",
+              "input": "0x9ec17673000000000000000000000000000000000000000000000000000000000000210500000000000000000000000000000000000000000000000000000000000000010000000000000000000000002dc219e716793fb4b21548c0f009ba3af753ab010000000000000000000000000000000000000000000000000000000000000003",
+              "error": "execution reverted",
+              "value": "0x0",
+              "type": "DELEGATECALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x5300a1a15135ea4dc7ad5a167152c01efc9b192a",
+        "to_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "value": "0x0",
+        "input": "0x9ec17673000000000000000000000000000000000000000000000000000000000000210500000000000000000000000000000000000000000000000000000000000000010000000000000000000000002dc219e716793fb4b21548c0f009ba3af753ab010000000000000000000000000000000000000000000000000000000000000003",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            8453,
+            1,
+            "0x2dc219e716793fb4b21548c0f009ba3af753ab01",
+            3
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "to_address": "0x58bcb647c4beff253b4b6996c62f737b783f2cdd",
+        "value": "0x0",
+        "input": "0x9ec17673000000000000000000000000000000000000000000000000000000000000210500000000000000000000000000000000000000000000000000000000000000010000000000000000000000002dc219e716793fb4b21548c0f009ba3af753ab010000000000000000000000000000000000000000000000000000000000000003",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            8453,
+            1,
+            "0x2dc219e716793fb4b21548c0f009ba3af753ab01",
+            3
+          ]
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x5300a1a15135ea4dc7ad5a167152c01efc9b192a",
+      "0x58bcb647c4beff253b4b6996c62f737b783f2cdd",
+      "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+    ]
+  },
+  "revert_reason": "execution reverted",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

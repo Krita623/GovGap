@@ -1,0 +1,124 @@
+{
+  "proposal_summary": "Establish reverse ENS records (primary names) for core ENS DAO addresses, specifically the ENS DAO wallet, ENS token contract, and the ENS Endowment wallet.",
+  "disclosed_entities": [
+    {
+      "name": "ENS DAO wallet",
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The ENS DAO wallet"
+    },
+    {
+      "name": "ENS token",
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The ENS token"
+    },
+    {
+      "name": "ENS Endowment wallet",
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The ENS Endowment wallet"
+    },
+    {
+      "name": "Reverse Registrar (reverse.ens.eth)",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar (reverse.ens.eth)"
+    },
+    {
+      "name": "0xF29100983E058B709F3D539b0c765937B804AC15",
+      "address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+      "entity_type": "unknown",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")`"
+    },
+    {
+      "name": "0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb",
+      "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+      "entity_type": "unknown",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "To: 0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "textual_evidence": "The ENS DAO wallet"
+    },
+    {
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "textual_evidence": "The ENS token"
+    },
+    {
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "textual_evidence": "The ENS Endowment wallet"
+    },
+    {
+      "address": "0xf29100983e058b709f3d539b0c765937b804ac15",
+      "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")`"
+    },
+    {
+      "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+      "textual_evidence": "To: 0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "textual_evidence": "GasToken: 0x0000000000000000000000000000000000000000"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar",
+      "canonical_action": "parameter_update",
+      "object": "ENS DAO wallet reverse record",
+      "claimed_effect": "set the reverse record of 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7",
+      "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")` on the Reverse Registrar (reverse.ens.eth) to set the reverse record of 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Call `setNameForAddr(...)` on the Reverse Registrar",
+      "canonical_action": "parameter_update",
+      "object": "ENS token reverse record",
+      "claimed_effect": "set the reverse record of 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+      "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")` on the Reverse Registrar to set the reverse record of 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Call `execTransaction()` on the Endowment multisig with the encoded calldata for `setName(\"endowment.ensdao.eth\")`",
+      "canonical_action": "parameter_update",
+      "object": "Endowment multisig reverse record",
+      "claimed_effect": "set the reverse record of 0x4F2083f5fBede34C2714aFfb3105539775f7FE64",
+      "textual_evidence": "Call `execTransaction()` on the Endowment multisig (endowment.ensdao.eth) with the encoded calldata for `setName(\"endowment.ensdao.eth\")` to set the reverse record of 0x4F2083f5fBede34C2714aFfb3105539775f7FE64.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only updates reverse records (primary ENS names) for three addresses using a few direct contract calls.",
+    "textual_evidence": "Several ENS DAO contracts lack primary names. This proposal establishes reverse records for core DAO addresses."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setName",
+      "textual_evidence": "Call `setName(\"wallet.ensdao.eth\")`"
+    },
+    {
+      "function_name": "setNameForAddr",
+      "textual_evidence": "Call `setNameForAddr(0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72, 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7, 0xF29100983E058B709F3D539b0c765937B804AC15, \"token.ensdao.eth\")`"
+    },
+    {
+      "function_name": "execTransaction",
+      "textual_evidence": "Call `execTransaction()` on the Endowment multisig"
+    }
+  ],
+  "limitations": [
+    "One address (0xF291...) used in setNameForAddr is not explained.",
+    "One target address (0xa58E...) in the Safe tx block is not mapped explicitly in the text description."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

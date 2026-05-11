@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "proposal_id": "400",
+    "generated_at": "2026-05-08T11:15:23.833525+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 6,
+    "score_scale": 10,
+    "risk_level": "MEDIUM",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 7 capped by highest severity MEDIUM."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "A proposal by Gauntlet to reactivate CRV borrowing on Aave v3 for both Ethereum and Polygon, alongside related parameter adjustments such as supplyCap, borrowCap, and debtCeiling.",
+    "disclosed_entities": [
+      {
+        "name": "CRV",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "CRV borrowing was disabled on Ethereum and Polygon v3"
+      },
+      {
+        "name": "Aave v3 Ethereum",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| Ethereum v3 | CRV   | supplyCap"
+      },
+      {
+        "name": "Aave v3 Polygon",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "| Polygon v3  | CRV   | borrowCap"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Set Ethereum v3 CRV supplyCap to 7.5m",
+        "canonical_action": "parameter_update",
+        "object": "CRV / Aave v3 Ethereum",
+        "claimed_effect": "Update supply cap from 51m to 7.5m",
+        "textual_evidence": "| Ethereum v3 | CRV | supplyCap | 51m | 7.5m |",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Set Ethereum v3 CRV borrowCap to 5m",
+        "canonical_action": "parameter_update",
+        "object": "CRV / Aave v3 Ethereum",
+        "claimed_effect": "Update borrow cap from 7.7m to 5m",
+        "textual_evidence": "| Ethereum v3 | CRV | borrowCap | 7.7m | 5m |",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Set Ethereum v3 CRV debtCeiling to $1m",
+        "canonical_action": "parameter_update",
+        "object": "CRV / Aave v3 Ethereum",
+        "claimed_effect": "Update debt ceiling from $5m to $1m",
+        "textual_evidence": "| Ethereum v3 | CRV | debtCeiling | $5m | $1m |",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Set Ethereum v3 CRV isBorrowable to True",
+        "canonical_action": "parameter_update",
+        "object": "CRV / Aave v3 Ethereum",
+        "claimed_effect": "Reactivate CRV borrowing on Ethereum v3",
+        "textual_evidence": "| Ethereum v3 | CRV | isBorrowable | False | True |",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Set Polygon v3 CRV borrowCap to 300k",
+        "canonical_action": "parameter_update",
+        "object": "CRV / Aave v3 Polygon",
+        "claimed_effect": "Update borrow cap from 900k to 300k",
+        "textual_evidence": "| Polygon v3 | CRV | borrowCap | 900k | 300k |",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Set Polygon v3 CRV isBorrowable to True",
+        "canonical_action": "parameter_update",
+        "object": "CRV / Aave v3 Polygon",
+        "claimed_effect": "Reactivate CRV borrowing on Polygon v3",
+        "textual_evidence": "| Polygon v3 | CRV | isBorrowable | False | True |",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal only consists of basic risk parameter updates for an existing asset on deployed markets.",
+      "textual_evidence": "we recommend a few other changes to CRV parameterization."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Smart contract addresses are not provided in the text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dabad81af85554e9ae636395611c58f7ec1aaec5000000000000000000000000000000000000000000000000000000000000001f",
+        "output": "0xdb10c686",
+        "depth": 0,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            1,
+            1,
+            "0xdabad81af85554e9ae636395611c58f7ec1aaec5",
+            31
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dabad81af85554e9ae636395611c58f7ec1aaec5000000000000000000000000000000000000000000000000000000000000001f",
+        "output": "0xdb10c686",
+        "depth": 1,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            1,
+            1,
+            "0xdabad81af85554e9ae636395611c58f7ec1aaec5",
+            31
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000890000000000000000000000000000000000000000000000000000000000000001000000000000000000000000401b5d0294e23637c18fcc38b1bca814cda2637c0000000000000000000000000000000000000000000000000000000000000012",
+        "output": "0xdb10c686",
+        "depth": 0,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            137,
+            1,
+            "0x401b5d0294e23637c18fcc38b1bca814cda2637c",
+            18
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000890000000000000000000000000000000000000000000000000000000000000001000000000000000000000000401b5d0294e23637c18fcc38b1bca814cda2637c0000000000000000000000000000000000000000000000000000000000000012",
+        "output": "0xdb10c686",
+        "depth": 1,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            137,
+            1,
+            "0x401b5d0294e23637c18fcc38b1bca814cda2637c",
+            18
+          ]
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+      "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 2,
+    "staticcall_count": 0,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "400:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+      "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+      "depth": 1,
+      "function_selector": "0x9ec17673",
+      "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dabad81af85554e9ae636395611c58f7ec1aaec5000000000000000000000000000000000000000000000000000000000000001f",
+        "output": "0xdb10c686",
+        "depth": 1,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            1,
+            1,
+            "0xdabad81af85554e9ae636395611c58f7ec1aaec5",
+            31
+          ]
+        ],
+        "error": "execution reverted",
+        "merged_count": 2
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 7,
+      "severity": "MEDIUM",
+      "summary": "Trace includes undisclosed addresses without evidence of an uncovered sensitive business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "MEDIUM",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+                "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c"
+              ],
+              "related_actions": [
+                {
+                  "id": "400:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+                  "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+                  "depth": 1,
+                  "function_selector": "0x9ec17673",
+                  "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+            "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+            "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal only consists of basic risk parameter updates for an existing asset on deployed markets.",
+            "textual_evidence": "we recommend a few other changes to CRV parameterization."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 2,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update",
+        "parameter_update",
+        "parameter_update",
+        "parameter_update",
+        "parameter_update",
+        "parameter_update"
+      ],
+      "actual_actions": [],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Set Ethereum v3 CRV supplyCap to 7.5m",
+              "canonical_action": "parameter_update",
+              "object": "CRV / Aave v3 Ethereum",
+              "claimed_effect": "Update supply cap from 51m to 7.5m",
+              "textual_evidence": "| Ethereum v3 | CRV | supplyCap | 51m | 7.5m |",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Set Ethereum v3 CRV borrowCap to 5m",
+              "canonical_action": "parameter_update",
+              "object": "CRV / Aave v3 Ethereum",
+              "claimed_effect": "Update borrow cap from 7.7m to 5m",
+              "textual_evidence": "| Ethereum v3 | CRV | borrowCap | 7.7m | 5m |",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Set Ethereum v3 CRV debtCeiling to $1m",
+              "canonical_action": "parameter_update",
+              "object": "CRV / Aave v3 Ethereum",
+              "claimed_effect": "Update debt ceiling from $5m to $1m",
+              "textual_evidence": "| Ethereum v3 | CRV | debtCeiling | $5m | $1m |",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Set Ethereum v3 CRV isBorrowable to True",
+              "canonical_action": "parameter_update",
+              "object": "CRV / Aave v3 Ethereum",
+              "claimed_effect": "Reactivate CRV borrowing on Ethereum v3",
+              "textual_evidence": "| Ethereum v3 | CRV | isBorrowable | False | True |",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Set Polygon v3 CRV borrowCap to 300k",
+              "canonical_action": "parameter_update",
+              "object": "CRV / Aave v3 Polygon",
+              "claimed_effect": "Update borrow cap from 900k to 300k",
+              "textual_evidence": "| Polygon v3 | CRV | borrowCap | 900k | 300k |",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Set Polygon v3 CRV isBorrowable to True",
+              "canonical_action": "parameter_update",
+              "object": "CRV / Aave v3 Polygon",
+              "claimed_effect": "Reactivate CRV borrowing on Polygon v3",
+              "textual_evidence": "| Polygon v3 | CRV | isBorrowable | False | True |",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "400:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+              "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+              "depth": 1,
+              "function_selector": "0x9ec17673",
+              "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "MEDIUM",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+            "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "related_actions": [
+            {
+              "id": "400:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+              "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+              "depth": 1,
+              "function_selector": "0x9ec17673",
+              "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

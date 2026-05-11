@@ -1,0 +1,102 @@
+{
+  "benchmark_id": "real-ens-0013",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0013.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "20404686300257550242704646761273386459664655640264490428281621095220078268383",
+    "status": "executed",
+    "title": "[EP 6.13] [Corrected] [Executable] - SPP Season 2 Implementation",
+    "description": "# [EP 6.13] [Corrected] [Executable] - SPP Season 2 Implementation\n## Correction\n\nThe previous version of this proposal has incorrect text in the description.  This version is corrected.\n\n## Abstract\n\nThis executable proposal implements the Service Provider Program Season 2 (SPP2) following the approval of [EP 6.10](https://www.tally.xyz/gov/ens/proposal/50462913323863149622798490468303951055439459905477651666479638328507088159695) for service provider selection and the budget framework established in [EP 6.3](https://www.tally.xyz/gov/ens/proposal/45863606498975303062952719073086674668061306651606831273917754523416516421073).\n\nThis proposal transitions our existing streaming infrastructure from the $3.6M annual budget supporting 9 providers to the new $4.5M annual budget supporting 8 providers, including 6 continuing providers and 2 new additions.\n\n## Specification\n\nFollowing the selection of service providers in EP 6.10, this proposal implements the technical changes required to:\n\n1. **Adjust Streaming Infrastructure** - Update the master flow rate from ENS DAO to the Stream Management Pod to accommodate the increased budget\n2. **Provide Initial Funding** - Supply one month of USDC funding (375,000 USDC) to ensure uninterrupted service\n3. **Configure Autowrap Parameters** - Set appropriate allowances for automatic USDC-to-USDCx conversion\n\nThe Stream Management Pod will continue to manage individual provider streams, adjusting rates for continuing providers and establishing new streams for JustaName and ZK Email.\n\n### Service Provider Allocations\n\nThe following providers and allocations have been approved:\n\n| Service Provider           | Annual Allocation | Stream Duration |\n| -------------------------- | ----------------- | --------------- |\n| ETH.LIMO                   | $700,000          | 2 years         |\n| Blockful                   | $700,000          | 2 years         |\n| Namehash Labs              | $1,100,000        | 1 year          |\n| Ethereum Identity Protocol | $500,000          | 1 year          |\n| Unruggable                 | $400,000          | 1 year          |\n| Namespace                  | $400,000          | 1 year          |\n| ZK Email                   | $400,000          | 1 year          |\n| Justaname                  | $300,000          | 1 year          |\n| **Total**                  | **$4,500,000**    |                 |\n\n### Technical Implementation\n\nThe implementation maintains our existing Superfluid architecture:\n\n* ENS Treasury (Timelock) \u2192 Stream Management Pod \u2192 Individual Service Providers\n* The Stream Management Pod continues to be controlled by 3 of 5 signatures (3 Metagov Stewards, Secretary, and DAO Governor)\n* Security measures remain in place, limiting exposure to approximately 50 days of funding in case of contract compromise\n\n## Transactions\n\n### Transaction 1: Approve USDCx\n\n**Target:** `0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` (USDC)\n**Function:** `approve`\n**Arguments:**\n\n* `spender: 0x1BA8603DA702602A8657980e825A6DAa03Dee93a`\n* `amount: 375000000000`\n\n**Calldata:**\n\n```\n0x095ea7b30000000000000000000000001ba8603da702602a8657980e825a6daa03dee93a000000000000000000000000000000000000000000000000000000000574fbde600\n```\n\n* Tenderly: [Approve USDCx](https://www.tdly.co/shared/simulation/2207ca50-6804-4e33-be61-4181ecd3f8e5)\n\n### Transaction 2: Upgrade USDC to USDCx\n\n**Target:** `0x1BA8603DA702602A8657980e825A6DAa03Dee93a` (USDCx)\n**Function:** `upgrade`\n**Arguments:**\n\n* `amount: 375000000000000000000000`\n\n**Calldata:**\n\n```\n0x45977d03000000000000000000000000000000000000000000004f68ca6d8cd91c600000\n```\n\n* Tenderly: [Upgrade USDC](https://www.tdly.co/shared/simulation/6abf821b-779e-429b-b8dd-707b71360687)\n\n### Transaction 3: Set Flow Rate\n\n**Target:** `0xcfA132E353cB4E398080B9700609bb008eceB125` (Superfluid)\n**Function:** `setFlowrate`\n**Arguments:**\n\n* `token: 0x1BA8603DA702602A8657980e825A6DAa03Dee93a`\n* `receiver: 0xB162Bf7A7fD64eF32b787719335d06B2780e31D1`\n* `flowrate: 142599440769357573`\n\n**Calldata:**\n\n```\n0x57e6aa360000000000000000000000001ba8603da702602a8657980e825a6daa03dee93a000000000000000000000000b162bf7a7fd64ef32b787719335d06b2780e31d100000000000000000000000000000000000000000000000001fa9d6f943a1705\n```\n\n* Tenderly: [Set Flow Rate](https://www.tdly.co/shared/simulation/9dd3a70d-cec4-4fac-88cf-9362fda170fc)\n\n### Transaction 4: Set Autowrap Allowance\n\n**Target:** `0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` (USDC)\n**Function:** `approve`\n**Arguments:**\n\n* `spender: 0x1D65c6d3AD39d454Ea8F682c49aE7744706eA96d`\n* `amount: 6375000000000`\n\n**Calldata:**\n\n```\n0x095ea7b30000000000000000000000001d65c6d3ad39d454ea8f682c49ae7744706ea96d000000000000000000000000000000000000000000000000000005cc4b9c4600\n```\n\n* Tenderly: [Set Autowrap Allowance](https://www.tdly.co/shared/simulation/e192ea31-145c-4d50-9632-1342267f5b8b)\n*\n\n### Transaction Details\n\n1. **Approve USDCx**: Allows the USDCx contract to spend 375,000 USDC from the ENS DAO treasury for the initial month of funding\n2. **Upgrade USDC to USDCx**: Wraps 375,000 USDC to USDCx (Superfluid's streaming token format)\n3. **Set Flow Rate**: Increases the master stream from 0.114155251141552512 USDCx per second ($3.6M/year) to 0.142599440769357573 USDCx/second ($4.5M/year)\n4. **Set Autowrap Allowance**: Authorizes the Superfluid autowrapper to convert up to 6.375M USDC over time, ensuring continuous funding availability\n\n## Verification\n\nThe testing repository with calculation tools and verification scripts is available at [github.com/5ajaki/SPP2-Streams](https://github.com/5ajaki/SPP2-Streams).\n\n## Implementation Timeline\n\nUpon passage of this proposal:\n\n1. The transactions will be executed immediately\n2. The Stream Management Pod will receive the increased flow rate\n3. Metagov stewards will coordinate with service providers to:\n   * Update existing provider streams to new rates\n   * Establish streams for new providers (JustaName and ZK Email)\n   * Calculate and distribute any backdated payments for rate increases\n\nAll providers will continue to be subject to the existing KYC and sanctions compliance requirements established in SPP1.\n\n***"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "approve(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x1ba8603da702602a8657980e825a6daa03dee93a"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "375000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x1BA8603DA702602A8657980e825A6DAa03Dee93a",
+      "native_value": "0",
+      "function": "upgrade(uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "uint256",
+          "value": "375000000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0xcfA132E353cB4E398080B9700609bb008eceB125",
+      "native_value": "0",
+      "function": "setFlowrate(address,address,int96)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "token",
+          "type": "address",
+          "value": "0x1ba8603da702602a8657980e825a6daa03dee93a"
+        },
+        {
+          "index": 1,
+          "name": "receiver",
+          "type": "address",
+          "value": "0xb162bf7a7fd64ef32b787719335d06b2780e31d1"
+        },
+        {
+          "index": 2,
+          "name": "flowrate",
+          "type": "int96",
+          "value": "142599440769357573"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "native_value": "0",
+      "function": "approve(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x1d65c6d3ad39d454ea8f682c49ae7744706ea96d"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "6375000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

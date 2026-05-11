@@ -1,0 +1,333 @@
+{
+  "proposal_id": "15",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "owners": [
+        {
+          "target": "0x1E506cbb6721B83B1549fa1558332381Ffa61A93",
+          "owner": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+        },
+        {
+          "target": "0x1E506cbb6721B83B1549fa1558332381Ffa61A93",
+          "owner": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+        }
+      ],
+      "source": "payload_target.owner()",
+      "confidence": 0.8,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+          "gas": "0xe48bdb",
+          "gasUsed": "0xd6de",
+          "to": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+          "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+          "calls": [
+            {
+              "from": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+              "gas": "0xe0e4f3",
+              "gasUsed": "0x6bbf",
+              "to": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+              "calls": [
+                {
+                  "from": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                  "gas": "0xdd458e",
+                  "gasUsed": "0x4f56",
+                  "to": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+                  "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+                  "calls": [
+                    {
+                      "from": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                      "gas": "0xd9bbf5",
+                      "gasUsed": "0x3a2b",
+                      "to": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                      "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+                      "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                      "calls": [
+                        {
+                          "from": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                          "gas": "0xd63959",
+                          "gasUsed": "0x1de5",
+                          "to": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+                          "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+                          "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                          "value": "0x0",
+                          "type": "DELEGATECALL"
+                        }
+                      ],
+                      "value": "0x0",
+                      "type": "CALL"
+                    }
+                  ],
+                  "value": "0x0",
+                  "type": "DELEGATECALL"
+                }
+              ],
+              "value": "0x0",
+              "type": "CALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      },
+      {
+        "payload_call_index": 1,
+        "trace": {
+          "from": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+          "gas": "0xe48bc3",
+          "gasUsed": "0xd6f6",
+          "to": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+          "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+          "calls": [
+            {
+              "from": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+              "gas": "0xe0e4dc",
+              "gasUsed": "0x6bbf",
+              "to": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+              "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+              "calls": [
+                {
+                  "from": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                  "gas": "0xdd4577",
+                  "gasUsed": "0x4f56",
+                  "to": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+                  "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+                  "calls": [
+                    {
+                      "from": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+                      "gas": "0xd9bbde",
+                      "gasUsed": "0x3a2b",
+                      "to": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                      "input": "0x095ea7b3000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+                      "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                      "calls": [
+                        {
+                          "from": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+                          "gas": "0xd63942",
+                          "gasUsed": "0x1de5",
+                          "to": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+                          "input": "0x095ea7b3000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+                          "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+                          "value": "0x0",
+                          "type": "DELEGATECALL"
+                        }
+                      ],
+                      "value": "0x0",
+                      "type": "CALL"
+                    }
+                  ],
+                  "value": "0x0",
+                  "type": "DELEGATECALL"
+                }
+              ],
+              "value": "0x0",
+              "type": "CALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+        "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+        "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+          200750000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 4,
+    "unique_addresses": [
+      "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+      "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+      "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+      "0xee56e2b3d491590b5b31738cc34d5232f378a8d5"
+    ],
+    "delegatecall_count": 4,
+    "staticcall_count": 0,
+    "external_call_count": 6,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "approve(address,address,uint256)",
+      "approve(address,uint256)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

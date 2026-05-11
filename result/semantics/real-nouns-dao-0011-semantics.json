@@ -1,0 +1,54 @@
+{
+  "proposal_summary": "Fund maty to continue tracking funded proposals and writing the weekly newsletter for the rest of 2024, requesting Noun 42 as a retro-reward and a funding stream totaling 36k.",
+  "disclosed_entities": [
+    {
+      "name": "maty",
+      "address": "0xdead753f9b1eb8f2f7372e8587e7c6e342daac89",
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "My previous proposal ended... I'm humbly asking for... profile/0xdead753f9b1eb8f2f7372e8587e7c6e342daac89"
+    },
+    {
+      "name": "Noun 42",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Noun 42 as a retro-reward for the past contributions"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xdead753f9b1eb8f2f7372e8587e7c6e342daac89",
+      "textual_evidence": "noudry traits URL link"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Noun 42 as a retro-reward for the past contributions",
+      "canonical_action": "transfer",
+      "object": "Noun 42",
+      "claimed_effect": "Rewards maty with Noun 42.",
+      "textual_evidence": "Noun 42 as a retro-reward for the past contributions and work done since December",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "renewal stream for the remainder of 2024 (May-December) at the same rate as last prop - 4.5k/month, a total of 36k.",
+      "canonical_action": "transfer",
+      "object": "36k funds",
+      "claimed_effect": "Establishes a payment stream to maty.",
+      "textual_evidence": "renewal stream for the remainder of 2024 (May-December) at the same rate as last prop - 4.5k/month, a total of 36k.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal consists of standard contributor compensation through a token transfer (Noun 42) and a payment stream.",
+    "textual_evidence": "Noun 42 as a retro-reward... renewal stream for the remainder of 2024... a total of 36k."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The exact currency of the 36k stream (e.g., USDC, DAI, ETH) is not explicitly named in the text, only the amount."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

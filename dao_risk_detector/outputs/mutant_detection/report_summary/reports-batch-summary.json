@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "total_scores": 24,
+    "elapsed_seconds": 0.017,
+    "status_counts": {
+      "success": 24
+    },
+    "risk_level_counts": {
+      "CRITICAL": 16,
+      "HIGH": 8
+    },
+    "report_success_count": 24,
+    "warning_rows": []
+  },
+  "rows": [
+    {
+      "index": 1,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0001-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0001-score.md",
+      "proposal_id": "mutant-permission-0001",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 2,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0002-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0002-score.md",
+      "proposal_id": "mutant-permission-0002",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 3,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0003-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0003-score.md",
+      "proposal_id": "mutant-permission-0003",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 4,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0004-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0004-score.md",
+      "proposal_id": "mutant-permission-0004",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 5,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0005-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0005-score.md",
+      "proposal_id": "mutant-permission-0005",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 6,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0006-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0006-score.md",
+      "proposal_id": "mutant-permission-0006",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 7,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0007-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0007-score.md",
+      "proposal_id": "mutant-permission-0007",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 8,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-permission-0008-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-permission-0008-score.md",
+      "proposal_id": "mutant-permission-0008",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 9,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0001-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0001-score.md",
+      "proposal_id": "mutant-transfer-0001",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 10,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0002-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0002-score.md",
+      "proposal_id": "mutant-transfer-0002",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 11,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0003-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0003-score.md",
+      "proposal_id": "mutant-transfer-0003",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 12,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0004-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0004-score.md",
+      "proposal_id": "mutant-transfer-0004",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 13,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0005-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0005-score.md",
+      "proposal_id": "mutant-transfer-0005",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 14,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0006-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0006-score.md",
+      "proposal_id": "mutant-transfer-0006",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 15,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0007-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0007-score.md",
+      "proposal_id": "mutant-transfer-0007",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 16,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-transfer-0008-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-transfer-0008-score.md",
+      "proposal_id": "mutant-transfer-0008",
+      "status": "success",
+      "overall_score": 4,
+      "risk_level": "HIGH",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 17,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0001-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0001-score.md",
+      "proposal_id": "mutant-upgrade-0001",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 18,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0002-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0002-score.md",
+      "proposal_id": "mutant-upgrade-0002",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 19,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0003-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0003-score.md",
+      "proposal_id": "mutant-upgrade-0003",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 20,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0004-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0004-score.md",
+      "proposal_id": "mutant-upgrade-0004",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 21,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0005-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0005-score.md",
+      "proposal_id": "mutant-upgrade-0005",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 22,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0006-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0006-score.md",
+      "proposal_id": "mutant-upgrade-0006",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 23,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0007-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0007-score.md",
+      "proposal_id": "mutant-upgrade-0007",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    },
+    {
+      "index": 24,
+      "score_input": "outputs\\mutant_detection\\scores\\mutant-upgrade-0008-score.json",
+      "report_output": "outputs\\mutant_detection\\reports\\mutant-upgrade-0008-score.md",
+      "proposal_id": "mutant-upgrade-0008",
+      "status": "success",
+      "overall_score": 2,
+      "risk_level": "CRITICAL",
+      "error": null,
+      "elapsed_seconds": 0.001
+    }
+  ]
+}

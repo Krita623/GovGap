@@ -1,0 +1,791 @@
+{
+  "metadata": {
+    "proposal_id": "111105159609719390908725919603971316574753860587890014819515615630412225940809",
+    "generated_at": "2026-05-08T11:15:23.916970+00:00",
+    "chain_id": 42161,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Establish Treasury and Growth Management tracks with their own 3-seat committees (TMC and GMC). The proposal outlines transferring 7,500 ETH and 26M ARB to the Arbitrum Foundation to execute yield-bearing onchain strategies, strategic partnerships, and create a stablecoin reserve to cover DAO expenses.",
+    "disclosed_entities": [
+      {
+        "name": "Arbitrum Foundation",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "the Arbitrum Foundation serves as the custodian/counterparty of the funds at all times"
+      },
+      {
+        "name": "Arbitrum DAO Treasury",
+        "address": null,
+        "entity_type": "treasury",
+        "disclosure_level": "implicit",
+        "textual_evidence": "I.e., chain profits (ETH) and tokens that have been authorized for spend but have not entered circulation yet (ARB)."
+      },
+      {
+        "name": "ARB",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "implicit",
+        "textual_evidence": "tokens that have been authorized for spend but have not entered circulation yet (ARB)"
+      },
+      {
+        "name": "ETH",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "implicit",
+        "textual_evidence": "chain profits (ETH)"
+      },
+      {
+        "name": "USDC",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "implicit",
+        "textual_evidence": "The additional 1M ARB being transferred to the Foundation will be liquidated for 300k USDC"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+        "textual_evidence": "7,500 ETH and 26M ARB will be moved to this address"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Transfer 7,500 ETH and 26M ARB to intermediate address then Foundation",
+        "canonical_action": "treasury_operation",
+        "object": "0xAc20CD734C65Baf48a1476447af7D3E3165DC739",
+        "claimed_effect": "Custodies the funds with the Arbitrum Foundation for use in treasury and growth management strategies",
+        "textual_evidence": "If this vote passes onchain via Tally, 7,500 ETH and 26M ARB will be moved to this address, and then transferred to two separate foundation controlled addresses.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Liquidate 1M ARB for 300k USDC",
+        "canonical_action": "treasury_operation",
+        "object": "Arbitrum Foundation",
+        "claimed_effect": "Funds the 300k USDC required to pay the members of the committees",
+        "textual_evidence": "The additional 1M ARB being transferred to the Foundation will be liquidated for 300k USDC in the most suitable manner to pay committee members",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal coordinates simple fund transfers and conversions, combined with the social establishment of committees to manage those funds. There are no highly technical smart contract upgrades claimed.",
+      "textual_evidence": "7,500 ETH and 26M ARB will be moved to this address, and then transferred to two separate foundation controlled addresses. No funds can be deployed by either the TMC or GMC"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "The addresses of the final 'two separate foundation controlled addresses' are not provided."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+          26000000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+          26000000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+        "value": "0x1969368974c05b00000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+        "to_address": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+        "value": "0x1969368974c05b00000",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+      "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+      "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+      "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+      "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+      "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+    ],
+    "delegatecall_count": 3,
+    "staticcall_count": 0,
+    "external_call_count": 3,
+    "value_transfer_count": 2,
+    "decoded_functions": [
+      "transfer(address,address,uint256)",
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+      "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "depth": 0,
+      "function_selector": "0xbeabacc8",
+      "decoded_function": "transfer(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+          26000000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:4:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+      "to_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x1969368974c05b00000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+        "value": "0x1969368974c05b00000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+      "depth": 1,
+      "function_selector": "0xbeabacc8",
+      "decoded_function": "transfer(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+          26000000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:5:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+      "to_address": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+      "depth": 1,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x1969368974c05b00000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+        "to_address": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+        "value": "0x1969368974c05b00000",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:2:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "depth": 2,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:3:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+      "depth": 3,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000ac20cd734c65baf48a1476447af7d3e3165dc7390000000000000000000000000000000000000000001581b6d300d0225a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0xac20cd734c65baf48a1476447af7d3e3165dc739"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+        "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+        "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+                "0x912ce59144191c1204e64559fe8253a0e49e6548",
+                "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+                "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+                "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+                "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+              ],
+              "related_actions": [
+                {
+                  "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+                  "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+                  "depth": 0,
+                  "function_selector": "0xbeabacc8",
+                  "decoded_function": "transfer(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:4:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+                  "to_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+                  "depth": 0,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x1969368974c05b00000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+                  "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+                  "depth": 1,
+                  "function_selector": "0xbeabacc8",
+                  "decoded_function": "transfer(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:5:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+                  "to_address": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x1969368974c05b00000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:2:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+                  "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+                  "depth": 2,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:3:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+                  "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+                  "depth": 3,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0xac20cd734c65baf48a1476447af7d3e3165dc739"
+          ],
+          "trace_unique_addresses": [
+            "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+            "0x912ce59144191c1204e64559fe8253a0e49e6548",
+            "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+            "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+            "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+            "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+            "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+            "0x912ce59144191c1204e64559fe8253a0e49e6548",
+            "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+            "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+            "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+            "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 3,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal coordinates simple fund transfers and conversions, combined with the social establishment of committees to manage those funds. There are no highly technical smart contract upgrades claimed.",
+            "textual_evidence": "7,500 ETH and 26M ARB will be moved to this address, and then transferred to two separate foundation controlled addresses. No funds can be deployed by either the TMC or GMC"
+          },
+          "actual_max_depth": 3,
+          "delegatecall_count": 3,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "transfer(address,address,uint256)",
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation",
+        "treasury_operation"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Transfer 7,500 ETH and 26M ARB to intermediate address then Foundation",
+              "canonical_action": "treasury_operation",
+              "object": "0xAc20CD734C65Baf48a1476447af7D3E3165DC739",
+              "claimed_effect": "Custodies the funds with the Arbitrum Foundation for use in treasury and growth management strategies",
+              "textual_evidence": "If this vote passes onchain via Tally, 7,500 ETH and 26M ARB will be moved to this address, and then transferred to two separate foundation controlled addresses.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Liquidate 1M ARB for 300k USDC",
+              "canonical_action": "treasury_operation",
+              "object": "Arbitrum Foundation",
+              "claimed_effect": "Funds the 300k USDC required to pay the members of the committees",
+              "textual_evidence": "The additional 1M ARB being transferred to the Foundation will be liquidated for 300k USDC in the most suitable manner to pay committee members",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+              "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "depth": 0,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:4:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+              "to_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x1969368974c05b00000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+              "depth": 1,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:5:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+              "to_address": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x1969368974c05b00000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:2:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+              "depth": 3,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "transfer(address,address,uint256)",
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+            "0x912ce59144191c1204e64559fe8253a0e49e6548",
+            "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+            "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+            "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+            "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+          ],
+          "related_actions": [
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+              "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "depth": 0,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:4:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+              "to_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x1969368974c05b00000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+              "depth": 1,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:5:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+              "to_address": "0x3e5c63644e683549055b9be8653de26e0b4cd36e",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x1969368974c05b00000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:2:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "111105159609719390908725919603971316574753860587890014819515615630412225940809:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+              "depth": 3,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "proposal_summary": "This proposal outlines ENS’s adoption of the SEAL Whitehat Safe Harbor Agreement to provide legal protection and predefined bounties for whitehats recovering funds during active exploits.",
+  "disclosed_entities": [
+    {
+      "name": "ENS Token",
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ENS Token | 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72"
+    },
+    {
+      "name": "ENS DAO Multisig,Metagov Main (Asset Recovery Address)",
+      "address": "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Asset Recovery Address | 0x91c32893216dE3eA0a55ABb9851f581d4503d39b ... ENS DAO Multisig,Metagov Main | 0x91c32893216dE3eA0a55ABb9851f581d4503d39b"
+    },
+    {
+      "name": "ENS Gnosis Safe",
+      "address": "0xcf60916b6cb4753f58533808fa610fcbd4098ec0",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ENS Gnosis Safe | 0xCF60916b6CB4753f58533808fA610FcbD4098Ec0"
+    },
+    {
+      "name": "Safe Harbor Registry V2",
+      "address": "0x1eacd100b0546e433fbf4d773109cad482c34686",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Target: Safe Harbor Registry V2 Address: 0x1eacd100b0546e433fbf4d773109cad482c34686"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+      "textual_evidence": "Asset Recovery Address ... 0x91c32893216dE3eA0a55ABb9851f581d4503d39b"
+    },
+    {
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "textual_evidence": "ENS DAO Wallet | 0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7"
+    },
+    {
+      "address": "0xcf60916b6cb4753f58533808fa610fcbd4098ec0",
+      "textual_evidence": "ENS Gnosis Safe | 0xCF60916b6CB4753f58533808fA610FcbD4098Ec0"
+    },
+    {
+      "address": "0x911143d946ba5d467bfc476491fdb235fef4d667",
+      "textual_evidence": "ENS Multisig | 0x911143d946bA5d467BfC476491fdb235fEf4D667"
+    },
+    {
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "textual_evidence": "ENS EnDAOment | 0x4F2083f5fBede34C2714aFfb3105539775f7FE64"
+    },
+    {
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "textual_evidence": "ENS Token | 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72"
+    },
+    {
+      "address": "0x1eacd100b0546e433fbf4d773109cad482c34686",
+      "textual_evidence": "Address: 0x1eacd100b0546e433fbf4d773109cad482c34686"
+    },
+    {
+      "address": "0x3303a9a3eb71836c0e88e8ab4eaf0d478e29e04c",
+      "textual_evidence": "address agreementAddress: 0x3303a9a3eb71836c0e88e8ab4eaf0d478e29e04c"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "adoptSafeHarbor",
+      "canonical_action": "parameter_update",
+      "object": "0x1eacd100b0546e433fbf4d773109cad482c34686",
+      "claimed_effect": "Adopts the SEAL Whitehat Safe Harbor Agreement on the Safe Harbor Registry V2 by registering the agreement address.",
+      "textual_evidence": "Target: Safe Harbor Registry V2 Address: 0x1eacd100b0546e433fbf4d773109cad482c34686 Function: adoptSafeHarbor Parameter: address agreementAddress: 0x3303a9a3eb71836c0e88e8ab4eaf0d478e29e04c",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "Only a single on-chain transaction is proposed, calling adoptSafeHarbor on the Registry.",
+    "textual_evidence": "The agreement will be registered on Ethereum in the Safe Harbor Registry at address 0x1eaCD100B0546E433fbf4d773109cAD482c34686"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "adoptSafeHarbor",
+      "textual_evidence": "Function: adoptSafeHarbor"
+    }
+  ],
+  "limitations": [
+    "Not all 17 ENS DAO multsig / controller addresses were listed explicitly in the disclosed_entities block due to space, but their textual inclusion implies them to be protected assets."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

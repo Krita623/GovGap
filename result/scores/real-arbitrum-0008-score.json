@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "proposal_id": "98446466630612736687159241204141593794174501692677162686607521796118942563659",
+    "generated_at": "2026-05-08T11:15:23.881470+00:00",
+    "chain_id": 42161,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 5 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "No data provided due to rate limit error.",
+    "disclosed_entities": [],
+    "disclosed_addresses": [],
+    "claimed_actions": [],
+    "claimed_complexity": {
+      "level": "unknown",
+      "reason": "No data available to determine complexity.",
+      "textual_evidence": ""
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No source text was provided because the upstream LLM request failed with a 429 Quota Exceeded error."
+    ],
+    "llm_status": "repaired",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xb7c1551bbeb47eb86266153df5f9d7da47f08308",
+          3300000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xb7c1551bbeb47eb86266153df5f9d7da47f08308",
+          3300000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+      "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+      "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+      "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+    ],
+    "delegatecall_count": 2,
+    "staticcall_count": 0,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,address,uint256)",
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+      "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "depth": 0,
+      "function_selector": "0xbeabacc8",
+      "decoded_function": "transfer(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xb7c1551bbeb47eb86266153df5f9d7da47f08308",
+          3300000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+      "depth": 1,
+      "function_selector": "0xbeabacc8",
+      "decoded_function": "transfer(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xb7c1551bbeb47eb86266153df5f9d7da47f08308",
+          3300000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:2:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+      "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "depth": 2,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:3:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+      "depth": 3,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000b7c1551bbeb47eb86266153df5f9d7da47f0830800000000000000000000000000000000000000000002bacd5bc40aa9c6800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x912ce59144191c1204e64559fe8253a0e49e6548",
+        "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+        "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+        "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x912ce59144191c1204e64559fe8253a0e49e6548",
+                "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+                "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+                "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+                "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+              ],
+              "related_actions": [
+                {
+                  "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+                  "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+                  "depth": 0,
+                  "function_selector": "0xbeabacc8",
+                  "decoded_function": "transfer(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+                  "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+                  "depth": 1,
+                  "function_selector": "0xbeabacc8",
+                  "decoded_function": "transfer(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:2:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+                  "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+                  "depth": 2,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:3:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+                  "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+                  "depth": 3,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "transfer"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x912ce59144191c1204e64559fe8253a0e49e6548",
+            "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+            "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+            "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+            "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x912ce59144191c1204e64559fe8253a0e49e6548",
+            "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+            "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+            "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+            "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "unknown",
+      "actual_max_depth": 3,
+      "depth_mismatch": false,
+      "summary": "Text complexity is unknown; observed trace depth is low to moderate.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "unknown",
+            "reason": "No data available to determine complexity.",
+            "textual_evidence": ""
+          },
+          "actual_max_depth": 3,
+          "delegatecall_count": 2,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 6,
+      "severity": "MEDIUM",
+      "matched_functions": [
+        "transfer(address,address,uint256)",
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Proposal text does not disclose canonical business actions; extracted actions need review.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "MEDIUM",
+          "description": "Proposal text does not disclose canonical business actions; extracted actions need review.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [],
+              "actual_business_actions": [
+                "transfer"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "transfer(address,address,uint256)",
+                "transfer(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [],
+          "actual_risk_actions": [
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+              "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "depth": 0,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+              "depth": 1,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:2:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+              "depth": 3,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "transfer(address,address,uint256)",
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x912ce59144191c1204e64559fe8253a0e49e6548",
+            "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+            "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+            "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+            "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+          ],
+          "related_actions": [
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xbfc1feca8b09a5c5d3effe7429ebe24b9c09ef58",
+              "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "depth": 0,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+              "depth": 1,
+              "function_selector": "0xbeabacc8",
+              "decoded_function": "transfer(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:2:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "to_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "depth": 2,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "98446466630612736687159241204141593794174501692677162686607521796118942563659:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+              "to_address": "0xc4ed0a9ea70d5bcc69f748547650d32cc219d882",
+              "depth": 3,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "MEDIUM",
+      "description": "Proposal text does not disclose canonical business actions; extracted actions need review.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "transfer(address,address,uint256)",
+            "transfer(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

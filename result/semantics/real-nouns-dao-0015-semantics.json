@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "Retrofund Yukigesho 9 ETH for 2 years of maintenance and 5 months of active work on Nouns Terminal, an alternative Nouns auction client.",
+  "disclosed_entities": [
+    {
+      "name": "Nouns Terminal",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Nouns Terminal is an alternative Nouns auction client focused on high information density."
+    },
+    {
+      "name": "Yukigesho",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Support Yukigasho — talented raising star developer in the Nouns ecosystem"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Retrofund Yukigesho 9 ETH",
+      "canonical_action": "maintenance",
+      "object": "9 ETH",
+      "claimed_effect": "Rewarding 2 years of maintenance and 5 months of active work, while ensuring guaranteed maintenance through May 2025.",
+      "textual_evidence": "9 ETH for 2 years of maintenance and 5 months of Yukigasho’s active work on Nouns Terminal",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal asks for a straightforward transfer of 9 ETH.",
+    "textual_evidence": "9 ETH for 2 years of maintenance and 5 months of Yukigasho’s active work on Nouns Terminal"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No target address or multisig is explicitly provided in the text for the ETH transfer."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

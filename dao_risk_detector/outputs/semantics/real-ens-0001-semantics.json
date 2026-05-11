@@ -1,0 +1,46 @@
+{
+  "proposal_summary": "This proposal updates the preset permissions granted to Karpatkey to manage the ENS Endowment, adding 16 new DeFi actions and strategies across various protocols like AAVE, Compound, Balancer, Maker, and Curve.",
+  "disclosed_entities": [
+    {
+      "name": "ENS Endowment",
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Endowment funds (endowment.ensdao.eth) must be executed by the DAO... 0x4F2083f5fBede34C2714aFfb3105539775f7FE64"
+    },
+    {
+      "name": "Karpatkey",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Permissions granted to Karpatkey to manage the Endowment are not static"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "textual_evidence": "Endowment funds (endowment.ensdao.eth) 0x4F2083f5fBede34C2714aFfb3105539775f7FE64"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Add permissions for 16 new DeFi actions including depositing and staking on Compound, Aave, Maker, Balancer, Convex, Aura, Curve, SushiSwap, and Cow Swap.",
+      "canonical_action": "parameter_update",
+      "object": "Preset permissions",
+      "claimed_effect": "Enhance the Endowment's performance, adaptability, and diversification by granting Karpatkey additional management permissions.",
+      "textual_evidence": "Permissions that will be added in this proposal are: 1. Deposit USDC on Compound v3; 2. Deposit DAI on AAVE v3... The payload to update the preset that needs to be executed by the ENS DAO",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires updating the authorization payload with 16 new permissions corresponding to diverse DeFi strategies, requiring accurate configuration of permissions.",
+    "textual_evidence": "Permissions that will be added in this proposal are: [16 different DeFi interactions]"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The exact function signatures for updating the permissions preset are not provided in the text, only high-level descriptions of the allowed actions."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

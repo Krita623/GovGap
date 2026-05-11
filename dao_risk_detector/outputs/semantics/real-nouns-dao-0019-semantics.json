@@ -1,0 +1,55 @@
+{
+  "proposal_summary": "Support women farmers in Uruguay by funding transportation and technical assistance for regenerative practices, through the Pampeanas Regenerativas Orientales (PRO) NGO.",
+  "disclosed_entities": [
+    {
+      "name": "Nouns Grants",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Submitted via Nouns Grants, a streamlined and user-friendly way to apply for small grants from Nouns."
+    },
+    {
+      "name": "Pampeanas Regenerativas Orientales",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "These ladies are part of a group Pampeanas Regenerativas Orientales who work toward regeneration in all aspects of li... I am the president of the Pampeanas Regenerativas Orientales (PRO) non-profit NGO"
+    },
+    {
+      "name": "Savory Institute Hub in Uruguay",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "from the Savory Institute Hub in Uruguay"
+    },
+    {
+      "name": "Instituto Plan Agropecuario de Uruguay",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "from the Instituto Plan Agropecuario de Uruguay."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Fund project budget",
+      "canonical_action": "transfer",
+      "object": null,
+      "claimed_effect": "Provide $7,500 for technical support, $1,500 for hotels, and $1,000 for gas.",
+      "textual_evidence": "$7,500 for technical support 20 members/1.5 years... $1,500 for hotels... $1,000 for gas",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "This is a simple off-chain funding grant proposal.",
+    "textual_evidence": "We already have a group going... Please provide a rough breakdown of how you plan to spend the grant money."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No precise on-chain execution details or destination addresses are provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

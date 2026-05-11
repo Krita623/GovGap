@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-ens-0009",
+  "dao": {
+    "name": "ENS",
+    "chain_id": 1,
+    "governor_address": "0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "33657496545373741813637578444724485346468737982573562831880427564621945332995",
+    "proposal_url": "https://www.tally.xyz/gov/ens/proposal/33657496545373741813637578444724485346468737982573562831880427564621945332995",
+    "source": "tally",
+    "created_block": 20828677,
+    "executed_block": 20892658,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# [EP 5.16] [Executable] Reimbursement of ENS Labs\u2019 legal fees in eth.link litigation",
+    "description": "# [EP 5.16] [Executable] Reimbursement of ENS Labs\u2019 legal fees in eth.link litigation\n\n[Temp Check Discourse link](https://discuss.ens.domains/t/ep-5-x-executable-reimbursement-of-ens-labs-legal-fees-in-eth-link-litigation/19613)\n\n\n ## Description \n## Summary\nThis executable proposal seeks to implement the reimbursement payment to ENS Labs for the legal fees incurred while pursuing litigation to protect the eth.link domain. The reimbursement was approved in the previously passed social proposal [EP 5.3](https://docs.ens.domains/dao/proposals/5.3).\n\n## Background\nThe lawsuit that ENS filed in federal district court in Arizona to maintain ownership and control over eth.link has been resolved, and on 26 August 2024, the Court officially closed this case.  \nENS Labs has maintained full ownership and control over the eth.link domain and, therefore, ENS Labs has achieved the initial objective they had when first filing the complaint and obtaining injunctive relief.  To reach this outcome, ENS Labs has spent in total 1,218,669.76 USD. \nThis legal action was necessary to defend the ENS ecosystem and maintain control of the eth.link domain, a critical infrastructure component since 2017.\n\n### Links\n- [EP 5.3 Snapshot Vote](https://snapshot.org/#/ens.eth/proposal/0x456ccb438eed5d189cbe51e5e36a88d2bb4dc0c61f12f6d9e310a7ba4798d5fc)\n- [Forum Discussion on EP 5.3](https://discuss.ens.domains/t/ep5-2-social-determine-ens-labs-next-steps-in-eth-link-litigation/18756)\n\n## Specification\nThis executable proposal will initiate a transfer of 1,218,669.76 USDC from the ENS DAO treasury to ENS Labs. This amount represents the final total of all legal expenses related to the eth.link litigation.\n\n### Transaction Details\n- **From:** ENS DAO Treasury (0xFe89cc7aBB2C4183683ab71653C4cdc9B02D44b7)\n- **To:** USDC Token Contract (0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48)\n- **Recipient:** ENS Labs (0x690F0581eCecCf8389c223170778cD9D029606F2)\n- **Amount:** 1,218,669.76 USDC (1218669760000 considering USDC's 6 decimal places)\n- **Purpose:** Reimbursement for legal fees in eth.link litigation\n\n\n\nThis transaction calls the `transfer` function of the USDC contract, transferring 1,218,669.76 USDC to ENS Labs' address.\n\n## Rationale\nThe ENS community, through the passage of EP 5.3, has demonstrated its support for reimbursing ENS Labs for the legal expenses incurred in protecting the eth.link domain. This reimbursement acknowledges the efforts made by ENS Labs to safeguard a critical asset of the ENS ecosystem. It ensures that the financial burden of this legal action does not fall solely on ENS Labs, particularly given that their actions were taken to benefit the entire ENS community.\n\n\n\n---\n\n\n\n*Note - When the orignal snapshot for the social vote was posted it was numbered as 5.2, but it should have been 5.3.  It has been renumbered in the official ENS documentation.  Some links point to forum discussions and Snapshots that show the original duplicitive label of 5.2*"
+  },
+  "payload": {
+    "targets": [
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0xa9059cbb000000000000000000000000690f0581ececcf8389c223170778cd9d029606f20000000000000000000000000000000000000000000000000000011bbe60ce00"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x4e9c9ab9a16682c61dfc077070e18df0eafe8044dcbf7cfa844cef749e32ecf5",
+    "executed_tx_hash": "0x70404c5d96d8f5414774d806284ae7760dea18be716a93796e2be8f06ded3eaa"
+  }
+}

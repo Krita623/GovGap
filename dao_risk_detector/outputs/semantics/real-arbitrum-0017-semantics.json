@@ -1,0 +1,27 @@
+{
+  "proposal_summary": "This Constitutional AIP proposes to upgrade Arbitrum One and Arbitrum Nova to ArbOS 40 \"Callisto\", which includes relevant Ethereum Execution Layer changes from the Pectra upgrade (EIP-7702, EIP-2537, EIP-2935) and a minor fix for Arbitrum Stylus.",
+  "disclosed_entities": [],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "updating the WASM module root and scheduling the ArbOS Upgrade",
+      "canonical_action": "upgrade",
+      "object": "Arbitrum One and Arbitrum Nova",
+      "claimed_effect": "Trigger activation of ArbOS 40 Callisto at epoch timestamp: 1750176000",
+      "textual_evidence": "This proposal payload will contain the on-chain changes, including updating the WASM module root and scheduling the ArbOS Upgrade... will trigger the activation of ArbOS 40 Callisto at epoch timestamp: `1750176000`",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "complex",
+    "reason": "ArbOS upgrade is equivalent of a hard fork involving core WASM module changes and node updates.",
+    "textual_evidence": "On a high level, an ArbOS upgrade can be interpreted as Arbitrum’s equivalent of a hard fork. ... large, complex upgrades (like ArbOS upgrades)"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific target addresses are disclosed in the proposal text.",
+    "The exact payload repository address is mentioned as a github link rather than an on-chain address."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

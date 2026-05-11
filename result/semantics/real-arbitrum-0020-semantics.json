@@ -1,0 +1,105 @@
+{
+  "proposal_summary": "This proposal requests funding for Arbitrum Onboarding V2, a 7-month Governance Bootcamp designed to onboard, train, and match new governance participants (Governance Fellows) with Arbitrum protocols. It includes an educational curriculum, hands-on exercises, and a matching phase.",
+  "disclosed_entities": [
+    {
+      "name": "Areta",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Areta, Event Horizon, Gains Network, Gitcoin, Tally, Plutus DAO, and Uniswap Foundation are eager to work with a Governance Fellow"
+    },
+    {
+      "name": "Event Horizon",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Areta, Event Horizon, Gains Network, Gitcoin, Tally, Plutus DAO, and Uniswap Foundation are eager to work with a Governance Fellow"
+    },
+    {
+      "name": "Gains Network",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Areta, Event Horizon, Gains Network, Gitcoin, Tally, Plutus DAO, and Uniswap Foundation"
+    },
+    {
+      "name": "Gitcoin",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Gitcoin, Tally, Plutus DAO, and Uniswap Foundation"
+    },
+    {
+      "name": "Tally",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Tally, Plutus DAO, and Uniswap Foundation"
+    },
+    {
+      "name": "Plutus DAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Plutus DAO, and Uniswap Foundation"
+    },
+    {
+      "name": "Uniswap Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Uniswap Foundation are eager to work with a Governance Fellow"
+    },
+    {
+      "name": "Atrium Academy",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We’re thrilled to welcome Bhaumik Patel, founder of Atrium Academy, as an advisor"
+    },
+    {
+      "name": "MSS",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We will be using the MSS services for payment. For swapping ARB to USDC, the MSS will send funds to an Arbitrum Foundation controlled address."
+    },
+    {
+      "name": "Arbitrum Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the MSS will send funds to an Arbitrum Foundation controlled address."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Fund the Onboarding Working Group",
+      "canonical_action": "transfer",
+      "object": "$193,138 USD paid in ARB",
+      "claimed_effect": "Run V2 of Arbitrum DAO’s Onboarding Program for 7 months",
+      "textual_evidence": "This proposal requests $193,138 USD paid in ARB for the Onboarding Working Group to run V2 of Arbitrum DAO’s Onboarding Program for 7 months.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Send funds for swapping",
+      "canonical_action": "transfer",
+      "object": "ARB to USDC",
+      "claimed_effect": "Swapped funds sent to Arbitrum Foundation controlled address",
+      "textual_evidence": "For swapping ARB to USDC, the MSS will send funds to an Arbitrum Foundation controlled address.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "complex",
+    "reason": "The proposal outlines a comprehensive 7-month educational program involving multiple tracks, exercises, curriculum modifications, and payment processes.",
+    "textual_evidence": "The Onboarding Program consists of the following components: An Application and Interview Process. A Curated Curriculum and Workshops. Exercises to assess comprehension of workshop materials... We are proposing a budget of $193,138 USD ... paid in ARB over 7 months."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses or target functions are explicitly provided for the transfer."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

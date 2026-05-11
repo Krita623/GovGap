@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "This proposal establishes a transparent, community-driven token-weighted approval voting process to elect two DUNA Admins (one Admin, one Reserve) via an off-chain vote on Nouns.gg, which will subsequently be finalized through an on-chain vote.",
+  "disclosed_entities": [
+    {
+      "name": "Nouns.gg",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "voting on Nouns.gg, achieved with Arweave"
+    },
+    {
+      "name": "Arweave",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Preserves History by archiving submissions with Arweave"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Approve the DUNA Admin election structure and authorize the preliminary voting round.",
+      "canonical_action": "governance_proposal_creation",
+      "object": "Election framework",
+      "claimed_effect": "Establishes a formal, 4+ week election process including warming-up, off-chain voting on Nouns.gg, and on-chain finalization.",
+      "textual_evidence": "A 'For' vote approves this election structure and authorizes conducting the preliminary voting round on Nouns.gg.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal defines a governance process and framework with off-chain steps leading to a future on-chain ratification vote. It contains no technical payload or smart contract interactions.",
+    "textual_evidence": "This proposal establishes a transparent, community-driven election process... followed by on-chain finalization."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal does not contain any executable on-chain payload, addresses, or smart contract function calls. It acts as a signaling or structural governance proposal."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

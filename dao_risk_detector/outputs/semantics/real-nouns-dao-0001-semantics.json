@@ -1,0 +1,112 @@
+{
+  "proposal_summary": "Fund the Calabara team with 50 ETH to build uplink.wtf, a marketing and proliferation platform for Nouns featuring Creator Contests and a new Nouns Raffle application.",
+  "disclosed_entities": [
+    {
+      "name": "NounsDAO",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "With a proven track record of funding high-quality content initiatives such as the Ordinary Folk video, Nounish productions, and more, NounsDAO boasts a diverse portfolio of content ready for widespread distribution."
+    },
+    {
+      "name": "SharkDAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "SharkDAO - source and vote on community art pieces to mint as open-editions from the DAO."
+    },
+    {
+      "name": "GnarsDAO",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Gnars - \"Skate Your City Series\". Worldwide digital skate competitions hosted by Gnars, run on Creator Contests, judged by GnarsDAO."
+    },
+    {
+      "name": "TNS",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We launched creator contests in September, and have since helped groups like TNS, Composables, SharkDAO, and others"
+    },
+    {
+      "name": "Composables",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Composables - recently hosted a contest in which they observed 30+ new collections"
+    },
+    {
+      "name": "NSFW",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "SharkDAO and NSFW both awarded us small grants to build the underlying infrastructure."
+    },
+    {
+      "name": "nickdodson.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Nick: nickdodson.eth"
+    },
+    {
+      "name": "signed.benbodhi.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Benbodhi: signed.benbodhi.eth"
+    },
+    {
+      "name": "juanx.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Juan: juanx.eth"
+    },
+    {
+      "name": "joshuafisher.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "JoshuaFisher: joshuafisher.eth"
+    },
+    {
+      "name": "toadyhawk.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ToadyHawk: toadyhawk.eth"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "30 ETH to team wallet upon execution",
+      "canonical_action": "transfer",
+      "object": "team wallet",
+      "claimed_effect": "Transfer 30 ETH to the team wallet",
+      "textual_evidence": "30 ETH to team wallet upon execution",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "20 ETH streamed over 3 months",
+      "canonical_action": "transfer",
+      "object": "streamed to team",
+      "claimed_effect": "Stream 20 ETH over 3 months",
+      "textual_evidence": "20 ETH streamed over 3 months",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal primarily requests funding via a transfer and stream. The underlying software development is complex (real-time concurrency, zk-snark research), but the on-chain action requested is straightforward.",
+    "textual_evidence": "We're requesting 50 ETH to fund a 3 month development cycle to deploy Creator Contests v2 and a brand new Nouns Raffle application to the new uplink.wtf platform.\n... \n50 ETH for development\n* 30 ETH to team wallet upon execution\n* 20 ETH streamed over 3 months"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Could not extract actual wallet addresses for multisig signers, as only ENS names were provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

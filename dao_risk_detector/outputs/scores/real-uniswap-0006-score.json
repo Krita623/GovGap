@@ -1,0 +1,348 @@
+{
+  "metadata": {
+    "proposal_id": "27",
+    "generated_at": "2026-05-08T11:15:24.465846+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 6,
+    "score_scale": 10,
+    "risk_level": "MEDIUM",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 7 capped by highest severity MEDIUM."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Deploy Uniswap v3 to Boba Network, an Ethereum L2 scaling solution. The proposal requests a license exemption for Boba Network to use the Uniswap V3 Core software code. Boba Network will provide $1M in BOBA tokens to foster usage via a multisig wallet co-owned by the Uniswap Grants Program and Boba Network.",
+    "disclosed_entities": [
+      {
+        "name": "Boba Network",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Boba Network and FranklinDAO (Prev. Penn Blockchain) are submitting this proposal to Deploy Uniswap v3 on Boba Network."
+      },
+      {
+        "name": "FranklinDAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Boba Network and FranklinDAO (Prev. Penn Blockchain) are submitting this proposal"
+      },
+      {
+        "name": "Uniswap Grants Program (UGP)",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The tokens will be sent to a multisig wallet co-owned by the Uniswap Grants Program (UGP) and Boba Network"
+      },
+      {
+        "name": "DMA Labs",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "In cooperation with DMA Labs (a major contributor to ICHIs Uniswap v3 management protocols)"
+      },
+      {
+        "name": "multisig wallet",
+        "address": null,
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The tokens will be sent to a multisig wallet co-owned by the Uniswap Grants Program (UGP) and Boba Network"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Grant an additional use grant to use the Uniswap V3 Core software code",
+        "canonical_action": "governance_proposal_creation",
+        "object": "Uniswap V3 Core software code",
+        "claimed_effect": "Boba Network receives license to use the Uniswap Code for a full deployment of the Uniswap Protocol v3 onto the Boba Network L2",
+        "textual_evidence": "The Boba Network is granted an additional use grant to use the Uniswap V3 Core software code",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Provide $1M $BOBA tokens",
+        "canonical_action": "treasury_operation",
+        "object": "$1M $BOBA tokens",
+        "claimed_effect": "Foster the usage of Uniswap v3 on Boba Network by funding incentives",
+        "textual_evidence": "Boba Network will provide $1M $BOBA tokens to foster the usage of Uniswap v3 on Boba Network. The tokens will be sent to a multisig wallet",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal primarily grants a license exemption for deploying the protocol on a new Layer 2 and arranging an incentive program via a multisig.",
+      "textual_evidence": "We are requesting an exemption that will allow Boba Network to use the Licensed Work to deploy it on Boba Network... Boba Network will provide $1M $BOBA tokens"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No smart contract code or addresses are provided for the actual deployment or execution."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+      "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": []
+  },
+  "risk_actions": [
+    {
+      "id": "27:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+      "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+      "depth": 1,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 7,
+      "severity": "MEDIUM",
+      "summary": "Trace includes undisclosed addresses without evidence of an uncovered sensitive business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+        "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "MEDIUM",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+                "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+              ],
+              "related_actions": [
+                {
+                  "id": "27:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+                  "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+            "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+            "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal primarily grants a license exemption for deploying the protocol on a new Layer 2 and arranging an incentive program via a multisig.",
+            "textual_evidence": "We are requesting an exemption that will allow Boba Network to use the Licensed Work to deploy it on Boba Network... Boba Network will provide $1M $BOBA tokens"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "governance_proposal_creation",
+        "treasury_operation"
+      ],
+      "actual_actions": [],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Grant an additional use grant to use the Uniswap V3 Core software code",
+              "canonical_action": "governance_proposal_creation",
+              "object": "Uniswap V3 Core software code",
+              "claimed_effect": "Boba Network receives license to use the Uniswap Code for a full deployment of the Uniswap Protocol v3 onto the Boba Network L2",
+              "textual_evidence": "The Boba Network is granted an additional use grant to use the Uniswap V3 Core software code",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Provide $1M $BOBA tokens",
+              "canonical_action": "treasury_operation",
+              "object": "$1M $BOBA tokens",
+              "claimed_effect": "Foster the usage of Uniswap v3 on Boba Network by funding incentives",
+              "textual_evidence": "Boba Network will provide $1M $BOBA tokens to foster the usage of Uniswap v3 on Boba Network. The tokens will be sent to a multisig wallet",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "27:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+              "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": []
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "MEDIUM",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+            "0x53a328f4086d7c0f1fa19e594c9b842125263026"
+          ],
+          "related_actions": [
+            {
+              "id": "27:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x408ed6354d4973f66138c91495f2f2fcbd8724c3",
+              "to_address": "0x53a328f4086d7c0f1fa19e594c9b842125263026",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

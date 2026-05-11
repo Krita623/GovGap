@@ -1,0 +1,26 @@
+# DAO Proposal Semantic Gap Report
+
+Proposal ID: {{ report.proposal_id }}
+
+Overall Score: {{ report.overall_score }}/10
+
+Highest Severity: {{ report.highest_severity }}
+
+## Dimension Scores
+
+| Dimension | Score | Severity |
+| --- | ---: | --- |
+| Conflict Detection | {{ report.conflict_detection.score }}/10 | {{ report.conflict_detection.severity }} |
+| Depth Analysis | {{ report.depth_analysis.score }}/10 | {{ report.depth_analysis.severity }} |
+| Function Semantic Match | {{ report.function_semantic_match.score }}/10 | {{ report.function_semantic_match.severity }} |
+
+## Findings
+
+{% if report.findings %}
+{% for finding in report.findings %}
+- {{ finding }}
+{% endfor %}
+{% else %}
+No findings.
+{% endif %}
+

@@ -1,0 +1,174 @@
+{
+  "proposal_summary": "Funding request for Unruggable to build and operate a network of gateways supporting EVM-chain Reverse Resolution (ENSIP-19). Requests $1,200,000 USDC streamed over 1 year and 24,000 ENS tokens vested over 2 years.",
+  "disclosed_entities": [
+    {
+      "name": "USDC",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "USDC | 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    },
+    {
+      "name": "USDCx",
+      "address": "0x1ba8603da702602a8657980e825a6daa03dee93a",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "USDCx | 0x1BA8603DA702602A8657980e825A6DAa03Dee93a"
+    },
+    {
+      "name": "Superfluid",
+      "address": "0xcfa132e353cb4e398080b9700609bb008eceb125",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Superfluid | 0xcfA132E353cB4E398080B9700609bb008eceB125"
+    },
+    {
+      "name": "Unruggable multisig wallet",
+      "address": "0x64ca550f78d6cc711b247319cc71a04a166707ab",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the stream to the Unruggable multisig wallet ... 0x64Ca550F78d6Cc711B247319CC71A04A166707Ab"
+    },
+    {
+      "name": "Autowrap strategy contract",
+      "address": "0x1d65c6d3ad39d454ea8f682c49ae7744706ea96d",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "amount of USDC... that the Autowrap strategy contract is able to spend ... 0x1D65c6d3AD39d454Ea8F682c49aE7744706eA96d"
+    },
+    {
+      "name": "ENS Token",
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ENS Token | 0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72"
+    },
+    {
+      "name": "Hedgey Batch Planner",
+      "address": "0x3466eb008edd8d5052446293d1a7d212cb65c646",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Hedgey Batch Planner | 0x3466EB008EDD8d5052446293D1a7D212cb65C646"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "textual_evidence": "USDC Target Address"
+    },
+    {
+      "address": "0x1ba8603da702602a8657980e825a6daa03dee93a",
+      "textual_evidence": "USDCx Target Address"
+    },
+    {
+      "address": "0xcfa132e353cb4e398080b9700609bb008eceb125",
+      "textual_evidence": "Superfluid Target Address"
+    },
+    {
+      "address": "0x64ca550f78d6cc711b247319cc71a04a166707ab",
+      "textual_evidence": "Unruggable multisig argument in setFlowrate and Hedgey BatchPlanner"
+    },
+    {
+      "address": "0x1d65c6d3ad39d454ea8f682c49ae7744706ea96d",
+      "textual_evidence": "Autowrap strategy argument"
+    },
+    {
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "textual_evidence": "ENS Token Target Address"
+    },
+    {
+      "address": "0x3466eb008edd8d5052446293d1a7d212cb65c646",
+      "textual_evidence": "Hedgey Batch Planner Target Address"
+    },
+    {
+      "address": "0x1bb64af7fe05fc69c740609267d2abe3e119ef82",
+      "textual_evidence": "Locker argument in Hedgey batchVestingPlans"
+    },
+    {
+      "address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "textual_evidence": "vestingAdmin argument in Hedgey batchVestingPlans"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "approve(address spender, uint256 amount)",
+      "canonical_action": "approval",
+      "object": "USDC",
+      "claimed_effect": "Approves the Super USDCx contract to spend $100,000 of USDC on behalf of the ENS DAO wallet.",
+      "textual_evidence": "This function approves the Super USDCx contract to spend $100,000 of USDC on behalf of the sender, the ENS DAO wallet.",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "upgrade(uint256 amount)",
+      "canonical_action": "transfer",
+      "object": "USDCx",
+      "claimed_effect": "Upgrades $100,000 USDC from the ENS DAO wallet to USDCx.",
+      "textual_evidence": "This function 'upgrades' $100,000 USDC from the ENS DAO wallet/'Timelock' to USDCx.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "setFlowrate(address tokenAddress, address receiverAddress, int96 amountPerSecond)",
+      "canonical_action": "transfer",
+      "object": "Superfluid",
+      "claimed_effect": "Sets up the stream to the Unruggable multisig wallet.",
+      "textual_evidence": "This function sets up the stream to the Unruggable multisig wallet. [2]",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "increaseAllowance(address spender, uint256 increment)",
+      "canonical_action": "approval",
+      "object": "USDC",
+      "claimed_effect": "Increases the amount of USDC that the Autowrap strategy contract is able to spend.",
+      "textual_evidence": "This function increases the amount of USDC (owned by the ENS DAO wallet/Timelock) that the Autowrap strategy contract is able to spend.",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "approve(address spender, uint256 amount)",
+      "canonical_action": "approval",
+      "object": "ENS Token",
+      "claimed_effect": "Approve the BatchPlanner to spend 24,000 ENS tokens owned by the ENS DAO Wallet.",
+      "textual_evidence": "Approve the BatchPlanner to spend 24,000 ENS tokens owned by the ENS DAO Wallet",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "batchVestingPlans(address locker, address token, uint256 totalAmount, ...)",
+      "canonical_action": "transfer",
+      "object": "Hedgey Batch Planner",
+      "claimed_effect": "Create the Vesting Plan. Tokens vested over 24 months, with a 12 month cliff.",
+      "textual_evidence": "Create the Vesting Plan. Tokens vested over 24 months, with a 12 month cliff.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Requires coordinating token approvals, wrapper actions (USDCx), stream configuration via Superfluid, and batch vesting plan initialization via Hedgey. It entails multiple components but builds on proven patterns utilized by the DAO previously.",
+    "textual_evidence": "This proposal constitutes two streams: A stream of $1,200,000 USDC per year... A stream of 24,000 ENS tokens... Both streams are controlled directly by the ENS DAO Wallet."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "approve",
+      "textual_evidence": "function approve(address spender, uint256 amount) external returns (bool)"
+    },
+    {
+      "function_name": "upgrade",
+      "textual_evidence": "function upgrade(uint256 amount)"
+    },
+    {
+      "function_name": "setFlowrate",
+      "textual_evidence": "function setFlowrate(address tokenAddress, address receiverAddress, int96 amountPerSecond)"
+    },
+    {
+      "function_name": "increaseAllowance",
+      "textual_evidence": "function increaseAllowance(address spender, uint256 increment)"
+    },
+    {
+      "function_name": "batchVestingPlans",
+      "textual_evidence": "function batchVestingPlans(address locker, address token, uint256 totalAmount,(address recipient, uint256 amount, uint256 start, uint256 cliff, uint256 rate)[], uint256 period, address vestingAdmin, bool adminTransferOBO, uint8 mintType)"
+    }
+  ],
+  "limitations": [
+    "External repository simulations and code links must be audited independently to verify accurate parameters matching the stated intent."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,164 @@
+{
+  "proposal_summary": "This proposal initializes a Compound III USDC market (cUSDCv3) on Optimism. It deploys the Comet implementation, sets risk parameters, configures COMP rewards, bridges 10K USDC via CCTP to seed reserves, bridges 3.6K COMP via L1StandardBridge to seed rewards, and updates the official ENS TXT records.",
+  "disclosed_entities": [
+    {
+      "name": "Circle's Cross-Chain Transfer Protocol (CCTP) TokenMessenger",
+      "address": "0xbd3fa81b58ba92a82136038b25adec7066af3155",
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Circle’s Cross-Chain Transfer Protocol (CCTP) TokenMessenger"
+    },
+    {
+      "name": "Optimism's L1StandardBridge",
+      "address": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Optimism’s L1StandardBridge"
+    },
+    {
+      "name": "Timelock",
+      "address": null,
+      "entity_type": "timelock",
+      "disclosure_level": "implicit",
+      "textual_evidence": "take the Timelock's USDC on Mainnet"
+    },
+    {
+      "name": "USDC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "take the Timelock's USDC on Mainnet"
+    },
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "implicit",
+      "textual_evidence": "take Timelock's COMP"
+    },
+    {
+      "name": "CometRewards",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "bridge to CometRewards"
+    },
+    {
+      "name": "Comet implementation",
+      "address": null,
+      "entity_type": "implementation",
+      "disclosure_level": "implicit",
+      "textual_evidence": "deploys a new Comet implementation on Optimism"
+    },
+    {
+      "name": "governance receiver on Optimism",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "across the bridge to the governance receiver on Optimism"
+    },
+    {
+      "name": "v3-additional-grants.compound-community-licenses.eth",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "updates the ENS TXT record v3-official-markets on v3-additional-grants.compound-community-licenses.eth"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xbd3fa81b58ba92a82136038b25adec7066af3155",
+      "textual_evidence": "Circle’s Cross-Chain Transfer Protocol (CCTP) TokenMessenger"
+    },
+    {
+      "address": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+      "textual_evidence": "Optimism’s L1StandardBridge"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "sets the Comet configuration and deploys a new Comet implementation on Optimism",
+      "canonical_action": "bridge",
+      "object": "Comet implementation",
+      "claimed_effect": "Deploys and configures the Compound III protocol on Optimism via cross-chain messages",
+      "textual_evidence": "The first proposal action sets the Comet configuration and deploys a new Comet implementation on Optimism. This sends the encoded setConfiguration and deployAndUpgradeTo calls across the bridge",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "calls setRewardConfig on the Optimism rewards contract",
+      "canonical_action": "bridge",
+      "object": "Optimism rewards contract",
+      "claimed_effect": "Sets COMP as the reward token with a supply and borrow speed of 5 COMP/day",
+      "textual_evidence": "It also calls setRewardConfig on the Optimism rewards contract, to establish Optimism’s bridged version of COMP as the reward token for the deployment and set the initial supply speed to be 5 COMP/day and borrow speed to be 5 COMP/day.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "approves Circle’s Cross-Chain Transfer Protocol (CCTP) TokenMessenger to take the Timelock's USDC",
+      "canonical_action": "approval",
+      "object": "CCTP TokenMessenger",
+      "claimed_effect": "Allows CCTP to transfer USDC from the Timelock to seed market reserves",
+      "textual_evidence": "The second action approves Circle’s Cross-Chain Transfer Protocol (CCTP) TokenMessenger to take the Timelock's USDC on Mainnet",
+      "confidence": 0.98
+    },
+    {
+      "raw_action": "deposits and burns 10K USDC from mainnet via depositForBurn function",
+      "canonical_action": "bridge",
+      "object": "USDC",
+      "claimed_effect": "Bridges 10K USDC to Optimism to mint native USDC to Comet",
+      "textual_evidence": "The third action deposits and burns 10K USDC from mainnet via depositForBurn function on CCTP’s TokenMessenger contract to mint native USDC to Comet on Optimism.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "approves Optimism’s L1StandardBridge to take Timelock's COMP",
+      "canonical_action": "bridge",
+      "object": "L1StandardBridge",
+      "claimed_effect": "Allows L1StandardBridge to transfer COMP from the Timelock to seed rewards",
+      "textual_evidence": "The fourth action approves Optimism’s L1StandardBridge to take Timelock's COMP",
+      "confidence": 0.98
+    },
+    {
+      "raw_action": "deposits 3.6K COMP from mainnet to the Optimism L1StandardBridge contract",
+      "canonical_action": "bridge",
+      "object": "COMP",
+      "claimed_effect": "Bridges 3.6K COMP to CometRewards on Optimism",
+      "textual_evidence": "The fifth action deposits 3.6K COMP from mainnet to the Optimism L1StandardBridge contract to bridge to CometRewards.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "updates the ENS TXT record v3-official-markets",
+      "canonical_action": "parameter_update",
+      "object": "ENS TXT record",
+      "claimed_effect": "Updates the official list of Compound markets",
+      "textual_evidence": "updates the ENS TXT record v3-official-markets on v3-additional-grants.compound-community-licenses.eth",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Deploys a new implementation across a bridge and seeds reserves/rewards.",
+    "textual_evidence": "This proposal initializes a Compound III USDC market (cUSDCv3) on Optimism. It deploys the Comet implementation... bridges 10K USDC... bridges 3.6K COMP"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setConfiguration",
+      "textual_evidence": "sends the encoded setConfiguration and deployAndUpgradeTo calls across the bridge"
+    },
+    {
+      "function_name": "deployAndUpgradeTo",
+      "textual_evidence": "sends the encoded setConfiguration and deployAndUpgradeTo calls across the bridge"
+    },
+    {
+      "function_name": "setRewardConfig",
+      "textual_evidence": "It also calls setRewardConfig on the Optimism rewards contract"
+    },
+    {
+      "function_name": "depositForBurn",
+      "textual_evidence": "The third action deposits and burns 10K USDC from mainnet via depositForBurn function"
+    }
+  ],
+  "limitations": [
+    "Cross-chain transactions complexity might introduce implementation details omitted from summary."
+  ],
+  "llm_status": "repaired",
+  "llm_used_for_scoring": false
+}

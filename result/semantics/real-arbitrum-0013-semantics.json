@@ -1,0 +1,62 @@
+{
+  "proposal_summary": "RnDAO proposes a two-phase, 6-month Hackathon Continuation Program in partnership with Arbitrum to co-fund and support top teams from the Arbitrum CollabTech Hackathon. The program aims to move projects from PoC to MVP, using funds transferred to the Arbitrum MSS.",
+  "disclosed_entities": [
+    {
+      "name": "RnDAO",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "RnDAO proposes to co-fund (roughly 50-50) a program in partnership with Arbitrum"
+    },
+    {
+      "name": "Questbook",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Arbitrum funded the Arbitrum CollabTech Hackathon through Questbook."
+    },
+    {
+      "name": "Arbitrum MSS",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The funds provided by ArbitrumDAO will be transferred to the Arbitrum MSS."
+    },
+    {
+      "name": "RnDAO multisig for Capital deployment",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "RnDAO multisig for Capital deployment into projects"
+    },
+    {
+      "name": "RnDAO multisig for Program",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "RnDAO multisig for Program (combined ops, venture support, and interviewees grant)."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "The funds provided by ArbitrumDAO will be transferred to the Arbitrum MSS.",
+      "canonical_action": "transfer",
+      "object": "Arbitrum MSS",
+      "claimed_effect": "Funds move to MSS then to RnDAO multisigs.",
+      "textual_evidence": "The funds provided by ArbitrumDAO will be transferred to the Arbitrum MSS.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Multisig fund transfers with basic milestones, no complex smart contract interactions.",
+    "textual_evidence": "The funds provided by ArbitrumDAO will be transferred to the Arbitrum MSS. The funds are then transferred from the MSS wallet in two phases and to two separate RnDAO controlled multisigs"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses or function calls are provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

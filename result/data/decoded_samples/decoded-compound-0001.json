@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-compound-0001",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0001.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "51",
+    "status": "executed",
+    "title": "# Contributor Grant: Getty Hill",
+    "description": "# Contributor Grant: Getty Hill\n### Background\nOver the last 6-months, Getty Hill has worked to improve Compound\u2019s oracle system; he coordinated [Proposal 47](https://compound.finance/governance/proposals/47), a months-long effort to harden the Compound price feed, which met the highest possible standard demanded by the Compound community.\n### Contributor Grant\nGetty requested an streaming grant for his prior and future efforts to coordinate oracle development;\n> While the major update has been made, more work is still needed. We still need to transition the Uniswap anchor from v2 to v3, support additional markets, [ongoing monitoring](http://defialerts.io/oracle), and further research the system\u2019s efficiency. The recent milestone is the beginning of a more vigilant and efficient Compound.\n> I am requesting a 0.000214 [Contributor Comp Speed grant](https://compound.finance/governance/proposals/30) from the protocol. Over the last 6-months, I acted as the project manager for the oracle improvement. I researched a myriad of options, worked closely with the Chainlink team, managed community feedback and input, championed the project, and most importantly, got it through governance. The ongoing contributor grant will be for the work I have done to get the oracle improvement in place and to manage it going forward.\nThis Contributor Grant will be used to carry on the work of improving the price feed, and represents the first streaming COMP grant. The grant runs in perpetuity until modified by governance.\n[Discussion](https://www.comp.xyz/t/oracle-contributor/1887)"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setContributorCompSpeed(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x9b68c14e936104e9a7a24c712beecdc220002984"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint256",
+          "value": "214000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

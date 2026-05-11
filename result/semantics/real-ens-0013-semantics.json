@@ -1,0 +1,39 @@
+{
+  "proposal_summary": "This proposal implements the Service Provider Program Season 2 (SPP2), increasing the annual budget to $4.5M to support 8 providers. It adjusts the Superfluid streaming infrastructure, provides 375,000 USDC in initial funding, and configures autowrap parameters.",
+  "disclosed_entities": [
+    {
+      "name": "USDC",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "USDC 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "textual_evidence": "USDC contract address"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "adjusts the Superfluid streaming infrastructure, provides 375,000 USDC in initial funding, and configures autowrap parameters",
+      "canonical_action": "treasury_operation",
+      "object": "USDC",
+      "claimed_effect": "provides initial funding and configures streaming parameters",
+      "textual_evidence": "It adjusts the Superfluid streaming infrastructure, provides 375,000 USDC in initial funding, and configures autowrap parameters.",
+      "confidence": 0.8
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves token transfers, parameter configuration, and adjusting streaming infrastructure.",
+    "textual_evidence": "adjusts the Superfluid streaming infrastructure, provides 375,000 USDC in initial funding, and configures autowrap parameters."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Partial input provided; reconstructed missing JSON structure."
+  ],
+  "llm_status": "repaired",
+  "llm_used_for_scoring": false
+}

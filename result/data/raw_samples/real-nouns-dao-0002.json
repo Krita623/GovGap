@@ -1,0 +1,47 @@
+{
+  "benchmark_id": "real-nouns-dao-0002",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "152",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/152",
+    "source": "tally",
+    "created_block": 15724579,
+    "executed_block": 15773219,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Nouns DAO V2 Upgrade",
+    "description": "# Nouns DAO V2 Upgrade\n\n## Summary\n\nThis proposal updates the Nouns DAO logic contract to a new version, with the following improvements and additions:\n\n1. **Dynamic Quorum**: In V1, quorum is a fixed percentage of total supply. In V2, quorum has a dynamic range, rising as a function of against votes up to a defined cap. Read [this post](https://mirror.xyz/0x10072dfc23771101dC042fD0014f263316a6E400/96zSoFfiT_RM2o2P9UbVKxPzVpB_trZqUjzllBE00BE) for more info.\n2. **Vote with Gas Refund**: Allow Nouners/delegates to vote and receive a gas refund. The vote still takes place in the case of insufficient ETH to refund.\n3. **Voting Delay Editing Bug Fix**: In V1, editing voting delay was unsafe. V2 makes it safe to edit anytime. More info on the bug [here](https://github.com/nounsDAO/nouns-diligence/blob/main/reports/proposal-58.md#major).\n4. **Cancel Proposal Bug Fix**: The DAO has a spam mitigation feature, allowing anyone to cancel a proposal if the proposer has an amount of votes less than or equal to proposal threshold. In V1, this feature didn't work when proposer had exactly proposal threshold votes; in V2 it works as expected.\n5. **Vetoer Change Is Now 2-step**: We received audit feedback that V1's vetoer change process was risky as a single-step process. In V2, the risk of setting a wrong vetoer is mitigated using a 2-step process where the current vetoer sets a pending new vetoer. Once set, the pending vetoer must accept for the change to take place.\n\n## Audit\n\n1. The code has gone through internal reviews and a [code4rena audit](https://code4rena.com/reports/2022-08-nounsdao/).\n2. **No high-risk issues were found in V2**.\n3. **Unrelated to this proposal**, one high-risk issue was found. See [this audit summary on discourse](https://discourse.nouns.wtf/t/nouns-dao-v2-audit-summary/2525) for more information.\n\n\n## Dynamic Quorum Parameters\n\nAs articulated in this [detailed post](https://mirror.xyz/0x10072dfc23771101dC042fD0014f263316a6E400/96zSoFfiT_RM2o2P9UbVKxPzVpB_trZqUjzllBE00BE), three parameters need to be set for dynamic quorum. This proposal sets their values, and we\u2019re offering the thinking behind them here:\n\n1. **Minimum quorum %**: keeping it at 10%, the same as today\u2019s quorum.\n2. **Maximum quorum %**: setting it to 15%, taking into account recent participation levels around 30%, allowing proposals with more than 15% For votes to be decided by simple majority; the intent is for this value to provide extra protection from voter apathy, while allowing most all proposals to be decided by simple majority rather than quorum.\n3. **Coefficient**: setting it to 1, such that each against vote raises the quorum requirement by one vote, until the maximum quorum is reached.\n\nThese parameters can be edited at any time via a proposal; treat these values as the first experiment.\n\n## Vote with Gas Refund\n\nA bit more on how this feature works:\n\n1. Governance clients (like nouns.wtf/vote) need to update their code to support it.\n2. Refunds are subject to certain constraints:\n    1. Gas base fee is capped at 200 gwei.\n    2. Gas priority fee is capped at 2 gwei.\n    3. Total gas is capped at 200K, supporting voting reason text up to roughly 9,190 characters.\n    4. If the contract\u2019s balance is insufficient, voter will receive a partial refund.\n3. This feature requires the DAO to maintain the DAO contract\u2019s ETH balance, which should be done via periodic ETH transfer proposals from the treasury to the DAO contract (this proposal performs the first funding).\n4. The DAO can choose to withdraw refund ETH back into the treasury at any time via a proposal.\n\n\n## Proposal Transactions for Humans\n\n1. `_setImplementation`: upgrades DAO logic to V2.\n2. `_setDynamicQuorumParams`: sets dynamic quorum params to:\n    1. Minimum quorum BPs: 10% (1000 basis points).\n    2. Maximum quorum BPs: 15% (1500 basis points).\n    3. Coefficient: 1 (1,000,000 in unsigned integer with 6 decimal places).\n3. `transfer`: funding vote refunds with 12 ETH, which should be enough for just over 100 proposals at today's participation rate (excluding honk\u2019s tendency to paste long paragraphs).\n\nAs always, please reach out in the\u00a0[#54-tech-grants](https://discord.com/channels/849745721544146955/981584123225321503)\u00a0channel in Discord with any questions \u2310\u25e8-\u25e8."
+  },
+  "payload": {
+    "targets": [
+      "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+      "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+      "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d"
+    ],
+    "values": [
+      "0",
+      "0",
+      "12000000000000000000"
+    ],
+    "signatures": [
+      "_setImplementation(address)",
+      "_setDynamicQuorumParams(uint16,uint16,uint32)",
+      ""
+    ],
+    "calldatas": [
+      "0x000000000000000000000000cacf365eda93f07741a80d4f39a773baabb3a873",
+      "0x00000000000000000000000000000000000000000000000000000000000003e800000000000000000000000000000000000000000000000000000000000005dc00000000000000000000000000000000000000000000000000000000000f4240",
+      "0x"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xed526a6a7d508f703b490300ba93293cc29d58015f6a28c8db6115d9d1b3a76a",
+    "executed_tx_hash": "0x58564b87054eb40642e304fe119a7d841f96233865f77fc98f86351bb6f6134a"
+  }
+}

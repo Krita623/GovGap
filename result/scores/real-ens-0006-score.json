@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "proposal_id": "8759198094868535520038506706231539487662297008587733129541987545743856603253",
+    "generated_at": "2026-05-08T11:15:24.208777+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal requests to allocate 200,000 ENS from the ENS treasury to the Protocol Guild pilot program, transferring the funds to a 1-year vesting contract (0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9) to reward Ethereum core protocol contributors.",
+    "disclosed_entities": [
+      {
+        "name": "ENS",
+        "address": null,
+        "entity_type": "treasury",
+        "disclosure_level": "implicit",
+        "textual_evidence": "We propose that 200k ENS (~3.7% of the unclaimed airdrop) be allocated in recognition of past and ongoing work"
+      },
+      {
+        "name": "Protocol Guild Pilot Vesting Contract",
+        "address": "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "1 Year Vesting Contract: https://app.0xsplits.xyz/accounts/0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9/"
+      },
+      {
+        "name": "Protocol Guild Split Contract",
+        "address": "0x84af3d5824f0390b9510440b6abb5cc02bb68ea1",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Split Contract: https://app.0xsplits.xyz/accounts/0x84af3D5824F0390b9510440B6ABB5CC02BB68ea1/"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+        "textual_evidence": "1 Year Vesting Contract: https://app.0xsplits.xyz/accounts/0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9/"
+      },
+      {
+        "address": "0x84af3d5824f0390b9510440b6abb5cc02bb68ea1",
+        "textual_evidence": "Split Contract: https://app.0xsplits.xyz/accounts/0x84af3D5824F0390b9510440B6ABB5CC02BB68ea1/"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "send 200k ENS to the Pilot vesting contract",
+        "canonical_action": "transfer",
+        "object": "0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9",
+        "claimed_effect": "Fund Protocol Guild pilot with 200,000 ENS",
+        "textual_evidence": "We are proposing that 200k ENS... be sent to the Pilot vesting contract deployed at 0xF29…f1a9",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal requires a standard ERC20 transfer of 200,000 ENS tokens from the ENS treasury to a specified vesting contract.",
+      "textual_evidence": "We propose that 200k ENS... be sent to the Pilot vesting contract"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No precise function signatures or full payload data provided in the text for the execution."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000f29ff96aaea6c9a1fba851f74737f3c069d4f1a9000000000000000000000000000000000000000000002a5a058fc295ed000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+          200000000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "8759198094868535520038506706231539487662297008587733129541987545743856603253:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000f29ff96aaea6c9a1fba851f74737f3c069d4f1a9000000000000000000000000000000000000000000002a5a058fc295ed000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+          200000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x84af3d5824f0390b9510440b6abb5cc02bb68ea1",
+        "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [
+                {
+                  "id": "8759198094868535520038506706231539487662297008587733129541987545743856603253:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+                  "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x84af3d5824f0390b9510440b6abb5cc02bb68ea1",
+            "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9"
+          ],
+          "trace_unique_addresses": [
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal requires a standard ERC20 transfer of 200,000 ENS tokens from the ENS treasury to a specified vesting contract.",
+            "textual_evidence": "We propose that 200k ENS... be sent to the Pilot vesting contract"
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "send 200k ENS to the Pilot vesting contract",
+              "canonical_action": "transfer",
+              "object": "0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9",
+              "claimed_effect": "Fund Protocol Guild pilot with 200,000 ENS",
+              "textual_evidence": "We are proposing that 200k ENS... be sent to the Pilot vesting contract deployed at 0xF29…f1a9",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "8759198094868535520038506706231539487662297008587733129541987545743856603253:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [
+            {
+              "id": "8759198094868535520038506706231539487662297008587733129541987545743856603253:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "Reassigns ownership of the ENS community pod, making it a sub-pod of the ENS ecosystem and dissolving the community working group multisig per EP15.",
+  "disclosed_entities": [
+    {
+      "name": "community WG multisig / ENS community pod",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Dissolve the community WG multisig per EP15\nThis proposal reassigns ownership of the ENS community pod"
+    },
+    {
+      "name": "ENS ecosystem",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "implicit",
+      "textual_evidence": "making it a sub-pod of ENS ecosystem"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "reassigns ownership of the ENS community pod",
+      "canonical_action": "role_change",
+      "object": "ENS community pod",
+      "claimed_effect": "making it a sub-pod of ENS ecosystem",
+      "textual_evidence": "This proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal consists of a straightforward ownership transfer of a single community pod.",
+    "textual_evidence": "This proposal reassigns ownership of the ENS community pod, making it a sub-pod of ENS ecosystem."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No on-chain addresses for the relevant multisigs or pods are provided in the text, so the exact transaction details cannot be derived."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

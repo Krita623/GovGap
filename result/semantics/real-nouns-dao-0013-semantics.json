@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "A funding request for $39,600 USD to cover the expenses of relocating Nouns Deli to a high-traffic spot in Prahran Market, Melbourne.",
+  "disclosed_entities": [
+    {
+      "name": "Nouns Deli",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We are seeking $39,600 USD to cover relocation expenses, ensuring Nouns Deli remains at the forefront"
+    },
+    {
+      "name": "Nouns DAO",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "rather than requesting the DAO to purchase the business"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Requesting $39,600 USD for relocation expenses",
+      "canonical_action": "transfer",
+      "object": "$39,600 USD",
+      "claimed_effect": "Funds will be used for shop design, construction, fit-out, branding, signage, and contingency for the Nouns Deli relocation.",
+      "textual_evidence": "Total Estimated Budget - $39,600",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal is a straightforward off-chain funding request for a real-world business relocation. No technical execution details or smart contract changes are mentioned.",
+    "textual_evidence": "We are seeking $39,600 USD to cover relocation expenses"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No recipient addresses or on-chain transaction details are provided for the requested funds."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

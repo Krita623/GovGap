@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "proposal_id": "175",
+    "generated_at": "2026-05-08T11:15:23.982472+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Proposal to renew the Compound Grants Program (CGP) 2.0 for two quarters with a total budget of $970,000 (17,436.7 COMP), distributed across several domains and managed by Questbook using a Delegated Domain Capital Allocation Model.",
+    "disclosed_entities": [
+      {
+        "name": "Questbook",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Questbook proposes to renew Compound Grants Program 2.0 with a budget of $970,000"
+      },
+      {
+        "name": "Grants SAFE",
+        "address": null,
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Unallocated funds from the Grants SAFE and all domain level SAFE will be returned back to the treasury."
+      },
+      {
+        "name": "Synapse",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "We suggest that the grants committee continue with Synapse for KYC services"
+      },
+      {
+        "name": "COMP",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "budget of $970,000 = 17,436.7 COMP"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xeb047900b28a9f90f3c0e65768b23e7542a65163",
+        "textual_evidence": "grantId=0xeb047900b28a9f90f3c0e65768b23e7542a65163"
+      },
+      {
+        "address": "0x291d6eb5de3b023ce9b760ef251b303c0c0fd11a",
+        "textual_evidence": "grantId=0x291d6eb5de3b023ce9b760ef251b303c0c0fd11a"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Renew Compound Grants Program 2.0 with a budget of 17,436.7 COMP",
+        "canonical_action": "treasury_operation",
+        "object": "CGP 2.0 Budget",
+        "claimed_effect": "Fund grants that align with Compound’s roadmap and compensate program managers and domain allocators.",
+        "textual_evidence": "we propose renewing CGP 2.0 with a budget of $970k for two quarters. The domain allocators will utilize this budget to fund proposals that align with Compound’s roadmap.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "The proposal requires the transfer of treasury funds to multiple domain-level multisig wallets operated by a Grants committee.",
+      "textual_evidence": "Each domain allocator will run their respective domain on-chain for full transparency using Questbook."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "The proposal text specifies a budget and intent but lacks the explicit on-chain execution addresses or technical payload inside the main body text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000008524b12cb7710c75b53baa9ca72b420542d24c130000000000000000000000000000000000000000000003b13ed29a676db60000",
+        "output": "0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000036436f6d703a3a5f7472616e73666572546f6b656e733a207472616e7366657220616d6f756e7420657863656564732062616c616e636500000000000000000000",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x8524b12cb7710c75b53baa9ca72b420542d24c13",
+          17436700000000000000000
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+      "0xc00e94cb662c3520282e6f5717214004a7f26888"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "175:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+      "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000008524b12cb7710c75b53baa9ca72b420542d24c130000000000000000000000000000000000000000000003b13ed29a676db60000",
+        "output": "0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000036436f6d703a3a5f7472616e73666572546f6b656e733a207472616e7366657220616d6f756e7420657863656564732062616c616e636500000000000000000000",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x8524b12cb7710c75b53baa9ca72b420542d24c13",
+          17436700000000000000000
+        ],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x291d6eb5de3b023ce9b760ef251b303c0c0fd11a",
+        "0xeb047900b28a9f90f3c0e65768b23e7542a65163"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+        "0xc00e94cb662c3520282e6f5717214004a7f26888"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+                "0xc00e94cb662c3520282e6f5717214004a7f26888"
+              ],
+              "related_actions": [
+                {
+                  "id": "175:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+                  "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x291d6eb5de3b023ce9b760ef251b303c0c0fd11a",
+            "0xeb047900b28a9f90f3c0e65768b23e7542a65163"
+          ],
+          "trace_unique_addresses": [
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0xc00e94cb662c3520282e6f5717214004a7f26888"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0xc00e94cb662c3520282e6f5717214004a7f26888"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "The proposal requires the transfer of treasury funds to multiple domain-level multisig wallets operated by a Grants committee.",
+            "textual_evidence": "Each domain allocator will run their respective domain on-chain for full transparency using Questbook."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Renew Compound Grants Program 2.0 with a budget of 17,436.7 COMP",
+              "canonical_action": "treasury_operation",
+              "object": "CGP 2.0 Budget",
+              "claimed_effect": "Fund grants that align with Compound’s roadmap and compensate program managers and domain allocators.",
+              "textual_evidence": "we propose renewing CGP 2.0 with a budget of $970k for two quarters. The domain allocators will utilize this budget to fund proposals that align with Compound’s roadmap.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "175:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+              "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+            "0xc00e94cb662c3520282e6f5717214004a7f26888"
+          ],
+          "related_actions": [
+            {
+              "id": "175:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x6d903f6003cca6255d85cca4d3b5e5146dc33925",
+              "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

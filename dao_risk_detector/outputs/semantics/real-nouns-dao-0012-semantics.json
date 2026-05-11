@@ -1,0 +1,26 @@
+{
+  "proposal_summary": "Funding request of 35,000 USDC to expand the Nouns Capture app, including developing an Android version, UI refinement, and launching to 20,000 PE teachers with curriculum integration.",
+  "disclosed_entities": [],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 35,000 USDC",
+      "canonical_action": "transfer",
+      "object": "35,000 USDC",
+      "claimed_effect": "Fund the expansion of the Nouns Capture app",
+      "textual_evidence": "We propose a funding request of 35,000 USDC to expand the Nouns Capture app...",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal asks for funding to expand an existing app, which involves software development, UI refinement, curriculum integration, and a global marketing campaign.",
+    "textual_evidence": "We propose a funding request of 35,000 USDC to expand the Nouns Capture app, an interactive scavenger hunt... UI Refinement and Android Development... Marketing and Global Launch... Curriculum Integration"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit receiving address or smart contract execution data is provided in the proposal."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

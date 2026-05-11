@@ -1,0 +1,77 @@
+{
+  "proposal_summary": "A proposal to fund volky.eth $18k streamed over 3 months to revamp nouns.wtf and dev tooling, retroactive compensation of 1 Noun for past work, and $2k to seed a bounty program managed by a 2/3 multisig.",
+  "disclosed_entities": [
+    {
+      "name": "volky.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Stream volky.eth $18k over 3 months"
+    },
+    {
+      "name": "Bounty Multisig",
+      "address": "0x0b276e727b3c09545593c484966138a11b1a32e7",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Funds will be kept in a 2/3 multisig with volky.eth + DUNA admins"
+    },
+    {
+      "name": "satori.wtf",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "(satori.wtf, indexcard.eth)"
+    },
+    {
+      "name": "indexcard.eth",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "(satori.wtf, indexcard.eth)"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x0b276e727b3c09545593c484966138a11b1a32e7",
+      "textual_evidence": "eth:0x0B276E727b3c09545593c484966138a11B1a32e7"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Stream volky.eth $18k over 3 months",
+      "canonical_action": "transfer",
+      "object": "$18k",
+      "claimed_effect": "Funds development work for nouns.wtf and dev tooling.",
+      "textual_evidence": "$6k/mo, streamed over 3 months, totalling $18k",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Retro-comp volky with 1 Noun",
+      "canonical_action": "transfer",
+      "object": "1 Noun",
+      "claimed_effect": "Rewards volky.eth for past work done on prop 773.",
+      "textual_evidence": "1 Noun as retro comp for the work already done",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set aside $2k for community contribution bounties",
+      "canonical_action": "transfer",
+      "object": "$2k",
+      "claimed_effect": "Funds a 2/3 multisig to pay out bounties to developers.",
+      "textual_evidence": "I'm asking for $2k to seed a bounty program Funds will be kept in a 2/3 multisig",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal consists of standard treasury transfers (streaming USDC/ETH, sending an NFT, and funding a multisig) without complex protocol upgrades.",
+    "textual_evidence": "Stream volky.eth $18k over 3 months... Retro-comp volky with 1 Noun... Set aside $2k"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit smart contract interaction payload or specific currency for the $18k and $2k is mentioned (assumed to be USDC or ETH).",
+    "The streaming mechanism (e.g., Sablier) is not explicitly detailed."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

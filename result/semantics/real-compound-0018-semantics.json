@@ -1,0 +1,42 @@
+{
+  "proposal_summary": "Gauntlet recommends adjusting the COMP rewards for both the supply and borrow sides across various comets (including Base AERO, Mantle USDe, Mainnet USDS, etc.) to aid optimal utilization and lower COMP burn.",
+  "disclosed_entities": [
+    {
+      "name": "Configurator",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator."
+    },
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adjustments to COMP rewards for both supply and borrow side"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Update COMP reward parameters",
+      "canonical_action": "parameter_update",
+      "object": "Configurator",
+      "claimed_effect": "Adjust COMP rewards to aide optimal utilization and lower COMP burn.",
+      "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal describes straightforward parameter updates to reward rates.",
+    "textual_evidence": "The proposal updates the parameters by using the respective methods on the Configurator."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit contract addresses (0x...) are provided.",
+    "Specific function names being called on the Configurator are not disclosed."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

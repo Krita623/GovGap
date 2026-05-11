@@ -1,0 +1,57 @@
+{
+  "proposal_summary": "This proposal requests to allocate 200,000 ENS from the ENS treasury to the Protocol Guild pilot program, transferring the funds to a 1-year vesting contract (0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9) to reward Ethereum core protocol contributors.",
+  "disclosed_entities": [
+    {
+      "name": "ENS",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "We propose that 200k ENS (~3.7% of the unclaimed airdrop) be allocated in recognition of past and ongoing work"
+    },
+    {
+      "name": "Protocol Guild Pilot Vesting Contract",
+      "address": "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "1 Year Vesting Contract: https://app.0xsplits.xyz/accounts/0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9/"
+    },
+    {
+      "name": "Protocol Guild Split Contract",
+      "address": "0x84af3d5824f0390b9510440b6abb5cc02bb68ea1",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Split Contract: https://app.0xsplits.xyz/accounts/0x84af3D5824F0390b9510440B6ABB5CC02BB68ea1/"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xf29ff96aaea6c9a1fba851f74737f3c069d4f1a9",
+      "textual_evidence": "1 Year Vesting Contract: https://app.0xsplits.xyz/accounts/0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9/"
+    },
+    {
+      "address": "0x84af3d5824f0390b9510440b6abb5cc02bb68ea1",
+      "textual_evidence": "Split Contract: https://app.0xsplits.xyz/accounts/0x84af3D5824F0390b9510440B6ABB5CC02BB68ea1/"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "send 200k ENS to the Pilot vesting contract",
+      "canonical_action": "transfer",
+      "object": "0xF29Ff96aaEa6C9A1fBa851f74737f3c069d4f1a9",
+      "claimed_effect": "Fund Protocol Guild pilot with 200,000 ENS",
+      "textual_evidence": "We are proposing that 200k ENS... be sent to the Pilot vesting contract deployed at 0xF29…f1a9",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal requires a standard ERC20 transfer of 200,000 ENS tokens from the ENS treasury to a specified vesting contract.",
+    "textual_evidence": "We propose that 200k ENS... be sent to the Pilot vesting contract"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No precise function signatures or full payload data provided in the text for the execution."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

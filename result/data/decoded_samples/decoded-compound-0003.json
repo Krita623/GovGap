@@ -1,0 +1,158 @@
+{
+  "benchmark_id": "real-compound-0003",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0003.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "176",
+    "status": "executed",
+    "title": "# [Gauntlet] 2023-08-14: Ethereum WETH - Risk Parameter, IR Curve, & Incentive Updates",
+    "description": "# [Gauntlet] 2023-08-14: Ethereum WETH - Risk Parameter, IR Curve, & Incentive Updates\n\n## Simple Summary\n\nA proposal from Gauntlet to adjust 2 asset-specific risk parameters, 1 global risk parameter, 1 Interest Rate curve parameter, and 1 incentive parameter.\n\nSpecifically, Gauntlet recommends the following changes:\n\n* Increase storefront price factor from 50% to 100%\n* Decrease wstETH liquidation penalty from 5% to 2.5%.\n* Decrease cbETH liquidation penalty from 5% to 2.5%.\n* Decrease Annual Borrow Interest Rate Slope Low from 0.051 to 0.037.\n* Increase COMP daily supply distribution from 38 to 70.\n\nFor more details, see the full forum post [here]( https://www.comp.xyz/t/gauntlet-recommendations-ethereum-compound-v3-eth-risk-parameter-ir-curve-incentive-changes-8-4-23/4565 ).\n\n## Motivation\n\nTo stimulate growth, Gauntlet proposes updating the IR borrow curve, liquidation bonus, and rewards for the protocol. These adjustments aim to increase capital efficiency and TVL growth, by incentivizing higher utilization and more supply.\n\n[Full proposal and forum discussion](https://www.comp.xyz/t/gauntlet-recommendations-ethereum-compound-v3-eth-risk-parameter-ir-curve-incentive-changes-8-4-23/4565)\n\n\n## Specification\n\nThe proposal uses the `updateAssetLiquidationFactor`, `setBaseTrackingSupplySpeed`, `setStoreFrontPriceFactor`, and `setBorrowPerYearInterestRateSlopeLow` methods of the Ethereum v3 WETH Configurator contract.\n\n\n*By approving this proposal, you agree that any services provided by Gauntlet shall be governed by the terms of service available at gauntlet.network/tos.*\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "native_value": "0",
+      "function": "updateAssetLiquidationFactor(address,address,uint64)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "address",
+          "value": "0xbe9895146f7af43049ca1c1ae358b0541ea49704"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "type": "uint64",
+          "value": "975000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "native_value": "0",
+      "function": "updateAssetLiquidationFactor(address,address,uint64)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "address",
+          "value": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0"
+        },
+        {
+          "index": 2,
+          "name": null,
+          "type": "uint64",
+          "value": "975000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "native_value": "0",
+      "function": "setBaseTrackingSupplySpeed(address,uint64)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint64",
+          "value": "810185185185"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "native_value": "0",
+      "function": "setStoreFrontPriceFactor(address,uint64)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint64",
+          "value": "1000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 4,
+      "target_contract": "0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3",
+      "native_value": "0",
+      "function": "setBorrowPerYearInterestRateSlopeLow(address,uint64)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "uint64",
+          "value": "37000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 5,
+      "target_contract": "0x1EC63B5883C3481134FD50D5DAebc83Ecd2E8779",
+      "native_value": "0",
+      "function": "deployAndUpgradeTo(address,address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "configuratorProxy",
+          "type": "address",
+          "value": "0x316f9708bb98af7da9c68c1c3b5e79039cd336e3"
+        },
+        {
+          "index": 1,
+          "name": "cometProxy",
+          "type": "address",
+          "value": "0xa17581a9e3356d9a858b789d68b4d866e593ae94"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

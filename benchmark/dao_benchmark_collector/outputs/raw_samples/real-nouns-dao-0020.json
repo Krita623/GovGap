@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-nouns-dao-0020",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "903",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/903",
+    "source": "tally",
+    "created_block": 24108301,
+    "executed_block": null,
+    "status": "defeated"
+  },
+  "proposal_text": {
+    "title": "# DUNA Admin Election Structure",
+    "description": "# DUNA Admin Election Structure\n\n**TL;DR** This proposal establishes a transparent, community-driven election process for selecting 2 DUNA Admins through token-weighted approval voting on Nouns.gg, achieved with Arweave, followed by on-chain finalization.\n\n![](https://i.ibb.co/35bjCvdk/Screenshot-2025-12-27-at-7-14-20-PM.png)\n\n**Background Information:** The previous DUNA Admin selection lacked a formal election process. Index and Prof were initially chosen by the Nounders and a working group, with Satori selected as a replacement after Prof could not commit. This proposal ensures a fair, open election where all Nouners can meaningfully participate.\n\n***Proposed Election Structure (Suggested by 5gram)***    **Voting Method: Token-Weighted Approval Voting**\n\n- Each voter may approve up to 2 candidates  \n- Voters can split their voting weight between their selected candidates  \n- The top 2 candidates by total approved voting weight are the winners. \n  1. First place becomes the DUNA Admin  \n  2. Second place becomes the DUNA Admin Reserve  \n\n***Timeline (4+ weeks total)***    \n\n**Warming-Up Period (2 weeks)**\n\n- Candidates submit applications  \n- Publication of candidate statements and proposed budgets  \n- Community discussion during weekly spaces (minimum 2 sessions)  \n- Candidates share their pitches and qualifications \n\n**Voting Period (1 week)**\n\n- Off-chain voting conducted on Nouns.gg  \n- All Nouners have sufficient time to review candidates and cast votes \n\n**On-Chain Finalization (8 days)**\n\n- Single proposal submitted naming the elected Admins  \n- Proposal includes terms (tenure, reporting requirements, recusal rules)  \n- Proposal includes budget caps and payment stream details  \n- Standard DAO vote to ratify the election results \n\n***Rationale***\n\n**This structure provides:**\n\n- Transparency: Open submission and voting process visible to all  \n- Adequate Time: 3+ weeks ensures broad participation and informed decision-making  \n- Community Voice: Token-weighted approval voting empowers all Nouners  \n- Efficiency: Single on-chain proposal reduces governance overhead  \n- Smooth Transition: Timeline aligns with current Admin term expiration \n- Preserves History by archiving submissions with Arweave \n\n**Voting - Please Note:**  \n\n- A \"**For**\" vote approves this election structure and authorizes conducting the preliminary voting round on Nouns.gg.  \n- A \"**Against**\" vote rejects this proposed election process. "
+  },
+  "payload": {
+    "targets": [
+      "0xd97Bcd9f47cEe35c0a9ec1dc40C1269afc9E8E1D"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "sendOrRegisterDebt(address,uint256)"
+    ],
+    "calldatas": [
+      "0x000000000000000000000000073f0dc58e9989c827ba5b7b35570b7315652e6300000000000000000000000000000000000000000000000000000000000f4240"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x9315ffb64b6f8a7a9f2e75289e95fd11f2f3e86a39dcb65db58f7f15d72e0608",
+    "executed_tx_hash": null
+  }
+}

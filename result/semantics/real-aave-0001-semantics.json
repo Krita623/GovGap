@@ -1,0 +1,74 @@
+{
+  "proposal_summary": "This proposal extends the ability for the Safety Module contracts (stkAAVE and stkABPT) to transfer AAVE rewards out of the Aave Ecosystem Reserve for the next year by executing approve functions.",
+  "disclosed_entities": [
+    {
+      "name": "Safety Module stkAAVE",
+      "address": "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "https://etherscan.io/address/0x4da27a545c0c5B758a6BA100e3a049001de870f5 is the stkAAVE contract"
+    },
+    {
+      "name": "Safety Module stkABPT",
+      "address": "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "and https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47 is the stkABPT address."
+    },
+    {
+      "name": "Aave ecosystem reserve",
+      "address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "on the Aave ecosystem reserve 0x25f2226b597e8f9514b3f68f00f494cf4f286491"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+      "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)"
+    },
+    {
+      "address": "0xa1116930326d21fb917d5a27f1e9943a9595fb47",
+      "textual_evidence": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750)"
+    },
+    {
+      "address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "textual_evidence": "on the Aave ecosystem reserve 0x25f2226b597e8f9514b3f68f00f494cf4f286491"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)",
+      "canonical_action": "approval",
+      "object": "stkAAVE contract",
+      "claimed_effect": "Approves 200,750 AAVE for the stkAAVE contract to distribute as safety incentives.",
+      "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750)",
+      "canonical_action": "approval",
+      "object": "stkABPT contract",
+      "claimed_effect": "Approves 200,750 AAVE for the stkABPT contract to distribute as safety incentives.",
+      "textual_evidence": "approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal consists entirely of performing two token approval actions on the Aave ecosystem reserve contract.",
+    "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and approve(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "approve",
+      "textual_evidence": "executes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750)"
+    }
+  ],
+  "limitations": [
+    "No precise token contract address is disclosed for AAVE, though it is implied to be handled via the reserve."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

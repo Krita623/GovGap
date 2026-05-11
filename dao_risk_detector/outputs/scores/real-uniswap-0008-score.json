@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "proposal_id": "65",
+    "generated_at": "2026-05-08T11:15:24.474635+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "The proposal requests the Uniswap DAO to match the 1M ARB grant received from the Arbitrum LTIPP by allocating $750k in UNI. These funds will be distributed alongside the LTIPP grant to incentivize liquidity providers on Uniswap via Gauntlet's dynamic optimization engine.",
+    "disclosed_entities": [
+      {
+        "name": "LTIPP Multisig",
+        "address": "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Multisig Address: 0x1026D3D219098D7b1B0A180F7E557DEeA7DA82C1 (⅔ Signers)"
+      },
+      {
+        "name": "Juanbug",
+        "address": "0xb8dcad009e533066f12e408075e10e3a30f1f15a",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "@Juanbug (UADP), 0xB8Dcad009E533066F12e408075E10E3a30F1f15A"
+      },
+      {
+        "name": "AbdullahUmar",
+        "address": "0x3d0e30031b547737ffcf13c127350159a6c4ce17",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "@AbdullahUmar (UADP), 0x3d0e30031b547737fFCf13c127350159A6C4ce17"
+      },
+      {
+        "name": "Picodes",
+        "address": "0x34eb88ead486a09cacd8dabe013682dc5f1dc41d",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Picodes (Merkl), 0x34Eb88EAD486A09CAcD8DaBe013682Dc5F1DC41D"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+        "textual_evidence": "Multisig Address: 0x1026D3D219098D7b1B0A180F7E557DEeA7DA82C1 (⅔ Signers)"
+      },
+      {
+        "address": "0xb8dcad009e533066f12e408075e10e3a30f1f15a",
+        "textual_evidence": "0xB8Dcad009E533066F12e408075E10E3a30F1f15A"
+      },
+      {
+        "address": "0x3d0e30031b547737ffcf13c127350159a6c4ce17",
+        "textual_evidence": "0x3d0e30031b547737fFCf13c127350159A6C4ce17"
+      },
+      {
+        "address": "0x34eb88ead486a09cacd8dabe013682dc5f1dc41d",
+        "textual_evidence": "0x34Eb88EAD486A09CAcD8DaBe013682Dc5F1DC41D"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Match Arbitrum LTIPP incentives by allocating $750k in UNI",
+        "canonical_action": "treasury_operation",
+        "object": "UNI",
+        "claimed_effect": "Allocates $750,000 worth of UNI to be matched alongside the ARB grant to incentivize liquidity providers.",
+        "textual_evidence": "The snapshot finished with the winner being $750k, hence we will move forward with this being the amount proposed. We will use the price of $9.74 per UNI for calculations.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal describes straightforward allocation of funds to match the Arbitrum LTIPP grant to be managed by a previously established entity structure.",
+      "textual_evidence": "If any funds are approved, they will follow a similar distribution structure and execution as above and be grouped together in Gauntlet’s incentives allocation."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No target address is explicitly provided for the UNI treasury transfer, though the funds will likely go to the disclosed multisig.",
+      "The exact on-chain payload is missing from the proposal description, only off-chain decisions and addresses are presented."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000001026d3d219098d7b1b0a180f7e557deea7da82c100000000000000000000000000000000000000000000104e2da94483f6200000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+          77000000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "65:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0xa9059cbb0000000000000000000000001026d3d219098d7b1b0a180f7e557deea7da82c100000000000000000000000000000000000000000000104e2da94483f6200000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+          77000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+        "0x34eb88ead486a09cacd8dabe013682dc5f1dc41d",
+        "0x3d0e30031b547737ffcf13c127350159a6c4ce17",
+        "0xb8dcad009e533066f12e408075e10e3a30f1f15a"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+              ],
+              "related_actions": [
+                {
+                  "id": "65:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x1026d3d219098d7b1b0a180f7e557deea7da82c1",
+            "0x34eb88ead486a09cacd8dabe013682dc5f1dc41d",
+            "0x3d0e30031b547737ffcf13c127350159a6c4ce17",
+            "0xb8dcad009e533066f12e408075e10e3a30f1f15a"
+          ],
+          "trace_unique_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal describes straightforward allocation of funds to match the Arbitrum LTIPP grant to be managed by a previously established entity structure.",
+            "textual_evidence": "If any funds are approved, they will follow a similar distribution structure and execution as above and be grouped together in Gauntlet’s incentives allocation."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business actions match extracted business actions.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Match Arbitrum LTIPP incentives by allocating $750k in UNI",
+              "canonical_action": "treasury_operation",
+              "object": "UNI",
+              "claimed_effect": "Allocates $750,000 worth of UNI to be matched alongside the ARB grant to incentivize liquidity providers.",
+              "textual_evidence": "The snapshot finished with the winner being $750k, hence we will move forward with this being the amount proposed. We will use the price of $9.74 per UNI for calculations.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "65:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "related_actions": [
+            {
+              "id": "65:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

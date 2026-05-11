@@ -1,0 +1,62 @@
+{
+  "proposal_summary": "This proposal outlines Cycle 3 of the Uniswap Delegate Reward Initiative, seeking to compensate up to 15 eligible delegates for their active participation in Uniswap governance over a 6-month period, with a total requested budget of 540,000 USD worth of UNI.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Uniswap Delegate Reward Initiative - Cycle 3"
+    },
+    {
+      "name": "StableLab",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "In late February 2024, StableLab proposed the Uniswap Delegate Reward Initiative"
+    },
+    {
+      "name": "Uniswap Delegate Reward Working Group",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "formation of the Uniswap Delegate Reward Working Group"
+    },
+    {
+      "name": "Accountability Committee",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The total amount, once approved, will be sent to the Accountability Committee, which will be responsible for the monthly distribution"
+    },
+    {
+      "name": "UNI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We are requesting 540,000 [6000 USD *6 Months *15 Delegates ] USD worth of UNI for cycle 3"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "The total amount, once approved, will be sent to the Accountability Committee, which will be responsible for the monthly distribution of rewards to eligible delegates.",
+      "canonical_action": "transfer",
+      "object": "540,000 USD worth of UNI",
+      "claimed_effect": "Fund the Accountability Committee to distribute monthly rewards to up to 15 delegates for 6 months.",
+      "textual_evidence": "The total amount, once approved, will be sent to the Accountability Committee... We are requesting 540,000 [6000 USD *6 Months *15 Delegates ] USD worth of UNI",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal defines a comprehensive evaluation framework for selecting candidates and enforcing distribution requirements for delegates over 6 months.",
+    "textual_evidence": "Application Eligibility... Metrics... Delegate Reward Eligibility... Budget"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No target address, execution actions, or smart contract function calls are provided explicitly in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,70 @@
+{
+  "risk_actions": [
+    {
+      "id": "466:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+      "depth": 1,
+      "function_selector": "0x27efe3cb",
+      "decoded_function": "_grantComp(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xbafe01ff935c7305907c33bf824352ee5979b526",
+        "value": "0x0",
+        "input": "0x27efe3cb000000000000000000000000334791289a906ac8f96ac0f90e7a91bf4aae4a6000000000000000000000000000000000000000000000085685e51a4f1ddc0000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0x27efe3cb",
+        "decoded_function": "_grantComp(address,uint256)",
+        "decoded_args": [
+          "0x334791289a906ac8f96ac0f90e7a91bf4aae4a60",
+          39375000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "466:3:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "depth": 2,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+        "to_address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000334791289a906ac8f96ac0f90e7a91bf4aae4a6000000000000000000000000000000000000000000000085685e51a4f1ddc0000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 2,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0x334791289a906ac8f96ac0f90e7a91bf4aae4a60",
+          39375000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 4,
+    "filtered_count": 0,
+    "deduplicated_count": 2,
+    "final_risk_action_count": 2
+  }
+}

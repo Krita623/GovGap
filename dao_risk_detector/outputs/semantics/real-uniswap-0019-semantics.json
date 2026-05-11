@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "This proposal requests 8,700 UNI (equivalent to $60,000) to onboard Forse by StableLab as a data service provider to analyze the effectiveness of the Uniswap Revitalization and Growth Program across 3 blockchains.",
+  "disclosed_entities": [
+    {
+      "name": "Forse / StableLab",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal seeks to onboard Forse by StableLab as a data service provider"
+    },
+    {
+      "name": "Uniswap Accountability Committee",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The budget once the onchain vote passes will first go to the Uniswap Accountability Committee."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer budget to Uniswap Accountability Committee",
+      "canonical_action": "transfer",
+      "object": "8700 UNI",
+      "claimed_effect": "Fund the data analytics services provided by Forse by StableLab",
+      "textual_evidence": "The proposal requests $60,000 worth of UNI, which is 8700 UNI... The budget once the onchain vote passes will first go to the Uniswap Accountability Committee.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "This is a straightforward budget request and service provider onboarding proposal with no smart contract upgrades or complex technical changes.",
+    "textual_evidence": "The proposal requests $60,000 worth of UNI, which is 8700 UNI to analyze the impact of the Uniswap Revitalization and Growth Program"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific target addresses or executable code details are provided in the proposal text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

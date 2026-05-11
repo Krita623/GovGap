@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-arbitrum-0001",
+  "dao": {
+    "name": "Arbitrum",
+    "chain_id": 42161,
+    "governor_address": "0xf07DeD9dC292157749B6Fd268E37DF6EA38395B9",
+    "governance_system": "openzeppelingovernor"
+  },
+  "proposal": {
+    "proposal_id": "71941171835710778457735937894689629320431683601089057868136768380925169329077",
+    "proposal_url": "https://www.tally.xyz/gov/arbitrum/proposal/71941171835710778457735937894689629320431683601089057868136768380925169329077",
+    "source": "tally",
+    "created_block": 105889839,
+    "executed_block": 112645569,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# AIP-2: Activate support for account abstraction endpoint on One and Nova",
+    "description": "# AIP-2: Activate support for account abstraction endpoint on One and Nova\n**Title** \n\nProposal: Activate support for account abstraction endpoint on One and Nova\n\n**Author** \n\nJason Windawi, Alchemy\n\n**Type** \n\nThis is a Constitutional proposal.\n\n**Abstract** \n\nAs part of the broader development of account abstraction standards and tooling, Ethereum researchers have proposed a new RPC [endpoint](https://notes.ethereum.org/@yoav/SkaX2lS9j) `eth_sendRawTransactionConditional` that adapts L2 sequencers to the specific needs of ERC-4337 bundlers. Offchain Labs has contributed to this new method by developing, testing and incorporating adjustments necessary to support the endpoint for Arbitrum\u2019s sequencer into Nitro with v.2.0.14, which is now live on the Arbitrum testnet. This AIP proposes that the Arbitrum DAO activate support for this endpoint on the One and Nova mainnets.\n\n**Motivation** \n\n[EIP-4337](https://eips.ethereum.org/EIPS/eip-4337) has created significant momentum for account abstraction across the EVM ecosystem. Among other innovations, the proposal split validation and execution into distinct steps in the process of bundling transactions for submission to an alternative mempool. This split introduced a potential issue for bundlers working on their L2 transactions.The delay between simulated transaction validation by the bundlers, and the final inclusion by sequencers, introduces a risk for reverting bundle submissions. This is due to the lag between the initial submission of a transaction and its ultimate inclusion, during which a smart contract account\u2019s storage can change and invalidate the transaction. Reverted bundle transactions result in lost value for the bundler, discouraging operation of these services until the issue is addressed.\n\nEthereum researchers [developed](https://notes.ethereum.org/@yoav/SkaX2lS9j) the `eth_sendRawTransactionConditional` endpoint to address this issue. This endpoint adds new options to the standard eth_sendRawTransaction endpoint that allow users to specify valid ranges for block height and timestamps. This will allow sequencers to reject transactions that don\u2019t meet conditions for inclusion during the earlier validation stage, addressing the risk that in-account storage might change between validation and execution.\n\nOffchain Labs developed, tested and implemented a version of the `eth_sendRawTransactionConditional` endpoint in the v.2.0.14 [update](https://github.com/OffchainLabs/nitro/releases/tag/v2.0.14) to Nitro, and have since implemented the endpoint on the Arbitrum testnet. This proposal requests that the DAO approve activating this endpoint for Arbitrum mainnets.\n\n**Rationale** \n\nThis proposal directly supports the DAO\u2019s constitutional value of maintaining alignment with the broader Ethereum ecosystem. The `eth_sendRawTransactionConditional` endpoint was [developed](https://notes.ethereum.org/@yoav/SkaX2lS9j) by the Ethereum Foundation to address the proposal\u2019s implications for layer 2 sequencers. Variations of this endpoint are being actively explored and developed by [prominent EVM L2s](https://blog.oplabs.co/erc-4337-and-account-abstraction/) [and others](https://github.com/maticnetwork/bor/pull/700) in the ecosystem, indicating that the need for this endpoint in the context of sequencer/bundler interactions is a known problem with the need for active work toward a solution.\n\nOur proposal is also aligned with the DAO\u2019s objective of ensuring decisions are sustainable over the medium and long term. As Arbitrum continues to push toward [decentralization](https://arbitrumfoundation.medium.com/arbitrum-the-next-phase-of-decentralization-e7f8b37b5226) beyond Vitalik\u2019s second [milestone](https://ethereum-magicians.org/t/proposed-milestones-for-rollups-taking-off-training-wheels/11571), the need for a flexible and secure endpoint for 4337-compliant transactions on Arbitrum will only become more critical.\n\nFinally, the proposal is aligned with the Arbitrum community\u2019s values of social and technical inclusion. By enabling one of the core features of account abstraction, Arbitrum\u2019s ecosystem would have access to the enormous potential for improvements in UX and other benefits of account abstraction.\n\n**Specifications** \n\nPR # [1474](https://github.com/OffchainLabs/nitro/pull/1474) on Github provides a history of the development and testing done by Offchain Labs, as well as the multiple stages of review by the team before it was merged on April 11, 2023. Making the endpoint viable for Arbitrum entailed two key adjustments to the checks performed before transactions reach the sequencer. The most fundamental was a config value change to the load balancer. The protocol\u2019s load balancer has historically limited the computational costs of processing transactions by setting the number of acceptable slots in a transaction to zero. The new endpoint\u2019s [design](https://notes.ethereum.org/@yoav/SkaX2lS9j) allows for up to 1,000 slots. To accommodate this increase for conditional transactions, PR 1474 removed this 0 restriction for Nitro and for the testnet.\n\nAllowing conditional transactions also introduces a risk of DOS attacks spamming the protocol with transactions regardless of whether they meet the state conditions at the time they were submitted. To address this, Labs updated the Arbitrum sequencer\u2019s pre-check to incorporate a backward-looking validity check of a given account\u2019s state, meaning that transactions can only execute if they met their own conditions as of one second prior to submitting the transaction.\n\n**Steps to Implement**\n\nThe work already done by Offchain Labs on this endpoint means that the steps to implement this AIP reduce to changing the load balancer config value as described above.\n\n**Timeline** \n\nIdeally ASAP, or as soon as is practical for Offchain Labs.\n\n**Overall Cost**\n\nThe upfront costs for implementation should effectively be zero given the work done already by Offchain Labs.\n\n"
+  },
+  "payload": {
+    "targets": [
+      "0xbf2896FD3053039b4200d9Adf39F3E4e1053e9e5"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0x"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x10c56b000c640126ee760be7c93c86298fef4a0781bc92c44f40b9c546ca0161",
+    "executed_tx_hash": "0x8d4f7b30fd9ecf6418309afc4a968290732cfa5c5b12ab0bb280e03517f18182"
+  }
+}

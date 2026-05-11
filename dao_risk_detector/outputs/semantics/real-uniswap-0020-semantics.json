@@ -1,0 +1,42 @@
+{
+  "proposal_summary": "This proposal sends $500k in UNI (35,211 UNI) to the Uniswap Accountability Committee to co-incentivize Uniswap v3 markets on the Sonic and Celo networks.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap Accountability Committee",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal sends $500k UNI to the Uniswap Accountability Committee"
+    },
+    {
+      "name": "UNI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "$500k UNI @ $14.20/UNI -> 35211 UNI"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 35211 UNI to the Uniswap Accountability Committee",
+      "canonical_action": "transfer",
+      "object": "35211 UNI",
+      "claimed_effect": "Funds the committee to co-incentivize Uniswap v3 markets on Sonic and Celo.",
+      "textual_evidence": "This proposal sends $500k UNI to the Uniswap Accountability Committee... $500k UNI @ $14.20/UNI -> 35211 UNI",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only involves a straightforward transfer of UNI tokens to a committee.",
+    "textual_evidence": "This proposal sends $500k UNI to the Uniswap Accountability Committee"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The target address for the Uniswap Accountability Committee is not provided.",
+    "The UNI token address is not explicitly provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

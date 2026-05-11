@@ -1,0 +1,713 @@
+{
+  "metadata": {
+    "proposal_id": "412",
+    "generated_at": "2026-05-08T11:15:24.381595+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Funding request for 3 months to develop Propdates 2.0, a tool for tracking proposal updates and successes, totaling 37 ETH.",
+    "disclosed_entities": [
+      {
+        "name": "Nouns DAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "expected that a proposer regularly updates the DAO on their work"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Fund Team via Stream",
+        "canonical_action": "treasury_operation",
+        "object": "30 ETH",
+        "claimed_effect": "Provide 3 months of funding to the development team via a stream.",
+        "textual_evidence": "Team: 30 ETH for three months (via Stream)",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Fund Incentives",
+        "canonical_action": "treasury_operation",
+        "object": "5 ETH",
+        "claimed_effect": "Provide 0.05 ETH to each of the first 100 successful props (before prop #363) that post a non-trivial update.",
+        "textual_evidence": "Incentives: 5 ETH (100 * 0.05 ETH)",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Fund OpEx",
+        "canonical_action": "treasury_operation",
+        "object": "2 ETH",
+        "claimed_effect": "Cover operational expenses.",
+        "textual_evidence": "OpEx: 2 ETH",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Includes setting up a payment stream and standard transfers, though specific technical parameters are not provided in the text.",
+      "textual_evidence": "Team: 30 ETH for three months (via Stream) | Incentives: 5 ETH | OpEx: 2 ETH"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No precise destination addresses or specific smart contract calls are provided in the proposal text to verify the on-chain execution payload."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+        "value": "0x6124fee993bc0000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "value": "0x0",
+        "input": "0x410aa52200000000000000000000000020bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd",
+        "output": "0x30116425",
+        "depth": 0,
+        "function_selector": "0x410aa522",
+        "decoded_function": "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+        "decoded_args": [
+          "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+          30000000000000000000,
+          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          1698710400,
+          1706659200,
+          0,
+          "0xd4b6472934c16ff3d81cc3502f853988cfb078dd"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "CREATE2",
+        "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "to_address": null,
+        "value": "0x0",
+        "input": "0x6101143d81600a3d39f336602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef7120bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d8000b2",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "CreateCollision"
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "value": "0x1a055690d9db80000",
+        "input": "0xd0e30db0",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xd0e30db0",
+        "decoded_function": "deposit()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd000000000000000000000000000000000000000000000001a055690d9db80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xd4b6472934c16ff3d81cc3502f853988cfb078dd",
+          30000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+      "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+      "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 4,
+    "value_transfer_count": 2,
+    "decoded_functions": [
+      "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+      "deposit()",
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "412:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x6124fee993bc0000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+        "value": "0x6124fee993bc0000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "412:3:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "depth": 0,
+      "function_selector": "0xd0e30db0",
+      "decoded_function": "deposit()",
+      "value": "0x1a055690d9db80000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "value": "0x1a055690d9db80000",
+        "input": "0xd0e30db0",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xd0e30db0",
+        "decoded_function": "deposit()",
+        "decoded_args": [],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "412:4:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "value": "0x0",
+        "input": "0xa9059cbb000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd000000000000000000000000000000000000000000000001a055690d9db80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": [
+          "0xd4b6472934c16ff3d81cc3502f853988cfb078dd",
+          30000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "412:2:contract_creation",
+      "action_type": "contract_creation",
+      "severity_hint": "high",
+      "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+      "to_address": null,
+      "depth": 1,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CREATE2",
+        "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "to_address": null,
+        "value": "0x0",
+        "input": "0x6101143d81600a3d39f336602c57343d527f9e4ac34f21c619cefc926c8bd93b54bf5a39c7ab2127a895af1cc0691d7e3dff593da1005b363d3d373d3d3d3d6100b2806062363936013d730b9dff1aba32a9fa95011c7f097ec672f689038f5af43d3d93803e606057fd5bf30fd206fc7a7dbcd5661157edcb1ffdd0d02a61ffb1a32fc9f9d8b2cf86c068cae13108809547ef7120bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d8000b2",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": "CreateCollision"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 4,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered high-risk business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+        "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+        "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+                "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+                "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+              ],
+              "related_actions": [
+                {
+                  "id": "412:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                  "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+                  "depth": 0,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x6124fee993bc0000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "412:3:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                  "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+                  "depth": 0,
+                  "function_selector": "0xd0e30db0",
+                  "decoded_function": "deposit()",
+                  "value": "0x1a055690d9db80000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "412:4:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+                  "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "412:2:contract_creation",
+                  "action_type": "contract_creation",
+                  "severity_hint": "high",
+                  "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+                  "to_address": null,
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "transfer"
+              ],
+              "uncovered_business_actions": [
+                "contract_creation"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "412:2:contract_creation",
+                  "action_type": "contract_creation",
+                  "severity_hint": "high",
+                  "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+                  "to_address": null,
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ]
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+            "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+            "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "contract_creation"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Includes setting up a payment stream and standard transfers, though specific technical parameters are not provided in the text.",
+            "textual_evidence": "Team: 30 ETH for three months (via Stream) | Incentives: 5 ETH | OpEx: 2 ETH"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "contract_creation",
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "contract_creation"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+        "deposit()",
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "contract_creation"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation",
+        "treasury_operation",
+        "treasury_operation"
+      ],
+      "actual_actions": [
+        "contract_creation",
+        "transfer"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "treasury_operation",
+                "treasury_operation",
+                "treasury_operation"
+              ],
+              "actual_business_actions": [
+                "contract_creation",
+                "transfer"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+                "deposit()",
+                "transfer(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Fund Team via Stream",
+              "canonical_action": "treasury_operation",
+              "object": "30 ETH",
+              "claimed_effect": "Provide 3 months of funding to the development team via a stream.",
+              "textual_evidence": "Team: 30 ETH for three months (via Stream)",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Fund Incentives",
+              "canonical_action": "treasury_operation",
+              "object": "5 ETH",
+              "claimed_effect": "Provide 0.05 ETH to each of the first 100 successful props (before prop #363) that post a non-trivial update.",
+              "textual_evidence": "Incentives: 5 ETH (100 * 0.05 ETH)",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Fund OpEx",
+              "canonical_action": "treasury_operation",
+              "object": "2 ETH",
+              "claimed_effect": "Cover operational expenses.",
+              "textual_evidence": "OpEx: 2 ETH",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "412:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x6124fee993bc0000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "412:3:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              "depth": 0,
+              "function_selector": "0xd0e30db0",
+              "decoded_function": "deposit()",
+              "value": "0x1a055690d9db80000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "412:4:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "412:2:contract_creation",
+              "action_type": "contract_creation",
+              "severity_hint": "high",
+              "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "to_address": null,
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "contract_creation",
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+            "deposit()",
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+            "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+            "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+            "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+          ],
+          "related_actions": [
+            {
+              "id": "412:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0x20bc977ffadf2b1b07b4eb9bcf214ead5edaa05d",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x6124fee993bc0000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "412:3:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              "depth": 0,
+              "function_selector": "0xd0e30db0",
+              "decoded_function": "deposit()",
+              "value": "0x1a055690d9db80000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "412:4:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+              "to_address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "412:2:contract_creation",
+              "action_type": "contract_creation",
+              "severity_hint": "high",
+              "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "to_address": null,
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "contract_creation"
+          ],
+          "material_related_actions": [
+            {
+              "id": "412:2:contract_creation",
+              "action_type": "contract_creation",
+              "severity_hint": "high",
+              "from_address": "0x0fd206fc7a7dbcd5661157edcb1ffdd0d02a61ff",
+              "to_address": null,
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "treasury_operation",
+            "treasury_operation",
+            "treasury_operation"
+          ],
+          "actual_business_actions": [
+            "contract_creation",
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+            "deposit()",
+            "transfer(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

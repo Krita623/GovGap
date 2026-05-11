@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-ens-0003",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0003.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "90476529665364161211265365238121921179703522228680648046371476645353679539653",
+    "status": "executed",
+    "title": "[EP2] Retrospective Airdrop ",
+    "description": "[EP2] Retrospective Airdrop \nEnacts EP2 as approved by Snapshot vote, and described in full here: https://github.com/ensdomains/governance-docs/blob/main/governance-proposals/ep2-executable-retrospective-airdrop-for-accounts-that-owned-another-accounts-primary-ens-1.md"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+      "native_value": "0",
+      "function": "approve(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "spender",
+          "type": "address",
+          "value": "0x4a1241c2cf2fd4a39918bcd738f90bd7094ec2dc"
+        },
+        {
+          "index": 1,
+          "name": "amount",
+          "type": "uint256",
+          "value": "219295650978169915391391"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "target_abi"
+    }
+  ]
+}

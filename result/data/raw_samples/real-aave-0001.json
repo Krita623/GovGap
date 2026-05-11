@@ -1,0 +1,43 @@
+{
+  "benchmark_id": "real-aave-0001",
+  "dao": {
+    "name": "Aave",
+    "chain_id": 1,
+    "governor_address": "0xEC568fffba86c094cf06b22134B23074DFE2252c",
+    "governance_system": "aave"
+  },
+  "proposal": {
+    "proposal_id": "15",
+    "proposal_url": "https://www.tally.xyz/gov/aave/proposal/15",
+    "source": "tally",
+    "created_block": 12388896,
+    "executed_block": 12420778,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Safety Incentives Implementation",
+    "description": "# Safety Incentives Implementation\n\nAIP-20\n\n__Author(s): Marc Zeller (@marczeller)__\n\n\n\n## AIP rationale\n\nAs a complementary final action following the AIP 18,\n\nThis proposal extends the ability for the Safety Module contracts (stkAAVE and stkABPT) to transfer the AAVE rewards out of the Aave Ecosystem Reserve for the next year onwards (200750 AAVE each, 401500 AAVE for both staking contracts).\n\nDoing so will allow continuation of the safety incentives for at least one year.\n\nThis will remove the need for periodic quarterly review of the emission scheme, changing the approach to an on demand emission review when the community deems necessary. Only one yearly review will be required.\n\n\n# ARC content in short\n\n* With the AIP-18 and this proposal, Safety Incentives are maintained until a change is implemented for the next year.\n\n# Relevant Links\n\n* AIP-19 postponing the end of safety incentives: https://app.aave.com/governance/14-QmTYMox4aBpyQH53LwMzTuJY2z7Df7ANUSakeeeWWUoXmJ\n* Aavenomics : https://docs.aave.com/aavenomics/\n\n## Implementations details\n\nexecutes approve(0x4da27a545c0c5B758a6BA100e3a049001de870f5, 200750) and\napprove(0xa1116930326D21fB917d5A27F1E9943A9595fb47, 200750) on the Aave ecosystem reserve 0x25f2226b597e8f9514b3f68f00f494cf4f286491. https://etherscan.io/address/0x4da27a545c0c5B758a6BA100e3a049001de870f5 is the stkAAVE contract and https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47 is the stkABPT address.\n\n## Copyright\n\nCopyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n\n\nDiscussion: https://governance.aave.com/t/proposal-introduce-liquidity-incentives-for-aave-v2/2340"
+  },
+  "payload": {
+    "targets": [
+      "0x1E506cbb6721B83B1549fa1558332381Ffa61A93",
+      "0x1E506cbb6721B83B1549fa1558332381Ffa61A93"
+    ],
+    "values": [
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "approve(address,address,uint256)",
+      "approve(address,address,uint256)"
+    ],
+    "calldatas": [
+      "0x0000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+      "0x0000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae9000000000000000000000000a1116930326d21fb917d5a27f1e9943a9595fb47000000000000000000000000000000000000000000002a82ade704ea53f80000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xdc7f178c728c6bd5955fe3865088753257b3002f1f300c82013b9089fd975f38",
+    "executed_tx_hash": "0xdf242079f3151a0ccf8c1c22b5f56741ded061c1c127c8549f239ef440eadcb4"
+  }
+}

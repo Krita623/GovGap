@@ -1,0 +1,229 @@
+{
+  "proposal_summary": "This proposal funds the operational costs of the Aave Robot with LINK tokens to automate permissionless actions in Aave Governance v2, and reimburses BGD Labs for previous operational expenses.",
+  "disclosed_entities": [
+    {
+      "name": "BGD Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal also reimburses BGD Labs for the LINK spent previously on the Aave Robot."
+    },
+    {
+      "name": "Aave Collector contract",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "from the Aave Collector contract which will help to perform automation"
+    },
+    {
+      "name": "Short Executor / Bridge Executor",
+      "address": null,
+      "entity_type": "timelock",
+      "disclosure_level": "explicit",
+      "textual_evidence": "from the collector contract across Ethereum, Polygon, Arbitrum, Optimism networks to the short Executor / Bridge Executor."
+    },
+    {
+      "name": "PegSwap",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the payload swaps it one-to-one using PegSwap to the ERC-677 LINK token."
+    },
+    {
+      "name": "EthKeeper",
+      "address": "0x9eea1ba822d204077e9f90a92d30432417184587",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Keeper Contracts: EthKeeper"
+    },
+    {
+      "name": "PolKeeper",
+      "address": "0xda98b308be8766501ec7fe3ed9a48efbd6c31a7b",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "PolKeeper"
+    },
+    {
+      "name": "OptKeeper",
+      "address": "0x102bf2c03c1901adba191457a8c4a4ef18b40029",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "OptKeeper"
+    },
+    {
+      "name": "ArbKeeper",
+      "address": "0x864a6aa4b8d4d84a7570fe2d0e4ece8077abcabb",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ArbKeeper"
+    },
+    {
+      "name": "EthOperator",
+      "address": "0x020e452b463568f55bac6dc5afc8f0b62ea5f0f3",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "AaveCLRobotOperator Contracts: EthOperator"
+    },
+    {
+      "name": "PolOperator",
+      "address": "0x4e8984d11a47ff89cd67c7651ecab6c00a74b4a9",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "PolOperator"
+    },
+    {
+      "name": "OptOperator",
+      "address": "0x4f830bc2ddac99307a3709c85f7533842bda7c63",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "OptOperator"
+    },
+    {
+      "name": "ArbOperator",
+      "address": "0xb0a73671c97bac9ba899cd1a23604fd2278cd02a",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ArbOperator"
+    },
+    {
+      "name": "BGD Robot Guardian Ethereum",
+      "address": "0xff37939808ecf199a2d599ef91d699fb13dab7f7",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "BGD Robot Guardian: Ethereum"
+    },
+    {
+      "name": "BGD Robot Guardian Polygon",
+      "address": "0x7683177b05a92e8b169d833718bdf9d0ce809aa9",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Polygon"
+    },
+    {
+      "name": "BGD Robot Guardian Optimism",
+      "address": "0x9867ce43d2a574a152fe6b134f64c9578ce3ce03",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Optimism"
+    },
+    {
+      "name": "BGD Robot Guardian Arbitrum",
+      "address": "0x87dfb794364f2b117c8dbae29ea622938b3ce465",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Arbitrum"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x9eea1ba822d204077e9f90a92d30432417184587",
+      "textual_evidence": "EthKeeper"
+    },
+    {
+      "address": "0xda98b308be8766501ec7fe3ed9a48efbd6c31a7b",
+      "textual_evidence": "PolKeeper"
+    },
+    {
+      "address": "0x102bf2c03c1901adba191457a8c4a4ef18b40029",
+      "textual_evidence": "OptKeeper"
+    },
+    {
+      "address": "0x864a6aa4b8d4d84a7570fe2d0e4ece8077abcabb",
+      "textual_evidence": "ArbKeeper"
+    },
+    {
+      "address": "0x020e452b463568f55bac6dc5afc8f0b62ea5f0f3",
+      "textual_evidence": "EthOperator"
+    },
+    {
+      "address": "0x4e8984d11a47ff89cd67c7651ecab6c00a74b4a9",
+      "textual_evidence": "PolOperator"
+    },
+    {
+      "address": "0x4f830bc2ddac99307a3709c85f7533842bda7c63",
+      "textual_evidence": "OptOperator"
+    },
+    {
+      "address": "0xb0a73671c97bac9ba899cd1a23604fd2278cd02a",
+      "textual_evidence": "ArbOperator"
+    },
+    {
+      "address": "0xff37939808ecf199a2d599ef91d699fb13dab7f7",
+      "textual_evidence": "BGD Robot Guardian: Ethereum"
+    },
+    {
+      "address": "0x7683177b05a92e8b169d833718bdf9d0ce809aa9",
+      "textual_evidence": "Polygon"
+    },
+    {
+      "address": "0x9867ce43d2a574a152fe6b134f64c9578ce3ce03",
+      "textual_evidence": "Optimism"
+    },
+    {
+      "address": "0x87dfb794364f2b117c8dbae29ea622938b3ce465",
+      "textual_evidence": "Arbitrum"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 1275 aLINK",
+      "canonical_action": "bridge",
+      "object": "1275 aLINK",
+      "claimed_effect": "Move tokens from collector contract across networks to the Short/Bridge Executor.",
+      "textual_evidence": "This proposal will transfer a total of: 1275 aLINK (~ $7500) from the collector contract across Ethereum, Polygon, Arbitrum, Optimism networks to the short Executor / Bridge Executor.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Withdraw aLINK to LINK",
+      "canonical_action": "bridge",
+      "object": "aLINK tokens",
+      "claimed_effect": "Convert aLINK to standard LINK tokens on Executors.",
+      "textual_evidence": "On the Short Executor / Bridge Executor, the aLINK tokens transferred will be withdrawn to the LINK tokens.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Fund robot",
+      "canonical_action": "treasury_operation",
+      "object": "675 LINK",
+      "claimed_effect": "Fill the keeper contract to pay for automated operations.",
+      "textual_evidence": "Out of all the LINK tokens received, 675 LINK will be used to fund the pre-registered robot using the Aave CL Robot Operator contract by calling the refillKeeper() method.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Transfer LINK to BGD Labs",
+      "canonical_action": "transfer",
+      "object": "600 LINK",
+      "claimed_effect": "Reimburse BGD Labs for prior expenses.",
+      "textual_evidence": "Once the keeper is refilled, a total of 600 LINK will be transferred to BGD labs for their previous spending on the Aave Robot for operational expenses.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Includes multi-chain asset transfers, standard withdrawals, a specific peg swap on Polygon, and automated keeper funding through an operator contract.",
+    "textual_evidence": "This proposal will transfer a total of: 1275 aLINK (~ $7500) from the collector contract across Ethereum, Polygon, Arbitrum, Optimism networks... In the case of Polygon... the payload swaps it one-to-one using PegSwap to the ERC-677 LINK token."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "queue",
+      "textual_evidence": "such as queue(), cancel(), and execute() need to be called"
+    },
+    {
+      "function_name": "cancel",
+      "textual_evidence": "such as queue(), cancel(), and execute() need to be called"
+    },
+    {
+      "function_name": "execute",
+      "textual_evidence": "such as queue(), cancel(), and execute() need to be called"
+    },
+    {
+      "function_name": "refillKeeper",
+      "textual_evidence": "by calling the refillKeeper() method."
+    }
+  ],
+  "limitations": [
+    "We don't know the addresses for PegSwap, the collector contract, or BGD Labs' multi-sig from the text alone, though some guardian and operator addresses are specified."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

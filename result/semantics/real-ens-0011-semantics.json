@@ -1,0 +1,151 @@
+{
+  "proposal_summary": "This proposal updates the Zodiac Roles Modifier to V2 to improve treasury management usability and transparency, enabling swapping on CoW Swap, updating token arrays for swapping, and removing obsolete actions and protocols.",
+  "disclosed_entities": [
+    {
+      "name": "Zodiac Roles Modifier module",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal aims to roll out an updated version of the Zodiac Roles Modifier module."
+    },
+    {
+      "name": "CoW Swap",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "enabling swapping actions on CoW Swap"
+    },
+    {
+      "name": "Uniswap v3",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "equivalent lists replicated for Uniswap v3"
+    },
+    {
+      "name": "Balancer",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "and Balancer"
+    },
+    {
+      "name": "Uniswap v2",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Uniswap v2 Swaps... Removed due to insufficient liquidity in V2 pools."
+    },
+    {
+      "name": "Stakewise v2",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Stakewise v2: Deprecated functions related to deposit"
+    },
+    {
+      "name": "Compound v2",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Compound v2... Discontinued all actions targeting v2 contracts"
+    },
+    {
+      "name": "Curve Pools",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Curve Pools: Addition of stETH-ng (factory) pool"
+    },
+    {
+      "name": "Convex Staking",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Convex Staking Added the CVX/stETH Rewards contract."
+    },
+    {
+      "name": "Lido",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Lido Withdrawals"
+    },
+    {
+      "name": "Spark",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Spark Rewards Claim"
+    },
+    {
+      "name": "Endowment Avatar Safe",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "implicit",
+      "textual_evidence": "transferred to the Endowment’s Avatar Safe"
+    },
+    {
+      "name": "Testing Avatar Safe",
+      "address": "0xc01318bab7ee1f5ba734172bf7718b5dc6ec90e1",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "we have utilised a Testing Avatar Safe"
+    },
+    {
+      "name": "Roles Modifier v2 module",
+      "address": "0x703806e61847984346d2d7ddd853049627e50a40",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Ownership of the deployed Roles Modifier v2 module"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xc01318bab7ee1f5ba734172bf7718b5dc6ec90e1",
+      "textual_evidence": "Testing Avatar Safe"
+    },
+    {
+      "address": "0x703806e61847984346d2d7ddd853049627e50a40",
+      "textual_evidence": "Roles Modifier v2 module"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Enable module Zodiac Roles Modifier v2",
+      "canonical_action": "upgrade",
+      "object": "Roles Modifier v2 module",
+      "claimed_effect": "Activating the new Roles Modifier v2 module",
+      "textual_evidence": "Upon approval, the Roles Modifier v2 module will be activated... The payload will only activate this module",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Revoke outdated allowances",
+      "canonical_action": "approval",
+      "object": null,
+      "claimed_effect": "Sets outdated allowances to zero",
+      "textual_evidence": "All existing and outdated allowances previously set by the Endowment are revoked (set to zero).",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves updating permissions on a custom module, revoking specific allowances, and enabling a new module, but uses pre-defined smart account tooling.",
+    "textual_evidence": "This proposal aims to roll out an updated version of the Zodiac Roles Modifier module... The payload will only activate this module, marking the first phase of the migration process. A subsequent policy update proposal will seek to disable the v1 module."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "requestWithdrawalsWstETHWithPermit",
+      "textual_evidence": "methods include requestWithdrawalsWstETHWithPermit and requestWithdrawalsWithPermit"
+    },
+    {
+      "function_name": "requestWithdrawalsWithPermit",
+      "textual_evidence": "methods include requestWithdrawalsWstETHWithPermit and requestWithdrawalsWithPermit"
+    }
+  ],
+  "limitations": [
+    "No complete list of specific contract addresses provided for all protocol updates like CoW Swap, Uniswap v3, Compound v2, etc."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

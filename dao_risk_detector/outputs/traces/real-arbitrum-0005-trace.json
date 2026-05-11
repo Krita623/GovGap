@@ -1,0 +1,115 @@
+{
+  "proposal_id": "55434268037459750836497365958054185343730937462615166912204494229415053613423",
+  "simulation_status": "reverted_with_trace",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0xf07DeD9dC292157749B6Fd268E37DF6EA38395B9",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+          "gas": "0xe48bb8",
+          "gasUsed": "0x7cbd",
+          "to": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+          "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000d19ed0e8e723fdb85a6a1480e5345fbcce0bff850000000000000000000000000000000000000000000174e800545e206aa00000",
+          "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+          "error": "execution reverted",
+          "revertReason": "Ownable: caller is not the owner",
+          "calls": [
+            {
+              "from": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+              "gas": "0xe0ddd2",
+              "gasUsed": "0xa5a",
+              "to": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+              "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000d19ed0e8e723fdb85a6a1480e5345fbcce0bff850000000000000000000000000000000000000000000174e800545e206aa00000",
+              "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+              "error": "execution reverted",
+              "revertReason": "Ownable: caller is not the owner",
+              "value": "0x0",
+              "type": "DELEGATECALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000d19ed0e8e723fdb85a6a1480e5345fbcce0bff850000000000000000000000000000000000000000000174e800545e206aa00000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 0,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xd19ed0e8e723fdb85a6a1480e5345fbcce0bff85",
+          1761000000000000000000000
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0xf3fc178157fb3c87548baa86f9d24ba38e649b58",
+        "to_address": "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+        "value": "0x0",
+        "input": "0xbeabacc8000000000000000000000000912ce59144191c1204e64559fe8253a0e49e6548000000000000000000000000d19ed0e8e723fdb85a6a1480e5345fbcce0bff850000000000000000000000000000000000000000000174e800545e206aa00000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000204f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572",
+        "depth": 1,
+        "function_selector": "0xbeabacc8",
+        "decoded_function": "transfer(address,address,uint256)",
+        "decoded_args": [
+          "0x912ce59144191c1204e64559fe8253a0e49e6548",
+          "0xd19ed0e8e723fdb85a6a1480e5345fbcce0bff85",
+          1761000000000000000000000
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+      "0x9f43ab02cacc8e709b05936a92dc85b76d1523c4",
+      "0xf3fc178157fb3c87548baa86f9d24ba38e649b58"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,address,uint256)"
+    ]
+  },
+  "revert_reason": "Ownable: caller is not the owner",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

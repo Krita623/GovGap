@@ -1,0 +1,84 @@
+{
+  "proposal_summary": "This proposal requests the creation of a $2.5 million ARB Subsidy Fund managed by the Arbitrum DAO Procurement Committee (ADPC) to provide financial assistance for security audits to projects within the Arbitrum ecosystem.",
+  "disclosed_entities": [
+    {
+      "name": "Arbitrum DAO Procurement Committee (ADPC)",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "implicit",
+      "textual_evidence": "the designated Multi-sig members, established at the inception of the ADPC... will take charge of disbursing funds"
+    },
+    {
+      "name": "Arbitrum Foundation",
+      "address": "0x40fce28c9f3a0d7b75b917c95960d61d930dca54",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The $2.5m worth of ARB will be going to an Arbitrum Foundation controlled wallet (0x40FcE28C9f3a0d7B75B917C95960D61D930dCA54)"
+    },
+    {
+      "name": "ArbitrumDAO Treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Remaining ARB will be sent back to the ArbitrumDAO Treasury."
+    },
+    {
+      "name": "Hedgey",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the transactions will be streamed using Hedgey."
+    },
+    {
+      "name": "Zodiac Governor Module",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the ArbitrumDAO has the authority to claw back funds from the ADPC’s multi-sig wallet using the Zodiac Governor Module"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x40fce28c9f3a0d7b75b917c95960d61d930dca54",
+      "textual_evidence": "The $2.5m worth of ARB will be going to an Arbitrum Foundation controlled wallet (0x40FcE28C9f3a0d7B75B917C95960D61D930dCA54)"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer $2.5m worth of ARB to an Arbitrum Foundation controlled wallet",
+      "canonical_action": "transfer",
+      "object": "0x40FcE28C9f3a0d7B75B917C95960D61D930dCA54",
+      "claimed_effect": "Funds will be converted to a stablecoin via OTC trading and then sent to the ADPC multi-sig.",
+      "textual_evidence": "The $2.5m worth of ARB will be going to an Arbitrum Foundation controlled wallet (0x40FcE28C9f3a0d7B75B917C95960D61D930dCA54) to be converted to an ideal stablecoin via OTC trading",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Send remaining ARB back to the ArbitrumDAO Treasury",
+      "canonical_action": "treasury_operation",
+      "object": null,
+      "claimed_effect": "Returns unused buffer funds to the treasury.",
+      "textual_evidence": "Remaining ARB will be sent back to the ArbitrumDAO Treasury.",
+      "confidence": 0.9
+    },
+    {
+      "raw_action": "Provide supplementary compensation to multi-sig wallets",
+      "canonical_action": "transfer",
+      "object": null,
+      "claimed_effect": "Each of the five multi-sig wallets receives 500 - 1,000 ARB monthly.",
+      "textual_evidence": "each of the five multi-sig wallets is proposed to receive a supplementary compensation ranging from 500 ARB - 1,000 ARB monthly.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal involves transferring funds to a foundation wallet for OTC conversion, managing a multi-sig, and streaming funds via Hedgey, which requires coordination but no complex smart contract deployments.",
+    "textual_evidence": "The $2.5m worth of ARB will be going to an Arbitrum Foundation controlled wallet... to be converted to an ideal stablecoin via OTC trading, with the funds then being sent to the ADPC multi-sig... transactions will be streamed using Hedgey."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "A small % buffer has been inserted to ensure OTC of $2.5m worth of ARB, with the exact buffer amount not explicitly defined.",
+    "The average cost of $200K per project is an estimate and actual costs will vary based on project specifics."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

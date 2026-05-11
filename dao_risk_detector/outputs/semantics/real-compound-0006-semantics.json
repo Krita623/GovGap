@@ -1,0 +1,64 @@
+{
+  "proposal_summary": "Proposal to renew the Compound Grants Program (CGP) 2.0 for two quarters with a total budget of $970,000 (17,436.7 COMP), distributed across several domains and managed by Questbook using a Delegated Domain Capital Allocation Model.",
+  "disclosed_entities": [
+    {
+      "name": "Questbook",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Questbook proposes to renew Compound Grants Program 2.0 with a budget of $970,000"
+    },
+    {
+      "name": "Grants SAFE",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Unallocated funds from the Grants SAFE and all domain level SAFE will be returned back to the treasury."
+    },
+    {
+      "name": "Synapse",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "We suggest that the grants committee continue with Synapse for KYC services"
+    },
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "budget of $970,000 = 17,436.7 COMP"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xeb047900b28a9f90f3c0e65768b23e7542a65163",
+      "textual_evidence": "grantId=0xeb047900b28a9f90f3c0e65768b23e7542a65163"
+    },
+    {
+      "address": "0x291d6eb5de3b023ce9b760ef251b303c0c0fd11a",
+      "textual_evidence": "grantId=0x291d6eb5de3b023ce9b760ef251b303c0c0fd11a"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Renew Compound Grants Program 2.0 with a budget of 17,436.7 COMP",
+      "canonical_action": "treasury_operation",
+      "object": "CGP 2.0 Budget",
+      "claimed_effect": "Fund grants that align with Compound’s roadmap and compensate program managers and domain allocators.",
+      "textual_evidence": "we propose renewing CGP 2.0 with a budget of $970k for two quarters. The domain allocators will utilize this budget to fund proposals that align with Compound’s roadmap.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires the transfer of treasury funds to multiple domain-level multisig wallets operated by a Grants committee.",
+    "textual_evidence": "Each domain allocator will run their respective domain on-chain for full transparency using Questbook."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal text specifies a budget and intent but lacks the explicit on-chain execution addresses or technical payload inside the main body text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

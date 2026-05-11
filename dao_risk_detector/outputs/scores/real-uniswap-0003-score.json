@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "proposal_id": "34",
+    "generated_at": "2026-05-08T11:15:24.453425+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Authorize Polygon Labs to deploy Uniswap V3 to the Polygon zkEVM rollup on behalf of the community.",
+    "disclosed_entities": [
+      {
+        "name": "Polygon Labs",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "We propose to authorize Polygon Labs to deploy Uniswap’s protocol to the Polygon Zero Knowledge Ethereum Virtual Machine rollup known as “zkEVM”"
+      },
+      {
+        "name": "Polygon Labs Services (Switzerland) AG",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The legal entity that is supporting this proposal is Polygon Labs Services (Switzerland) AG"
+      },
+      {
+        "name": "Uniswap",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Deploying early on zkEVM helps solidify Uniswap’s place as the number one DEX"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Deploy Uniswap V3 protocol to Polygon zkEVM",
+        "canonical_action": "governance_proposal_creation",
+        "object": "Uniswap V3 on Polygon zkEVM",
+        "claimed_effect": "Make Uniswap available on an EVM compatible ZK rollup",
+        "textual_evidence": "We propose to authorize Polygon Labs to deploy Uniswap’s protocol to the Polygon Zero Knowledge Ethereum Virtual Machine rollup known as “zkEVM” on behalf of the community.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Deploys an existing EVM codebase to an equivalent zk-rollup, but involves cross-chain components like arbitrary message passing through bridges.",
+      "textual_evidence": "As an Ethereum Layer Two, it uses Zero Knowledge proofs to inherit Ethereum’s core safety, while allowing developers to easily deploy existing EVM codebases."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No explicit contract addresses or technical deployment parameters provided."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0xe63e2cdd24695464c015b2f5ef723ce17e96886b",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0xe63e2cdd24695464c015b2f5ef723ce17e96886b"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": []
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Trace includes undisclosed execution path components without extracted risk actions.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0xe63e2cdd24695464c015b2f5ef723ce17e96886b"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0xe63e2cdd24695464c015b2f5ef723ce17e96886b"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0xe63e2cdd24695464c015b2f5ef723ce17e96886b"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0xe63e2cdd24695464c015b2f5ef723ce17e96886b"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 9,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Deploys an existing EVM codebase to an equivalent zk-rollup, but involves cross-chain components like arbitrary message passing through bridges.",
+            "textual_evidence": "As an Ethereum Layer Two, it uses Zero Knowledge proofs to inherit Ethereum’s core safety, while allowing developers to easily deploy existing EVM codebases."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "governance_proposal_creation"
+      ],
+      "actual_actions": [],
+      "summary": "No deterministic business action was extracted from the trace.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Deploy Uniswap V3 protocol to Polygon zkEVM",
+              "canonical_action": "governance_proposal_creation",
+              "object": "Uniswap V3 on Polygon zkEVM",
+              "claimed_effect": "Make Uniswap available on an EVM compatible ZK rollup",
+              "textual_evidence": "We propose to authorize Polygon Labs to deploy Uniswap’s protocol to the Polygon Zero Knowledge Ethereum Virtual Machine rollup known as “zkEVM” on behalf of the community.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [],
+          "wrapper_actions": [],
+          "decoded_functions": []
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0xe63e2cdd24695464c015b2f5ef723ce17e96886b"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

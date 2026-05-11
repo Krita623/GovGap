@@ -1,0 +1,164 @@
+{
+  "proposal_summary": "This proposal replaces three DNSSEC oracle algorithms with newly deployed contracts to address an RSA Signature Forgery issue and optimize gas using the new EIP-7951 P-256 precompile.",
+  "disclosed_entities": [
+    {
+      "name": "RSASHA1_ADDRESS",
+      "address": "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "RSASHA1_ADDRESS = 0x58E0383E21f25DaB957F6664240445A514E9f5e8"
+    },
+    {
+      "name": "RSASHA256_ADDRESS",
+      "address": "0xaee0e2c4d5ab2fc164c8b0cc8d3118c1c752c95e",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "RSASHA256_ADDRESS = 0xaee0E2c4d5AB2fc164C8b0Cc8D3118C1c752C95E"
+    },
+    {
+      "name": "P256SHA256_ADDRESS",
+      "address": "0xb091c4f6fac16edda5ee1e0f4738f80011905878",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "P256SHA256_ADDRESS = 0xB091C4F6FAc16eDDA5Ee1E0f4738f80011905878"
+    },
+    {
+      "name": "DNSSECImpl",
+      "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "DNSSEC_IMPL_ADDRESS=0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5"
+    },
+    {
+      "name": "Root",
+      "address": "0xab528d626ec275e3fad363ff1393a41f581c5897",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ROOT_ADDRESS=0xaB528d626EC275E3faD363fF1393A41F581c5897"
+    },
+    {
+      "name": "DNSRegistrar",
+      "address": "0xb32cb5677a7c971689228ec835800432b339ba2b",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "DNS_REGISTRAR_ADDRESS = 0xB32cB5677a7C971689228EC835800432B339bA2B"
+    },
+    {
+      "name": "ENS DAO Timelock",
+      "address": null,
+      "entity_type": "timelock",
+      "disclosure_level": "implicit",
+      "textual_evidence": "This proposal contains 7 transaction(s) to be executed by the ENS DAO Timelock."
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x58e0383e21f25dab957f6664240445a514e9f5e8",
+      "textual_evidence": "RSASHA1_ADDRESS = [0x58E0383E21f25DaB957F6664240445A514E9f5e8]"
+    },
+    {
+      "address": "0xaee0e2c4d5ab2fc164c8b0cc8d3118c1c752c95e",
+      "textual_evidence": "RSASHA256_ADDRESS = [0xaee0E2c4d5AB2fc164C8b0Cc8D3118C1c752C95E]"
+    },
+    {
+      "address": "0xb091c4f6fac16edda5ee1e0f4738f80011905878",
+      "textual_evidence": "P256SHA256_ADDRESS = [0xB091C4F6FAc16eDDA5Ee1E0f4738f80011905878]"
+    },
+    {
+      "address": "0x0fc3152971714e5ed7723fafa650f86a4baf30c5",
+      "textual_evidence": "DNSSEC_IMPL_ADDRESS=0x0fc3152971714E5ed7723FAFa650F86A4BaF30C5"
+    },
+    {
+      "address": "0xab528d626ec275e3fad363ff1393a41f581c5897",
+      "textual_evidence": "ROOT_ADDRESS=0xaB528d626EC275E3faD363fF1393A41F581c5897"
+    },
+    {
+      "address": "0xb32cb5677a7c971689228ec835800432b339ba2b",
+      "textual_evidence": "DNS_REGISTRAR_ADDRESS = 0xB32cB5677a7C971689228EC835800432B339bA2B"
+    },
+    {
+      "address": "0x0000000000000000000000000000000000000000",
+      "textual_evidence": "owner: 0x0000000000000000000000000000000000000000"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "DNSSECImpl: setAlgorithm of RSASHA1",
+      "canonical_action": "parameter_update",
+      "object": "DNSSECImpl",
+      "claimed_effect": "Update algorithm to new address to patch RSA signature forgery",
+      "textual_evidence": "DNSSECImpl: setAlgorithm of RSASHA1",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "DNSSECImpl: setAlgorithm of RSASHA256",
+      "canonical_action": "parameter_update",
+      "object": "DNSSECImpl",
+      "claimed_effect": "Update algorithm to new address to patch RSA signature forgery",
+      "textual_evidence": "DNSSECImpl: setAlgorithm of RSASHA256",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "DNSSECImpl: setAlgorithm of P256SHA256",
+      "canonical_action": "parameter_update",
+      "object": "DNSSECImpl",
+      "claimed_effect": "Update algorithm to newly deployed contract to use p-256 precompile",
+      "textual_evidence": "DNSSECImpl: setAlgorithm ... P256SHA256 (Using p-256 precompile) to newly deployed contracts",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Root: setSubnodeOwner of cc to 0",
+      "canonical_action": "role_change",
+      "object": "Root",
+      "claimed_effect": "Sets subnode owner of cc to address 0",
+      "textual_evidence": "Root: setSubnodeOwner of cc and name to 0",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "Root: setSubnodeOwner of name to 0",
+      "canonical_action": "role_change",
+      "object": "Root",
+      "claimed_effect": "Sets subnode owner of name to address 0",
+      "textual_evidence": "Root: setSubnodeOwner of cc and name to 0",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "DNSRegistrar: Call enableNode for .cc",
+      "canonical_action": "parameter_update",
+      "object": "DNSRegistrar",
+      "claimed_effect": "Re-enable .cc for DNSSEC",
+      "textual_evidence": "DNSRegistrar: Call enableNode for .cc ... to re-enable them for DNSSEC",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "DNSRegistrar: Call enableNode for .name",
+      "canonical_action": "parameter_update",
+      "object": "DNSRegistrar",
+      "claimed_effect": "Re-enable .name for DNSSEC",
+      "textual_evidence": "DNSRegistrar: Call enableNode for ... .name to re-enable them for DNSSEC",
+      "confidence": 1.0
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Includes a set of 7 contract calls to patch security vulnerabilities and optimize gas usages, modifying several key infrastructure components directly.",
+    "textual_evidence": "This proposal contains 7 transaction(s) to be executed by the ENS DAO Timelock."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setAlgorithm",
+      "textual_evidence": "DNSSECImpl | setAlgorithm"
+    },
+    {
+      "function_name": "setSubnodeOwner",
+      "textual_evidence": "Root | setSubnodeOwner"
+    },
+    {
+      "function_name": "enableNode",
+      "textual_evidence": "DNSRegistrar | enableNode"
+    }
+  ],
+  "limitations": [],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

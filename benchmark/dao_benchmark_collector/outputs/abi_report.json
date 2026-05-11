@@ -1,0 +1,10 @@
+{
+  "unique_targets": 92,
+  "status_counts": {
+    "local_hit": 86,
+    "failed: not_verified": 6
+  },
+  "targets_with_abi": 86,
+  "targets_without_abi": 6,
+  "etherscan_api_key_detected": true
+}

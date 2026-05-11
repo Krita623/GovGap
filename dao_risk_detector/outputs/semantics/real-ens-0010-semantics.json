@@ -1,0 +1,84 @@
+{
+  "proposal_summary": "Revoke the DAO's ability to upgrade the name wrapper by setting a new proxy-based metadata service address and then revoking admin ownership of the name wrapper.",
+  "disclosed_entities": [
+    {
+      "name": "New Metadata Service (Implementation)",
+      "address": "0x806f84f3789f51352c1b0ab3ffa192665d283808",
+      "entity_type": "implementation",
+      "disclosure_level": "explicit",
+      "textual_evidence": "A new metadata service has been deployed at 0x806f84F3789f51352C1B0aB3fFa192665d283808"
+    },
+    {
+      "name": "Metadata Proxy",
+      "address": "0xabb76d7e79de010117b147761013f11630a6799f",
+      "entity_type": "proxy",
+      "disclosure_level": "explicit",
+      "textual_evidence": "a transparent proxy was deployed in transaction... at address 0xabb76d7e79de010117b147761013f11630a6799f"
+    },
+    {
+      "name": "Proxy Admin",
+      "address": "0xeae9309ddb1aadb4cf1ebad5e51aef999833a992",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The admin contract for this proxy is at 0xeae9309ddb1aadb4cf1ebad5e51aef999833a992"
+    },
+    {
+      "name": "wallet.ensdao.eth",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "and the owner set to wallet.ensdao.eth"
+    },
+    {
+      "name": "Name Wrapper",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Admin control over the name wrapper gives the DAO two functions"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x806f84f3789f51352c1b0ab3ffa192665d283808",
+      "textual_evidence": "A new metadata service has been deployed at 0x806f84F3789f51352C1B0aB3fFa192665d283808"
+    },
+    {
+      "address": "0xabb76d7e79de010117b147761013f11630a6799f",
+      "textual_evidence": "transparent proxy was deployed... at address 0xabb76d7e79de010117b147761013f11630a6799f"
+    },
+    {
+      "address": "0xeae9309ddb1aadb4cf1ebad5e51aef999833a992",
+      "textual_evidence": "The admin contract for this proxy is at 0xeae9309ddb1aadb4cf1ebad5e51aef999833a992"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "sets the metadata service address on the name wrapper to the above proxy",
+      "canonical_action": "parameter_update",
+      "object": "Name Wrapper",
+      "claimed_effect": "Updates the Name Wrapper to use the newly deployed metadata proxy.",
+      "textual_evidence": "The executable component of this proposal sets the metadata service address on the name wrapper to the above proxy",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "revokes ownership over it.",
+      "canonical_action": "role_change",
+      "object": "Name Wrapper",
+      "claimed_effect": "Removes the DAO's administrative control over the Name Wrapper, preventing future upgrades.",
+      "textual_evidence": "then revokes ownership over it.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal performs two straightforward actions: updating an address parameter and revoking admin ownership.",
+    "textual_evidence": "The executable component of this proposal sets the metadata service address on the name wrapper to the above proxy, then revokes ownership over it."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No explicit contract addresses were provided for the existing Name Wrapper contract.",
+    "Exact function signature names for setting the metadata address or revoking ownership were not disclosed in the text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

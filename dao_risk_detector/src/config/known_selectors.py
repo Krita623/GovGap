@@ -1,0 +1,50 @@
+"""Known function selectors used for static decoding and risk classification."""
+
+SELECTOR_SIGNATURES: dict[str, str] = {
+    "0x3659cfe6": "upgradeTo(address)",
+    "0x4f1ef286": "upgradeToAndCall(address,bytes)",
+    "0xd784d426": "setImplementation(address)",
+    "0xf2fde38b": "transferOwnership(address)",
+    "0x13af4035": "setOwner(address)",
+    "0x8f283970": "changeAdmin(address)",
+    "0x2f2ff15d": "grantRole(bytes32,address)",
+    "0xd547741f": "revokeRole(bytes32,address)",
+    "0xb3ab15fb": "setOperator(address,bool)",
+    "0xa9059cbb": "transfer(address,uint256)",
+    "0x23b872dd": "transferFrom(address,address,uint256)",
+    "0x095ea7b3": "approve(address,uint256)",
+    "0xe1f21c67": "approve(address,address,uint256)",
+    "0x39509351": "increaseAllowance(address,uint256)",
+    "0x2e1a7d4d": "withdraw(uint256)",
+    "0x85fb709d": "sweep(address)",
+    "0xac9650d8": "multicall(bytes[])",
+    "0xb61d27f6": "execute(address,uint256,bytes)",
+    "0x3a9c7e9e": "sendMessage(address,bytes)",
+    "0x6fadcf72": "relayMessage(address,address,bytes)",
+    "0xef43d2c6": "CONSTANT_OUTFLOW_NFT()",
+}
+
+SELECTOR_ACTIONS: dict[str, str] = {
+    "0x3659cfe6": "upgrade",
+    "0x4f1ef286": "upgrade",
+    "0xd784d426": "upgrade",
+    "0xf2fde38b": "permission_change",
+    "0x13af4035": "permission_change",
+    "0x8f283970": "proxy_change",
+    "0x2f2ff15d": "permission_change",
+    "0xd547741f": "permission_change",
+    "0xb3ab15fb": "permission_change",
+    "0xa9059cbb": "transfer",
+    "0x23b872dd": "transfer",
+    "0x095ea7b3": "approval",
+    "0xe1f21c67": "approval",
+    "0x39509351": "approval",
+    "0x2e1a7d4d": "transfer",
+    "0x85fb709d": "transfer",
+    "0xac9650d8": "multicall",
+    "0xb61d27f6": "arbitrary_call",
+    "0x3a9c7e9e": "bridge",
+    "0x6fadcf72": "bridge",
+}
+
+KNOWN_SELECTORS = SELECTOR_SIGNATURES

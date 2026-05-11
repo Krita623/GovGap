@@ -1,0 +1,178 @@
+{
+  "proposal_id": "32",
+  "simulation_status": "reverted_with_trace",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "executor": "0xEC568fffba86c094cf06b22134B23074DFE2252c",
+      "warning": "fallback_to_governor",
+      "source": "dao.governor_address",
+      "confidence": 0.4,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+          "gas": "0xe48f78",
+          "gasUsed": "0xa01a",
+          "to": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+          "input": "0x61461954",
+          "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+          "error": "execution reverted",
+          "revertReason": "33",
+          "calls": [
+            {
+              "from": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+              "gas": "0xe0f1de",
+              "gasUsed": "0x9d2",
+              "to": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+              "input": "0x85c858b1",
+              "output": "0x000000000000000000000000311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "type": "STATICCALL"
+            },
+            {
+              "from": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+              "gas": "0xe0dc26",
+              "gasUsed": "0x2c05",
+              "to": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+              "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+              "error": "execution reverted",
+              "revertReason": "33",
+              "calls": [
+                {
+                  "from": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                  "gas": "0xdd4534",
+                  "gasUsed": "0x17fe",
+                  "to": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+                  "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+                  "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+                  "error": "execution reverted",
+                  "revertReason": "33",
+                  "calls": [
+                    {
+                      "from": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                      "gas": "0xd9c522",
+                      "gasUsed": "0x9fe",
+                      "to": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+                      "input": "0xaecda378",
+                      "output": "0x0000000000000000000000005300a1a15135ea4dc7ad5a167152c01efc9b192a",
+                      "type": "STATICCALL"
+                    }
+                  ],
+                  "value": "0x0",
+                  "type": "DELEGATECALL"
+                }
+              ],
+              "value": "0x0",
+              "type": "CALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "value": "0x0",
+        "input": "0x61461954",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x61461954",
+        "decoded_function": "execute()",
+        "decoded_args": [],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0x85c858b1",
+        "output": "0x000000000000000000000000311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "depth": 1,
+        "function_selector": "0x85c858b1",
+        "decoded_function": "getLendingPoolConfigurator()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x17ec6a7044c5b665d304126a96d8affca440715c",
+        "to_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "value": "0x0",
+        "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x1d2118f9",
+        "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+        "decoded_args": [
+          "0xd46ba6d942050d489dbd938a2c909a5d5039a161",
+          "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "value": "0x0",
+        "input": "0x1d2118f9000000000000000000000000d46ba6d942050d489dbd938a2c909a5d5039a16100000000000000000000000084d1fad9559b8ac1fda17d073b8542c8fb6986dd",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x1d2118f9",
+        "decoded_function": "setReserveInterestRateStrategyAddress(address,address)",
+        "decoded_args": [
+          "0xd46ba6d942050d489dbd938a2c909a5d5039a161",
+          "0x84d1fad9559b8ac1fda17d073b8542c8fb6986dd"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0xaecda378",
+        "output": "0x0000000000000000000000005300a1a15135ea4dc7ad5a167152c01efc9b192a",
+        "depth": 3,
+        "function_selector": "0xaecda378",
+        "decoded_function": "getPoolAdmin()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x17ec6a7044c5b665d304126a96d8affca440715c",
+      "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+      "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 2,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "execute()",
+      "getLendingPoolConfigurator()",
+      "getPoolAdmin()",
+      "setReserveInterestRateStrategyAddress(address,address)"
+    ]
+  },
+  "revert_reason": "33",
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

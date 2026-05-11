@@ -1,0 +1,124 @@
+{
+  "proposal_summary": "A proposal to implement the 1 basis point (1bp) / 1 tick fee tier on Polygon, serving as the first Uniswap cross-chain governance proposal utilizing the Fx-Portal messaging mechanism between Ethereum and Polygon.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Uniswap has four deployments: Ethereum, Abritrum, Optimism, and Polygon."
+    },
+    {
+      "name": "FxRoot",
+      "address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Every governance proposal targeting a change on Polygon should set the FxRoot on Ethereum as the target"
+    },
+    {
+      "name": "FxChild",
+      "address": "0x8397259c983751daf40400790063935a11afa28a",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "are delivered by the FxChild"
+    },
+    {
+      "name": "Ethereum Proxy contract",
+      "address": "0x8a1b966ac46f42275860f905dbc75efbfdc12374",
+      "entity_type": "proxy",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The owner of the Uniswap v3 contracts on Polygon is the Ethereum Proxy contract."
+    },
+    {
+      "name": "Timelock contract",
+      "address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "entity_type": "timelock",
+      "disclosure_level": "explicit",
+      "textual_evidence": "transactions that originate from the Timelock contract on Ethereum"
+    },
+    {
+      "name": "Uniswap Governor Alpha",
+      "address": "0x5e4be8bc9637f0eaa1a755019e06a68ce081d58f",
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "To build the proposal–Uniswap Governor Alpha"
+    },
+    {
+      "name": "Uniswap Factory contract on Polygon",
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Uniswap Factory contract on Polygon"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x8a1b966ac46f42275860f905dbc75efbfdc12374",
+      "textual_evidence": "The owner of the Uniswap v3 contracts on Polygon is the Ethereum Proxy contract"
+    },
+    {
+      "address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "textual_evidence": "Timelock contract on Ethereum"
+    },
+    {
+      "address": "0x8397259c983751daf40400790063935a11afa28a",
+      "textual_evidence": "delivered by the FxChild"
+    },
+    {
+      "address": "0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2",
+      "textual_evidence": "set the FxRoot on Ethereum as the target"
+    },
+    {
+      "address": "0x5e4be8bc9637f0eaa1a755019e06a68ce081d58f",
+      "textual_evidence": "Uniswap Governor Alpha: propose()"
+    },
+    {
+      "address": "0x3d1d3e34f7fb6d26245e6640e1c50710efff15ba",
+      "textual_evidence": "Targets: [FxRoot Contract]"
+    },
+    {
+      "address": "0x1f98431c8ad98523631ae4a59f267346ea31f984",
+      "textual_evidence": "Uniswap Factory contract on Polygon"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Enable 1 basis point/1 tick fee tier on Polygon",
+      "canonical_action": "parameter_update",
+      "object": "Uniswap Factory contract on Polygon",
+      "claimed_effect": "Increases available fee tiers for Uniswap pools on Polygon.",
+      "textual_evidence": "we are implementing the 1 basis point/1 tick fee tier on Polygon... Datas: [Uniswap Factory contract–enableFeeAmount(100,1)]",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Cross-chain message sending",
+      "canonical_action": "bridge",
+      "object": "FxRoot",
+      "claimed_effect": "Sends a message from Ethereum to Polygon FxChild.",
+      "textual_evidence": "Messages can be sent from Ethereum to Polygon by calling the sendMessageToChild(address, bytes) at the FxRoot contract",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "It involves deploying cross-chain messaging capabilities to manage parameters on another network via a proxy mechanism.",
+    "textual_evidence": "first Uniswap cross-chain proposal... The message passed through the FxRoot must contain the target(s) contract on Polygon, the function(s) to call, the call data(s)"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "sendMessageToChild",
+      "textual_evidence": "calling the sendMessageToChild(address, bytes) at the FxRoot contract"
+    },
+    {
+      "function_name": "enableFeeAmount",
+      "textual_evidence": "Datas: [Uniswap Factory contract–enableFeeAmount(100,1)]"
+    },
+    {
+      "function_name": "propose",
+      "textual_evidence": "Uniswap Governor Alpha: propose()"
+    }
+  ],
+  "limitations": [],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

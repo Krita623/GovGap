@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-uniswap-0014",
+  "source_raw_sample": "outputs/raw_samples/real-uniswap-0014.json",
+  "proposal": {
+    "dao": "Uniswap",
+    "chain_id": 1,
+    "proposal_id": "86",
+    "status": "executed",
+    "title": "Approved Budgets Rebalancing (S4)",
+    "description": "# Approved Budgets Rebalancing (S4)\n[Disclaimer - This proposal is powered by the Uniswap Accountability Committee. kpk did not receive compensation for posting this proposal.]\n\n**For the full proposal, please see this [forum post](https://gov.uniswap.org/t/uniswap-accountability-committee-uac-season-3-report/25467).**\n\n\nSimilar to last season\u2019s rebalance, fluctuations in the UNI token price means that the accounts for various programs become unbalanced\u2013sometimes at a surplus and other times at a deficit. Since programs are budgeted in terms of dollars, we are looking to top up those balances to ensure commitments around sustaining elected DAO programs are covered. As mentioned in the forum post, this temperature check associated with rebalancing is being run separately from the UAC Season 4 renewal vote.\n\nThe rebalance will be for $280,142, priced in UNI at the time of the unchain vote. Further details on the request and breakdown of budget items can be found at the forum post above.\n\n$280,142 @ $5.3/UNI -> 52856 UNI"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "native_value": "0",
+      "function": "transfer(address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "dst",
+          "type": "address",
+          "value": "0x3b59c6d0034490093460787566dc5d6ce17f2f9c"
+        },
+        {
+          "index": 1,
+          "name": "rawAmount",
+          "type": "uint256",
+          "value": "52856000000000000000000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

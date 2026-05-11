@@ -1,0 +1,39 @@
+{
+  "proposal_summary": "This proposal requests a transfer of 7,325,000 ARB to an Oversight Committee multisig, which will delegate 7,000,000 ARB to the Event Horizon Voter Enfranchisement Pool and distribute a 325,000 ARB grant to the Event Horizon team and Oversight Committee members.",
+  "disclosed_entities": [
+    {
+      "name": "Oversight Committee multi-signature wallet",
+      "address": "0x15c4edf2cf2f36335e42c19e506ed6cb16a57d8f",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal requests a transfer of 7,325,000 ARB to an Oversight Committee multisig"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x15c4edf2cf2f36335e42c19e506ed6cb16a57d8f",
+      "textual_evidence": "Oversight Committee multi-signature wallet"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 7,325,000 ARB",
+      "canonical_action": "transfer",
+      "object": "ARB tokens",
+      "claimed_effect": "Fund the multisig for delegation and grants",
+      "textual_evidence": "This proposal requests a transfer of 7,325,000 ARB to an Oversight Committee multisig",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "Involves transfer and subsequent delegation of funds",
+    "textual_evidence": "will delegate 7,000,000 ARB to the Event Horizon Voter Enfranchisement Pool"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Incomplete input provided."
+  ],
+  "llm_status": "repaired",
+  "llm_used_for_scoring": false
+}

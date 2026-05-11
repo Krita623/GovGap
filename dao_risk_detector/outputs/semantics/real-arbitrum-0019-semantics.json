@@ -1,0 +1,110 @@
+{
+  "proposal_summary": "Register the Sky Custom Gateway contracts in the Arbitrum Router to allow bridging USDS and sUSDS through the official Arbitrum Bridge UI.",
+  "disclosed_entities": [
+    {
+      "name": "USDS token on Ethereum",
+      "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "USDS address on Ethereum - https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F"
+    },
+    {
+      "name": "sUSDS token on Ethereum",
+      "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "sUSDS address on Ethereum - https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD"
+    },
+    {
+      "name": "Sky Custom Gateway on Ethereum",
+      "address": "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Sky Custom Gateway on Ethereum - https://etherscan.io/address/0x84b9700e28b23f873b82c1beb23d86c091b6079e"
+    },
+    {
+      "name": "Sky Custom Gateway on Arbitrum",
+      "address": "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+      "entity_type": "bridge",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Sky Custom Gateway on Arbitrum - https://arbiscan.io/address/0x13f7f24ca959359a4d710d32c715d4bce273c793"
+    },
+    {
+      "name": "Official USDS on Arbitrum",
+      "address": "0x6491c05a82219b8d1479057361ff1654749b876b",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Official USDS address on Arbitrum - https://arbiscan.io/token/0x6491c05a82219b8d1479057361ff1654749b876b"
+    },
+    {
+      "name": "Official sUSDS on Arbitrum",
+      "address": "0xddb46999f8891663a8f2828d25298f70416d7610",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Official sUSDS address on Arbitrum - https://arbiscan.io/token/0xdDb46999F8891663a8F2828d25298f70416d7610"
+    },
+    {
+      "name": "L1GatewayRouter contract on Ethereum",
+      "address": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "[2] https://etherscan.io/address/0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+      "textual_evidence": "USDS address on Ethereum - https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F"
+    },
+    {
+      "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+      "textual_evidence": "sUSDS address on Ethereum - https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD"
+    },
+    {
+      "address": "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+      "textual_evidence": "Sky Custom Gateway on Ethereum - https://etherscan.io/address/0x84b9700e28b23f873b82c1beb23d86c091b6079e"
+    },
+    {
+      "address": "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+      "textual_evidence": "Sky Custom Gateway on Arbitrum - https://arbiscan.io/address/0x13f7f24ca959359a4d710d32c715d4bce273c793"
+    },
+    {
+      "address": "0x6491c05a82219b8d1479057361ff1654749b876b",
+      "textual_evidence": "Official USDS address on Arbitrum - https://arbiscan.io/token/0x6491c05a82219b8d1479057361ff1654749b876b"
+    },
+    {
+      "address": "0xddb46999f8891663a8f2828d25298f70416d7610",
+      "textual_evidence": "Official sUSDS address on Arbitrum - https://arbiscan.io/token/0xdDb46999F8891663a8F2828d25298f70416d7610"
+    },
+    {
+      "address": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+      "textual_evidence": "[2] https://etherscan.io/address/0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Execution of the setGateways method",
+      "canonical_action": "parameter_update",
+      "object": "L1GatewayRouter contract",
+      "claimed_effect": "Registers the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router",
+      "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens. This action will register the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal simply executes a single existing function (setGateways) on an existing routing contract to update an external configuration.",
+    "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "setGateways",
+      "textual_evidence": "We propose the execution of the setGateways method"
+    }
+  ],
+  "limitations": [
+    "No precise calldata or full array payload details for `setGateways` is provided."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

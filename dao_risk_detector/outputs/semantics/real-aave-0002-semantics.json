@@ -1,0 +1,86 @@
+{
+  "proposal_summary": "Deactivates the ability to open new stable rate borrowing positions on Aave V1 and updates the rebalance mechanism to enforce a swap to variable rates during extreme borrowing pressure.",
+  "disclosed_entities": [
+    {
+      "name": "Proposal Contract",
+      "address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Executes the proposal deployed at https://etherscan.io/address/0x6a46c03c861cab74c8a213983b7eb295234c16b3#code"
+    },
+    {
+      "name": "LendingPool",
+      "address": "0xdb9217fad3c1463093fc2801dd0a22c930850a61",
+      "entity_type": "implementation",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code"
+    },
+    {
+      "name": "LendingPoolCore",
+      "address": "0x2847a5d7ce69790cb40471d454feb21a0be1f2e3",
+      "entity_type": "implementation",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x6a46c03c861cab74c8a213983b7eb295234c16b3",
+      "textual_evidence": "Executes the proposal deployed at https://etherscan.io/address/0x6a46c03c861cab74c8a213983b7eb295234c16b3#code"
+    },
+    {
+      "address": "0xdb9217fad3c1463093fc2801dd0a22c930850a61",
+      "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code"
+    },
+    {
+      "address": "0x2847a5d7ce69790cb40471d454feb21a0be1f2e3",
+      "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Updates the LendingPool implementation",
+      "canonical_action": "upgrade",
+      "object": "LendingPool",
+      "claimed_effect": "Sets a new implementation address for the LendingPool",
+      "textual_evidence": "Updates the LendingPool implementation to https://etherscan.io/address/0xDB9217fad3c1463093fc2801Dd0a22C930850A61#code",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Updates the LendingPoolCore implementation",
+      "canonical_action": "upgrade",
+      "object": "LendingPoolCore",
+      "claimed_effect": "Sets a new implementation address for LendingPoolCore to update rebalanceStableRate() logic",
+      "textual_evidence": "Updates the LendingPoolCore implementation to https://etherscan.io/address/0x2847A5D7Ce69790cb40471d454FEB21A0bE1F2e3#code",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Execute disableReserveStableBorrowRate()",
+      "canonical_action": "parameter_update",
+      "object": "All Aave V1 assets",
+      "claimed_effect": "Disables stable rate borrowing for all assets listed on Aave V1",
+      "textual_evidence": "Execute disableReserveStableBorrowRate() in all the assets listed on the protocol V1",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal requires updating two core system implementations (LendingPool and LendingPoolCore) and executing a parameter change across all supported assets.",
+    "textual_evidence": "Deactivation of the ability to open new stable rate borrowing positions on Aave V1 and update of the rebalance mechanism"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "rebalanceStableRate()",
+      "textual_evidence": "These contract updates are needed to update the implementation of the rebalanceStableRate() function"
+    },
+    {
+      "function_name": "disableReserveStableBorrowRate()",
+      "textual_evidence": "Execute disableReserveStableBorrowRate() in all the assets listed on the protocol V1"
+    }
+  ],
+  "limitations": [
+    "No specific address was provided for the assets that will have their borrow rate disabled."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

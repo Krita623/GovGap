@@ -1,0 +1,39 @@
+{
+  "risk_actions": [
+    {
+      "id": "585:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+      "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+      "depth": 1,
+      "function_selector": "0xac4951f6",
+      "decoded_function": "setClientApproval(uint32,bool)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x883860178f95d0c82413edc1d6de530cb4771d55",
+        "to_address": "0xaaf173e6b65aa4473c830edb402d26b7a33c5e94",
+        "value": "0x0",
+        "input": "0xac4951f600000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000001",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xac4951f6",
+        "decoded_function": "setClientApproval(uint32,bool)",
+        "decoded_args": [
+          16,
+          true
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 1,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 1
+  }
+}

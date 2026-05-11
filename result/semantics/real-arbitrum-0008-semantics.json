@@ -1,0 +1,17 @@
+{
+  "proposal_summary": "No data provided due to rate limit error.",
+  "disclosed_entities": [],
+  "disclosed_addresses": [],
+  "claimed_actions": [],
+  "claimed_complexity": {
+    "level": "unknown",
+    "reason": "No data available to determine complexity.",
+    "textual_evidence": ""
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No source text was provided because the upstream LLM request failed with a 429 Quota Exceeded error."
+  ],
+  "llm_status": "repaired",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-uniswap-0020",
+  "dao": {
+    "name": "Uniswap",
+    "chain_id": 1,
+    "governor_address": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "75",
+    "proposal_url": "https://www.tally.xyz/gov/uniswap/proposal/75",
+    "source": "tally",
+    "created_block": 21539258,
+    "executed_block": null,
+    "status": "canceled"
+  },
+  "proposal_text": {
+    "title": "Incentive Package for Sonic and Celo",
+    "description": "# Incentive Package for Sonic and Celo\nThis proposal sends $500k UNI to the Uniswap Accountability Committee which will be used to co-incentivize Uniswap v3 markets on Sonic and Celo.\n\nThe breakdown is as follows:\n\n* $250k for Sonic: ([Discussion](https://gov.uniswap.org/t/rfc-deploy-uniswap-v3-on-sonic-formerly-fantom/25024), [Snapshot](https://v1.snapshot.box/#/uniswapgovernance.eth/proposal/0x5527b3846cd05a64346a00461d2c763531f43e2b2f4f1c7d55e1ba7de60c4d4e))\n* $250k for Celo: ([Discussion](https://gov.uniswap.org/t/temp-check-scale-uniswap-liquidity-on-celo/24995), [Snapshot](https://v1.snapshot.box/#/uniswapgovernance.eth/proposal/0xb7218cdbaab203872d4f17d161d84ad04f8b35ab6d8254d6786ca18d9893fe40))\n\nBoth votes had near unanimous support during the snapshot phases hence why they are being combined here. We encourage delegates to check out the links above (nothing has changed from snapshot vote to on chain vote) for specifics and breakdown of incentives/match.\n\n\n\n$500k UNI @ $14.20/UNI -> 35211 UNI"
+  },
+  "payload": {
+    "targets": [
+      "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      "transfer(address,uint256)"
+    ],
+    "calldatas": [
+      "0xa9059cbb0000000000000000000000003b59c6d0034490093460787566dc5d6ce17f2f9c000000000000000000000000000000000000000000000774cac95820674c0000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xce295e37a3eafd12b440704bb9437677db8bf33809df9eb677fd5c2dd962bb5e",
+    "executed_tx_hash": null
+  }
+}

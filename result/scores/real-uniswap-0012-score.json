@@ -1,0 +1,728 @@
+{
+  "metadata": {
+    "proposal_id": "53",
+    "generated_at": "2026-05-08T11:15:24.496159+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal requests the Uniswap Foundation to delegate a total of 10 million UNI to 7 active but underrepresented delegates to increase active participation and robust governance. Delegates must maintain an 80% participation rate.",
+    "disclosed_entities": [
+      {
+        "name": "Uniswap Foundation",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "this proposal requests the Uniswap Foundation delegate in total 10 million UNI to 7 active yet underrepresented delegates."
+      },
+      {
+        "name": "Franchiser contract",
+        "address": null,
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "is subject to undelegation via the Franchiser contract explained below"
+      },
+      {
+        "name": "404 DAO",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "404 DAO 5786355 2500002 2500002 500000 0xE93D59CC0bcECFD4ac204827eF67c5266079E2b52"
+      },
+      {
+        "name": "Wintermute Governance",
+        "address": "0xb933aee47c438f22de0747d57fc239fe37878dd1",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Wintermute Governance 5643733 600000 1900000 2500000 0xB933AEe47C438f22DE0747D57fc239FE37878Dd1"
+      },
+      {
+        "name": "PGov",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "PGov 4744613 2500002 2500002 500000 0x3fb19771947072629c8eee7995a2ef23b72d4c8a4"
+      },
+      {
+        "name": "StableLab",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "StableLab 4489610 1422499 8582500 0000 0xECC2a9240268BC7a26386ecB49E1Befca2706AC95"
+      },
+      {
+        "name": "Keyrock",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Keyrock 3252294 10000 4939725 03971.7015 0x1855f41B8A86e701E33199DE7C25d3e3830698ba6"
+      },
+      {
+        "name": "Karpatkey",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Karpatkey 2980075 467000 4526269 19625.9675 0x8787FC2De4De95c53e5E3a4e5459247D9773ea527"
+      },
+      {
+        "name": "atiselsts.eth",
+        "address": "0xaac35d953ef23ae2e61a866ab93dea6ec0050bcd",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "atiselsts.eth 1010931 250000 1535444 03544.3309 0xAac35d953Ef23aE2E61a866ab93deA6eC0050bcD"
+      },
+      {
+        "name": "FranchiserFactory",
+        "address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "one function call on the FranchiserFactory contract here (https://etherscan.io/address/0xf754A7E347F81cFdc70AF9FbCCe9Df3D826360FA)"
+      },
+      {
+        "name": "Timelock",
+        "address": null,
+        "entity_type": "timelock",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The Timelock will call the fundMany function"
+      },
+      {
+        "name": "Proposer",
+        "address": "0xb933aee47c438f22de0747d57fc239fe37878dd1",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "0xB933AEe47C438f22DE0747D57fc239FE37878Dd1"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xb933aee47c438f22de0747d57fc239fe37878dd1",
+        "textual_evidence": "Wintermute Governance, Proposer"
+      },
+      {
+        "address": "0xaac35d953ef23ae2e61a866ab93dea6ec0050bcd",
+        "textual_evidence": "atiselsts.eth"
+      },
+      {
+        "address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "textual_evidence": "FranchiserFactory contract"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "delegate 10 million UNI to 7 delegates",
+        "canonical_action": "governance_proposal_creation",
+        "object": "UNI tokens",
+        "claimed_effect": "Distribute voting power to active delegates",
+        "textual_evidence": "delegate in total 10 million UNI to 7 active yet underrepresented delegates",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "call fundMany on FranchiserFactory",
+        "canonical_action": "unknown",
+        "object": "FranchiserFactory",
+        "claimed_effect": "deploys a Franchiser contract for each delegate and funds it",
+        "textual_evidence": "The Timelock will call the fundMany function, and pass it two arrays of calldata",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Uses a factory contract to deploy individual delegator contracts for 7 recipients.",
+      "textual_evidence": "one function call on the FranchiserFactory contract ... The Timelock will call the fundMany function, and pass it two arrays of calldata. ... The result of that function call will be an individual Franchiser contract deployed for each delegate"
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "fundMany",
+        "textual_evidence": "The Timelock will call the fundMany function"
+      },
+      {
+        "function_name": "recall",
+        "textual_evidence": "recall the tokens by calling the recall function"
+      }
+    ],
+    "limitations": [
+      "Could not resolve the exact ABI or exact calldata array parameters strictly."
+    ],
+    "llm_status": "repaired",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000f754a7e347f81cfdc70af9fbcce9df3d826360fa000000000000000000000000000000000000000000084595161401484a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+          10000000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "value": "0x0",
+        "input": "0xb6a24b0e000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000007000000000000000000000000e93d59cc0bcecfd4ac204827ef67c5266079e2b5000000000000000000000000b933aee47c438f22de0747d57fc239fe37878dd10000000000000000000000003fb19771947072629c8eee7995a2ef23b72d4c8a000000000000000000000000ecc2a9240268bc7a26386ecb49e1befca2706ac90000000000000000000000001855f41b8a86e701e33199de7c25d3e3830698ba0000000000000000000000008787fc2de4de95c53e5e3a4e5459247d9773ea52000000000000000000000000aac35d953ef23ae2e61a866ab93dea6ec0050bcd000000000000000000000000000000000000000000000000000000000000000700000000000000000000000000000000000000000001dc74be914d16aa40000000000000000000000000000000000000000000000001925734d5b8904b80000000000000000000000000000000000000000000000001dc74be914d16aa40000000000000000000000000000000000000000000000002115d92dfa8ab3908000000000000000000000000000000000000000000000000689a4699582d49d00000000000000000000000000000000000000000000000005fd8e79594ac65080000000000000000000000000000000000000000000000002083a30d1905c2200000",
+        "output": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000070000000000000000000000008d2642ec9d19a9333c8593ab7de1cc3be44d2dbc000000000000000000000000e38e5dd6e11ba18450cbdd518e8a7eb5f4a17a1100000000000000000000000061bed6a58c4dc592f1dc32f9ec0f67e49208405c000000000000000000000000fb6b912cf7082031822f52e7d7ef59280f97a257000000000000000000000000d57a44e75e863907fc1957b49b35893bf7874809000000000000000000000000a5bb68ac2d70b21f5b7d051542f4799954fb6087000000000000000000000000fe23b0ddcc9c78b21092e54b846a302c961efab2",
+        "depth": 0,
+        "function_selector": "0xb6a24b0e",
+        "decoded_function": "fundMany(address[],uint256[])",
+        "decoded_args": [
+          [
+            "0xe93d59cc0bcecfd4ac204827ef67c5266079e2b5",
+            "0xb933aee47c438f22de0747d57fc239fe37878dd1",
+            "0x3fb19771947072629c8eee7995a2ef23b72d4c8a",
+            "0xecc2a9240268bc7a26386ecb49e1befca2706ac9",
+            "0x1855f41b8a86e701e33199de7c25d3e3830698ba",
+            "0x8787fc2de4de95c53e5e3a4e5459247d9773ea52",
+            "0xaac35d953ef23ae2e61a866ab93dea6ec0050bcd"
+          ],
+          [
+            2250000000000000000000000,
+            1900000000000000000000000,
+            2250000000000000000000000,
+            2499858000000000000000000,
+            493972000000000000000000,
+            452626000000000000000000,
+            153544000000000000000000
+          ]
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc0000000000000000000000008d2642ec9d19a9333c8593ab7de1cc3be44d2dbc00000000000000000000000000000000000000000001dc74be914d16aa400000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x8d2642ec9d19a9333c8593ab7de1cc3be44d2dbc",
+          2250000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000e38e5dd6e11ba18450cbdd518e8a7eb5f4a17a1100000000000000000000000000000000000000000001925734d5b8904b800000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0xe38e5dd6e11ba18450cbdd518e8a7eb5f4a17a11",
+          1900000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc00000000000000000000000061bed6a58c4dc592f1dc32f9ec0f67e49208405c00000000000000000000000000000000000000000001dc74be914d16aa400000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x61bed6a58c4dc592f1dc32f9ec0f67e49208405c",
+          2250000000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000fb6b912cf7082031822f52e7d7ef59280f97a25700000000000000000000000000000000000000000002115d92dfa8ab39080000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0xfb6b912cf7082031822f52e7d7ef59280f97a257",
+          2499858000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000d57a44e75e863907fc1957b49b35893bf787480900000000000000000000000000000000000000000000689a4699582d49d00000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0xd57a44e75e863907fc1957b49b35893bf7874809",
+          493972000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000a5bb68ac2d70b21f5b7d051542f4799954fb6087000000000000000000000000000000000000000000005fd8e79594ac65080000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0xa5bb68ac2d70b21f5b7d051542f4799954fb6087",
+          452626000000000000000000
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc000000000000000000000000fe23b0ddcc9c78b21092e54b846a302c961efab2000000000000000000000000000000000000000000002083a30d1905c2200000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0xfe23b0ddcc9c78b21092e54b846a302c961efab2",
+          153544000000000000000000
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 9,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "approve(address,uint256)",
+      "fundMany(address[],uint256[])",
+      "transferFrom(address,address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "53:0:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "depth": 0,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x095ea7b3000000000000000000000000f754a7e347f81cfdc70af9fbcce9df3d826360fa000000000000000000000000000000000000000000084595161401484a000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+          10000000000000000000000000
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "53:2:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+      "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "depth": 1,
+      "function_selector": "0x23b872dd",
+      "decoded_function": "transferFrom(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+        "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+        "value": "0x0",
+        "input": "0x23b872dd0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc0000000000000000000000008d2642ec9d19a9333c8593ab7de1cc3be44d2dbc00000000000000000000000000000000000000000001dc74be914d16aa400000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x23b872dd",
+        "decoded_function": "transferFrom(address,address,uint256)",
+        "decoded_args": [
+          "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "0x8d2642ec9d19a9333c8593ab7de1cc3be44d2dbc",
+          2250000000000000000000000
+        ],
+        "error": null,
+        "merged_count": 7
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [
+        "0xaac35d953ef23ae2e61a866ab93dea6ec0050bcd",
+        "0xb933aee47c438f22de0747d57fc239fe37878dd1",
+        "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+              ],
+              "related_actions": [
+                {
+                  "id": "53:0:approval",
+                  "action_type": "approval",
+                  "severity_hint": "medium",
+                  "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                  "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+                  "depth": 0,
+                  "function_selector": "0x095ea7b3",
+                  "decoded_function": "approve(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "53:2:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+                  "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+                  "depth": 1,
+                  "function_selector": "0x23b872dd",
+                  "decoded_function": "transferFrom(address,address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "approval",
+                "transfer"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0xaac35d953ef23ae2e61a866ab93dea6ec0050bcd",
+            "0xb933aee47c438f22de0747d57fc239fe37878dd1",
+            "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa"
+          ],
+          "trace_unique_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+            "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "approval",
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Uses a factory contract to deploy individual delegator contracts for 7 recipients.",
+            "textual_evidence": "one function call on the FranchiserFactory contract ... The Timelock will call the fundMany function, and pass it two arrays of calldata. ... The result of that function call will be an individual Franchiser contract deployed for each delegate"
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "approval",
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "approve(address,uint256)",
+        "fundMany(address[],uint256[])",
+        "transferFrom(address,address,uint256)"
+      ],
+      "unmatched_functions": [
+        "approval",
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "governance_proposal_creation",
+        "unknown"
+      ],
+      "actual_actions": [
+        "approval",
+        "transfer"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "governance_proposal_creation",
+                "unknown"
+              ],
+              "actual_business_actions": [
+                "approval",
+                "transfer"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "approve(address,uint256)",
+                "fundMany(address[],uint256[])",
+                "transferFrom(address,address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "delegate 10 million UNI to 7 delegates",
+              "canonical_action": "governance_proposal_creation",
+              "object": "UNI tokens",
+              "claimed_effect": "Distribute voting power to active delegates",
+              "textual_evidence": "delegate in total 10 million UNI to 7 active yet underrepresented delegates",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "call fundMany on FranchiserFactory",
+              "canonical_action": "unknown",
+              "object": "FranchiserFactory",
+              "claimed_effect": "deploys a Franchiser contract for each delegate and funds it",
+              "textual_evidence": "The Timelock will call the fundMany function, and pass it two arrays of calldata",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "53:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 0,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "53:2:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 1,
+              "function_selector": "0x23b872dd",
+              "decoded_function": "transferFrom(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "approve(address,uint256)",
+            "fundMany(address[],uint256[])",
+            "transferFrom(address,address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+          ],
+          "related_actions": [
+            {
+              "id": "53:0:approval",
+              "action_type": "approval",
+              "severity_hint": "medium",
+              "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 0,
+              "function_selector": "0x095ea7b3",
+              "decoded_function": "approve(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "53:2:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xf754a7e347f81cfdc70af9fbcce9df3d826360fa",
+              "to_address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+              "depth": 1,
+              "function_selector": "0x23b872dd",
+              "decoded_function": "transferFrom(address,address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "governance_proposal_creation",
+            "unknown"
+          ],
+          "actual_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "approve(address,uint256)",
+            "fundMany(address[],uint256[])",
+            "transferFrom(address,address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

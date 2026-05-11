@@ -1,0 +1,451 @@
+{
+  "metadata": {
+    "proposal_id": "16288348195459185256236376597446433097934740027053618232242382845767010422421",
+    "generated_at": "2026-05-08T11:15:23.938025+00:00",
+    "chain_id": 42161,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Register the Sky Custom Gateway contracts in the Arbitrum Router to allow bridging USDS and sUSDS through the official Arbitrum Bridge UI.",
+    "disclosed_entities": [
+      {
+        "name": "USDS token on Ethereum",
+        "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "USDS address on Ethereum - https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F"
+      },
+      {
+        "name": "sUSDS token on Ethereum",
+        "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "sUSDS address on Ethereum - https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD"
+      },
+      {
+        "name": "Sky Custom Gateway on Ethereum",
+        "address": "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+        "entity_type": "bridge",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Sky Custom Gateway on Ethereum - https://etherscan.io/address/0x84b9700e28b23f873b82c1beb23d86c091b6079e"
+      },
+      {
+        "name": "Sky Custom Gateway on Arbitrum",
+        "address": "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+        "entity_type": "bridge",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Sky Custom Gateway on Arbitrum - https://arbiscan.io/address/0x13f7f24ca959359a4d710d32c715d4bce273c793"
+      },
+      {
+        "name": "Official USDS on Arbitrum",
+        "address": "0x6491c05a82219b8d1479057361ff1654749b876b",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Official USDS address on Arbitrum - https://arbiscan.io/token/0x6491c05a82219b8d1479057361ff1654749b876b"
+      },
+      {
+        "name": "Official sUSDS on Arbitrum",
+        "address": "0xddb46999f8891663a8f2828d25298f70416d7610",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Official sUSDS address on Arbitrum - https://arbiscan.io/token/0xdDb46999F8891663a8F2828d25298f70416d7610"
+      },
+      {
+        "name": "L1GatewayRouter contract on Ethereum",
+        "address": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "[2] https://etherscan.io/address/0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "textual_evidence": "USDS address on Ethereum - https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F"
+      },
+      {
+        "address": "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "textual_evidence": "sUSDS address on Ethereum - https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD"
+      },
+      {
+        "address": "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+        "textual_evidence": "Sky Custom Gateway on Ethereum - https://etherscan.io/address/0x84b9700e28b23f873b82c1beb23d86c091b6079e"
+      },
+      {
+        "address": "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+        "textual_evidence": "Sky Custom Gateway on Arbitrum - https://arbiscan.io/address/0x13f7f24ca959359a4d710d32c715d4bce273c793"
+      },
+      {
+        "address": "0x6491c05a82219b8d1479057361ff1654749b876b",
+        "textual_evidence": "Official USDS address on Arbitrum - https://arbiscan.io/token/0x6491c05a82219b8d1479057361ff1654749b876b"
+      },
+      {
+        "address": "0xddb46999f8891663a8f2828d25298f70416d7610",
+        "textual_evidence": "Official sUSDS address on Arbitrum - https://arbiscan.io/token/0xdDb46999F8891663a8F2828d25298f70416d7610"
+      },
+      {
+        "address": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "textual_evidence": "[2] https://etherscan.io/address/0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Execution of the setGateways method",
+        "canonical_action": "parameter_update",
+        "object": "L1GatewayRouter contract",
+        "claimed_effect": "Registers the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router",
+        "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens. This action will register the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal simply executes a single existing function (setGateways) on an existing routing contract to update an external configuration.",
+      "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "setGateways",
+        "textual_evidence": "We propose the execution of the setGateways method"
+      }
+    ],
+    "limitations": [
+      "No precise calldata or full array payload details for `setGateways` is provided."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0x0000000000000000000000000000000000000064",
+        "value": "0x286ddae64b21ae8a125500000000",
+        "input": "0x928c169a000000000000000000000000e6841d92b0c345144506576ec13ecf5103ac7f49000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000003a48f2a0bb000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000003a190ca590a6180243a42a14ffea85b209f13ffbcdacd53669a94f4e2b85c2be000000000000000000000000000000000000000000000000000000000003f48000000000000000000000000000000000000000000000000000000000000000010000000000000000000000003fffbadaf827559da092217e474760e2b2c3cedd0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001e41cff79cd0000000000000000000000007f089c0daf0181f7afd533f5f3265301bb09d56200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000164594767d500000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000c3500000000000000000000000000000000000000000000000000000000003b9aca00000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000dc035d45d973e3ec169d2276ddab16f1e407384f000000000000000000000000a3931d71877c0e7a3148cb7eb4463524fec27fbd000000000000000000000000000000000000000000000000000000000000000200000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e00000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x928c169a",
+        "decoded_function": "sendTxToL1(address,bytes)",
+        "decoded_args": [
+          "0xe6841d92b0c345144506576ec13ecf5103ac7f49",
+          "0x8f2a0bb000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000003a190ca590a6180243a42a14ffea85b209f13ffbcdacd53669a94f4e2b85c2be000000000000000000000000000000000000000000000000000000000003f48000000000000000000000000000000000000000000000000000000000000000010000000000000000000000003fffbadaf827559da092217e474760e2b2c3cedd0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001e41cff79cd0000000000000000000000007f089c0daf0181f7afd533f5f3265301bb09d56200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000164594767d500000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000c3500000000000000000000000000000000000000000000000000000000003b9aca00000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000dc035d45d973e3ec169d2276ddab16f1e407384f000000000000000000000000a3931d71877c0e7a3148cb7eb4463524fec27fbd000000000000000000000000000000000000000000000000000000000000000200000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e00000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": "invalid opcode: INVALID"
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x0000000000000000000000000000000000000064",
+      "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 1,
+    "decoded_functions": [
+      "sendTxToL1(address,bytes)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "16288348195459185256236376597446433097934740027053618232242382845767010422421:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+      "to_address": "0x0000000000000000000000000000000000000064",
+      "depth": 0,
+      "function_selector": "0x928c169a",
+      "decoded_function": "sendTxToL1(address,bytes)",
+      "value": "0x286ddae64b21ae8a125500000000",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0x0000000000000000000000000000000000000064",
+        "value": "0x286ddae64b21ae8a125500000000",
+        "input": "0x928c169a000000000000000000000000e6841d92b0c345144506576ec13ecf5103ac7f49000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000003a48f2a0bb000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000003a190ca590a6180243a42a14ffea85b209f13ffbcdacd53669a94f4e2b85c2be000000000000000000000000000000000000000000000000000000000003f48000000000000000000000000000000000000000000000000000000000000000010000000000000000000000003fffbadaf827559da092217e474760e2b2c3cedd0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001e41cff79cd0000000000000000000000007f089c0daf0181f7afd533f5f3265301bb09d56200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000164594767d500000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000c3500000000000000000000000000000000000000000000000000000000003b9aca00000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000dc035d45d973e3ec169d2276ddab16f1e407384f000000000000000000000000a3931d71877c0e7a3148cb7eb4463524fec27fbd000000000000000000000000000000000000000000000000000000000000000200000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e00000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x928c169a",
+        "decoded_function": "sendTxToL1(address,bytes)",
+        "decoded_args": [
+          "0xe6841d92b0c345144506576ec13ecf5103ac7f49",
+          "0x8f2a0bb000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000000000000000000003a190ca590a6180243a42a14ffea85b209f13ffbcdacd53669a94f4e2b85c2be000000000000000000000000000000000000000000000000000000000003f48000000000000000000000000000000000000000000000000000000000000000010000000000000000000000003fffbadaf827559da092217e474760e2b2c3cedd0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001e41cff79cd0000000000000000000000007f089c0daf0181f7afd533f5f3265301bb09d56200000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000164594767d500000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000c3500000000000000000000000000000000000000000000000000000000003b9aca00000000000000000000000000000000000000000000000000000009184e72a0000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000dc035d45d973e3ec169d2276ddab16f1e407384f000000000000000000000000a3931d71877c0e7a3148cb7eb4463524fec27fbd000000000000000000000000000000000000000000000000000000000000000200000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e00000000000000000000000084b9700e28b23f873b82c1beb23d86c091b6079e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "error": "invalid opcode: INVALID"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [
+        "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+        "0x6491c05a82219b8d1479057361ff1654749b876b",
+        "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+        "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+        "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "0xddb46999f8891663a8f2828d25298f70416d7610"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x0000000000000000000000000000000000000064",
+        "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x0000000000000000000000000000000000000064",
+                "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+              ],
+              "related_actions": [
+                {
+                  "id": "16288348195459185256236376597446433097934740027053618232242382845767010422421:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+                  "to_address": "0x0000000000000000000000000000000000000064",
+                  "depth": 0,
+                  "function_selector": "0x928c169a",
+                  "decoded_function": "sendTxToL1(address,bytes)",
+                  "value": "0x286ddae64b21ae8a125500000000",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "transfer"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x13f7f24ca959359a4d710d32c715d4bce273c793",
+            "0x6491c05a82219b8d1479057361ff1654749b876b",
+            "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+            "0x84b9700e28b23f873b82c1beb23d86c091b6079e",
+            "0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+            "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+            "0xddb46999f8891663a8f2828d25298f70416d7610"
+          ],
+          "trace_unique_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal simply executes a single existing function (setGateways) on an existing routing contract to update an external configuration.",
+            "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "sendTxToL1(address,bytes)"
+      ],
+      "unmatched_functions": [
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "parameter_update"
+              ],
+              "actual_business_actions": [
+                "transfer"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "sendTxToL1(address,bytes)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Execution of the setGateways method",
+              "canonical_action": "parameter_update",
+              "object": "L1GatewayRouter contract",
+              "claimed_effect": "Registers the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router",
+              "textual_evidence": "We propose the execution of the setGateways method [1] on the L1GatewayRouter contract [2] on Ethereum for both USDS and sUSDS tokens. This action will register the official USDS and sUSDS tokens along with the Sky Custom Gateway contracts on the Router.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "16288348195459185256236376597446433097934740027053618232242382845767010422421:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+              "to_address": "0x0000000000000000000000000000000000000064",
+              "depth": 0,
+              "function_selector": "0x928c169a",
+              "decoded_function": "sendTxToL1(address,bytes)",
+              "value": "0x286ddae64b21ae8a125500000000",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "sendTxToL1(address,bytes)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x0000000000000000000000000000000000000064",
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0"
+          ],
+          "related_actions": [
+            {
+              "id": "16288348195459185256236376597446433097934740027053618232242382845767010422421:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+              "to_address": "0x0000000000000000000000000000000000000064",
+              "depth": 0,
+              "function_selector": "0x928c169a",
+              "decoded_function": "sendTxToL1(address,bytes)",
+              "value": "0x286ddae64b21ae8a125500000000",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "parameter_update"
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "sendTxToL1(address,bytes)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "proposal_summary": "A proposal to create a streaming COMP grant (0.000214 Contributor Comp Speed) for Getty Hill to compensate for past and future work on coordinating and improving Compound's oracle system.",
+  "disclosed_entities": [
+    {
+      "name": "Getty Hill",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Over the last 6-months, Getty Hill has worked to improve Compound’s oracle system"
+    },
+    {
+      "name": "Compound",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "highest possible standard demanded by the Compound community."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Set Contributor Comp Speed grant",
+      "canonical_action": "treasury_operation",
+      "object": "Streaming COMP grant",
+      "claimed_effect": "Provide a continuous grant of 0.000214 to Getty Hill until modified by governance.",
+      "textual_evidence": "I am requesting a 0.000214 Contributor Comp Speed grant from the protocol. [...] The grant runs in perpetuity until modified by governance.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only involves setting up a streaming payment (Comp Speed grant) for a single contributor.",
+    "textual_evidence": "This Contributor Grant will be used to carry on the work of improving the price feed, and represents the first streaming COMP grant."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No recipient address provided for Getty Hill.",
+    "No specific contract or function names provided to execute the streaming grant."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

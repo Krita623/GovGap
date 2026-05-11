@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "proposal_id": "42",
+    "generated_at": "2026-05-08T11:15:24.484132+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "A proposal to officially deploy and recognize Uniswap V3 on the Linea mainnet as a canonical deployment, integrating it with the ConsenSys product ecosystem including MetaMask.",
+    "disclosed_entities": [
+      {
+        "name": "ConsenSys",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Consensys is seeking a Uniswap V3 deployment for Linea’s mainnet launch"
+      },
+      {
+        "name": "GFX Labs",
+        "address": "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Proposer: Consensys & GFX Labs ... Proposer gfxlabs.eth 0xa6e8772af29b29B9202a073f8E36f447689BEef6"
+      },
+      {
+        "name": "Linea Native Bridge",
+        "address": null,
+        "entity_type": "bridge",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Bridge Provider: Linea Native Bridge"
+      },
+      {
+        "name": "v3CoreFactory",
+        "address": "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- v3CoreFactoryAddress"
+      },
+      {
+        "name": "multicall2",
+        "address": "0x93e253d101519578a8df0bce2a43d8292bfb3a1f",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- multicall2Address"
+      },
+      {
+        "name": "proxyAdmin",
+        "address": "0x091e99cb1c49331a94dd62755d168e941abd0693",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- proxyAdminAddress"
+      },
+      {
+        "name": "tickLens",
+        "address": "0x3334d83e224af5ef9c2e7dda7c7c98efd9621fa9",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- tickLensAddress"
+      },
+      {
+        "name": "nftDescriptorLibraryV1_3_0",
+        "address": "0x0cdee061c75d43c82520ed998c23ac2991c9ac6d",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- nftDescriptorLibraryAddressV1_3_0"
+      },
+      {
+        "name": "nonfungibleTokenPositionDescriptorV1_3_0",
+        "address": "0xf9d1077fd35670d4acbd27af82652a8d84577d9f",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- nonfungibleTokenPositionDescriptorAddressV1_3_0"
+      },
+      {
+        "name": "descriptorProxy",
+        "address": "0x4f225937edc33efd6109c4cef7b560b2d6401009",
+        "entity_type": "proxy",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- descriptorProxyAddress"
+      },
+      {
+        "name": "nonfungibleTokenPositionManager",
+        "address": "0x4615c383f85d0a2bbed973d83ccecf5cb7121463",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- nonfungibleTokenPositionManagerAddress"
+      },
+      {
+        "name": "v3Migrator",
+        "address": "0x03a520b32c04bf3beef7beb72e919cf822ed34f1",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- v3MigratorAddress"
+      },
+      {
+        "name": "v3Staker",
+        "address": "0x68ed6c1d24a1aa74ef684e958dd6b6e1f1a90c57",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- v3StakerAddress"
+      },
+      {
+        "name": "quoterV2",
+        "address": "0x42be4d6527829fefa1493e1fb9f3676d2425c3c1",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- quoterV2Address"
+      },
+      {
+        "name": "swapRouter02",
+        "address": "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "- swapRouter02"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+        "textual_evidence": "v3CoreFactoryAddress 0x31FAfd4889FA1269F7a13A66eE0fB458f27D72A9"
+      },
+      {
+        "address": "0x93e253d101519578a8df0bce2a43d8292bfb3a1f",
+        "textual_evidence": "multicall2Address 0x93e253D101519578A8DF0BCe2A43D8292BFb3A1F"
+      },
+      {
+        "address": "0x091e99cb1c49331a94dd62755d168e941abd0693",
+        "textual_evidence": "proxyAdminAddress 0x091e99cb1C49331a94dD62755D168E941AbD0693"
+      },
+      {
+        "address": "0x3334d83e224af5ef9c2e7dda7c7c98efd9621fa9",
+        "textual_evidence": "tickLensAddress 0x3334d83e224aF5ef9C2E7DDA7c7C98Efd9621fA9"
+      },
+      {
+        "address": "0x0cdee061c75d43c82520ed998c23ac2991c9ac6d",
+        "textual_evidence": "nftDescriptorLibraryAddressV1_3_0 0x0CdeE061c75D43c82520eD998C23ac2991c9ac6d"
+      },
+      {
+        "address": "0xf9d1077fd35670d4acbd27af82652a8d84577d9f",
+        "textual_evidence": "nonfungibleTokenPositionDescriptorAddressV1_3_0 0xF9d1077fd35670d4ACbD27af82652a8d84577d9F"
+      },
+      {
+        "address": "0x4f225937edc33efd6109c4cef7b560b2d6401009",
+        "textual_evidence": "descriptorProxyAddress 0x4f225937EDc33EFD6109c4ceF7b560B2D6401009"
+      },
+      {
+        "address": "0x4615c383f85d0a2bbed973d83ccecf5cb7121463",
+        "textual_evidence": "nonfungibleTokenPositionManagerAddress 0x4615C383F85D0a2BbED973d83ccecf5CB7121463"
+      },
+      {
+        "address": "0x03a520b32c04bf3beef7beb72e919cf822ed34f1",
+        "textual_evidence": "v3MigratorAddress 0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1"
+      },
+      {
+        "address": "0x68ed6c1d24a1aa74ef684e958dd6b6e1f1a90c57",
+        "textual_evidence": "v3StakerAddress 0x68ED6C1d24A1aa74EF684E958dD6B6E1F1A90c57"
+      },
+      {
+        "address": "0x42be4d6527829fefa1493e1fb9f3676d2425c3c1",
+        "textual_evidence": "quoterV2Address 0x42bE4D6527829FeFA1493e1fb9F3676d2425C3C1"
+      },
+      {
+        "address": "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a",
+        "textual_evidence": "swapRouter02 0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a"
+      },
+      {
+        "address": "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+        "textual_evidence": "Proposer gfxlabs.eth 0xa6e8772af29b29B9202a073f8E36f447689BEef6"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Recognize deployment on Linea as canonical",
+        "canonical_action": "governance_proposal_creation",
+        "object": "v3deployments.uniswap.eth",
+        "claimed_effect": "The text record of the uniswap.eth ENS subdomain titled v3deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on Linea.",
+        "textual_evidence": "The text record of the uniswap.eth ENS subdomain titled v3deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on Linea.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "Requires updating ENS subdomain records across networks.",
+      "textual_evidence": "If this onchain vote passes, this deployment will be officially recognized as a canonical v3 deployment through an amendment to the v3deployments.uniswap.eth subdomain."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No target smart contract functions (like setSubnodeRecord) are explicitly documented for the ENS update in the text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "value": "0x0",
+        "input": "0x10f13a8c0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000005353931343400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000553078643139643442356433353832353866303544374234313145323141313436304431314230383736462c3078333146416664343838394641313236394637613133413636654530664234353866323744373241390000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x10f13a8c",
+        "decoded_function": "setText(bytes32,string,string)",
+        "decoded_args": [
+          "0x0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+          "59144",
+          "0xd19d4B5d358258f05D7B411E21A1460D11B0876F,0x31FAfd4889FA1269F7a13A66eE0fB458f27D72A9"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0",
+        "input": "0x02571be30b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+        "output": "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+        "depth": 1,
+        "function_selector": "0x02571be3",
+        "decoded_function": "owner(bytes32)",
+        "decoded_args": [
+          "0x0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 1,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "owner(bytes32)",
+      "setText(bytes32,string,string)"
+    ]
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 7,
+      "severity": "MEDIUM",
+      "summary": "Trace includes undisclosed addresses without evidence of an uncovered sensitive business action.",
+      "disclosed_addresses": [
+        "0x03a520b32c04bf3beef7beb72e919cf822ed34f1",
+        "0x091e99cb1c49331a94dd62755d168e941abd0693",
+        "0x0cdee061c75d43c82520ed998c23ac2991c9ac6d",
+        "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+        "0x3334d83e224af5ef9c2e7dda7c7c98efd9621fa9",
+        "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a",
+        "0x42be4d6527829fefa1493e1fb9f3676d2425c3c1",
+        "0x4615c383f85d0a2bbed973d83ccecf5cb7121463",
+        "0x4f225937edc33efd6109c4cef7b560b2d6401009",
+        "0x68ed6c1d24a1aa74ef684e958dd6b6e1f1a90c57",
+        "0x93e253d101519578a8df0bce2a43d8292bfb3a1f",
+        "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+        "0xf9d1077fd35670d4acbd27af82652a8d84577d9f"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "MEDIUM",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+                "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+                "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "parameter_update"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x03a520b32c04bf3beef7beb72e919cf822ed34f1",
+            "0x091e99cb1c49331a94dd62755d168e941abd0693",
+            "0x0cdee061c75d43c82520ed998c23ac2991c9ac6d",
+            "0x31fafd4889fa1269f7a13a66ee0fb458f27d72a9",
+            "0x3334d83e224af5ef9c2e7dda7c7c98efd9621fa9",
+            "0x3d4e44eb1374240ce5f1b871ab261cd16335b76a",
+            "0x42be4d6527829fefa1493e1fb9f3676d2425c3c1",
+            "0x4615c383f85d0a2bbed973d83ccecf5cb7121463",
+            "0x4f225937edc33efd6109c4cef7b560b2d6401009",
+            "0x68ed6c1d24a1aa74ef684e958dd6b6e1f1a90c57",
+            "0x93e253d101519578a8df0bce2a43d8292bfb3a1f",
+            "0xa6e8772af29b29b9202a073f8e36f447689beef6",
+            "0xf9d1077fd35670d4acbd27af82652a8d84577d9f"
+          ],
+          "trace_unique_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "Requires updating ENS subdomain records across networks.",
+            "textual_evidence": "If this onchain vote passes, this deployment will be officially recognized as a canonical v3 deployment through an amendment to the v3deployments.uniswap.eth subdomain."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "owner(bytes32)",
+        "setText(bytes32,string,string)"
+      ],
+      "unmatched_functions": [
+        "parameter_update"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "governance_proposal_creation"
+      ],
+      "actual_actions": [
+        "parameter_update"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "governance_proposal_creation"
+              ],
+              "actual_business_actions": [
+                "parameter_update"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "owner(bytes32)",
+                "setText(bytes32,string,string)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Recognize deployment on Linea as canonical",
+              "canonical_action": "governance_proposal_creation",
+              "object": "v3deployments.uniswap.eth",
+              "claimed_effect": "The text record of the uniswap.eth ENS subdomain titled v3deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on Linea.",
+              "textual_evidence": "The text record of the uniswap.eth ENS subdomain titled v3deployments.uniswap.eth will be amended to include the reference to the stated v3 contracts on Linea.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "owner(bytes32)",
+            "setText(bytes32,string,string)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "MEDIUM",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+            "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "parameter_update"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "governance_proposal_creation"
+          ],
+          "actual_business_actions": [
+            "parameter_update"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "owner(bytes32)",
+            "setText(bytes32,string,string)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

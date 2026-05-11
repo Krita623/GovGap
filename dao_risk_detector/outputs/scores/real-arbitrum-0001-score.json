@@ -1,0 +1,236 @@
+{
+  "metadata": {
+    "proposal_id": "71941171835710778457735937894689629320431683601089057868136768380925169329077",
+    "generated_at": "2026-05-08T11:15:23.851488+00:00",
+    "chain_id": 42161,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Activate support for the eth_sendRawTransactionConditional RPC endpoint on the Arbitrum One and Nova mainnets to support ERC-4337 account abstraction and bundlers.",
+    "disclosed_entities": [
+      {
+        "name": "Arbitrum DAO",
+        "address": null,
+        "entity_type": "governor",
+        "disclosure_level": "implicit",
+        "textual_evidence": "This AIP proposes that the Arbitrum DAO activate support for this endpoint"
+      },
+      {
+        "name": "Arbitrum One",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "not_disclosed",
+        "textual_evidence": "on the One and Nova mainnets."
+      },
+      {
+        "name": "Arbitrum Nova",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "not_disclosed",
+        "textual_evidence": "on the One and Nova mainnets."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Change the load balancer config value to remove the 0 slots restriction",
+        "canonical_action": "parameter_update",
+        "object": "load balancer",
+        "claimed_effect": "Allows conditional transactions to use up to 1,000 slots and activates the eth_sendRawTransactionConditional endpoint.",
+        "textual_evidence": "steps to implement this AIP reduce to changing the load balancer config value as described above.",
+        "confidence": 0.9
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "Implementation only requires changing a configuration value on the load balancer, as the feature is already developed and tested in Nitro v2.0.14.",
+      "textual_evidence": "The work already done by Offchain Labs on this endpoint means that the steps to implement this AIP reduce to changing the load balancer config value as described above."
+    },
+    "disclosed_functions": [
+      {
+        "function_name": "eth_sendRawTransactionConditional",
+        "textual_evidence": "Ethereum researchers have proposed a new RPC endpoint eth_sendRawTransactionConditional that adapts L2 sequencers"
+      },
+      {
+        "function_name": "eth_sendRawTransaction",
+        "textual_evidence": "This endpoint adds new options to the standard eth_sendRawTransaction endpoint"
+      }
+    ],
+    "limitations": [
+      "No specific target contract addresses or precise configuration parameters are detailed in the proposal text."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "to_address": "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5",
+        "value": "0x0",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+      "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": []
+  },
+  "risk_actions": [],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Trace includes undisclosed execution path components without extracted risk actions.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+        "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+                "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+              ],
+              "related_actions": [],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+            "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+            "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "Implementation only requires changing a configuration value on the load balancer, as the feature is already developed and tested in Nitro v2.0.14.",
+            "textual_evidence": "The work already done by Offchain Labs on this endpoint means that the steps to implement this AIP reduce to changing the load balancer config value as described above."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 10,
+      "severity": "LOW",
+      "matched_functions": [],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [],
+      "summary": "No deterministic business action was extracted from the trace.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Change the load balancer config value to remove the 0 slots restriction",
+              "canonical_action": "parameter_update",
+              "object": "load balancer",
+              "claimed_effect": "Allows conditional transactions to use up to 1,000 slots and activates the eth_sendRawTransactionConditional endpoint.",
+              "textual_evidence": "steps to implement this AIP reduce to changing the load balancer config value as described above.",
+              "confidence": 0.9
+            }
+          ],
+          "actual_risk_actions": [],
+          "actual_business_actions": [],
+          "wrapper_actions": [],
+          "decoded_functions": []
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x34d45e99f7d8c45ed05b5ca72d54bbd1fb3f98f0",
+            "0xbf2896fd3053039b4200d9adf39f3e4e1053e9e5"
+          ],
+          "related_actions": [],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

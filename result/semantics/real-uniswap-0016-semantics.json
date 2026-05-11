@@ -1,0 +1,55 @@
+{
+  "proposal_summary": "This proposal outlines Cycle 2 of the Uniswap Delegate Reward Initiative, a 6-month compensation program for up to 15 top delegates, aimed at maintaining high participation quality and dedication. Delegates will receive up to $6,000 USD worth of UNI per month based on their offchain/onchain voting participation, rationale writing, and community call attendance. An 84,000 UNI budget is requested.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Uniswap Delegate Reward Initiative"
+    },
+    {
+      "name": "UNI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "worth of $UNI reward per month"
+    },
+    {
+      "name": "StableLab",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "In late February 2024, StableLab proposed the Uniswap Delegate Reward Initiative 14"
+    },
+    {
+      "name": "Accountability Committee",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "implicit",
+      "textual_evidence": "The total amount, once approved, will be sent to the Accountability Committee, which will be responsible for the monthly distribution"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer UNI budget to Accountability Committee",
+      "canonical_action": "transfer",
+      "object": "Accountability Committee",
+      "claimed_effect": "Fund 6 months of delegate rewards for 15 delegates.",
+      "textual_evidence": "We are requesting 540,000 [6000 USD *6 Months *15 Delegates ] USD worth of UNI... which would be 84,000 UNI. The total amount, once approved, will be sent to the Accountability Committee...",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal introduces a points-based system with multiple criteria (voting participation, proposal authorship, other participation) and administrative overhead managed by the Accountability Committee.",
+    "textual_evidence": "In case there are more than 15 eligible applicants, the top 15 will be chosen by the following objective metrics."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No precise addresses provided for token or recipient."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-nouns-dao-0008",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "332",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/332",
+    "source": "tally",
+    "created_block": 17680069,
+    "executed_block": 17766661,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Stake 10000 ETH to Lido",
+    "description": "# Stake 10000 ETH to Lido\n\nThis is a proposal to stake an additional 10000 ETH."
+  },
+  "payload": {
+    "targets": [
+      "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+    ],
+    "values": [
+      "10000000000000000000000"
+    ],
+    "signatures": [
+      "submit(address)"
+    ],
+    "calldatas": [
+      "0x0000000000000000000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0xe6c7911a7fecb8f171af058579f3b390b6726ff2d63ea7e406ae09481120e0c4",
+    "executed_tx_hash": "0xdc47968e0f3e182027a3b59cac94b753153d5351152f6c5627e4f3ec2c6faa0a"
+  }
+}

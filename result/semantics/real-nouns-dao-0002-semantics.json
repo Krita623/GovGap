@@ -1,0 +1,75 @@
+{
+  "proposal_summary": "This proposal upgrades the Nouns DAO logic contract to V2, introducing dynamic quorum, voting with gas refunds, multiple bug fixes, and a two-step vetoer change process. It also funds the contract with 12 ETH for the new gas refund feature.",
+  "disclosed_entities": [
+    {
+      "name": "Nouns DAO logic contract",
+      "address": null,
+      "entity_type": "implementation",
+      "disclosure_level": "implicit",
+      "textual_evidence": "This proposal updates the Nouns DAO logic contract to a new version"
+    },
+    {
+      "name": "treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "periodic ETH transfer proposals from the treasury to the DAO contract"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x10072dfc23771101dc042fd0014f263316a6e400",
+      "textual_evidence": "https://mirror.xyz/0x10072dfc23771101dC042fD0014f263316a6E400/96zSoFfiT_RM2o2P9UbVKxPzVpB_trZqUjzllBE00BE"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "_setImplementation: upgrades DAO logic to V2.",
+      "canonical_action": "upgrade",
+      "object": "DAO logic",
+      "claimed_effect": "Upgrades DAO logic contract to version 2.",
+      "textual_evidence": "_setImplementation: upgrades DAO logic to V2.",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "_setDynamicQuorumParams: sets dynamic quorum params",
+      "canonical_action": "parameter_update",
+      "object": "Dynamic Quorum Parameters",
+      "claimed_effect": "Sets minimum quorum to 10%, maximum to 15%, and coefficient to 1.",
+      "textual_evidence": "_setDynamicQuorumParams: sets dynamic quorum params to: 1. Minimum quorum BPs: 10%... Maximum quorum BPs: 15%... Coefficient: 1",
+      "confidence": 1.0
+    },
+    {
+      "raw_action": "transfer: funding vote refunds with 12 ETH",
+      "canonical_action": "transfer",
+      "object": "12 ETH",
+      "claimed_effect": "Funds the vote gas refund mechanism with 12 ETH.",
+      "textual_evidence": "transfer: funding vote refunds with 12 ETH, which should be enough for just over 100 proposals at today's participation rate",
+      "confidence": 1.0
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal involves an implementation logic upgrade, introducing new parameters (dynamic quorum), and transferring funds for a new gas refund mechanism.",
+    "textual_evidence": "This proposal updates the Nouns DAO logic contract to a new version, with the following improvements and additions: 1. Dynamic Quorum... 2. Vote with Gas Refund..."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "_setImplementation",
+      "textual_evidence": "_setImplementation: upgrades DAO logic to V2."
+    },
+    {
+      "function_name": "_setDynamicQuorumParams",
+      "textual_evidence": "_setDynamicQuorumParams: sets dynamic quorum params to"
+    },
+    {
+      "function_name": "transfer",
+      "textual_evidence": "transfer: funding vote refunds with 12 ETH"
+    }
+  ],
+  "limitations": [
+    "No target contract addresses are explicitly provided in the proposal text, other than an address embedded within an informational mirror.xyz URL."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

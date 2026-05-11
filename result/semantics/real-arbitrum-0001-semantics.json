@@ -1,0 +1,57 @@
+{
+  "proposal_summary": "Activate support for the eth_sendRawTransactionConditional RPC endpoint on the Arbitrum One and Nova mainnets to support ERC-4337 account abstraction and bundlers.",
+  "disclosed_entities": [
+    {
+      "name": "Arbitrum DAO",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "implicit",
+      "textual_evidence": "This AIP proposes that the Arbitrum DAO activate support for this endpoint"
+    },
+    {
+      "name": "Arbitrum One",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "on the One and Nova mainnets."
+    },
+    {
+      "name": "Arbitrum Nova",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "on the One and Nova mainnets."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Change the load balancer config value to remove the 0 slots restriction",
+      "canonical_action": "parameter_update",
+      "object": "load balancer",
+      "claimed_effect": "Allows conditional transactions to use up to 1,000 slots and activates the eth_sendRawTransactionConditional endpoint.",
+      "textual_evidence": "steps to implement this AIP reduce to changing the load balancer config value as described above.",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "Implementation only requires changing a configuration value on the load balancer, as the feature is already developed and tested in Nitro v2.0.14.",
+    "textual_evidence": "The work already done by Offchain Labs on this endpoint means that the steps to implement this AIP reduce to changing the load balancer config value as described above."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "eth_sendRawTransactionConditional",
+      "textual_evidence": "Ethereum researchers have proposed a new RPC endpoint eth_sendRawTransactionConditional that adapts L2 sequencers"
+    },
+    {
+      "function_name": "eth_sendRawTransaction",
+      "textual_evidence": "This endpoint adds new options to the standard eth_sendRawTransaction endpoint"
+    }
+  ],
+  "limitations": [
+    "No specific target contract addresses or precise configuration parameters are detailed in the proposal text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

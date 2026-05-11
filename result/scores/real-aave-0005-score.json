@@ -1,0 +1,720 @@
+{
+  "metadata": {
+    "proposal_id": "35",
+    "generated_at": "2026-05-08T11:15:23.748912+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 2,
+    "score_scale": 10,
+    "risk_level": "CRITICAL",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 2 capped by highest severity CRITICAL."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "Add the FEI stablecoin as a borrowable (but not collateral) asset on Aave V2.",
+    "disclosed_entities": [
+      {
+        "name": "aFEI",
+        "address": "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Interest bearing aFEI: 0xAcF35Af93a65904C50ED93dfb010bAAdEBb4ccF0"
+      },
+      {
+        "name": "variableDebtFEI",
+        "address": "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Variable Debt variableDebtFEI: 0x1B669D5034143E272b5Ff548f2878735A2F3505A"
+      },
+      {
+        "name": "stableDebtFEI",
+        "address": "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Stable Debt stableDebtFEI: 0x1DdcF68f4C2600CBE534212765F964342a2faf02"
+      },
+      {
+        "name": "Strategy Implementation for FEI",
+        "address": "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Strategy Implementation for FEI: 0xF0bA2a8c12A2354c075b363765EAe825619bd490"
+      },
+      {
+        "name": "TRIBE Incentives Controller Implementation",
+        "address": "0xff865335401f12b88fa3ff5a3a51685a7f224191",
+        "entity_type": "implementation",
+        "disclosure_level": "explicit",
+        "textual_evidence": "TRIBE Incentives Controller Implementation: 0xff865335401f12b88fa3ff5a3a51685a7f224191"
+      },
+      {
+        "name": "TRIBE Incentives Controller Proxy",
+        "address": "0xdee5c1662bbff8f80f7c572d8091bf251b3b0dab",
+        "entity_type": "proxy",
+        "disclosure_level": "explicit",
+        "textual_evidence": "and proxy: 0xDee5c1662bBfF8f80f7c572D8091BF251b3B0dAB"
+      },
+      {
+        "name": "FEI",
+        "address": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Token Contract - https://etherscan.io/token/0x956F47F50A910163D8BF957Cf5846D573E7f87CA"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+        "textual_evidence": "Interest bearing aFEI: 0xAcF35Af93a65904C50ED93dfb010bAAdEBb4ccF0"
+      },
+      {
+        "address": "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+        "textual_evidence": "Variable Debt variableDebtFEI: 0x1B669D5034143E272b5Ff548f2878735A2F3505A"
+      },
+      {
+        "address": "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+        "textual_evidence": "Stable Debt stableDebtFEI: 0x1DdcF68f4C2600CBE534212765F964342a2faf02"
+      },
+      {
+        "address": "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+        "textual_evidence": "Strategy Implementation for FEI: 0xF0bA2a8c12A2354c075b363765EAe825619bd490"
+      },
+      {
+        "address": "0xff865335401f12b88fa3ff5a3a51685a7f224191",
+        "textual_evidence": "TRIBE Incentives Controller Implementation: 0xff865335401f12b88fa3ff5a3a51685a7f224191"
+      },
+      {
+        "address": "0xdee5c1662bbff8f80f7c572d8091bf251b3b0dab",
+        "textual_evidence": "and proxy: 0xDee5c1662bBfF8f80f7c572D8091BF251b3B0dAB"
+      },
+      {
+        "address": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "textual_evidence": "Token Contract - https://etherscan.io/token/0x956F47F50A910163D8BF957Cf5846D573E7f87CA"
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Add FEI as a borrowable asset on Aave V2",
+        "canonical_action": "parameter_update",
+        "object": "Aave V2 market",
+        "claimed_effect": "Enables FEI to be borrowed and deposited, utilizing Chainlink oracle, and specifies specific LTV, threshold, and strategy parameters.",
+        "textual_evidence": "FEI will only be used for depositing, not as collateral. The following params are proposed: Strategy: rateStrategyStableOne, Base LTV As Collateral: 0",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "moderate",
+      "reason": "It involves listing a new asset on Aave, setting custom parameters, and deploying multiple collateral, debt, strategy, and incentive contracts.",
+      "textual_evidence": "Following the steps from the Aave governance docs, the following contracts were generated... Additionally the Fei Smart Contracts team contributed an ERC-20 compatibile incentives controller contract"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Payload smart contract execution logic is not explicitly provided in the text, only the resulting configuration variables and addresses."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "value": "0x0",
+        "input": "0x3fa57231000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf02000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd49000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x3fa57231",
+        "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+        "decoded_args": [
+          "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+          0,
+          0,
+          0,
+          2000,
+          18,
+          true,
+          false,
+          false
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0x85c858b1",
+        "output": "0x000000000000000000000000311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "depth": 1,
+        "function_selector": "0x85c858b1",
+        "decoded_function": "getLendingPoolConfigurator()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+        "value": "0",
+        "input": "0xb16a19de",
+        "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "depth": 1,
+        "function_selector": "0xb16a19de",
+        "decoded_function": "UNDERLYING_ASSET_ADDRESS()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+        "value": "0",
+        "input": "0xb16a19de",
+        "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "depth": 1,
+        "function_selector": "0xb16a19de",
+        "decoded_function": "UNDERLYING_ASSET_ADDRESS()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+        "value": "0",
+        "input": "0xb16a19de",
+        "output": "0x000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "depth": 1,
+        "function_selector": "0xb16a19de",
+        "decoded_function": "UNDERLYING_ASSET_ADDRESS()",
+        "decoded_args": [],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "to_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "value": "0x0",
+        "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 1,
+        "function_selector": "0x6e801a71",
+        "decoded_function": "initReserve(address,address,address,uint8,address)",
+        "decoded_args": [
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          18,
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "value": "0x0",
+        "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x6e801a71",
+        "decoded_function": "initReserve(address,address,address,uint8,address)",
+        "decoded_args": [
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          18,
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490"
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "value": "0",
+        "input": "0xaecda378",
+        "output": "0x0000000000000000000000005300a1a15135ea4dc7ad5a167152c01efc9b192a",
+        "depth": 3,
+        "function_selector": "0xaecda378",
+        "decoded_function": "getPoolAdmin()",
+        "decoded_args": [],
+        "error": null
+      }
+    ],
+    "max_depth": 3,
+    "unique_addresses": [
+      "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+      "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+      "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+      "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+      "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+      "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 5,
+    "external_call_count": 2,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "UNDERLYING_ASSET_ADDRESS()",
+      "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+      "getLendingPoolConfigurator()",
+      "getPoolAdmin()",
+      "initReserve(address,address,address,uint8,address)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "35:0:arbitrary_call",
+      "action_type": "arbitrary_call",
+      "severity_hint": "high",
+      "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+      "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+      "depth": 0,
+      "function_selector": "0x3fa57231",
+      "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "value": "0x0",
+        "input": "0x3fa57231000000000000000000000000956f47f50a910163d8bf957cf5846d573e7f87ca000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf02000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd49000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000000000000000000000000000012000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 0,
+        "function_selector": "0x3fa57231",
+        "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+        "decoded_args": [
+          "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+          0,
+          0,
+          0,
+          2000,
+          18,
+          true,
+          false,
+          false
+        ],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    },
+    {
+      "id": "35:6:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+      "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+      "depth": 2,
+      "function_selector": "0x6e801a71",
+      "decoded_function": "initReserve(address,address,address,uint8,address)",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "value": "0x0",
+        "input": "0x6e801a71000000000000000000000000acf35af93a65904c50ed93dfb010baadebb4ccf00000000000000000000000001b669d5034143e272b5ff548f2878735a2f3505a0000000000000000000000001ddcf68f4c2600cbe534212765f964342a2faf020000000000000000000000000000000000000000000000000000000000000012000000000000000000000000f0ba2a8c12a2354c075b363765eae825619bd490",
+        "output": "0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000023333000000000000000000000000000000000000000000000000000000000000",
+        "depth": 2,
+        "function_selector": "0x6e801a71",
+        "decoded_function": "initReserve(address,address,address,uint8,address)",
+        "decoded_args": [
+          "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+          "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+          "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+          18,
+          "0xf0ba2a8c12a2354c075b363765eae825619bd490"
+        ],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "summary": "An undisclosed address participates in an uncovered critical business action.",
+      "disclosed_addresses": [
+        "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+        "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+        "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+        "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+        "0xdee5c1662bbff8f80f7c572d8091bf251b3b0dab",
+        "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+        "0xff865335401f12b88fa3ff5a3a51685a7f224191"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+        "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+        "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+        "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "CRITICAL",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+                "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+                "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c"
+              ],
+              "related_actions": [
+                {
+                  "id": "35:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+                  "depth": 0,
+                  "function_selector": "0x3fa57231",
+                  "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                },
+                {
+                  "id": "35:6:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+                  "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+                  "depth": 2,
+                  "function_selector": "0x6e801a71",
+                  "decoded_function": "initReserve(address,address,address,uint8,address)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "arbitrary_call"
+              ],
+              "material_related_actions": [
+                {
+                  "id": "35:0:arbitrary_call",
+                  "action_type": "arbitrary_call",
+                  "severity_hint": "high",
+                  "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+                  "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+                  "depth": 0,
+                  "function_selector": "0x3fa57231",
+                  "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ]
+            }
+          ],
+          "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+            "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+            "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
+            "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+            "0xdee5c1662bbff8f80f7c572d8091bf251b3b0dab",
+            "0xf0ba2a8c12a2354c075b363765eae825619bd490",
+            "0xff865335401f12b88fa3ff5a3a51685a7f224191"
+          ],
+          "trace_unique_addresses": [
+            "0x1b669d5034143e272b5ff548f2878735a2f3505a",
+            "0x1ddcf68f4c2600cbe534212765f964342a2faf02",
+            "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+            "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+            "0xacf35af93a65904c50ed93dfb010baadebb4ccf0",
+            "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+            "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+            "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+            "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+            "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "moderate",
+      "actual_max_depth": 3,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "moderate",
+            "reason": "It involves listing a new asset on Aave, setting custom parameters, and deploying multiple collateral, debt, strategy, and incentive contracts.",
+            "textual_evidence": "Following the steps from the Aave governance docs, the following contracts were generated... Additionally the Fei Smart Contracts team contributed an ERC-20 compatibile incentives controller contract"
+          },
+          "actual_max_depth": 3,
+          "delegatecall_count": 1,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "arbitrary_call"
+          ],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 2,
+      "severity": "CRITICAL",
+      "matched_functions": [
+        "UNDERLYING_ASSET_ADDRESS()",
+        "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+        "getLendingPoolConfigurator()",
+        "getPoolAdmin()",
+        "initReserve(address,address,address,uint8,address)"
+      ],
+      "unmatched_functions": [
+        "arbitrary_call"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "parameter_update"
+      ],
+      "actual_actions": [
+        "arbitrary_call"
+      ],
+      "summary": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "CRITICAL",
+          "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "parameter_update"
+              ],
+              "actual_business_actions": [
+                "arbitrary_call"
+              ],
+              "wrapper_actions": [
+                "delegatecall"
+              ],
+              "decoded_functions": [
+                "UNDERLYING_ASSET_ADDRESS()",
+                "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+                "getLendingPoolConfigurator()",
+                "getPoolAdmin()",
+                "initReserve(address,address,address,uint8,address)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Add FEI as a borrowable asset on Aave V2",
+              "canonical_action": "parameter_update",
+              "object": "Aave V2 market",
+              "claimed_effect": "Enables FEI to be borrowed and deposited, utilizing Chainlink oracle, and specifies specific LTV, threshold, and strategy parameters.",
+              "textual_evidence": "FEI will only be used for depositing, not as collateral. The following params are proposed: Strategy: rateStrategyStableOne, Base LTV As Collateral: 0",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "35:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "depth": 0,
+              "function_selector": "0x3fa57231",
+              "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "35:6:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+              "depth": 2,
+              "function_selector": "0x6e801a71",
+              "decoded_function": "initReserve(address,address,address,uint8,address)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [
+            "arbitrary_call"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "UNDERLYING_ASSET_ADDRESS()",
+            "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+            "getLendingPoolConfigurator()",
+            "getPoolAdmin()",
+            "initReserve(address,address,address,uint8,address)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "CRITICAL",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+            "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+            "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
+            "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "related_actions": [
+            {
+              "id": "35:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "depth": 0,
+              "function_selector": "0x3fa57231",
+              "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            },
+            {
+              "id": "35:6:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x311bb771e4f8952e6da169b425e7e92d6ac45756",
+              "to_address": "0x246ca67522df5895cd6cf8807ec161954ea1ba61",
+              "depth": 2,
+              "function_selector": "0x6e801a71",
+              "decoded_function": "initReserve(address,address,address,uint8,address)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "arbitrary_call"
+          ],
+          "material_related_actions": [
+            {
+              "id": "35:0:arbitrary_call",
+              "action_type": "arbitrary_call",
+              "severity_hint": "high",
+              "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+              "to_address": "0xe775a3a0a1cdc50bd48d5f47c442a0a4f5f24473",
+              "depth": 0,
+              "function_selector": "0x3fa57231",
+              "decoded_function": "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ]
+        }
+      ],
+      "recommendation": "Pause or escalate manual review because an uncovered critical business action is linked to an undisclosed address.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "CRITICAL",
+      "description": "Text claims a low-risk action while the trace includes a sensitive business action.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "parameter_update"
+          ],
+          "actual_business_actions": [
+            "arbitrary_call"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "UNDERLYING_ASSET_ADDRESS()",
+            "execute(address,address,address,address,address,uint256,uint256,uint256,uint256,uint8,bool,bool,bool)",
+            "getLendingPoolConfigurator()",
+            "getPoolAdmin()",
+            "initReserve(address,address,address,uint8,address)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "proposal_summary": "Proposal by Flipside Crypto to onboard cbETH (Coinbase Wrapped Staked ETH) to the Aave Ethereum V3 pool.",
+  "disclosed_entities": [
+    {
+      "name": "cbETH",
+      "address": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "asset: 0xBe9895146f7AF43049ca1c1AE358B0541Ea49704"
+    },
+    {
+      "name": "Price feed adapter",
+      "address": "0x5f4d15d761528c57a5c30c43c1dab26fc5452731",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "0x5f4d15d761528c57a5C30c43c1DAb26Fc5452731 adapter of cbETH/ETH Chainlink"
+    },
+    {
+      "name": "Interest rate strategy",
+      "address": "0x24701a6368ff6d2874d6b8cdadd461552b8a5283",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Interest rate strategy 0x24701A6368Ff6D2874d6b8cDadd461552B8A5283"
+    },
+    {
+      "name": "GenericV3ListingEngine",
+      "address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The proposal payload uses the GenericListingEngine... 0xC51e6E38d406F98049622Ca54a6096a23826B426"
+    },
+    {
+      "name": "Chainlink cbETH/ETH price feed",
+      "address": "0xf017fcb346a1885194689ba23eff2fe6fa5c483b",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adapter of the Chainlink cbETH/ETH price feed"
+    },
+    {
+      "name": "AaveV3EthcbETHPayload",
+      "address": "0xd91d1331db4f436daf47ec9dd86decb8eef946b4",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "AaveV3EthcbETHPayload: ProposalPayload"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+      "textual_evidence": "asset: 0xBe9895146f7AF43049ca1c1AE358B0541Ea49704"
+    },
+    {
+      "address": "0x5f4d15d761528c57a5c30c43c1dab26fc5452731",
+      "textual_evidence": "Price feed 0x5f4d15d761528c57a5C30c43c1DAb26Fc5452731"
+    },
+    {
+      "address": "0x24701a6368ff6d2874d6b8cdadd461552b8a5283",
+      "textual_evidence": "Interest rate strategy 0x24701A6368Ff6D2874d6b8cDadd461552B8A5283"
+    },
+    {
+      "address": "0xc51e6e38d406f98049622ca54a6096a23826b426",
+      "textual_evidence": "GenericListingEngine 0xC51e6E38d406F98049622Ca54a6096a23826B426"
+    },
+    {
+      "address": "0xf017fcb346a1885194689ba23eff2fe6fa5c483b",
+      "textual_evidence": "Chainlink cbETH/ETH price feed"
+    },
+    {
+      "address": "0xd91d1331db4f436daf47ec9dd86decb8eef946b4",
+      "textual_evidence": "AaveV3EthcbETHPayload: ProposalPayload"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Onboard cbETH using GenericListingEngine",
+      "canonical_action": "parameter_update",
+      "object": "Aave Ethereum V3 Pool",
+      "claimed_effect": "Adds cbETH to the Aave V3 pool with defined risk parameters such as LTV 67%, Supply Cap 10k.",
+      "textual_evidence": "The proposal payload uses the GenericListingEngine to perform a new asset listing with the following parameters:",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal uses a standard payload (GenericListingEngine) to list a new asset.",
+    "textual_evidence": "The proposal payload uses the GenericListingEngine to perform a new asset listing"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No limitations mentioned in the provided text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "dao_id": "compound",
+    "name": "Compound",
+    "tally_slug": "compound",
+    "expected_chain_id": 1
+  },
+  {
+    "dao_id": "uniswap",
+    "name": "Uniswap",
+    "tally_slug": "uniswap",
+    "expected_chain_id": 1
+  },
+  {
+    "dao_id": "ens",
+    "name": "ENS",
+    "tally_slug": "ens",
+    "expected_chain_id": 1
+  },
+  {
+    "dao_id": "arbitrum",
+    "name": "Arbitrum",
+    "tally_slug": "arbitrum",
+    "expected_chain_id": 42161
+  },
+  {
+    "dao_id": "aave",
+    "name": "Aave",
+    "tally_slug": "aave",
+    "expected_chain_id": 1
+  },
+  {
+    "dao_id": "nouns-dao",
+    "name": "Nouns DAO",
+    "tally_slug": "nounsdao",
+    "expected_chain_id": 1
+  }
+]

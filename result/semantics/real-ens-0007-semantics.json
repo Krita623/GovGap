@@ -1,0 +1,53 @@
+{
+  "proposal_summary": "This proposal requests to initiate a new daily stream of 15,075.33 USDC from the ENS DAO treasury to ENS Labs, starting January 1, 2025, to fund the development and security audits of ENSv2.",
+  "disclosed_entities": [
+    {
+      "name": "ENS DAO treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "explicit",
+      "textual_evidence": "initiate a new daily stream of 15,075.33 USDC from the ENS DAO treasury"
+    },
+    {
+      "name": "ENS Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "from the ENS DAO treasury to ENS Labs"
+    },
+    {
+      "name": "Existing Streaming Contract",
+      "address": "0xb1377e4f32e6746444970823d5506f98f5a04201",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "existing streaming contract of 11,500 USDC/day at 0xB1377e4f32e6746444970823D5506F98f5A04201"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xb1377e4f32e6746444970823d5506f98f5a04201",
+      "textual_evidence": "existing streaming contract of 11,500 USDC/day at 0xB1377e4f32e6746444970823D5506F98f5A04201"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "initiate a new daily stream of 15,075.33 USDC",
+      "canonical_action": "treasury_operation",
+      "object": "15,075.33 USDC",
+      "claimed_effect": "Increases daily funding for ENS Labs to develop ENSv2",
+      "textual_evidence": "This executable proposal will initiate a new daily stream of 15,075.33 USDC from the ENS DAO treasury to ENS Labs, starting on January 1, 2025",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only involves creating a new token stream from the treasury.",
+    "textual_evidence": "initiate a new daily stream of 15,075.33 USDC from the ENS DAO treasury"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific target addresses for the newly created stream are provided in the text, only the general entity 'ENS Labs'."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "proposal_id": "396",
+    "generated_at": "2026-05-08T11:15:23.827906+00:00",
+    "chain_id": 1,
+    "simulation_status": "reverted_with_trace",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 6,
+    "score_scale": 10,
+    "risk_level": "MEDIUM",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 7 capped by highest severity MEDIUM."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "A proposal to renew Gauntlet's 12-month continuous market risk management engagement with Aave, covering V2, V3, GHO, and an insolvency refund.",
+    "disclosed_entities": [
+      {
+        "name": "Gauntlet",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "explicit",
+        "textual_evidence": "A proposal to renew Gauntlet’s 12-month engagement with Aave"
+      },
+      {
+        "name": "aUSDT",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The annual fee will be a fixed fee of $1,600,000. This will be 50% in GHO and 50% in aUSDT."
+      },
+      {
+        "name": "GHO",
+        "address": null,
+        "entity_type": "token",
+        "disclosure_level": "explicit",
+        "textual_evidence": "The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year."
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "Deposit 480,000 aUSDT in a vault for the insolvency refund",
+        "canonical_action": "treasury_operation",
+        "object": "aUSDT",
+        "claimed_effect": "Sets aside 30% of the total annual fee in a vault to act as an insolvency refund.",
+        "textual_evidence": "30% of the total annual fee (480,000 in aUSDT) will be deposited in a vault for the insolvency refund.",
+        "confidence": 0.95
+      },
+      {
+        "raw_action": "Stream 320,000 aUSDT and 800,000 GHO linearly over 1 year",
+        "canonical_action": "treasury_operation",
+        "object": "aUSDT and GHO",
+        "claimed_effect": "Pays Gauntlet's remaining service fee progressively over 12 months.",
+        "textual_evidence": "The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year.",
+        "confidence": 0.95
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal only consists of transferring and streaming specific token amounts to compensate a service provider.",
+      "textual_evidence": "The Proposal Payload does the following: 30% of the total annual fee (480,000 in aUSDT) will be deposited... The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "No specific smart contract addresses or vault addresses are provided in the proposal text.",
+      "Functions and stream mechanics are not explicitly detailed, only described conceptually."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xec568fffba86c094cf06b22134b23074dfe2252c",
+        "to_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dabad81af85554e9ae636395611c58f7ec1aaec5000000000000000000000000000000000000000000000000000000000000001d",
+        "output": "0xdb10c686",
+        "depth": 0,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            1,
+            1,
+            "0xdabad81af85554e9ae636395611c58f7ec1aaec5",
+            29
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dabad81af85554e9ae636395611c58f7ec1aaec5000000000000000000000000000000000000000000000000000000000000001d",
+        "output": "0xdb10c686",
+        "depth": 1,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            1,
+            1,
+            "0xdabad81af85554e9ae636395611c58f7ec1aaec5",
+            29
+          ]
+        ],
+        "error": "execution reverted"
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+      "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+      "0xec568fffba86c094cf06b22134b23074dfe2252c"
+    ],
+    "delegatecall_count": 1,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "396:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+      "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+      "depth": 1,
+      "function_selector": "0x9ec17673",
+      "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+      "value": "0x0",
+      "evidence_source": "reverted_trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "value": "0x0",
+        "input": "0x9ec1767300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000dabad81af85554e9ae636395611c58f7ec1aaec5000000000000000000000000000000000000000000000000000000000000001d",
+        "output": "0xdb10c686",
+        "depth": 1,
+        "function_selector": "0x9ec17673",
+        "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+        "decoded_args": [
+          [
+            1,
+            1,
+            "0xdabad81af85554e9ae636395611c58f7ec1aaec5",
+            29
+          ]
+        ],
+        "error": "execution reverted"
+      },
+      "confidence": 0.75
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 7,
+      "severity": "MEDIUM",
+      "summary": "Trace includes undisclosed addresses without evidence of an uncovered sensitive business action.",
+      "disclosed_addresses": [],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+        "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+        "0xec568fffba86c094cf06b22134b23074dfe2252c"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "MEDIUM",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+                "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+                "0xec568fffba86c094cf06b22134b23074dfe2252c"
+              ],
+              "related_actions": [
+                {
+                  "id": "396:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+                  "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+                  "depth": 1,
+                  "function_selector": "0x9ec17673",
+                  "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+                  "value": "0x0",
+                  "evidence_source": "reverted_trace",
+                  "confidence": 0.75
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [],
+          "trace_unique_addresses": [
+            "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+            "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+            "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 1,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal only consists of transferring and streaming specific token amounts to compensate a service provider.",
+            "textual_evidence": "The Proposal Payload does the following: 30% of the total annual fee (480,000 in aUSDT) will be deposited... The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year."
+          },
+          "actual_max_depth": 1,
+          "delegatecall_count": 1,
+          "business_actions_match": true,
+          "actual_business_actions": [],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "treasury_operation",
+        "treasury_operation"
+      ],
+      "actual_actions": [],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Deposit 480,000 aUSDT in a vault for the insolvency refund",
+              "canonical_action": "treasury_operation",
+              "object": "aUSDT",
+              "claimed_effect": "Sets aside 30% of the total annual fee in a vault to act as an insolvency refund.",
+              "textual_evidence": "30% of the total annual fee (480,000 in aUSDT) will be deposited in a vault for the insolvency refund.",
+              "confidence": 0.95
+            },
+            {
+              "raw_action": "Stream 320,000 aUSDT and 800,000 GHO linearly over 1 year",
+              "canonical_action": "treasury_operation",
+              "object": "aUSDT and GHO",
+              "claimed_effect": "Pays Gauntlet's remaining service fee progressively over 12 months.",
+              "textual_evidence": "The remaining 320,000 in aUSDT and 800,000 GHO will be streamed linearly over 1 year.",
+              "confidence": 0.95
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "396:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+              "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+              "depth": 1,
+              "function_selector": "0x9ec17673",
+              "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "actual_business_actions": [],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "forwardPayloadForExecution((uint256,uint8,address,uint40))"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "MEDIUM",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+            "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+            "0xec568fffba86c094cf06b22134b23074dfe2252c"
+          ],
+          "related_actions": [
+            {
+              "id": "396:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x9aee0b04504cef83a65ac3f0e838d0593bcb2bc7",
+              "to_address": "0x323f2c8e227b3f0d88b047ed16581fc0b6b9b1d7",
+              "depth": 1,
+              "function_selector": "0x9ec17673",
+              "decoded_function": "forwardPayloadForExecution((uint256,uint8,address,uint40))",
+              "value": "0x0",
+              "evidence_source": "reverted_trace",
+              "confidence": 0.75
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

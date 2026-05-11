@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "proposal_id": "mutant-transfer-0003",
+    "generated_at": "2026-05-11T06:10:07.002136+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 4,
+    "score_scale": 10,
+    "risk_level": "HIGH",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 4 capped by highest severity HIGH."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "This proposal refreshes accounting records and does not mention token movement.",
+    "disclosed_entities": [
+      {
+        "name": "DAO timelock",
+        "address": "0x1000000000000000000000000000000000000001",
+        "entity_type": "timelock",
+        "disclosure_level": "implicit",
+        "textual_evidence": "standard DAO execution context"
+      }
+    ],
+    "disclosed_addresses": [],
+    "claimed_actions": [
+      {
+        "raw_action": "maintenance",
+        "canonical_action": "maintenance",
+        "object": null,
+        "claimed_effect": "Refresh accounting records without moving assets.",
+        "textual_evidence": "This proposal refreshes accounting records and does not mention token movement.",
+        "confidence": 0.82
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The text describes routine single-step maintenance.",
+      "textual_evidence": "This proposal refreshes accounting records and does not mention token movement."
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "Synthetic mutant semantics intentionally omit the risky business action."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x3000000000000000000000000000000000000003",
+        "value": "0x0",
+        "input": "0xa9059cbb00000000000000000000000040000000000000000000000000000000000000030000000000000000000000000000000000000000000000003782dace9d900000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x1000000000000000000000000000000000000001",
+      "0x3000000000000000000000000000000000000003"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "transfer(address,uint256)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "mutant-transfer-0003:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0x1000000000000000000000000000000000000001",
+      "to_address": "0x3000000000000000000000000000000000000003",
+      "depth": 0,
+      "function_selector": "0xa9059cbb",
+      "decoded_function": "transfer(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1000000000000000000000000000000000000001",
+        "to_address": "0x3000000000000000000000000000000000000003",
+        "value": "0x0",
+        "input": "0xa9059cbb00000000000000000000000040000000000000000000000000000000000000030000000000000000000000000000000000000000000000003782dace9d900000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xa9059cbb",
+        "decoded_function": "transfer(address,uint256)",
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 5,
+      "severity": "HIGH",
+      "summary": "An undisclosed address participates in an uncovered approval or transfer action.",
+      "disclosed_addresses": [
+        "0x1000000000000000000000000000000000000001"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0x3000000000000000000000000000000000000003"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "HIGH",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0x3000000000000000000000000000000000000003"
+              ],
+              "related_actions": [
+                {
+                  "id": "mutant-transfer-0003:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0x1000000000000000000000000000000000000001",
+                  "to_address": "0x3000000000000000000000000000000000000003",
+                  "depth": 0,
+                  "function_selector": "0xa9059cbb",
+                  "decoded_function": "transfer(address,uint256)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [],
+              "uncovered_business_actions": [
+                "transfer"
+              ],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x1000000000000000000000000000000000000001"
+          ],
+          "trace_unique_addresses": [
+            "0x1000000000000000000000000000000000000001",
+            "0x3000000000000000000000000000000000000003"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0x3000000000000000000000000000000000000003"
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 10,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 0,
+      "depth_mismatch": false,
+      "summary": "Observed trace depth is consistent with the claimed complexity.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The text describes routine single-step maintenance.",
+            "textual_evidence": "This proposal refreshes accounting records and does not mention token movement."
+          },
+          "actual_max_depth": 0,
+          "delegatecall_count": 0,
+          "business_actions_match": false,
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "uncovered_business_actions": [
+            "transfer"
+          ]
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 4,
+      "severity": "HIGH",
+      "matched_functions": [
+        "transfer(address,uint256)"
+      ],
+      "unmatched_functions": [
+        "transfer"
+      ],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "maintenance"
+      ],
+      "actual_actions": [
+        "transfer"
+      ],
+      "summary": "Claimed business action categories differ from extracted business actions.",
+      "findings": [
+        {
+          "id": "semantic.function_mismatch",
+          "title": "Claimed actions do not fully match trace actions",
+          "severity": "HIGH",
+          "description": "Claimed business action categories differ from extracted business actions.",
+          "evidence_type": "rule_engine",
+          "evidence": [
+            {
+              "claimed_actions": [
+                "maintenance"
+              ],
+              "actual_business_actions": [
+                "transfer"
+              ],
+              "wrapper_actions": [],
+              "decoded_functions": [
+                "transfer(address,uint256)"
+              ],
+              "unknown_selectors": []
+            }
+          ],
+          "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "maintenance",
+              "canonical_action": "maintenance",
+              "object": null,
+              "claimed_effect": "Refresh accounting records without moving assets.",
+              "textual_evidence": "This proposal refreshes accounting records and does not mention token movement.",
+              "confidence": 0.82
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "mutant-transfer-0003:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1000000000000000000000000000000000000001",
+              "to_address": "0x3000000000000000000000000000000000000003",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "transfer(address,uint256)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "HIGH",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0x3000000000000000000000000000000000000003"
+          ],
+          "related_actions": [
+            {
+              "id": "mutant-transfer-0003:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0x1000000000000000000000000000000000000001",
+              "to_address": "0x3000000000000000000000000000000000000003",
+              "depth": 0,
+              "function_selector": "0xa9059cbb",
+              "decoded_function": "transfer(address,uint256)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [],
+          "uncovered_business_actions": [
+            "transfer"
+          ],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review whether the proposal text sufficiently discloses the business action and its counterparty.",
+      "confidence": 0.9
+    },
+    {
+      "id": "semantic.function_mismatch",
+      "title": "Claimed actions do not fully match trace actions",
+      "severity": "HIGH",
+      "description": "Claimed business action categories differ from extracted business actions.",
+      "evidence_type": "rule_engine",
+      "evidence": [
+        {
+          "claimed_actions": [
+            "maintenance"
+          ],
+          "actual_business_actions": [
+            "transfer"
+          ],
+          "wrapper_actions": [],
+          "decoded_functions": [
+            "transfer(address,uint256)"
+          ],
+          "unknown_selectors": []
+        }
+      ],
+      "recommendation": "Compare proposal action wording with decoded functions and risk actions before relying on the text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

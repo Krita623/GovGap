@@ -1,0 +1,36 @@
+{
+  "risk_actions": [
+    {
+      "id": "773:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+      "to_address": "0x6a024f521f83906671e1a23a8b6c560be7e980f4",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x186a0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xb1a32fc9f9d8b2cf86c068cae13108809547ef71",
+        "to_address": "0x6a024f521f83906671e1a23a8b6c560be7e980f4",
+        "value": "0x186a0",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 1,
+    "filtered_count": 0,
+    "deduplicated_count": 0,
+    "final_risk_action_count": 1
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "benchmark_id": "real-nouns-dao-0016",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "795",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/795",
+    "source": "tally",
+    "created_block": 22442654,
+    "executed_block": 22511857,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Nouns infra & dev tooling revamp + Bounty program pilot",
+    "description": "# Nouns infra & dev tooling revamp + Bounty program pilot\n\n## TL;DR:\n\n- Stream volky.eth $18k over 3 months to work on:\n  - revamping nouns.wtf & nouns.center \n  - modernizing development tooling \n  - establishing a clear process and guidelines for community contributions  \n- Retro-comp volky with 1 Noun for the work done over the past month on [prop 773](https://www.nouns.camp/proposals/773) \n- Set aside $2k for community contribution bounties \n\n## Who\n\nvolky.eth \ud83d\udc4b more context on [prop 773](https://www.nouns.camp/proposals/773)\n\n## What\n\nThe plan is: I'll do a lot of work upfront to update nouns.wtf + nouns.center, tidy up the codebase and modernize the tooling, dependencies and contribution practices. The long term vision is to rely mostly on community contributions, with a slim part-time guild of core contributors that take care of chores, integrating contributions and ensuring the health of the infrastructure.\n\n- fix nouns.wtf \n- fix nouns center \n- process github issues and PRs \n- upgrade to modern tech stack \n- improve our developer docs \n- implement contribution processes and guidelines (both code & content) \n\n### Bounty program pilot\n\nI'm asking for $2k to seed a bounty program\nFunds will be kept in a [2/3 multisig](https://app.safe.global/home?safe=eth:0x0B276E727b3c09545593c484966138a11B1a32e7) with volky.eth + DUNA admins (satori.wtf, indexcard.eth)\n\nI'll be using [https://dework.xyz/](https://dework.xyz/) to assign bounties to some issues and to bootstrap the community contributions process. Will include both code & content contributions.\n\nTo be kicked off after the contribution process and guidelines are established.\n\n## Why\n\nNouns.wtf is the #1 onboarding touchpoint for Nouns, and it's broken and outdated\nWe have to fix it, and to ensure it never goes stale like that again.\n\nWe've got a ton of extremely talented developers in Nouns. They mostly work on their own things, though, and usually build most of it from scratch.\n\nWe should leverage that talent to improve our core infrastructure and reduce the amount of redundant work by maintaining tooling and infra that serves the whole Nouns ecosystem.\n\nThat way we can have better clients, more vibe-coded experiments, more fun, less boilerplate...all of that while being more conservative with treasury usage in comparison to funding a lot of isolated initiatives.\n\n## Duration\n\n3 months\n\n## Compensation\n\n- 1 Noun as retro comp for [the work already done](https://www.updates.wtf/update/773-2) up to now \n- $6k/mo, streamed over 3 months, totalling $18k "
+  },
+  "payload": {
+    "targets": [
+      "0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03",
+      "0x0fd206FC7A7dBcD5661157eDCb1FFDD0D02A61ff",
+      "0xd97Bcd9f47cEe35c0a9ec1dc40C1269afc9E8E1D",
+      "0xd97Bcd9f47cEe35c0a9ec1dc40C1269afc9E8E1D"
+    ],
+    "values": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "signatures": [
+      "safeTransferFrom(address,address,uint256)",
+      "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+      "sendOrRegisterDebt(address,uint256)",
+      "sendOrRegisterDebt(address,uint256)"
+    ],
+    "calldatas": [
+      "0x000000000000000000000000b1a32fc9f9d8b2cf86c068cae13108809547ef710000000000000000000000006a024f521f83906671e1a23a8b6c560be7e980f40000000000000000000000000000000000000000000000000000000000000147",
+      "0x0000000000000000000000006a024f521f83906671e1a23a8b6c560be7e980f40000000000000000000000000000000000000000000000000000000430e23400000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4800000000000000000000000000000000000000000000000000000000682558b000000000000000000000000000000000000000000000000000000000689ea2b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000948da71e0d4322ef249de7a6a08de9f486d12612",
+      "0x000000000000000000000000948da71e0d4322ef249de7a6a08de9f486d126120000000000000000000000000000000000000000000000000000000430e23400",
+      "0x0000000000000000000000000b276e727b3c09545593c484966138a11b1a32e70000000000000000000000000000000000000000000000000000000077359400"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x7411850b5723fcc6f97bf9d7c8e8aa0adebc4ba1694d34a431e1f87ed5672fac",
+    "executed_tx_hash": "0x2b140a878bc291018609907082d2030db4b25364589453584ad4c399e667e633"
+  }
+}

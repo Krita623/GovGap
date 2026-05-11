@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-uniswap-0001",
+  "dao": {
+    "name": "Uniswap",
+    "chain_id": 1,
+    "governor_address": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "14",
+    "proposal_url": "https://www.tally.xyz/gov/uniswap/proposal/14",
+    "source": "tally",
+    "created_block": 14495579,
+    "executed_block": 14567223,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Polygon 1bp Fee Tier",
+    "description": "# Polygon 1bp Fee Tier\n\n## Description\n\nTo date, Uniswap has four deployments: Ethereum, Abritrum, Optimism, and Polygon. In addition to these deployments, there are proposals to deploy Uniswap on Harmony, Celo, and more chains expected soon. The protocol should continue to deploy to new markets, but as the protocol continues to grow, it is vital the protocol learns to manage each of the deployments. With each new chain, there is new infrastructure that needs to be adapted to so that UNI on Ethereum can govern all of these deployments.\n\nGFX Labs has been researching the various deployments and has prepared the first Uniswap cross-chain proposal to demonstrate how mainnet UNI can manage deployments on other chains.\n\nPolygon has a messaging mechanism between Ethereum and Polygon called the [Fx-Portal](https://docs.polygon.technology/docs/develop/l1-l2-communication/fx-portal/). The portal functions via three contracts: FxRoot, State Sender, & FxChild. Messages can be sent from Ethereum to Polygon by calling the sendMessageToChild(address, bytes) at the FxRoot contract on Ethereum, which calls the State Sender contract. The [validators](https://docs.polygon.technology/docs/validate/polygon-basics/who-is-validator/) monitor the State Sender contract and relay messages to the FxChild on Polygon. Upon successful relay to the FxChild, the message is executed on Polygon by the validators.\n\nThe owner of the Uniswap v3 contracts on Polygon is the [Ethereum Proxy contract](https://polygonscan.com/address/0x8a1b966ac46f42275860f905dbc75efbfdc12374#code). The proxy contract will only process transactions that originate from the [Timelock contract](https://etherscan.io/address/0x1a9c8182c09f50c8318d769245bea52c32be35bc#code) on Ethereum and are delivered by the [FxChild](https://polygonscan.com/address/0x8397259c983751daf40400790063935a11afa28a). Every governance proposal targeting a change on Polygon should set the [FxRoot](https://etherscan.io/address/0xfe5e5d361b2ad62c541bab87c45a0b9b018389a2#code) on Ethereum as the target and send the message (parameter change) via the contract. The message passed through the FxRoot must contain the target(s) contract on Polygon, the function(s) to call, the call data(s), similar to the proposal system.\n\nFor the pilot of cross-chain governance, we are implementing the 1 basis point/1 tick fee tier on Polygon. The 1bp pools on Ethereum have been incredibly successful and increased Uniswap\u2019s market share significantly since GFX Labs\u2019 successful proposal in November 2021.\n\n[![|624x281](https://lh5.googleusercontent.com/nkHPN-akEVdPkIr3P7Tya8wvZMBftJryqVfsnwKaSp5mowgmcCq_aYEPkvKdIW8I20tPa6clkSUrCA78yTtebtf6iYfsgqHYt9x1Fg4lZaRhCgkvO2rbszg2wB1aJsWcIxLgHbLU)](https://dune.xyz/queries/150801)\n\nBecause governance has already approved it on Ethereum, the content of this proposal should not be controversial and puts the focus on the research and implementation.\n\n# Proposal\n\nGFX Labs has already tested the governance proposal on Goerli & Mumbai.\n\nTo build the proposal\u2013[Uniswap Governor Alpha](https://goerli.etherscan.io/address/0x5e4be8bc9637f0eaa1a755019e06a68ce081d58f#writeContract): propose()\n\n1. Targets: [[FxRoot Contract](https://goerli.etherscan.io/address/0x3d1d3e34f7fb6d26245e6640e1c50710efff15ba#writeContract)]\n2. Values: [0]\n3. Signatures: [\u201c\u201d]\n4. Call data: [Call data to be processed by the FxRoot]. The data is from the sendMessageToChild(_receiver (address), _data (bytes))\n\n```\n    _receiver (address) is the [EthereumProxy contract](https://mumbai.polygonscan.com/address/0x8a1b966ac46f42275860f905dbc75efbfdc12374#code) which is the owner of the [Uniswap Factory contract on Polyon](https://mumbai.polygonscan.com/address/0x1f98431c8ad98523631ae4a59f267346ea31f984).\n    _data (bytes) is an encoded message where the abi is address[] targets, bytes[] datas, uint256[] values\n\n      1. Targets: [[Uniswap Factory contract on Polygon](https://mumbai.polygonscan.com/address/0x1f98431c8ad98523631ae4a59f267346ea31f984)]\n      2. Datas: [Uniswap Factory contract\u2013enableFeeAmount(100,1)]\n      3. Values: [0]\n```\n\n5. Description: \u201c1bp polygon test\u201d\n\n# Successful test\n\n1. [Proposal](https://goerli.etherscan.io/tx/0xa201faffc23069f80dca9c8956eec9a8091b896454468b9c3ea9b44dbd436370#eventlog)\n2. [Vote](https://goerli.etherscan.io/tx/0x4e53072c73ddd09000304235bb8201b7ed7e866c7d7e5b2fa8c4c95ad4ac09df#eventlog)\n3. [Queue](https://goerli.etherscan.io/tx/0xa24ec65a9f333566b27d23bf962a9de55026e5a131940461a2a9a668ce90a062#eventlog)\n4. [Execute (Mainnet)](https://goerli.etherscan.io/tx/0x2bd39e01e411bcea42c9f439f9b6671bfe15fecf73961e564828f5979d722c92#eventlog)\n5. [Executed (Polyon)](https://mumbai.polygonscan.com/tx/0xa822e4df25425aa30dc061b80eb9728ca09e23f254c983ce3e127a0a44e0b7ae#eventlog)\n\n[Temperature Check Snapshot](https://snapshot.org/#/uniswap/proposal/QmWhemJom3RZdH91rBPmjvAFZEr9HdFRSFVNtAae6kgbyE)\n[Consensus Check Snapshot](https://snapshot.org/#/uniswap/proposal/QmZ2D27uouvVEHGuRvydwmwepgL2PEXbGzYAXqYr9bMwLo)"
+  },
+  "payload": {
+    "targets": [
+      "0xfe5e5D361b2ad62c541bAb87C45a0B9B018389a2"
+    ],
+    "values": [
+      "0"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0xb47204770000000000000000000000008a1b966ac46f42275860f905dbc75efbfdc12374000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000000000000000010000000000000000000000001f98431c8ad98523631ae4a59f267346ea31f9840000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000448a7c195f000000000000000000000000000000000000000000000000000000000000006400000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x3a145e0d038b87cd734f1bc0d73e7f488ee9d945727e75b03c15bc37d4d43865",
+    "executed_tx_hash": "0x15dec50eed28ab14b2fdf5429e29d7acc32e68d23594edb110d249c6e30cf84b"
+  }
+}

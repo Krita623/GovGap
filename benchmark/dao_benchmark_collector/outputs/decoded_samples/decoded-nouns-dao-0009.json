@@ -1,0 +1,36 @@
+{
+  "benchmark_id": "real-nouns-dao-0009",
+  "source_raw_sample": "outputs/raw_samples/real-nouns-dao-0009.json",
+  "proposal": {
+    "dao": "Nouns DAO",
+    "chain_id": 1,
+    "proposal_id": "585",
+    "status": "executed",
+    "title": "# Approve ID 16 for Client Incentives",
+    "description": "# Approve ID 16 for Client Incentives\n\nIf executed, this proposal approves the [Lighthouse](https://lighthouse.cx) client ID (16) for Nouns Client Incentives.\n\nLighthouse is a native mobile app for iOS and Android that makes it easy to participation in on-chain communities. We are currently working on more features for Nouns based on feedback from our recent proposal (577), and as our voting feature is getting close to completion, we would like to be cleared for receiving incentives.\n\nOur goal is to make Nouns more accessible to a wider audience, provide a better user experience for new crypto users, and further proliferate the farcaster experience.\n\n[https://warpcast.com/~/channel/lighthouse0x](https://warpcast.com/~/channel/lighthouse0x)\n\n\u2310\u25e8-\u25e8"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x883860178F95d0C82413eDc1D6De530cB4771d55",
+      "native_value": "0",
+      "function": "setClientApproval(uint32,bool)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "uint32",
+          "value": "16"
+        },
+        {
+          "index": 1,
+          "name": null,
+          "type": "bool",
+          "value": "True"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

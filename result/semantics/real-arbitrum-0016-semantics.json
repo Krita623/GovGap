@@ -1,0 +1,56 @@
+{
+  "proposal_summary": "Proposes the DeFi Renaissance Incentive Program (DRIP), a new incentives framework utilizing 3-month targeted seasons to incentivize specific assets and activities on Arbitrum. Requests an 80M ARB allocation to be managed by a Season Selection Committee (Arbitrum Foundation, Entropy Advisors, Offchain Labs) via a Foundation-controlled wallet with DAO clawback capabilities.",
+  "disclosed_entities": [
+    {
+      "name": "Arbitrum Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "All funds will be sent to an Arbitrum Foundation controlled wallet with DAO-clawback capabilities."
+    },
+    {
+      "name": "Arbitrum DAO",
+      "address": null,
+      "entity_type": "governor",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The DAO will have the ability to kill the DRIP program via a snapshot vote with 3% quorum"
+    },
+    {
+      "name": "Entropy Advisors",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Season Selection Committee: ... 2. Entropy Advisors"
+    },
+    {
+      "name": "Offchain Labs",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Season Selection Committee: ... 3. Offchain Labs"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 80M ARB to a foundation-controlled wallet",
+      "canonical_action": "transfer",
+      "object": "80M ARB",
+      "claimed_effect": "Funds the DRIP program for up to 4 seasons, with unallocated funds held or returned to the DAO.",
+      "textual_evidence": "The DRIP seeks funding of 80M ARB for the first 4 seasons... All funds will be sent to an Arbitrum Foundation controlled wallet with DAO-clawback capabilities.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The author explicitly states the program's design and intent is simple, targeted, and measurable.",
+    "textual_evidence": "The DRIP is purposefully simple, targeted, and measurable"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The specific address for the Foundation-controlled wallet is not disclosed.",
+    "The technical implementation of the 'DAO-clawback capabilities' is not described in detail."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

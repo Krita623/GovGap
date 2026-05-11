@@ -1,0 +1,737 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_basefeeScalar",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_blobbasefeeScalar",
+        "type": "uint32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_batcherHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint64",
+        "name": "_gasLimit",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_baseFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_unsafeBlockSigner",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint32",
+            "name": "maxResourceLimit",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "elasticityMultiplier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "baseFeeMaxChangeDenominator",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "minimumBaseFee",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "systemTxMaxGas",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint128",
+            "name": "maximumBaseFee",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ResourceMetering.ResourceConfig",
+        "name": "_config",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "version",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "enum SystemConfig.UpdateType",
+        "name": "updateType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "ConfigUpdate",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "version",
+        "type": "uint8"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "UNSAFE_BLOCK_SIGNER_SLOT",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "VERSION",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "baseFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "basefeeScalar",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "batcherHash",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "blobbasefeeScalar",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "daFootprintGasScalar",
+    "outputs": [
+      {
+        "internalType": "uint16",
+        "name": "",
+        "type": "uint16"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "eip1559Denominator",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "eip1559Elasticity",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gasLimit",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_basefeeScalar",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_blobbasefeeScalar",
+        "type": "uint32"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_batcherHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint64",
+        "name": "_gasLimit",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_baseFee",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_unsafeBlockSigner",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint32",
+            "name": "maxResourceLimit",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "elasticityMultiplier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "baseFeeMaxChangeDenominator",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "minimumBaseFee",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "systemTxMaxGas",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint128",
+            "name": "maximumBaseFee",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ResourceMetering.ResourceConfig",
+        "name": "_config",
+        "type": "tuple"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maximumGasLimit",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "minBaseFee",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "minimumGasLimit",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "operatorFeeConstant",
+    "outputs": [
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "operatorFeeScalar",
+    "outputs": [
+      {
+        "internalType": "uint32",
+        "name": "",
+        "type": "uint32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "overhead",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "resourceConfig",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint32",
+            "name": "maxResourceLimit",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "elasticityMultiplier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "baseFeeMaxChangeDenominator",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "minimumBaseFee",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "systemTxMaxGas",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint128",
+            "name": "maximumBaseFee",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ResourceMetering.ResourceConfig",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "scalar",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_baseFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "setBaseFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_batcherHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setBatcherHash",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint16",
+        "name": "_daFootprintGasScalar",
+        "type": "uint16"
+      }
+    ],
+    "name": "setDAFootprintGasScalar",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "_denominator",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_elasticity",
+        "type": "uint32"
+      }
+    ],
+    "name": "setEIP1559Params",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_overhead",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_scalar",
+        "type": "uint256"
+      }
+    ],
+    "name": "setGasConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "_basefeeScalar",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_blobbasefeeScalar",
+        "type": "uint32"
+      }
+    ],
+    "name": "setGasConfigArsia",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "_gasLimit",
+        "type": "uint64"
+      }
+    ],
+    "name": "setGasLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint64",
+        "name": "_minBaseFee",
+        "type": "uint64"
+      }
+    ],
+    "name": "setMinBaseFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint32",
+        "name": "_operatorFeeScalar",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint64",
+        "name": "_operatorFeeConstant",
+        "type": "uint64"
+      }
+    ],
+    "name": "setOperatorFeeScalars",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint32",
+            "name": "maxResourceLimit",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "elasticityMultiplier",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "baseFeeMaxChangeDenominator",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "minimumBaseFee",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint32",
+            "name": "systemTxMaxGas",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint128",
+            "name": "maximumBaseFee",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ResourceMetering.ResourceConfig",
+        "name": "_config",
+        "type": "tuple"
+      }
+    ],
+    "name": "setResourceConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_unsafeBlockSigner",
+        "type": "address"
+      }
+    ],
+    "name": "setUnsafeBlockSigner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unsafeBlockSigner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "version",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

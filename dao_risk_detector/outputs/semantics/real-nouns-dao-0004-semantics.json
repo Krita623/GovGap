@@ -1,0 +1,117 @@
+{
+  "proposal_summary": "Fund a Nouns-branded sailing event during NFT.NYC 2023, featuring a fleet of J/24 sailboats in New York Harbor, interactive community building, and post-event meetups.",
+  "disclosed_entities": [
+    {
+      "name": "Manhattan Yacht Club",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "implicit",
+      "textual_evidence": "organize a sailing event on April 9th in New York with help of Manhattan Yacht Club"
+    },
+    {
+      "name": "Gnosis Safe Multisig",
+      "address": "0xac2671baaa44b79ca1fb006750c684e5349d721b",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The receiving address is a Gnosis Safe with 4/6 signers.\n\nMultisig address: 0xAC2671bAaA44b79cA1Fb006750c684E5349d721b"
+    },
+    {
+      "name": "toady_hawk",
+      "address": "0x5d802e2fe48392c104ce0401c7eca8a4456f1f16",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "toady_hawk: 0x5D802e2Fe48392c104Ce0401C7ECa8a4456f1F16"
+    },
+    {
+      "name": "benbodhi",
+      "address": "0x80826180a2629206e3499b5167aac8440e3f87f6",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "benbodhi: 0x80826180A2629206E3499B5167aaC8440E3F87f6"
+    },
+    {
+      "name": "adrianmcli",
+      "address": "0xe7304ba0f157f2ade94015934284b6704bc72911",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "adrianmcli: 0xE7304bA0f157f2Ade94015934284b6704BC72911"
+    },
+    {
+      "name": "Brennen",
+      "address": "0xf8a065f287d91d77cd626af38ffa220d9b552a2b",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Brennen: 0xf8a065f287d91d77cd626af38ffa220d9b552a2b"
+    },
+    {
+      "name": "142",
+      "address": "0xe6232ed3436c4065d38d8bfdc8ea90858ecdfa69",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "142: 0xE6232ed3436C4065D38D8BFdC8EA90858ecDfa69"
+    },
+    {
+      "name": "fiveoceans_dev",
+      "address": "0xdf6e59c6df1e9500fd35a76ff4c62f9901e90019",
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "fiveoceans_dev: 0xDf6e59c6DF1E9500fd35A76FF4C62F9901E90019"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xac2671baaa44b79ca1fb006750c684e5349d721b",
+      "textual_evidence": "0xAC2671bAaA44b79cA1Fb006750c684E5349d721b.transfer"
+    },
+    {
+      "address": "0x5d802e2fe48392c104ce0401c7eca8a4456f1f16",
+      "textual_evidence": "toady_hawk: 0x5D802e2Fe48392c104Ce0401C7ECa8a4456f1F16"
+    },
+    {
+      "address": "0x80826180a2629206e3499b5167aac8440e3f87f6",
+      "textual_evidence": "benbodhi: 0x80826180A2629206E3499B5167aaC8440E3F87f6"
+    },
+    {
+      "address": "0xe7304ba0f157f2ade94015934284b6704bc72911",
+      "textual_evidence": "adrianmcli: 0xE7304bA0f157f2Ade94015934284b6704BC72911"
+    },
+    {
+      "address": "0xf8a065f287d91d77cd626af38ffa220d9b552a2b",
+      "textual_evidence": "Brennen: 0xf8a065f287d91d77cd626af38ffa220d9b552a2b"
+    },
+    {
+      "address": "0xe6232ed3436c4065d38d8bfdc8ea90858ecdfa69",
+      "textual_evidence": "142: 0xE6232ed3436C4065D38D8BFdC8EA90858ecDfa69"
+    },
+    {
+      "address": "0xdf6e59c6df1e9500fd35a76ff4c62f9901e90019",
+      "textual_evidence": "fiveoceans_dev: 0xDf6e59c6DF1E9500fd35A76FF4C62F9901E90019"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "0xAC2671bAaA44b79cA1Fb006750c684E5349d721b.transfer(154.0 ETH)",
+      "canonical_action": "transfer",
+      "object": "0xAC2671bAaA44b79cA1Fb006750c684E5349d721b",
+      "claimed_effect": "Transfer 154 ETH to the multisig for event funding.",
+      "textual_evidence": "0xAC2671bAaA44b79cA1Fb006750c684E5349d721b.transfer(\n 154.0 ETH\n)",
+      "confidence": 1.0
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "Single transfer to a multisig.",
+    "textual_evidence": "0xAC2671bAaA44b79cA1Fb006750c684E5349d721b.transfer(\n 154.0 ETH\n)"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "transfer",
+      "textual_evidence": "0xAC2671bAaA44b79cA1Fb006750c684E5349d721b.transfer"
+    }
+  ],
+  "limitations": [
+    "No target smart contract given for the eth transfer action, implied DAO treasury."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

@@ -1,0 +1,609 @@
+{
+  "metadata": {
+    "proposal_id": "31309365093913580207991288430108338667724061355449265288906484597789511363394",
+    "generated_at": "2026-05-08T11:15:24.217900+00:00",
+    "chain_id": 1,
+    "simulation_status": "success",
+    "trace_source": "simulated_trace"
+  },
+  "overall": {
+    "score": 8,
+    "score_scale": 10,
+    "risk_level": "LOW",
+    "score_method": "min_dimension_score_with_severity_cap",
+    "summary": "Overall score uses minimum dimension score 8 capped by highest severity LOW."
+  },
+  "proposal_semantics": {
+    "proposal_summary": "The proposal expands the ENS Endowment by transferring a third tranche of 5,000 ETH from the ENS DAO. It also updates the Allowance Module on the ENS Endowment to reduce the reset time for ETH fee allowances from 30 days to 25 days to mitigate payment delays.",
+    "disclosed_entities": [
+      {
+        "name": "ENS Endowment",
+        "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "entity_type": "treasury",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64)"
+      },
+      {
+        "name": "ENS DAO Multisig",
+        "address": null,
+        "entity_type": "multisig",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Executed by the ENS DAO Multisig"
+      },
+      {
+        "name": "Allowance Module",
+        "address": "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+        "entity_type": "external_contract",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Update the Allowance Module\nExecuted by the ENS Endowment. [...] Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module"
+      },
+      {
+        "name": "main.mg.wg.ens.eth",
+        "address": "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+        "entity_type": "multisig",
+        "disclosure_level": "explicit",
+        "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module"
+      },
+      {
+        "name": "Karpatkey",
+        "address": null,
+        "entity_type": "unknown",
+        "disclosure_level": "implicit",
+        "textual_evidence": "Author - karpatkey"
+      }
+    ],
+    "disclosed_addresses": [
+      {
+        "address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64)"
+      },
+      {
+        "address": "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+        "textual_evidence": "Update the Allowance Module \nCurrently, the parameters..."
+      },
+      {
+        "address": "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+        "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "textual_evidence": "\"token\": \"0x0000000000000000000000000000000000000000\","
+      }
+    ],
+    "claimed_actions": [
+      {
+        "raw_action": "Transfer 5,000 ETH to the Endowment",
+        "canonical_action": "transfer",
+        "object": "5,000 ETH",
+        "claimed_effect": "Fund the Endowment with its third tranche of 5,000 ETH from the ENS DAO Multisig.",
+        "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64) Value: 5000000000000000000000",
+        "confidence": 0.99
+      },
+      {
+        "raw_action": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module from 30 days to 25 days",
+        "canonical_action": "approval",
+        "object": "Allowance Module (0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134)",
+        "claimed_effect": "Lowers the reset window for fee extraction allowances from 30 days to 25 days, preventing payment delays.",
+        "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module from 30 days to 25 days (i.e. 43200 minutes to 36000)",
+        "confidence": 0.99
+      }
+    ],
+    "claimed_complexity": {
+      "level": "simple",
+      "reason": "The proposal executes exactly two straightforward operations: a native ETH transfer and an update to a numeric parameter (resetTimeMin) in an existing Allowance module.",
+      "textual_evidence": "1. Fund Transfer ... 2. Update the Allowance Module"
+    },
+    "disclosed_functions": [],
+    "limitations": [
+      "The specific ABI function signature used to execute the parameter update on the Allowance Module is not provided explicitly in the text (only field names like 'resetTimeMin').",
+      "Claims surrounding specific ROI percentages and operations performed externally by Karpatkey cannot be computationally verified via the proposed execution payloads alone."
+    ],
+    "llm_status": "success",
+    "llm_used_for_scoring": false
+  },
+  "trace_summary": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "value": "0x10f0cf064dd59200000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x10f0cf064dd59200000",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "value": "0x0",
+        "input": "0x6a761202000000000000000000000000cfbfac74c26f8647cbdb8c5caf80bb5b32e4313400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022000000000000000000000000000000000000000000000000000000000000000a4beaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b700000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 0,
+        "function_selector": "0x6a761202",
+        "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "decoded_args": [
+          "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+          0,
+          "0xbeaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d",
+          0,
+          0,
+          0,
+          0,
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x0",
+        "input": "0x6a761202000000000000000000000000cfbfac74c26f8647cbdb8c5caf80bb5b32e4313400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022000000000000000000000000000000000000000000000000000000000000000a4beaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b700000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x6a761202",
+        "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "decoded_args": [
+          "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+          0,
+          "0xbeaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d",
+          0,
+          0,
+          0,
+          0,
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "CALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+        "value": "0x0",
+        "input": "0xbeaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xbeaeb388",
+        "decoded_function": "setAllowance(address,address,uint96,uint16,uint32)",
+        "decoded_args": [
+          "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+          "0x0000000000000000000000000000000000000000",
+          30000000000000000000,
+          36000,
+          28825613
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 2,
+    "unique_addresses": [
+      "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+      "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+      "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+    ],
+    "delegatecall_count": 2,
+    "staticcall_count": 0,
+    "external_call_count": 3,
+    "value_transfer_count": 2,
+    "decoded_functions": [
+      "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+      "setAllowance(address,address,uint96,uint16,uint32)"
+    ]
+  },
+  "risk_actions": [
+    {
+      "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:0:transfer",
+      "action_type": "transfer",
+      "severity_hint": "medium",
+      "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+      "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "depth": 0,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x10f0cf064dd59200000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+        "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "value": "0x10f0cf064dd59200000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:1:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+      "depth": 1,
+      "function_selector": null,
+      "decoded_function": null,
+      "value": "0x10f0cf064dd59200000",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x10f0cf064dd59200000",
+        "input": "0x",
+        "output": null,
+        "depth": 1,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:3:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+      "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+      "depth": 1,
+      "function_selector": "0x6a761202",
+      "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "value": "0x0",
+        "input": "0x6a761202000000000000000000000000cfbfac74c26f8647cbdb8c5caf80bb5b32e4313400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022000000000000000000000000000000000000000000000000000000000000000a4beaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000041000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b700000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 1,
+        "function_selector": "0x6a761202",
+        "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "decoded_args": [
+          "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+          0,
+          "0xbeaeb38800000000000000000000000091c32893216de3ea0a55abb9851f581d4503d39b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001a055690d9db800000000000000000000000000000000000000000000000000000000000000008ca00000000000000000000000000000000000000000000000000000000001b7d80d",
+          0,
+          0,
+          0,
+          0,
+          "0x0000000000000000000000000000000000000000",
+          "0x0000000000000000000000000000000000000000",
+          "0x000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7000000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "error": null
+      },
+      "confidence": 0.9
+    }
+  ],
+  "dimensions": {
+    "conflict_detection": {
+      "score": 8,
+      "severity": "LOW",
+      "summary": "Execution includes undisclosed path components, but core business actions match proposal text.",
+      "disclosed_addresses": [
+        "0x0000000000000000000000000000000000000000",
+        "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+        "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+        "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134"
+      ],
+      "system_addresses": [],
+      "unaccounted_addresses": [
+        "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+        "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+      ],
+      "findings": [
+        {
+          "id": "conflict.unaccounted_addresses",
+          "title": "Unaccounted trace addresses",
+          "severity": "LOW",
+          "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+          "evidence_type": "trace",
+          "evidence": [
+            {
+              "unaccounted_addresses": [
+                "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+                "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+              ],
+              "related_actions": [
+                {
+                  "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:0:transfer",
+                  "action_type": "transfer",
+                  "severity_hint": "medium",
+                  "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+                  "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+                  "depth": 0,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x10f0cf064dd59200000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:1:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+                  "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+                  "depth": 1,
+                  "function_selector": null,
+                  "decoded_function": null,
+                  "value": "0x10f0cf064dd59200000",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                },
+                {
+                  "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:3:delegatecall",
+                  "action_type": "delegatecall",
+                  "severity_hint": "high",
+                  "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+                  "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+                  "depth": 1,
+                  "function_selector": "0x6a761202",
+                  "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+                  "value": "0x0",
+                  "evidence_source": "trace",
+                  "confidence": 0.9
+                }
+              ],
+              "covered_business_actions": [
+                "approval",
+                "transfer"
+              ],
+              "uncovered_business_actions": [],
+              "material_related_actions": []
+            }
+          ],
+          "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+          "confidence": 0.9
+        }
+      ],
+      "evidence": [
+        {
+          "disclosed_addresses": [
+            "0x0000000000000000000000000000000000000000",
+            "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+            "0x91c32893216de3ea0a55abb9851f581d4503d39b",
+            "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134"
+          ],
+          "trace_unique_addresses": [
+            "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+            "0xcfbfac74c26f8647cbdb8c5caf80bb5b32e43134",
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "system_addresses": [],
+          "unaccounted_addresses": [
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "covered_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "depth_analysis": {
+      "score": 8,
+      "severity": "LOW",
+      "claimed_complexity": "simple",
+      "actual_max_depth": 2,
+      "depth_mismatch": false,
+      "summary": "Core business actions match proposal text; observed wrapper depth is within a normal review range.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_complexity": {
+            "level": "simple",
+            "reason": "The proposal executes exactly two straightforward operations: a native ETH transfer and an update to a numeric parameter (resetTimeMin) in an existing Allowance module.",
+            "textual_evidence": "1. Fund Transfer ... 2. Update the Allowance Module"
+          },
+          "actual_max_depth": 2,
+          "delegatecall_count": 2,
+          "business_actions_match": true,
+          "actual_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "uncovered_business_actions": []
+        }
+      ]
+    },
+    "function_semantic_match": {
+      "score": 9,
+      "severity": "LOW",
+      "matched_functions": [
+        "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+        "setAllowance(address,address,uint96,uint16,uint32)"
+      ],
+      "unmatched_functions": [],
+      "unknown_selectors": [],
+      "claimed_actions": [
+        "transfer",
+        "approval"
+      ],
+      "actual_actions": [
+        "approval",
+        "transfer"
+      ],
+      "summary": "Claimed business actions match; extra execution wrappers are present but do not create a business-action mismatch.",
+      "findings": [],
+      "evidence": [
+        {
+          "claimed_actions": [
+            {
+              "raw_action": "Transfer 5,000 ETH to the Endowment",
+              "canonical_action": "transfer",
+              "object": "5,000 ETH",
+              "claimed_effect": "Fund the Endowment with its third tranche of 5,000 ETH from the ENS DAO Multisig.",
+              "textual_evidence": "Transfer 5,000 ETH to the Endowment (0x4F2083f5fBede34C2714aFfb3105539775f7FE64) Value: 5000000000000000000000",
+              "confidence": 0.99
+            },
+            {
+              "raw_action": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module from 30 days to 25 days",
+              "canonical_action": "approval",
+              "object": "Allowance Module (0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134)",
+              "claimed_effect": "Lowers the reset window for fee extraction allowances from 30 days to 25 days, preventing payment delays.",
+              "textual_evidence": "Change the resetTimeMin for main.mg.wg.ens.eth in the Allowance Module from 30 days to 25 days (i.e. 43200 minutes to 36000)",
+              "confidence": 0.99
+            }
+          ],
+          "actual_risk_actions": [
+            {
+              "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x10f0cf064dd59200000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x10f0cf064dd59200000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": "0x6a761202",
+              "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "actual_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "wrapper_actions": [
+            "delegatecall"
+          ],
+          "decoded_functions": [
+            "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+            "setAllowance(address,address,uint96,uint16,uint32)"
+          ]
+        }
+      ]
+    }
+  },
+  "risk_findings": [
+    {
+      "id": "conflict.unaccounted_addresses",
+      "title": "Unaccounted trace addresses",
+      "severity": "LOW",
+      "description": "One or more addresses appeared in the trace without direct proposal text disclosure.",
+      "evidence_type": "trace",
+      "evidence": [
+        {
+          "unaccounted_addresses": [
+            "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+            "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+          ],
+          "related_actions": [
+            {
+              "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:0:transfer",
+              "action_type": "transfer",
+              "severity_hint": "medium",
+              "from_address": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7",
+              "to_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "depth": 0,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x10f0cf064dd59200000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:1:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": null,
+              "decoded_function": null,
+              "value": "0x10f0cf064dd59200000",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            },
+            {
+              "id": "31309365093913580207991288430108338667724061355449265288906484597789511363394:3:delegatecall",
+              "action_type": "delegatecall",
+              "severity_hint": "high",
+              "from_address": "0x4f2083f5fbede34c2714affb3105539775f7fe64",
+              "to_address": "0xd9db270c1b5e3bd161e8c8503c55ceabee709552",
+              "depth": 1,
+              "function_selector": "0x6a761202",
+              "decoded_function": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+              "value": "0x0",
+              "evidence_source": "trace",
+              "confidence": 0.9
+            }
+          ],
+          "covered_business_actions": [
+            "approval",
+            "transfer"
+          ],
+          "uncovered_business_actions": [],
+          "material_related_actions": []
+        }
+      ],
+      "recommendation": "Review undisclosed execution path components, but prioritize whether the core business action remains covered by proposal text.",
+      "confidence": 0.9
+    }
+  ],
+  "hallucination_controls": {
+    "llm_used_for_scoring": false,
+    "llm_used_for_trace_analysis": false,
+    "unsupported_claims_allowed": false,
+    "unknown_fields_preserved_as_unknown": true
+  }
+}

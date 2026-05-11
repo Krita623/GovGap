@@ -1,0 +1,97 @@
+{
+  "proposal_summary": "This proposal updates the MAI a/s/v token implementations on Optimism and Arbitrum to Aave 3.0.2, unpauses the MAI reserve, and sets it as flashloanable.",
+  "disclosed_entities": [
+    {
+      "name": "MAI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal updates the `MAI` a/s/v token implementations on `Optimism` and `Arbitrum`"
+    },
+    {
+      "name": "POOL_CONFIGURATOR",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "POOL_CONFIGURATOR.updateAToken"
+    },
+    {
+      "name": "AaveV3ArbitrumAssets.MAI_UNDERLYING",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "POOL_CONFIGURATOR.setReservePause(AaveV3ArbitrumAssets.MAI_UNDERLYING, false)"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Update MAI a/s/v token implementations",
+      "canonical_action": "upgrade",
+      "object": "MAI a/s/v tokens",
+      "claimed_effect": "Aligns the tokens with Aave 3.0.2 implementations.",
+      "textual_evidence": "This proposal updates the `MAI` a/s/v token implementations on `Optimism` and `Arbitrum` to be aligned with `Aave 3.0.2`.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Unpause the reserve",
+      "canonical_action": "parameter_update",
+      "object": "MAI reserve",
+      "claimed_effect": "Unpauses the MAI reserve allowing normal operations like liquidations to proceed.",
+      "textual_evidence": "POOL_CONFIGURATOR.setReservePause(AaveV3ArbitrumAssets.MAI_UNDERLYING, false)",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Set flashloanable flag to true",
+      "canonical_action": "parameter_update",
+      "object": "MAI reserve",
+      "claimed_effect": "Makes the MAI reserve flashloanable.",
+      "textual_evidence": "POOL_CONFIGURATOR.setReserveFlashLoaning(AaveV3ArbitrumAssets.MAI_UNDERLYING, true)",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal consists of standard administrative method calls to upgrade token implementations and change two configuration flags.",
+    "textual_evidence": "The proposal executes the following commands:\n\n- `POOL_CONFIGURATOR.updateAToken`\n- `POOL_CONFIGURATOR.updateStableDebtToken`\n- `POOL_CONFIGURATOR.updateVariableDebtToken`\n- `POOL_CONFIGURATOR.setReservePause(AaveV3ArbitrumAssets.MAI_UNDERLYING, false)`\n- `POOL_CONFIGURATOR.setReserveFlashLoaning(AaveV3ArbitrumAssets.MAI_UNDERLYING, true)`"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "handleRepayment",
+      "textual_evidence": "In `Aave v3.0.2` the signature of `handleRepayment()` has changed"
+    },
+    {
+      "function_name": "repayWithAToken",
+      "textual_evidence": "as `repayWithAToken` is not affected"
+    },
+    {
+      "function_name": "repay",
+      "textual_evidence": "but `liquidations` wouldn't work as they rely on `repay`"
+    },
+    {
+      "function_name": "updateAToken",
+      "textual_evidence": "`POOL_CONFIGURATOR.updateAToken`"
+    },
+    {
+      "function_name": "updateStableDebtToken",
+      "textual_evidence": "`POOL_CONFIGURATOR.updateStableDebtToken`"
+    },
+    {
+      "function_name": "updateVariableDebtToken",
+      "textual_evidence": "`POOL_CONFIGURATOR.updateVariableDebtToken`"
+    },
+    {
+      "function_name": "setReservePause",
+      "textual_evidence": "`POOL_CONFIGURATOR.setReservePause(AaveV3ArbitrumAssets.MAI_UNDERLYING, false)`"
+    },
+    {
+      "function_name": "setReserveFlashLoaning",
+      "textual_evidence": "`POOL_CONFIGURATOR.setReserveFlashLoaning(AaveV3ArbitrumAssets.MAI_UNDERLYING, true)`"
+    }
+  ],
+  "limitations": [
+    "No hardcoded 0x addresses are provided in the proposal text, relying strictly on internal constants and configuration registries."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

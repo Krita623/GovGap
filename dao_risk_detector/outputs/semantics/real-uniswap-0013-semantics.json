@@ -1,0 +1,40 @@
+{
+  "proposal_summary": "This proposal approves the budget for the Uniswap Accountability Committee (UAC) Season 3, an approved budget rebalance, and an extra 16th delegate cycle 2 spot, resulting in a total transfer of 84,594 UNI to the UAC wallet.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap Accountability Committee (UAC) Wallet",
+      "address": "0x3b59c6d0034490093460787566dc5d6ce17f2f9c",
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Total: 84,594 UNI will be sent to the UAC wallet at this address: 0x3B59C6d0034490093460787566dc5D6cE17F2f9C"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0x3b59c6d0034490093460787566dc5d6ce17f2f9c",
+      "textual_evidence": "Total: 84,594 UNI will be sent to the UAC wallet at this address: 0x3B59C6d0034490093460787566dc5D6cE17F2f9C"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer UNI to the UAC wallet",
+      "canonical_action": "transfer",
+      "object": "0x3B59C6d0034490093460787566dc5D6cE17F2f9C",
+      "claimed_effect": "Funds the UAC wallet with 84,594 UNI to cover Season 3 operations, a budget rebalance, and a delegate spot.",
+      "textual_evidence": "Total: 84,594 UNI will be sent to the UAC wallet at this address: 0x3B59C6d0034490093460787566dc5D6cE17F2f9C",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal requires a single token transfer of UNI to a specified wallet.",
+    "textual_evidence": "Total: 84,594 UNI will be sent to the UAC wallet at this address"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The source contract/treasury address for the 84,594 UNI is not explicitly disclosed.",
+    "No explicit smart contract function names are mentioned."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

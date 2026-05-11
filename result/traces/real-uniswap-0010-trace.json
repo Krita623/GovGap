@@ -1,0 +1,108 @@
+{
+  "proposal_id": "42",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0x1a9c8182c09f50c8318d769245bea52c32be35bc"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+          "gas": "0xe48510",
+          "gasUsed": "0x1ea8a",
+          "to": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+          "input": "0x10f13a8c0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000005353931343400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000553078643139643442356433353832353866303544374234313145323141313436304431314230383736462c3078333146416664343838394641313236394637613133413636654530664234353866323744373241390000000000000000000000",
+          "calls": [
+            {
+              "from": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+              "gas": "0xe0dbaf",
+              "gasUsed": "0xb87",
+              "to": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+              "input": "0x02571be30b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+              "output": "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+              "type": "STATICCALL"
+            }
+          ],
+          "value": "0x0",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+        "to_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "value": "0x0",
+        "input": "0x10f13a8c0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000005353931343400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000553078643139643442356433353832353866303544374234313145323141313436304431314230383736462c3078333146416664343838394641313236394637613133413636654530664234353866323744373241390000000000000000000000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0x10f13a8c",
+        "decoded_function": "setText(bytes32,string,string)",
+        "decoded_args": [
+          "0x0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+          "59144",
+          "0xd19d4B5d358258f05D7B411E21A1460D11B0876F,0x31FAfd4889FA1269F7a13A66eE0fB458f27D72A9"
+        ],
+        "error": null
+      },
+      {
+        "call_type": "STATICCALL",
+        "from_address": "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41",
+        "to_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+        "value": "0",
+        "input": "0x02571be30b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12",
+        "output": "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc",
+        "depth": 1,
+        "function_selector": "0x02571be3",
+        "decoded_function": "owner(bytes32)",
+        "decoded_args": [
+          "0x0b9638d2c5bd4528d603562a1fa1e734fe1b88e680f448d779531e9bc2b55f12"
+        ],
+        "error": null
+      }
+    ],
+    "max_depth": 1,
+    "unique_addresses": [
+      "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+      "0x1a9c8182c09f50c8318d769245bea52c32be35bc",
+      "0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 1,
+    "external_call_count": 1,
+    "value_transfer_count": 0,
+    "decoded_functions": [
+      "owner(bytes32)",
+      "setText(bytes32,string,string)"
+    ]
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

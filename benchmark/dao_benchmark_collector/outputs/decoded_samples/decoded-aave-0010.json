@@ -1,0 +1,46 @@
+{
+  "benchmark_id": "real-aave-0010",
+  "source_raw_sample": "outputs/raw_samples/real-aave-0010.json",
+  "proposal": {
+    "dao": "Aave",
+    "chain_id": 1,
+    "proposal_id": "238",
+    "status": "executed",
+    "title": "#  Update Mai Token implementations, unpause & enable flashloanable",
+    "description": "#  Update Mai Token implementations, unpause & enable flashloanable\n\n---\ntitle: Update Mai Token implementations, unpause & enable flashloanable\nauthor: BGD Labs\ndiscussions: https://governance.aave.com/t/arfc-add-mai-to-arbitrum-aave-v3-market/12759/8\n---\n\n## Simple Summary\n\nThis proposal updates the `MAI` a/s/v token implementations on `Optimism` and `Arbitrum` to be aligned with `Aave 3.0.2`.\nIt also unpauses the `MAI` reserve and sets it as flashloanable.\n\n## Motivation\n\nIn `Aave v3.0.2` the signature of `handleRepayment()` has changed and a `flashloanable` flag was added.\nWhile all existing reserves `a/s/v` token implementations were upgraded in the [original proposal](https://app.aave.com/governance/proposal/213/) and flashloanable was set to `true` on all reserves, shortly after, `MAI` was listed on the `Optimism` and `Arbitrum` pools using the old implementations and not setting flashloanable to `true`.\n\nIn the current state repayments of MAI could still work, as `repayWithAToken` is not affected, but `liquidations` wouldn't work as they rely on `repay`.\nTo reduce risk, the Aave Guardian coordinated a pause for these mostly empty reserves (~$8'000 between Arbitrum and Optimism).\n\nThis proposal resolves the current issues by:\n\n- Upgrading the `a/s/v` token implementations.\n- Setting the `flashloanable` flashloanable flag to `true`.\n- Unpausing the reserve.\n\n## Specification\n\nIn order to align `MAI` with other tokens. The proposal executes the following commands:\n\n- `POOL_CONFIGURATOR.updateAToken`\n- `POOL_CONFIGURATOR.updateStableDebtToken`\n- `POOL_CONFIGURATOR.updateVariableDebtToken`\n- `POOL_CONFIGURATOR.setReservePause(AaveV3ArbitrumAssets.MAI_UNDERLYING, false)`\n- `POOL_CONFIGURATOR.setReserveFlashLoaning(AaveV3ArbitrumAssets.MAI_UNDERLYING, true)`\n\n## References\n\n- [Discussion](https://governance.aave.com/t/arfc-add-mai-to-arbitrum-aave-v3-market/12759/8)\n- [Code:ArbPayload](https://github.com/bgd-labs/aave-proposals/blob/main/src/AaveV3OPARBMAIFixes_20230606/AaveV3ARBMAIFixes_20230606.sol)\n- [Code:ArbTest](https://github.com/bgd-labs/aave-proposals/blob/main/src/AaveV3OPARBMAIFixes_20230606/AaveV3ARBMAIFixes_20230606_Test.t.sol)\n- [Code:OptPayload](https://github.com/bgd-labs/aave-proposals/blob/main/src/AaveV3OPARBMAIFixes_20230606/AaveV3OPMAIFixes_20230606.sol)\n- [Code:OptTest](https://github.com/bgd-labs/aave-proposals/blob/main/src/AaveV3OPARBMAIFixes_20230606/AaveV3OPMAIFixes_20230606_Test.t.sol)\n\n## Copyright\n\nCopyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).\n"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x5f5C02875a8e9B5A26fbd09040ABCfDeb2AA6711",
+      "native_value": "0",
+      "function": "execute(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "l2PayloadContract",
+          "type": "address",
+          "value": "0x0c2c95b24529664fe55d4437d7a31175cfe6c4f7"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0xd1B3E25fD7C8AE7CADDC6F71b461b79CD4ddcFa3",
+      "native_value": "0",
+      "function": "execute(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "l2PayloadContract",
+          "type": "address",
+          "value": "0x9441b65ee553f70df9c77d45d3283b6bc24f222d"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

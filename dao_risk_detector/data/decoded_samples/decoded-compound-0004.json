@@ -1,0 +1,30 @@
+{
+  "benchmark_id": "real-compound-0004",
+  "source_raw_sample": "outputs/raw_samples/real-compound-0004.json",
+  "proposal": {
+    "dao": "Compound",
+    "chain_id": 1,
+    "proposal_id": "119",
+    "status": "executed",
+    "title": "# Oracle Update",
+    "description": "# Oracle Update"
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B",
+      "native_value": "0",
+      "function": "_setPriceOracle(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": null,
+          "type": "address",
+          "value": "0x65c816077c29b557bee980ae3cc2dce80204a0c5"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

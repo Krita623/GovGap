@@ -1,0 +1,96 @@
+{
+  "benchmark_id": "real-ens-0018",
+  "source_raw_sample": "outputs/raw_samples/real-ens-0018.json",
+  "proposal": {
+    "dao": "ENS",
+    "chain_id": 1,
+    "proposal_id": "69304512515872868228453463730257567312488838925636819022683533220991373699419",
+    "status": "queued",
+    "title": "[EP 6.34] Register on.eth to the ENS DAO wallet and set the resolver",
+    "description": "# [EP 6.34] Register on.eth to the ENS DAO wallet and set the resolver\n# Previous Context\n\n* [\\[Temp Check\\] Registration of on.eth to support interoperable addressing standards](https://discuss.ens.domains/t/temp-check-registration-of-on-eth-to-support-interoperable-addressing-standards/21541)\n* [\\[Temp Check\\] l2.eth to Enable Chain-Specific Addresses](https://discuss.ens.domains/t/temp-check-l2-eth-to-enable-chain-specific-addresses/20862)\n* [Allowing the DAO to manually issue .eth 2LDs, including 1- and 2- character ones](https://discuss.ens.domains/t/allowing-the-dao-to-manually-issue-eth-2lds-including-1-and-2-character-ones/20851)\n\n# Description\n\nThis proposal registers the \\`on.eth\\` ENS name to the ENS DAO wallet (`0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7`) and sets the resolver to an on-chain registry-resolver contract (`0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A`).\n\n# Motivation\n\nThe Chain Registry-Resolver is a smart contract that acts as a **canonical, on-chain registry** for blockchain metadata. It serves as the resolver for the `on.eth` namespace and enables applications and users to retrieve metadata for **any** blockchain using a single human-readable identifier, such as \\`base\\` or \\`solana\\`.\n\nHistorically, blockchain metadata has been stored in centralized, fragmented repositories maintained by third parties. The Chain Registry-Resolver brings this metadata on-chain into a single, extensible registry, where control and update authority are delegated to the relevant chain operators.\n\n# Specification\n\n## Relevant Contracts\n\n* &#x20;\\`wallet.ensdao.eth\\` \u2022 `0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7`\n* \\`registry.ens.eth\\` \u2022 `0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e`&#x20;\n* \\`registrar.ens.eth\\` \u2022 `0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85`\n* ChainResolver (Proxy)\\` \u2022 `0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A`\n* \\`ChainResolver (Implementation)\\` \u2022 `0x97df70ef350a5d2f606e0baf6d38de2ec26f7290`\n\n### ChainResolver\n\nThe \\`ChainResolver\\` GitHub repo can be found here: [https://github.com/unruggable-labs/chain-resolver.](https://github.com/unruggable-labs/chain-resolver.)\n\nIn depth documentation outlining the functionality, interfaces, and implementation approach for the smart contract is available here: [https://github.com/ensdomains/docs/pull/508/changes.](https://github.com/ensdomains/docs/pull/508/changes.)\n\n## Proposal\n\nThis proposal includes four components.\n\n**1. Adding the DAO wallet as a controller on the \\`BaseRegistrarImplementation\\` smart contract.**\n\n`To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85`\n\n`Value: 0`\n\n`Calldata: 0xa7fc7a07000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7`\n\nSimulation: [https://www.tdly.co/shared/simulation/709dde20-78e2-47e0-a952-d80d9772e5eb](https://www.tdly.co/shared/simulation/709dde20-78e2-47e0-a952-d80d9772e5eb)\n\n**2. Registering the name \\`on.eth\\` to the DAO wallet.**\n\n`To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85`\n\n`Value: 0`\n\n`Calldata: 0xfca247ac6460d40e0362f6a2c743f205df8181010b7f26e76d5606847fb7be7fb6d135f9000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b70000000000000000000000000000000000000000000000000000000012cc0300`\n\nSimulation: [https://www.tdly.co/shared/simulation/2b0f1049-6820-4661-88bf-3b9fbee8ae84](https://www.tdly.co/shared/simulation/2b0f1049-6820-4661-88bf-3b9fbee8ae84)\n\n**3. Setting the deployed \\`ChainResolver\\` as the resolver for**\n\n\\*\\*\\*\\*  `on.eth`\n\nThe Resolver proxy is deployed at `0x2a9B5787207863cf2d63d20172ed1F7bB2c9487A`.\n\n`To: 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e`\n\n`Value: 0`\n\n`Calldata: 0x1896f70acabf8262fe531c2a7e8cd86e06342bc27fc0591ecd562fbac88280abc18ef8990000000000000000000000002a9b5787207863cf2d63d20172ed1f7bb2c9487a`\n\nSimulation: [https://www.tdly.co/shared/simulation/291142ff-d41a-45ab-8263-34fad6b781b5](https://www.tdly.co/shared/simulation/291142ff-d41a-45ab-8263-34fad6b781b5)\n\n**4. Removing the DAO wallet as a controller on the \\`BaseRegistrarImplementation\\` smart contract.**\n\n`To: 0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85`\n\n`Value: 0`\n\n`Calldata: 0xf6a74ed7000000000000000000000000fe89cc7abb2c4183683ab71653c4cdc9b02d44b7`\n\nSimulation: [https://www.tdly.co/shared/simulation/e2430d87-5475-4cea-a320-0e44640b1d3d](https://www.tdly.co/shared/simulation/e2430d87-5475-4cea-a320-0e44640b1d3d)\n\n# Notes\n\nThe Registry-Resolver contract is currently owned by an Unruggable controlled deployment wallet (`0x81c11034fe2b2f0561e9975df9a45d99172183af`). This temporary ownership is limited to initial bootstrapping of chain identifiers and will be transferred to a neutral multisig once the initial registry state is established."
+  },
+  "decoded_calls": [
+    {
+      "payload_call_index": 0,
+      "target_contract": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "native_value": "0",
+      "function": "addController(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "controller",
+          "type": "address",
+          "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 1,
+      "target_contract": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "native_value": "0",
+      "function": "register(uint256,address,uint256)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "id",
+          "type": "uint256",
+          "value": "45402365724566784737799689503774969143694275755436707346024963105947305195001"
+        },
+        {
+          "index": 1,
+          "name": "owner",
+          "type": "address",
+          "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        },
+        {
+          "index": 2,
+          "name": "duration",
+          "type": "uint256",
+          "value": "315360000"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 2,
+      "target_contract": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+      "native_value": "0",
+      "function": "setResolver(bytes32,address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "node",
+          "type": "bytes32",
+          "value": "0xcabf8262fe531c2a7e8cd86e06342bc27fc0591ecd562fbac88280abc18ef899"
+        },
+        {
+          "index": 1,
+          "name": "resolver",
+          "type": "address",
+          "value": "0x2a9b5787207863cf2d63d20172ed1f7bb2c9487a"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    },
+    {
+      "payload_call_index": 3,
+      "target_contract": "0x57f1887a8BF19b14fC0dF6Fd9B2acc9Af147eA85",
+      "native_value": "0",
+      "function": "removeController(address)",
+      "arguments": [
+        {
+          "index": 0,
+          "name": "controller",
+          "type": "address",
+          "value": "0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7"
+        }
+      ],
+      "decode_status": "ok",
+      "decode_source": "signature"
+    }
+  ]
+}

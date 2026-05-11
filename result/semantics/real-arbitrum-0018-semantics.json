@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "This proposal requests an additional 4 million ARB to increase the Stylus Sprint Committee's budget to fund exceptional applications that were excluded due to initial budget constraints.",
+  "disclosed_entities": [
+    {
+      "name": "Stylus Sprint multisig",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "the funds will be sent to the existing MSS-controlled Stylus Sprint multisig."
+    },
+    {
+      "name": "Entropy",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "not_disclosed",
+      "textual_evidence": "Entropy and the committee have no conflicts of interest"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Transfer 4,000,000 ARB to the Stylus Sprint multisig",
+      "canonical_action": "transfer",
+      "object": "4,000,000 ARB",
+      "claimed_effect": "Extend the funding opportunities to promising projects that were not initially accepted into the Sprint due to budget constraints.",
+      "textual_evidence": "The Stylus Sprint committee is requesting an additional 4,000,000 ARB to extend its Stylus Sprint budget. If approved, the funds will be sent to the existing MSS-controlled Stylus Sprint multisig.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only requests a straightforward transfer of funds to an existing multisig.",
+    "textual_evidence": "If approved, the funds will be sent to the existing MSS-controlled Stylus Sprint multisig."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No specific smart contract addresses or target addresses are provided in the text, only names of the entities."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

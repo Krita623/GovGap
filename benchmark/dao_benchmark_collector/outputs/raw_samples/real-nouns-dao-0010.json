@@ -1,0 +1,51 @@
+{
+  "benchmark_id": "real-nouns-dao-0010",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "412",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/412",
+    "source": "tally",
+    "created_block": 18349129,
+    "executed_block": 18415641,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Propdates 2.0",
+    "description": "# Propdates 2.0\n\n*\u201cWhat ever happened to Prop #123?\u201d\n\u201cWhat was the most successful Nouns proposal?\u201d\n\u201cWhich proposals should we try to repeat?\u201d\n\u201cWho are our most committed contributors?\u201d*\n\n[Propdates](https://updates.wtf) is here to answer these questions. With contracts built by Wilson, Propdates is the best way to keep up with Nouns proposals after they pass, and an entirely new design space within the greater Nouns ecosystem. We\u2019ve never had any consistent, onchain way to keep track of contributors\u2019 work, and no way to recommend regular updates. Down the line, one could imagine Propdates as an onchain oracle for proposal progress.\n\n## PROGRESS SO FAR\nI built the Propdates site and public graph, inspired by Krel\u2019s [requests.wtf](http://requests.wtf). What started as a weekend experiment has grown into something much bigger: it\u2019s clear that we\u2019ve tapped into something special. In fact, Propdates has already become part of the pre-proposal conversation process - it is expected that a proposer regularly updates the DAO on their work. In just a few weeks, we already have had 17 unique posters, and more coming.\n\n![](https://i.ibb.co/mt9nCgz/metrics.png)\n![](https://i.ibb.co/CzXyQrg/other.png)\n\n## LOOKING AHEAD\nWe\u2019d like to move Propdates from an experiment to a fully-featured Nouns app and a key part of the ecosystem, on par with teams like Agora, Federation, Prop House. Our end goal is for Propdates to be a protocol any contract or app can plug into to determine a proposal\u2019s success. It is clear that it could expand further than just Nouns.\n\nWe are asking for three months of funding (more on the team below). Martin will be close to full-time, but working on other projects as well (similar to almost all software proposers). We expect Onion to be part time for two months or so. For these months, our priorities will be:\n1.  Contract improvements to expand functionality  & data\n\t- New channels to post updates in: prop house entries, user channels, custom channels\n\t- Revamped admin system / permissions + \u201cSuper Admin\u201d to unlock proposals where proposer is unresponsive\n\t- Explore contract to update/revoke streams based on a proposal's updates\n2.  Improved editor, claiming and submitting UX\n\t- Easy image upload via Arweave or IPFS (and potentially expand as a public good for Nouns ecosystem)\n\t- In-app markdown editor and previews for better UX\n3.  Farcaster integration for likes & comments on updates\n4.  Open Editions to celebrate Completed Props\n\nOur goals by January 31st, 2024 are:\n-   150 proposals marked as completed\n-   400 updates posted\n-   30 weekly updates on average\n\nAdditionally, we want to encourage past proposals to share updates on their work, but recognize it\u2019s often hard for contributors to track down their sponsoring proposers (pre-v3). We are requesting 0.05 ETH to send to each of the first 100 successful props (before prop #363) that posts a non-trivial update as an incentive to kickstart the protocol. At the time of writing there have been 225 successful proposals, so this would go a long way to getting all proposals marked as completed.\n\n## TEAM\n\n-   [martin](https://twitter.com/anquetil) worked on [Mogu](http://nouns.wtf/vote/321), [Explorer Grants](http://nouns.wtf/vote/178), [Hack Week](http://nouns.wtf/vote/253)\n-   [onnnnnnnion](https://twitter.com/onnnnnnnion) (solidity) worked on [BLOCKS](https://mint.fun/zora/0x1F781d47cD59257D7AA1Bd7b2fbaB50D57AF8587), [onions renderer](https://twitter.com/onnnnnnnion/status/1639045062595170307), [PH Infinite Round Committee](https://prop.house/infinite/nouns-retro-grants)\n\n## FUNDING\n-   Team: 30 ETH for three months (via Stream)\n-   Incentives: 5 ETH (100 * 0.05 ETH)\n-   OpEx: 2 ETH\n \nWe commit to posting updates on [updates.wtf](https://updates.wtf) bi-weekly to keep the community updated on our progress. If we do not update, our stream can be canceled."
+  },
+  "payload": {
+    "targets": [
+      "0x20bC977ffADF2b1B07b4eB9bCf214ead5EdAA05d",
+      "0x0fd206FC7A7dBcD5661157eDCb1FFDD0D02A61ff",
+      "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    ],
+    "values": [
+      "7000000000000000000",
+      "0",
+      "30000000000000000000",
+      "0"
+    ],
+    "signatures": [
+      "",
+      "createStream(address,uint256,address,uint256,uint256,uint8,address)",
+      "deposit()",
+      "transfer(address,uint256)"
+    ],
+    "calldatas": [
+      "0x",
+      "0x00000000000000000000000020bc977ffadf2b1b07b4eb9bcf214ead5edaa05d000000000000000000000000000000000000000000000001a055690d9db80000000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc200000000000000000000000000000000000000000000000000000000654043800000000000000000000000000000000000000000000000000000000065b98d800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd",
+      "0x",
+      "0x000000000000000000000000d4b6472934c16ff3d81cc3502f853988cfb078dd000000000000000000000000000000000000000000000001a055690d9db80000"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x8bf366f6a14649a8aa37524c7adffe02bae52dd845b590d2ea8aaf6b319a2e4c",
+    "executed_tx_hash": "0x296e2f1de340d61b90324aa630e0ab09f249d50caf9e52de8cbc6cb8af12c3b5"
+  }
+}

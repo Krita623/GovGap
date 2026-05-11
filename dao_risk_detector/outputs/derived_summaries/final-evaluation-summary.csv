@@ -1,0 +1,121 @@
+benchmark_id,call_count,chain_id,conflict_detection_score,conflict_detection_severity,dao,decoded_exists,delegatecall_count,depth_analysis_score,depth_analysis_severity,error,function_semantic_match_score,function_semantic_match_severity,index,llm_status,max_depth,overall_score,proposal_id,report_exists,risk_action_count,risk_actions_exists,risk_level,sample_exists,score_exists,semantics_exists,simulation_status,trace_exists,trace_source
+real-aave-0001,10,1,8,LOW,Aave,True,4,8,LOW,,9,LOW,1,success,4,8,15,True,5,True,LOW,True,True,True,success,True,simulated_trace
+real-aave-0002,2,1,4,HIGH,Aave,True,0,10,LOW,,2,CRITICAL,2,success,1,2,7,True,1,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0003,24,1,8,LOW,Aave,True,8,8,LOW,,9,LOW,3,success,2,8,42,True,1,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0004,3,1,4,HIGH,Aave,True,0,10,LOW,,2,CRITICAL,4,success,2,2,100,True,1,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-aave-0005,8,1,2,CRITICAL,Aave,True,1,10,LOW,,2,CRITICAL,5,success,3,2,35,True,2,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0006,5,1,2,CRITICAL,Aave,True,1,10,LOW,,2,CRITICAL,6,success,3,2,32,True,2,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0007,8,1,4,HIGH,Aave,True,1,6,MEDIUM,,2,CRITICAL,7,success,3,2,152,True,2,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0008,11,1,4,HIGH,Aave,True,1,7,MEDIUM,,2,CRITICAL,8,success,4,2,149,True,2,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0009,23,1,2,CRITICAL,Aave,True,3,6,MEDIUM,,3,HIGH,9,success,3,2,234,True,7,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0010,13,1,2,CRITICAL,Aave,True,4,5,HIGH,,2,CRITICAL,10,success,6,2,238,True,7,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0011,8,1,2,CRITICAL,Aave,True,1,10,LOW,,2,CRITICAL,11,success,3,2,164,True,2,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-aave-0012,3,1,4,HIGH,Aave,True,0,10,LOW,,2,CRITICAL,12,success,2,2,178,True,1,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-aave-0013,2,1,7,MEDIUM,Aave,True,1,9,LOW,,9,LOW,13,success,1,6,397,True,2,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0014,2,1,7,MEDIUM,Aave,True,1,9,LOW,,9,LOW,14,success,1,6,407,True,2,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0015,32,1,2,CRITICAL,Aave,True,8,6,MEDIUM,,2,CRITICAL,15,success,6,2,355,True,15,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0016,19,1,8,LOW,Aave,True,5,6,MEDIUM,,4,HIGH,16,success,6,4,310,True,10,True,HIGH,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0017,2,1,7,MEDIUM,Aave,True,1,8,LOW,,9,LOW,17,success,1,6,396,True,2,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0018,4,1,7,MEDIUM,Aave,True,2,8,LOW,,9,LOW,18,success,1,6,400,True,2,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0019,2,1,7,MEDIUM,Aave,True,1,8,LOW,,9,LOW,19,success,1,6,390,True,2,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-aave-0020,20,1,2,CRITICAL,Aave,True,6,5,HIGH,,2,CRITICAL,20,success,6,2,321,True,9,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0001,1,42161,8,LOW,Arbitrum,True,0,8,LOW,,10,LOW,21,success,0,8,71941171835710778457735937894689629320431683601089057868136768380925169329077,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0002,1,42161,8,LOW,Arbitrum,True,0,8,LOW,,10,LOW,22,success,0,8,70545629960586317780628692755032548222173912190231545322320044688071893662480,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0003,4,42161,8,LOW,Arbitrum,True,2,9,LOW,,9,LOW,23,success,3,8,4339452689891418965907083940091891085726910948106830138993485564953310970308,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0004,1,42161,8,LOW,Arbitrum,True,0,9,LOW,,10,LOW,24,success,0,8,77069694702187027448745871790562515795432836429094222862498991082283032976814,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0005,2,42161,8,LOW,Arbitrum,True,1,9,LOW,,9,LOW,25,success,1,8,55434268037459750836497365958054185343730937462615166912204494229415053613423,True,2,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0006,2,42161,8,LOW,Arbitrum,True,1,9,LOW,,9,LOW,26,success,1,8,6269372711941757139042689495856382466058496535755800373140231592090274906424,True,2,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0007,4,42161,8,LOW,Arbitrum,True,2,8,LOW,,9,LOW,27,success,3,8,38701323908152171422214887490453506732497504710759730413296983575898180294585,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0008,4,42161,5,HIGH,Arbitrum,True,2,9,LOW,,6,MEDIUM,28,repaired,3,4,98446466630612736687159241204141593794174501692677162686607521796118942563659,True,4,True,HIGH,True,True,True,success,True,simulated_trace
+real-arbitrum-0009,96,42161,8,LOW,Arbitrum,True,48,8,LOW,,9,LOW,29,success,3,8,7516302970844612385418101444853135774524286064427379173725195909617827683975,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0010,4,42161,8,LOW,Arbitrum,True,2,9,LOW,,9,LOW,30,repaired,3,8,79529399410531589353911088395953830829384332193617716676855043534419270111970,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0011,4,42161,8,LOW,Arbitrum,True,2,9,LOW,,9,LOW,31,success,3,8,3552942192106351362095426680857341385146921274641698065112264407057470303359,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0012,1,42161,8,LOW,Arbitrum,True,0,9,LOW,,10,LOW,32,repaired,0,8,112325874093084064493910714319140234408317576120604499542718372361020687891105,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0013,4,42161,8,LOW,Arbitrum,True,2,9,LOW,,9,LOW,33,success,3,8,108658450973990931334575713480652794742647878863726354508911679874665321261959,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0014,6,42161,8,LOW,Arbitrum,True,3,9,LOW,,9,LOW,34,success,3,8,111105159609719390908725919603971316574753860587890014819515615630412225940809,True,6,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0015,1,42161,8,LOW,Arbitrum,True,0,9,LOW,,10,LOW,35,success,0,8,71020107401388505040510993373598301285550678565865201408741893567942851985019,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0016,4,42161,8,LOW,Arbitrum,True,2,8,LOW,,9,LOW,36,success,3,8,13050485773425645466153415888358064378805606653363056526521393182333458879398,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0017,1,42161,8,LOW,Arbitrum,True,0,9,LOW,,10,LOW,37,success,0,8,13108804573775967668959825241666341617107666532012387058509418598838035461528,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0018,4,42161,8,LOW,Arbitrum,True,2,8,LOW,,9,LOW,38,success,3,8,27831845498978337986467036886891836384283300266814708262424272663046958396151,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-arbitrum-0019,1,42161,5,HIGH,Arbitrum,True,0,10,LOW,,4,HIGH,39,success,0,4,16288348195459185256236376597446433097934740027053618232242382845767010422421,True,1,True,HIGH,True,True,True,reverted_with_trace,True,simulated_trace
+real-arbitrum-0020,4,42161,8,LOW,Arbitrum,True,2,9,LOW,,9,LOW,40,success,3,8,41764616447638715300612914863093416410063619332654034338488569044333128121381,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-compound-0001,2,1,7,MEDIUM,Compound,True,1,10,LOW,,4,HIGH,41,success,1,4,51,True,1,True,HIGH,True,True,True,success,True,simulated_trace
+real-compound-0002,4,1,5,HIGH,Compound,True,2,6,MEDIUM,,4,HIGH,42,success,3,4,188,True,4,True,HIGH,True,True,True,success,True,simulated_trace
+real-compound-0003,23,1,2,CRITICAL,Compound,True,7,5,HIGH,,2,CRITICAL,43,success,6,2,176,True,8,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-compound-0004,2,1,8,LOW,Compound,True,1,9,LOW,,9,LOW,44,success,1,8,119,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-compound-0005,1,1,8,LOW,Compound,True,0,8,LOW,,10,LOW,45,success,0,8,134,True,1,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-compound-0006,1,1,8,LOW,Compound,True,0,9,LOW,,10,LOW,46,success,0,8,175,True,1,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-compound-0007,41,1,5,HIGH,Compound,True,11,5,HIGH,,7,MEDIUM,47,success,7,4,255,True,19,True,HIGH,True,True,True,success,True,simulated_trace
+real-compound-0008,35,1,5,HIGH,Compound,True,13,7,MEDIUM,,7,MEDIUM,48,repaired,7,4,238,True,17,True,HIGH,True,True,True,success,True,simulated_trace
+real-compound-0009,29,1,5,HIGH,Compound,True,8,10,LOW,,7,MEDIUM,49,success,7,4,258,True,11,True,HIGH,True,True,True,success,True,simulated_trace
+real-compound-0010,34,1,4,HIGH,Compound,True,4,6,MEDIUM,,2,CRITICAL,50,success,6,2,341,True,6,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-compound-0011,4,1,5,HIGH,Compound,True,2,6,MEDIUM,,4,HIGH,51,success,3,4,318,True,4,True,HIGH,True,True,True,success,True,simulated_trace
+real-compound-0012,63,1,8,LOW,Compound,True,9,8,LOW,,9,LOW,52,success,4,8,240,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-compound-0013,11,1,2,CRITICAL,Compound,True,5,10,LOW,,2,CRITICAL,53,success,3,2,402,True,8,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-compound-0014,46,1,2,CRITICAL,Compound,True,10,5,HIGH,,2,CRITICAL,54,success,8,2,426,True,18,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-compound-0015,47,1,4,HIGH,Compound,True,10,7,MEDIUM,,2,CRITICAL,55,success,8,2,418,True,13,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-compound-0016,10,1,8,LOW,Compound,True,1,8,LOW,,9,LOW,56,success,2,8,451,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-compound-0017,18,1,8,LOW,Compound,True,2,9,LOW,,9,LOW,57,success,2,8,466,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-compound-0018,87,1,2,CRITICAL,Compound,True,22,5,HIGH,,2,CRITICAL,58,success,8,2,442,True,34,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-compound-0019,32,1,5,HIGH,Compound,True,8,9,LOW,,6,MEDIUM,59,success,4,4,545,True,5,True,HIGH,True,True,True,reverted_with_trace,True,simulated_trace
+real-compound-0020,11,1,6,MEDIUM,Compound,True,5,10,LOW,,7,MEDIUM,60,success,5,6,506,True,6,True,MEDIUM,True,True,True,success,True,simulated_trace
+real-ens-0001,13,1,5,HIGH,ENS,True,3,10,LOW,,4,HIGH,61,success,4,4,55447465396737793905646186593156244424717001140618132725073945884287085787959,True,11,True,HIGH,True,True,True,success,True,simulated_trace
+real-ens-0002,1,1,8,LOW,ENS,True,0,8,LOW,,10,LOW,62,success,0,8,43203199770691383238593940280239053946984014979449022275641313046078578194694,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0003,1,1,5,HIGH,ENS,True,0,9,LOW,,4,HIGH,63,success,0,4,90476529665364161211265365238121921179703522228680648046371476645353679539653,True,1,True,HIGH,True,True,True,success,True,simulated_trace
+real-ens-0004,2,1,8,LOW,ENS,True,1,8,LOW,,9,LOW,64,success,1,8,112764562576314516994943312429834673309292069549953740415731020720942627228986,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0005,5,1,8,LOW,ENS,True,2,9,LOW,,9,LOW,65,success,1,8,27850654116740852236526757351596115114486670304472932313768517382407193376455,True,2,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-ens-0006,1,1,8,LOW,ENS,True,0,8,LOW,,10,LOW,66,success,0,8,8759198094868535520038506706231539487662297008587733129541987545743856603253,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0007,2,1,8,LOW,ENS,True,1,8,LOW,,9,LOW,67,success,1,8,33504840096777976512510989921427323867039135570342563123194157971712476988820,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0008,5,1,8,LOW,ENS,True,2,8,LOW,,9,LOW,68,success,2,8,31309365093913580207991288430108338667724061355449265288906484597789511363394,True,3,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0009,2,1,8,LOW,ENS,True,1,8,LOW,,9,LOW,69,success,1,8,33657496545373741813637578444724485346468737982573562831880427564621945332995,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0010,2,1,8,LOW,ENS,True,0,8,LOW,,10,LOW,70,success,0,8,40272043175867710511047990376059633000673751036364092383567949469124429500507,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0011,5,1,7,MEDIUM,ENS,True,3,9,LOW,,9,LOW,71,success,4,6,107992041043258996427224563090014372885335179099580585497266204203463156791290,True,3,True,MEDIUM,True,True,True,success,True,simulated_trace
+real-ens-0012,88,1,2,CRITICAL,ENS,True,41,5,HIGH,,2,CRITICAL,72,success,11,2,13214174724111749338017943143826453367599509196993220699255450633508989705578,True,33,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-ens-0013,15,1,2,CRITICAL,ENS,True,7,10,LOW,,2,CRITICAL,73,repaired,4,2,20404686300257550242704646761273386459664655640264490428281621095220078268383,True,8,True,CRITICAL,True,True,True,reverted_with_trace,True,simulated_trace
+real-ens-0014,7,1,10,LOW,ENS,True,0,9,LOW,,10,LOW,74,success,1,9,31038548146097859834078018568437840147798885401616129864120868194533406456350,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-ens-0015,13,1,8,LOW,ENS,True,1,8,LOW,,9,LOW,75,success,3,8,108835189906614532703236602621229289879643217303874617456878894788222576090451,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0016,13,1,8,LOW,ENS,True,0,9,LOW,,10,LOW,76,success,1,8,28252712932062322633429808688780331957150867173093906455161078029287649387260,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0017,1,1,10,LOW,ENS,True,0,8,LOW,,10,LOW,77,success,0,8,48262157524430528705514027771464261215955420389394621161356313649894506972547,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-ens-0018,5,1,10,LOW,ENS,True,0,9,LOW,,10,LOW,78,success,1,9,69304512515872868228453463730257567312488838925636819022683533220991373699419,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-ens-0019,22,1,10,LOW,ENS,True,0,9,LOW,,10,LOW,79,success,1,9,43003012871521685709452092060115706577030630127946926655190871046443785691900,True,0,True,LOW,True,True,True,reverted_with_trace,True,simulated_trace
+real-ens-0020,1,1,8,LOW,ENS,True,0,8,LOW,,10,LOW,80,success,0,8,93339540979084434403669350155813124666788975924280943502320960019054315770244,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0001,2,1,8,LOW,Nouns DAO,True,1,9,LOW,,9,LOW,81,success,1,8,215,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0002,5,1,6,MEDIUM,Nouns DAO,True,2,10,LOW,,7,MEDIUM,82,success,1,6,152,True,5,True,MEDIUM,True,True,True,success,True,simulated_trace
+real-nouns-dao-0003,1,1,8,LOW,Nouns DAO,True,0,8,LOW,,10,LOW,83,success,0,8,57,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0004,2,1,8,LOW,Nouns DAO,True,1,8,LOW,,9,LOW,84,success,1,8,173,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0005,2,1,8,LOW,Nouns DAO,True,1,9,LOW,,9,LOW,85,success,1,8,189,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0006,2,1,8,LOW,Nouns DAO,True,1,9,LOW,,9,LOW,86,success,1,8,223,True,2,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0007,5,1,8,LOW,Nouns DAO,True,2,8,LOW,,9,LOW,87,success,4,8,435,True,3,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0008,4,1,6,MEDIUM,Nouns DAO,True,2,9,LOW,,7,MEDIUM,88,success,2,6,332,True,4,True,MEDIUM,True,True,True,success,True,simulated_trace
+real-nouns-dao-0009,2,1,8,LOW,Nouns DAO,True,1,8,LOW,,9,LOW,89,success,1,8,585,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0010,5,1,4,HIGH,Nouns DAO,True,0,10,LOW,,2,CRITICAL,90,success,1,2,412,True,4,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-nouns-dao-0011,11,1,4,HIGH,Nouns DAO,True,3,10,LOW,,3,HIGH,91,success,2,3,554,True,6,True,HIGH,True,True,True,success,True,simulated_trace
+real-nouns-dao-0012,6,1,8,LOW,Nouns DAO,True,2,9,LOW,,9,LOW,92,success,2,8,455,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0013,5,1,8,LOW,Nouns DAO,True,2,8,LOW,,9,LOW,93,success,2,8,763,True,3,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0014,10,1,4,HIGH,Nouns DAO,True,3,10,LOW,,3,HIGH,94,success,2,3,711,True,3,True,HIGH,True,True,True,success,True,simulated_trace
+real-nouns-dao-0015,1,1,5,HIGH,Nouns DAO,True,0,10,LOW,,4,HIGH,95,success,0,4,676,True,1,True,HIGH,True,True,True,success,True,simulated_trace
+real-nouns-dao-0016,15,1,4,HIGH,Nouns DAO,True,5,10,LOW,,3,HIGH,96,success,2,3,795,True,5,True,HIGH,True,True,True,success,True,simulated_trace
+real-nouns-dao-0017,3,1,7,MEDIUM,Nouns DAO,True,1,8,LOW,,9,LOW,97,success,2,6,743,True,1,True,MEDIUM,True,True,True,success,True,simulated_trace
+real-nouns-dao-0018,1,1,5,HIGH,Nouns DAO,True,0,10,LOW,,4,HIGH,98,success,0,4,773,True,1,True,HIGH,True,True,True,success,True,simulated_trace
+real-nouns-dao-0019,5,1,8,LOW,Nouns DAO,True,2,8,LOW,,9,LOW,99,success,2,8,823,True,3,True,LOW,True,True,True,success,True,simulated_trace
+real-nouns-dao-0020,5,1,5,HIGH,Nouns DAO,True,2,10,LOW,,4,HIGH,100,success,2,4,903,True,3,True,HIGH,True,True,True,success,True,simulated_trace
+real-uniswap-0001,2,1,8,LOW,Uniswap,True,0,9,LOW,,10,LOW,101,success,1,8,14,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0002,2,1,7,MEDIUM,Uniswap,True,0,10,LOW,,6,MEDIUM,102,success,1,6,31,True,0,True,MEDIUM,True,True,True,success,True,simulated_trace
+real-uniswap-0003,1,1,8,LOW,Uniswap,True,0,9,LOW,,10,LOW,103,success,0,8,34,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0004,1,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,104,success,0,8,22,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0005,2,1,7,MEDIUM,Uniswap,True,1,9,LOW,,9,LOW,105,success,1,6,26,True,1,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-uniswap-0006,2,1,7,MEDIUM,Uniswap,True,1,9,LOW,,9,LOW,106,success,1,6,27,True,1,True,MEDIUM,True,True,True,reverted_with_trace,True,simulated_trace
+real-uniswap-0007,2,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,107,success,1,8,50,True,0,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0008,1,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,108,success,0,8,65,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0009,8,1,8,LOW,Uniswap,True,4,9,LOW,,9,LOW,109,repaired,3,8,47,True,4,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0010,2,1,7,MEDIUM,Uniswap,True,0,10,LOW,,4,HIGH,110,success,1,4,42,True,0,True,HIGH,True,True,True,success,True,simulated_trace
+real-uniswap-0011,2,1,8,LOW,Uniswap,True,1,8,LOW,,9,LOW,111,success,1,8,55,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0012,9,1,5,HIGH,Uniswap,True,0,10,LOW,,4,HIGH,112,repaired,1,4,53,True,2,True,HIGH,True,True,True,success,True,simulated_trace
+real-uniswap-0013,1,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,113,success,0,8,70,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0014,1,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,114,success,0,8,86,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0015,1,1,8,LOW,Uniswap,True,0,9,LOW,,10,LOW,115,success,0,8,80,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0016,1,1,8,LOW,Uniswap,True,0,9,LOW,,10,LOW,116,success,0,8,68,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0017,2,1,7,MEDIUM,Uniswap,True,0,10,LOW,,4,HIGH,117,success,1,4,78,True,0,True,HIGH,True,True,True,success,True,simulated_trace
+real-uniswap-0018,59,1,2,CRITICAL,Uniswap,True,26,10,LOW,,2,CRITICAL,118,success,5,2,94,True,20,True,CRITICAL,True,True,True,success,True,simulated_trace
+real-uniswap-0019,1,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,119,success,0,8,71,True,1,True,LOW,True,True,True,success,True,simulated_trace
+real-uniswap-0020,1,1,8,LOW,Uniswap,True,0,8,LOW,,10,LOW,120,success,0,8,75,True,1,True,LOW,True,True,True,success,True,simulated_trace

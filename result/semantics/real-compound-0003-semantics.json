@@ -1,0 +1,83 @@
+{
+  "proposal_summary": "A proposal by Gauntlet to adjust risk parameters, an interest rate curve parameter, and an incentive parameter for Ethereum Compound v3 WETH to stimulate growth.",
+  "disclosed_entities": [
+    {
+      "name": "Ethereum v3 WETH Configurator contract",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "The proposal uses the [...] methods of the Ethereum v3 WETH Configurator contract."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Increase storefront price factor",
+      "canonical_action": "parameter_update",
+      "object": "storefront price factor",
+      "claimed_effect": "Increase storefront price factor from 50% to 100%",
+      "textual_evidence": "Increase storefront price factor from 50% to 100%",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Decrease wstETH liquidation penalty",
+      "canonical_action": "parameter_update",
+      "object": "wstETH liquidation penalty",
+      "claimed_effect": "Decrease wstETH liquidation penalty from 5% to 2.5%",
+      "textual_evidence": "Decrease wstETH liquidation penalty from 5% to 2.5%.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Decrease cbETH liquidation penalty",
+      "canonical_action": "parameter_update",
+      "object": "cbETH liquidation penalty",
+      "claimed_effect": "Decrease cbETH liquidation penalty from 5% to 2.5%",
+      "textual_evidence": "Decrease cbETH liquidation penalty from 5% to 2.5%.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Decrease Annual Borrow Interest Rate Slope Low",
+      "canonical_action": "parameter_update",
+      "object": "Annual Borrow Interest Rate Slope Low",
+      "claimed_effect": "Decrease Annual Borrow Interest Rate Slope Low from 0.051 to 0.037",
+      "textual_evidence": "Decrease Annual Borrow Interest Rate Slope Low from 0.051 to 0.037.",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "Increase COMP daily supply distribution",
+      "canonical_action": "parameter_update",
+      "object": "COMP daily supply distribution",
+      "claimed_effect": "Increase COMP daily supply distribution from 38 to 70",
+      "textual_evidence": "Increase COMP daily supply distribution from 38 to 70.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal involves basic parameter changes such as risk parameters and incentive updates on a single configurator contract.",
+    "textual_evidence": "A proposal from Gauntlet to adjust 2 asset-specific risk parameters, 1 global risk parameter, 1 Interest Rate curve parameter, and 1 incentive parameter."
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "updateAssetLiquidationFactor",
+      "textual_evidence": "The proposal uses the updateAssetLiquidationFactor, setBaseTrackingSupplySpeed, setStoreFrontPriceFactor, and setBorrowPerYearInterestRateSlopeLow methods"
+    },
+    {
+      "function_name": "setBaseTrackingSupplySpeed",
+      "textual_evidence": "The proposal uses the updateAssetLiquidationFactor, setBaseTrackingSupplySpeed, setStoreFrontPriceFactor, and setBorrowPerYearInterestRateSlopeLow methods"
+    },
+    {
+      "function_name": "setStoreFrontPriceFactor",
+      "textual_evidence": "The proposal uses the updateAssetLiquidationFactor, setBaseTrackingSupplySpeed, setStoreFrontPriceFactor, and setBorrowPerYearInterestRateSlopeLow methods"
+    },
+    {
+      "function_name": "setBorrowPerYearInterestRateSlopeLow",
+      "textual_evidence": "The proposal uses the updateAssetLiquidationFactor, setBaseTrackingSupplySpeed, setStoreFrontPriceFactor, and setBorrowPerYearInterestRateSlopeLow methods"
+    }
+  ],
+  "limitations": [
+    "No explicit contract addresses are provided in the proposal text."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

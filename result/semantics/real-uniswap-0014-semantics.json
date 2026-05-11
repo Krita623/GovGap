@@ -1,0 +1,42 @@
+{
+  "proposal_summary": "A proposal to rebalance budgets for various Uniswap DAO programs by topping up their balances with 52,856 UNI ($280,142) to cover dollar-denominated commitments affected by token price fluctuations.",
+  "disclosed_entities": [
+    {
+      "name": "Uniswap Accountability Committee",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "This proposal is powered by the Uniswap Accountability Committee."
+    },
+    {
+      "name": "UNI",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "fluctuations in the UNI token price... 52856 UNI"
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Rebalance program budgets with a top-up of 52,856 UNI",
+      "canonical_action": "treasury_operation",
+      "object": "52856 UNI",
+      "claimed_effect": "Ensure commitments around sustaining elected DAO programs are covered after token price fluctuations.",
+      "textual_evidence": "we are looking to top up those balances to ensure commitments... The rebalance will be for $280,142... 52856 UNI",
+      "confidence": 0.9
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal only involves a straightforward treasury transfer or rebalancing of funds to cover a specified fiat value.",
+    "textual_evidence": "we are looking to top up those balances... The rebalance will be for $280,142, priced in UNI"
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "The proposal does not specify the exact target addresses for the program accounts receiving the topped-up balances.",
+    "The proposal relies on off-chain context (the linked forum post) for the exact breakdown of budget items."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

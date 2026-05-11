@@ -1,0 +1,50 @@
+{
+  "proposal_summary": "This proposal increases the MaticX Supply Cap on Polygon v3 from 8.6M units to 17.2M units.",
+  "disclosed_entities": [
+    {
+      "name": "MaticX",
+      "address": "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6",
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Contract: polygon: 0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6"
+    },
+    {
+      "name": "Payload Implementation",
+      "address": "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e",
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Deployed Contracts (https://polygonscan.com/address/0x6b5af634e20eaa5fc85f9943913aa46a088ac29e)"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6",
+      "textual_evidence": "Contract: polygon: 0xfa68FB4628DFF1028CFEc22b4162FCcd0d45efb6"
+    },
+    {
+      "address": "0x6b5af634e20eaa5fc85f9943913aa46a088ac29e",
+      "textual_evidence": "Deployed Contracts (https://polygonscan.com/address/0x6b5af634e20eaa5fc85f9943913aa46a088ac29e)"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "Increase the Supply Cap from 8.6M units to 17.2M units",
+      "canonical_action": "parameter_update",
+      "object": "MaticX SupplyCap",
+      "claimed_effect": "Increases the allowed supply cap for MaticX on Aave v3 Polygon to 17,200,000 to enable more deposits and SD rewards.",
+      "textual_evidence": "|SupplyCap|8.6M units|17.2M units|",
+      "confidence": 0.99
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal involves a single parameter update (SupplyCap) for an existing asset.",
+    "textual_evidence": "This proposal will increase the Supply Cap from 8.6M units to 17.2M units."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "Does not specify exact function names used to enact the parameter change, though typical pool configrator actions are implied."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

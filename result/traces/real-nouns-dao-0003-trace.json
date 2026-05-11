@@ -1,0 +1,74 @@
+{
+  "proposal_id": "57",
+  "simulation_status": "success",
+  "trace_source": "simulated_trace",
+  "raw_trace": {
+    "execution_context": {
+      "governor": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+      "attempts": [
+        {
+          "signature": "getExecutor(uint256)",
+          "result": null
+        },
+        {
+          "signature": "executor()",
+          "result": null
+        },
+        {
+          "signature": "timelock()",
+          "result": "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+        }
+      ],
+      "source": "governor.timelock()",
+      "confidence": 0.85,
+      "anvil_rpc_url": "http://127.0.0.1:8545",
+      "anvil_reused_existing": true,
+      "anvil_reset_existing": true
+    },
+    "payload_traces": [
+      {
+        "payload_call_index": 0,
+        "trace": {
+          "from": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+          "gas": "0xe48fb8",
+          "gasUsed": "0x5208",
+          "to": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+          "input": "0x",
+          "value": "0x63bf212b431ec0000",
+          "type": "CALL"
+        }
+      }
+    ]
+  },
+  "parsed_trace": {
+    "calls": [
+      {
+        "call_type": "CALL",
+        "from_address": "0x0bc3807ec262cb779b38d65b38158acc3bfede10",
+        "to_address": "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+        "value": "0x63bf212b431ec0000",
+        "input": "0x",
+        "output": null,
+        "depth": 0,
+        "function_selector": null,
+        "decoded_function": null,
+        "decoded_args": null,
+        "error": null
+      }
+    ],
+    "max_depth": 0,
+    "unique_addresses": [
+      "0x0b3cf56e7df3bb3fb7201ffcd96d279b05ddd2e3",
+      "0x0bc3807ec262cb779b38d65b38158acc3bfede10"
+    ],
+    "delegatecall_count": 0,
+    "staticcall_count": 0,
+    "external_call_count": 1,
+    "value_transfer_count": 1,
+    "decoded_functions": []
+  },
+  "revert_reason": null,
+  "error": null,
+  "confidence": 0.9,
+  "fallback_used": false
+}

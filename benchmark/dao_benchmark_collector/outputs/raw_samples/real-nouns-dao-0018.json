@@ -1,0 +1,39 @@
+{
+  "benchmark_id": "real-nouns-dao-0018",
+  "dao": {
+    "name": "Nouns DAO",
+    "chain_id": 1,
+    "governor_address": "0x6f3E6272A167e8AcCb32072d08E0957F9c79223d",
+    "governance_system": "governorbravo"
+  },
+  "proposal": {
+    "proposal_id": "773",
+    "proposal_url": "https://www.tally.xyz/gov/nounsdao/proposal/773",
+    "source": "tally",
+    "created_block": 22175364,
+    "executed_block": 22240854,
+    "status": "executed"
+  },
+  "proposal_text": {
+    "title": "# Appoint Volky as nouns-monorepo (Nouns.wtf + dev tooling) maintainer",
+    "description": "# Appoint Volky as nouns-monorepo (Nouns.wtf + dev tooling) maintainer\n\nHey folks. Volky here \ud83d\udc4b\n\nFollowing up from the discussion started in [[IDEA] Add All Approved Nouns Clients to Nouns.wtf](https://www.nouns.camp/topics/%5Bidea%5D-add-all-approved-nouns-clients-to-nouns.wtf-39a7ea92f59d74a950e4a08990519ee44ef3abc0)\n\nI'm requesting admin access to [https://github.com/nounsDAO/nouns-monorepo](https://github.com/nounsDAO/nouns-monorepo) so that I can help with:\n\n- nouns.wtf updates  \n- processing the backlog of issues + PRs in the repo  \n- updating the developer tooling  \n- adding guidelines for contributions  \n- integrating contributions from the community \n\nI vouch to always consult the DAO before making opinionated public-facing changes (e.g. adding new content to nouns.wtf)\n\n## Why Volky\n\nI'm a full-stack developer, with ample experience with Typescript and Solidity ()\n\nI have extensive experience specifically with the Nouns contracts and the rest of the codebase:\n\n- I've built [Noundry Studio](https://studio.noundry.wtf) for artists to create Nouns traits  \n- I've built [Nomo Nouns](https://nomo.wtf), a game where players can \"rescue\" Nouns that did not make it to the auction  \n- I've built a [Nouns governance client for Gnars](https://gnars.wtf) from the ground up  \n- I've built [Noundry Gallery](https://gallery.noundry.wtf), allowing artists to propose new traits to the DAO \n\n## Compensation\n\nFor compensation, I intend to eventually set up a [Nounish Software](https://flows.wtf/flow/0x9dc54d2b8ee696f6ee4b31a41a719e6ccd1b909c021698a40727f6f0c1a257c1) Flow"
+  },
+  "payload": {
+    "targets": [
+      "0x6a024f521f83906671e1a23a8B6c560be7e980F4"
+    ],
+    "values": [
+      "100000"
+    ],
+    "signatures": [
+      ""
+    ],
+    "calldatas": [
+      "0x"
+    ]
+  },
+  "transactions": {
+    "created_tx_hash": "0x3c46d487f4e775f6d38f17a523e279dc2a099bd48aa2e66a7f16ed47cc453ddd",
+    "executed_tx_hash": "0x16efcebfb56903c2a84e7713eeba75edd281bd927cb65ac45e69da11928df4e1"
+  }
+}

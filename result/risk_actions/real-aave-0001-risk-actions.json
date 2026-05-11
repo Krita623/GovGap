@@ -1,0 +1,163 @@
+{
+  "risk_actions": [
+    {
+      "id": "15:0:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+      "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+      "depth": 0,
+      "function_selector": "0xe1f21c67",
+      "decoded_function": "approve(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0xee56e2b3d491590b5b31738cc34d5232f378a8d5",
+        "to_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 0,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:1:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+      "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "depth": 1,
+      "function_selector": "0xe1f21c67",
+      "decoded_function": "approve(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x1e506cbb6721b83b1549fa1558332381ffa61a93",
+        "to_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 1,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:2:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+      "depth": 2,
+      "function_selector": "0xe1f21c67",
+      "decoded_function": "approve(address,address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0xa335e2443b59d11337e9005c9af5bc31f8000714",
+        "value": "0x0",
+        "input": "0xe1f21c670000000000000000000000007fc66500c84a76ad7e9c93437bfc5ac33e2ddae90000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": null,
+        "depth": 2,
+        "function_selector": "0xe1f21c67",
+        "decoded_function": "approve(address,address,uint256)",
+        "decoded_args": [
+          "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:3:approval",
+      "action_type": "approval",
+      "severity_hint": "medium",
+      "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+      "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "depth": 3,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "CALL",
+        "from_address": "0x25f2226b597e8f9514b3f68f00f494cf4f286491",
+        "to_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 3,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    },
+    {
+      "id": "15:4:delegatecall",
+      "action_type": "delegatecall",
+      "severity_hint": "high",
+      "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+      "depth": 4,
+      "function_selector": "0x095ea7b3",
+      "decoded_function": "approve(address,uint256)",
+      "value": "0x0",
+      "evidence_source": "trace",
+      "raw_evidence": {
+        "call_type": "DELEGATECALL",
+        "from_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+        "to_address": "0xc13eac3b4f9eed480045113b7af00f7b5655ece8",
+        "value": "0x0",
+        "input": "0x095ea7b30000000000000000000000004da27a545c0c5b758a6ba100e3a049001de870f5000000000000000000000000000000000000000000002a82ade704ea53f80000",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "depth": 4,
+        "function_selector": "0x095ea7b3",
+        "decoded_function": "approve(address,uint256)",
+        "decoded_args": [
+          "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+          200750000000000000000000
+        ],
+        "error": null,
+        "merged_count": 2
+      },
+      "confidence": 0.9
+    }
+  ],
+  "filtering_summary": {
+    "raw_detected_count": 10,
+    "filtered_count": 0,
+    "deduplicated_count": 5,
+    "final_risk_action_count": 5
+  }
+}

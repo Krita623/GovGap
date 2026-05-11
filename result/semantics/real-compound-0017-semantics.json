@@ -1,0 +1,114 @@
+{
+  "proposal_summary": "This proposal finalizes the engagement of ChainSecurity and Certora as joint Security Service Providers (SSPs) for the Compound DAO, along with ZeroShadow for incident response, for a 12-month term starting August 18, 2025. It authorizes a total budget of $2,000,000 USD, to be streamed in COMP tokens via the Compound Streamer.",
+  "disclosed_entities": [
+    {
+      "name": "ChainSecurity",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the DAO has elected to appoint ChainSecurity and Certora as its joint security service providers"
+    },
+    {
+      "name": "Certora",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the DAO has elected to appoint ChainSecurity and Certora as its joint security service providers"
+    },
+    {
+      "name": "ZeroShadow",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "the DAO will also engage ZeroShadow to deliver incident response and monitoring services"
+    },
+    {
+      "name": "Compound Foundation",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Following a multi-week evaluation by the Compound Foundation"
+    },
+    {
+      "name": "OpenZeppelin",
+      "address": null,
+      "entity_type": "unknown",
+      "disclosure_level": "explicit",
+      "textual_evidence": "ensuring a smooth transition from the existing relationship with OpenZeppelin"
+    },
+    {
+      "name": "Community Multisig",
+      "address": null,
+      "entity_type": "multisig",
+      "disclosure_level": "explicit",
+      "textual_evidence": "resolve security incidents in coordination with the Community Multisig"
+    },
+    {
+      "name": "Compound Streamer",
+      "address": null,
+      "entity_type": "external_contract",
+      "disclosure_level": "explicit",
+      "textual_evidence": "authorize the creation of two COMP token streams via the Compound Streamer"
+    },
+    {
+      "name": "COMP",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Funds will be streamed in COMP tokens"
+    }
+  ],
+  "disclosed_addresses": [
+    {
+      "address": "0xa1fa21665daa59f27046110cc2f58218b6343a2b",
+      "textual_evidence": "ChainSecurity & Certora reception address: 0xa1fa21665daA59f27046110CC2f58218b6343A2B"
+    },
+    {
+      "address": "0x334791289a906ac8f96ac0f90e7a91bf4aae4a60",
+      "textual_evidence": "Stream address: 0x334791289a906Ac8f96ac0f90E7A91Bf4AaE4A60"
+    },
+    {
+      "address": "0x9faeabced4c29f030d40a83f1a7822624d67f904",
+      "textual_evidence": "ZeroShadow reception address: 0x9FAEaBCeD4C29F030d40A83F1a7822624d67f904"
+    },
+    {
+      "address": "0xaf9cee006ae377e88f3bbd668e3d67807f546bd8",
+      "textual_evidence": "Stream address: 0xAF9CEE006AE377e88f3BBd668e3d67807F546Bd8"
+    }
+  ],
+  "claimed_actions": [
+    {
+      "raw_action": "authorize the creation of two COMP token streams via the Compound Streamer",
+      "canonical_action": "treasury_operation",
+      "object": "Compound Streamer",
+      "claimed_effect": "Sets up two payment streams for the security service providers with specific parameters including duration, slippage, and claim cooldown.",
+      "textual_evidence": "If passed, this proposal will authorize the creation of two COMP token streams via the Compound Streamer",
+      "confidence": 0.95
+    },
+    {
+      "raw_action": "deposit COMP into the streams",
+      "canonical_action": "transfer",
+      "object": "COMP",
+      "claimed_effect": "Transfers approximately 45,000 COMP (39,375 to ChainSecurity & Certora, 5,625 to ZeroShadow) into the Streamer contracts to fund the 12-month engagement.",
+      "textual_evidence": "At the time of onchain vote submission, 45,000 COMP approximates the $2.2M total, of which, 39,375 will be deposited in the ChainSecurity & Certora stream, and 5,625 will be allocated to the ZeroShadow stream.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "moderate",
+    "reason": "The proposal involves configuring and funding two separate streaming contracts with specific parameters (duration, slippage, cooldown) and a buffer for price volatility.",
+    "textual_evidence": "Funds will be streamed in COMP tokens through the Compound Streamer. The amount of COMP streamed will be USD-adjusted using Chainlink price feeds... a 10% buffer will be applied to each stream"
+  },
+  "disclosed_functions": [
+    {
+      "function_name": "terminateStream",
+      "textual_evidence": "An onchain proposal must call the terminateStream() function in order for cancellation to occur."
+    }
+  ],
+  "limitations": [
+    "COMP price volatility might require additional funding if the 10% buffer is insufficient to cover the $2M USD equivalent over the 12-month term.",
+    "Stream cancellation requires a 60-day notice period and a separate onchain proposal to call terminateStream()."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}

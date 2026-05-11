@@ -1,0 +1,41 @@
+{
+  "proposal_summary": "Fund the submission of the documentary 'Benbodhi: Decoded' to 48 film festivals with a requested budget of 2,854 USDC.",
+  "disclosed_entities": [
+    {
+      "name": "USDC",
+      "address": null,
+      "entity_type": "token",
+      "disclosure_level": "explicit",
+      "textual_evidence": "Budget: $2,854.00 USDC"
+    },
+    {
+      "name": "Nouns Treasury",
+      "address": null,
+      "entity_type": "treasury",
+      "disclosure_level": "implicit",
+      "textual_evidence": "Nouns can fund the festivals' fees."
+    }
+  ],
+  "disclosed_addresses": [],
+  "claimed_actions": [
+    {
+      "raw_action": "Fund the festivals' fees",
+      "canonical_action": "transfer",
+      "object": "2,854.00 USDC",
+      "claimed_effect": "Provide the budget required to submit the documentary to 48 film festivals.",
+      "textual_evidence": "Budget: $2,854.00 USDC\n...\nI will front the soundtrack cost out of pocket and Nouns can fund the festivals' fees.",
+      "confidence": 0.95
+    }
+  ],
+  "claimed_complexity": {
+    "level": "simple",
+    "reason": "The proposal asks for a straightforward funding transfer to pay for film festival submission fees. No smart contract operations or complex executions are described.",
+    "textual_evidence": "Budget: $2,854.00 USDC ... Nouns can fund the festivals' fees."
+  },
+  "disclosed_functions": [],
+  "limitations": [
+    "No receiving address or smart contract addresses are provided in the proposal text to verify the transaction details."
+  ],
+  "llm_status": "success",
+  "llm_used_for_scoring": false
+}
